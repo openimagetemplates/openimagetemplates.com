@@ -84,6 +84,16 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
           <section className="mt-8">
             <div className="flex items-center justify-between gap-4">
               <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">Full prompt</h2>
+              <CopyButton value={template.prompt} label="Copy prompt" />
+            </div>
+            <div className="mt-4 rounded-[8px] border border-black/10 bg-white p-5 text-sm leading-7 text-zinc-700">
+              {template.prompt}
+            </div>
+          </section>
+
+          <section className="mt-8">
+            <div className="flex items-center justify-between gap-4">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">Template JSON</h2>
               <CopyButton value={templateJson} label="Copy JSON" />
             </div>
             <pre className="mt-4 max-h-[520px] min-w-0 overflow-auto whitespace-pre-wrap break-words rounded-[8px] border border-black/10 bg-zinc-950 p-5 text-sm leading-6 text-zinc-100">

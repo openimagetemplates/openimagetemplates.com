@@ -12,6 +12,21 @@ export default function SchemaPage() {
         Version {TEMPLATE_SCHEMA_VERSION} defines a portable JSON format for reusable AI image generation templates:
         a visible prompt, editable slots, suggested models, examples, provenance, and license metadata.
       </p>
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a
+          href="/open-image-template.schema.json"
+          className="inline-flex h-12 items-center justify-center rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800"
+        >
+          View raw JSON schema
+        </a>
+        <a
+          href="/open-image-template.schema.json"
+          download
+          className="inline-flex h-12 items-center justify-center rounded-full border border-black/10 bg-white px-5 text-sm font-semibold text-zinc-950 shadow-sm transition hover:bg-zinc-50"
+        >
+          Download schema
+        </a>
+      </div>
 
       <div className="mt-10 grid gap-4 md:grid-cols-3">
         {[
