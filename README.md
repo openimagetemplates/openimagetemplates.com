@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Open Image Templates
 
-## Getting Started
+A free, open prompt-template standard and gallery for AI image generation, sponsored by NanoGPT.
 
-First, run the development server:
+The site is designed to be:
+
+- Open: every prompt is visible and copyable.
+- Portable: templates are JSON and can be used with any generator.
+- Fast: app routes are static-first and image delivery is CDN/R2 oriented.
+- NanoGPT-powered: each template can be generated on NanoGPT in one click.
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production Asset Strategy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Local demo images live in `public/templates`. For production, upload preview derivatives to R2 and set:
 
-## Learn More
+```bash
+NEXT_PUBLIC_TEMPLATE_ASSET_BASE_URL=https://img.openimagetemplates.com
+```
 
-To learn more about Next.js, take a look at the following resources:
+The template data prepends this base URL to `/templates/...`, so the same catalogue works locally and against CDN-hosted assets.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+See [docs/architecture.md](docs/architecture.md) for cache and moderation details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Schema
 
-## Deploy on Vercel
+The Open Image Template schema is published at:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+/open-image-template.schema.json
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Current schema version: `1.0.0`.
+
+## Project Structure
+
+```text
+src/lib/templates.ts              Template catalogue and JSON conversion helpers
+src/components/GalleryExplorer.tsx Search and category filtering
+src/components/TemplateCard.tsx    Gallery cards
+src/app/templates/[id]/page.tsx    Static template detail pages
+src/app/schema/page.tsx            Schema documentation
+src/app/architecture/page.tsx      Production architecture notes
+public/templates                   Local demo preview assets
+```
