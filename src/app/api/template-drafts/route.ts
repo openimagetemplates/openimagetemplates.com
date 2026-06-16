@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { NANO_GPT_ACCESS_TOKEN_COOKIE, getNanoGptBaseUrl } from "@/lib/nanogpt-auth";
 import {
   createEmptyTemplateDraft,
   normalizeCategory,
@@ -97,14 +98,22 @@ function getNanoGptApiKey() {
   return process.env.NANOGPT_API_KEY || process.env.NANO_GPT_API_KEY || "";
 }
 
-function getNanoGptBaseUrl() {
-  return (process.env.NANOGPT_BASE_URL || "https://nano-gpt.com").replace(/\/+$/, "");
+function getCookieValue(cookieHeader: string | null, name: string) {
+  return cookieHeader
+    ?.split(";")
+    .map((part) => part.trim())
+    .find((part) => part.startsWith(`${name}=`))
+    ?.slice(name.length + 1) || "";
+}
+
+function getNanoGptAccessToken(request: Request) {
+  return getCookieValue(request.headers.get("cookie"), NANO_GPT_ACCESS_TOKEN_COOKIE) || getNanoGptApiKey();
 }
 
 export async function POST(request: Request) {
-  const apiKey = getNanoGptApiKey();
+  const apiKey = getNanoGptAccessToken(request);
   if (!apiKey) {
-    return errorResponse(503, "Template AI is not configured yet.");
+    return errorResponse(401, "Sign in with NanoGPT to generate templates with AI.");
   }
 
   let body: Record<string, unknown>;

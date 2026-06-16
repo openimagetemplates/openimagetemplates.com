@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
-import { NanoGptMark } from "@/components/NanoGptMark";
+import { NanoGptAuthButton } from "@/components/NanoGptAuthButton";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -67,13 +67,7 @@ export default function RootLayout({
                 </Link>
               ))}
             </nav>
-            <a
-              href="https://nano-gpt.com/auth/signin?callbackUrl=%2Fmedia%3Fmode%3Dimage"
-              className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-zinc-950 px-4 text-sm font-semibold text-white transition hover:bg-zinc-800"
-            >
-              <NanoGptMark />
-              Sign in with NanoGPT
-            </a>
+            <NanoGptAuthButton />
           </div>
         </header>
         {children}
