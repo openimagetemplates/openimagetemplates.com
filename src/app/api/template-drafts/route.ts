@@ -99,11 +99,17 @@ function getNanoGptApiKey() {
 }
 
 function getCookieValue(cookieHeader: string | null, name: string) {
-  return cookieHeader
+  const rawValue = cookieHeader
     ?.split(";")
     .map((part) => part.trim())
     .find((part) => part.startsWith(`${name}=`))
     ?.slice(name.length + 1) || "";
+
+  try {
+    return decodeURIComponent(rawValue);
+  } catch {
+    return rawValue;
+  }
 }
 
 function getNanoGptAccessToken(request: Request) {
