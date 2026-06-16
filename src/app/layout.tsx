@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import { NanoGptAuthButton } from "@/components/NanoGptAuthButton";
+import { OpenImageTemplatesLogo } from "@/components/OpenImageTemplatesLogo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -48,12 +49,15 @@ export default function RootLayout({
       <body>
         <header className="sticky top-0 z-40 border-b border-black/10 bg-[#f5f3ef]/90 backdrop-blur-xl">
           <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-            <Link href="/" className="flex items-center gap-3">
-              <span className="grid h-9 w-9 place-items-center rounded-[8px] bg-zinc-950 text-sm font-semibold text-white">
-                OI
-              </span>
-              <span className="text-sm font-semibold tracking-tight text-zinc-950 sm:text-base">
-                Open Image Templates
+            <Link href="/" className="flex items-center gap-2.5" aria-label="Open Image Templates home">
+              <OpenImageTemplatesLogo
+                maskId="header-open-image-templates-logo-mask"
+                showWordmark={false}
+                className="h-9 w-auto"
+              />
+              <span className="leading-none text-zinc-950">
+                <span className="block text-sm font-extrabold tracking-tight">Open Image</span>
+                <span className="block text-sm font-normal tracking-tight">Templates</span>
               </span>
             </Link>
             <nav className="hidden items-center gap-1 md:flex">
@@ -73,7 +77,10 @@ export default function RootLayout({
         {children}
         <footer className="border-t border-black/10 bg-white">
           <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-8 text-sm text-zinc-600 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-            <p>Open Image Templates is a free prompt-template standard and gallery, sponsored by NanoGPT.</p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <OpenImageTemplatesLogo maskId="footer-open-image-templates-logo-mask" className="h-10 w-auto max-w-[190px]" />
+              <p>Open Image Templates is a free prompt-template standard and gallery, sponsored by NanoGPT.</p>
+            </div>
             <div className="flex gap-4">
               <Link href="/schema" className="font-medium text-zinc-950 hover:underline">
                 Schema
