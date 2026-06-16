@@ -1,11 +1,28 @@
+"use client";
+
 import { Check, LogOut } from "lucide-react";
-import { cookies } from "next/headers";
-import { NANO_GPT_ACCESS_TOKEN_COOKIE } from "@/lib/nanogpt-auth";
+import { useEffect, useState } from "react";
 import { NanoGptMark } from "./NanoGptMark";
 
-export async function NanoGptAuthButton() {
-  const cookieStore = await cookies();
-  const isConnected = Boolean(cookieStore.get(NANO_GPT_ACCESS_TOKEN_COOKIE)?.value);
+export function NanoGptAuthButton() {
+  const [isConnected, setIsConnected] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+
+    fetch("/api/nanogpt-auth/status", { cache: "no-store" })
+      .then((response) => response.json())
+      .then((data) => {
+        if (active) setIsConnected(Boolean(data?.connected));
+      })
+      .catch(() => {
+        if (active) setIsConnected(false);
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
 
   if (isConnected) {
     return (
