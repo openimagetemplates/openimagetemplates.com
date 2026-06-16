@@ -46,6 +46,11 @@ export function NanoGptAuthButton() {
   return (
     <a
       href="/api/nanogpt-auth/start"
+      onClick={(event) => {
+        event.preventDefault();
+        const returnTo = `${window.location.pathname}${window.location.search}`;
+        window.location.href = `/api/nanogpt-auth/start?returnTo=${encodeURIComponent(returnTo)}`;
+      }}
       className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-zinc-950 px-4 text-sm font-semibold text-white transition hover:bg-zinc-800"
     >
       <NanoGptMark />
