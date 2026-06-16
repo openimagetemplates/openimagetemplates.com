@@ -65,7 +65,66 @@ export const categories: Array<"All" | TemplateCategory> = categoryOrder.filter(
   return templates.some((template) => template.category === category);
 });
 
-export const featuredTemplates = templates.slice(0, 6);
+type TemplateSelectionOptions = {
+  excludeIds?: Iterable<string>;
+  startCategoryIndex?: number;
+  startTemplateIndex?: number;
+};
+
+export const featuredTemplates = selectDiverseTemplates(templates, 6);
+
+export function selectDiverseTemplates(
+  sourceTemplates: ImageTemplate[],
+  limit: number,
+  options: TemplateSelectionOptions = {},
+) {
+  const excludedIds = new Set(options.excludeIds ?? []);
+  const selectableCategories = categoryOrder.filter((category): category is TemplateCategory => category !== "All");
+  const categoryOffset = normalizeOffset(options.startCategoryIndex ?? 0, selectableCategories.length);
+  const templateOffset = Math.max(0, options.startTemplateIndex ?? 0);
+  const orderedCategories = [
+    ...selectableCategories.slice(categoryOffset),
+    ...selectableCategories.slice(0, categoryOffset),
+  ];
+  const grouped = new Map(
+    orderedCategories.map((category) => [
+      category,
+      sourceTemplates.filter((template) => template.category === category && !excludedIds.has(template.id)),
+    ]),
+  );
+  const selected: ImageTemplate[] = [];
+  const seenIds = new Set<string>();
+
+  for (let round = 0; selected.length < limit && round < sourceTemplates.length; round += 1) {
+    let addedThisRound = false;
+
+    for (const category of orderedCategories) {
+      const categoryTemplates = grouped.get(category) ?? [];
+      if (categoryTemplates.length === 0) continue;
+
+      const candidate = categoryTemplates[(round + templateOffset) % categoryTemplates.length];
+      if (seenIds.has(candidate.id)) continue;
+
+      selected.push(candidate);
+      seenIds.add(candidate.id);
+      addedThisRound = true;
+      if (selected.length >= limit) break;
+    }
+
+    if (!addedThisRound) break;
+  }
+
+  if (selected.length >= limit) return selected;
+
+  for (const template of sourceTemplates) {
+    if (excludedIds.has(template.id) || seenIds.has(template.id)) continue;
+    selected.push(template);
+    seenIds.add(template.id);
+    if (selected.length >= limit) break;
+  }
+
+  return selected;
+}
 
 export function getTemplateById(id: string) {
   return templates.find((template) => template.id === id);
@@ -108,4 +167,9 @@ function toTemplateCategory(category: string): TemplateCategory {
   }
 
   return "Other";
+}
+
+function normalizeOffset(value: number, length: number) {
+  if (length <= 0) return 0;
+  return ((value % length) + length) % length;
 }

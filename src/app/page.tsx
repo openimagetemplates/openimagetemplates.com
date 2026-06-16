@@ -1,19 +1,35 @@
 /* eslint-disable @next/next/no-img-element */
-import { ArrowLeft, ArrowRight, Check, ChevronDown, Copy, Download, Globe2, ShieldCheck, SlidersHorizontal } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Download, Globe2, ShieldCheck, SlidersHorizontal } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GalleryExplorer } from "@/components/GalleryExplorer";
 import { HomepageHero } from "@/components/HomepageHero";
+import { HomepagePromptBuilderDemo } from "@/components/HomepagePromptBuilderDemo";
 import { JsonLd } from "@/components/JsonLd";
-import { templateLookGroups } from "@/lib/prompt-builder";
 import { absoluteUrl, SITE_DESCRIPTION, SITE_NAME, templateUrl } from "@/lib/seo";
-import { featuredTemplates, TEMPLATE_SCHEMA_VERSION, templates } from "@/lib/templates";
+import { selectDiverseTemplates, TEMPLATE_SCHEMA_VERSION, templates } from "@/lib/templates";
 
 const showcaseColors = ["#e9ff8f", "#4bb3f0", "#5cc878", "#bdb8f8", "#a9c1b6", "#f6a66d"];
-const stylePreviewOptions = templateLookGroups
-  .find((group) => group.name === "style")
-  ?.options.filter((option) => ["Photo", "3D render", "Anime poster"].includes(option.label)) ?? [];
-const builderRows = ["Add a color palette", "Add lighting", "Add a photography style", "Add a material", "Add a medium"];
+const heroTemplates = selectDiverseTemplates(templates, 18);
+const makingTemplates = selectDiverseTemplates(templates, 6, {
+  excludeIds: heroTemplates.slice(0, 6).map((template) => template.id),
+  startCategoryIndex: 1,
+  startTemplateIndex: 2,
+});
+const collageTemplates = selectDiverseTemplates(templates, 6, {
+  excludeIds: [...heroTemplates.slice(0, 6), ...makingTemplates].map((template) => template.id),
+  startCategoryIndex: 3,
+  startTemplateIndex: 4,
+});
+const bottomShowcaseTemplates = selectDiverseTemplates(templates, 12, {
+  excludeIds: [...heroTemplates.slice(0, 6), ...makingTemplates, ...collageTemplates].map((template) => template.id),
+  startCategoryIndex: 5,
+  startTemplateIndex: 6,
+});
+const galleryTemplates = selectDiverseTemplates(templates, templates.length, {
+  startCategoryIndex: 2,
+  startTemplateIndex: 8,
+});
 
 export const metadata: Metadata = {
   alternates: {
@@ -59,7 +75,7 @@ export default function Home() {
           },
         ]}
       />
-      <HomepageHero templates={featuredTemplates} templateCount={templates.length} schemaVersion={TEMPLATE_SCHEMA_VERSION} />
+      <HomepageHero templates={heroTemplates} templateCount={templates.length} schemaVersion={TEMPLATE_SCHEMA_VERSION} />
 
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
@@ -68,7 +84,7 @@ export default function Home() {
           </h2>
 
           <div className="mt-12 grid gap-x-7 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
-            {templates.slice(0, 6).map((template) => (
+            {makingTemplates.map((template) => (
               <Link key={template.id} href={`/templates/${template.id}`} className="group block">
                 <div className="aspect-[16/9] overflow-hidden rounded-[8px] bg-zinc-100">
                   <img
@@ -149,8 +165,8 @@ export default function Home() {
           <div className="oit-shape-float absolute right-8 top-24 hidden h-64 w-80 rotate-[6deg] rounded-[8px] bg-[#4bb3f0] p-4 shadow-2xl lg:block">
             <div className="h-full overflow-hidden rounded-[8px] bg-white/35 p-3">
               <img
-                src={featuredTemplates[1]?.image}
-                alt={featuredTemplates[1]?.imageAlt}
+                src={collageTemplates[0]?.image}
+                alt={collageTemplates[0]?.imageAlt}
                 className="h-full w-full rounded-[8px] object-cover object-top shadow-xl"
               />
             </div>
@@ -158,7 +174,7 @@ export default function Home() {
 
           <div className="oit-shape-drift absolute bottom-10 right-24 hidden h-56 w-56 rounded-[8px] bg-[#bdb8f8] p-5 shadow-xl md:block">
             <div className="grid h-full grid-cols-2 gap-3">
-              {featuredTemplates.slice(2, 6).map((template) => (
+              {collageTemplates.slice(1, 5).map((template) => (
                 <img
                   key={template.id}
                   src={template.image}
@@ -216,85 +232,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-[8px] border border-black/10 bg-white p-4 shadow-[0_24px_70px_rgba(24,24,27,0.12)] sm:p-5">
-            <div className="rounded-[8px] bg-zinc-50 p-4 sm:p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">Adjust this template</p>
-              <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                {[
-                  ["Subject", "ceramic vase"],
-                  ["Material", "wet clay"],
-                  ["Lighting", "dusty sunlight"],
-                ].map(([label, value]) => (
-                  <div key={label} className="rounded-[8px] border border-black/10 bg-white p-3">
-                    <p className="text-sm font-semibold text-zinc-950">{label}</p>
-                    <div className="mt-3 rounded-[8px] border border-black/10 bg-white px-3 py-2 text-sm text-zinc-700">
-                      {value}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-4 overflow-hidden rounded-[8px] border border-black/10 bg-white">
-                <div className="border-b border-black/10 p-4">
-                  <div className="flex items-center justify-between gap-3">
-                    <div>
-                      <p className="text-base font-semibold text-zinc-950">Style: 3D render</p>
-                      <p className="mt-1 text-xs font-medium text-blue-600">Click again to preview</p>
-                    </div>
-                    <ChevronDown className="rotate-180 text-zinc-700" size={18} aria-hidden="true" />
-                  </div>
-                  <div className="mt-4 grid grid-cols-3 gap-3">
-                    {stylePreviewOptions.map((option) => {
-                      const isSelected = option.label === "3D render";
-                      return (
-                        <div
-                          key={option.label}
-                          className={`overflow-hidden rounded-[8px] border bg-white text-left ${
-                            isSelected ? "border-blue-500 text-blue-600 ring-2 ring-blue-100" : "border-black/10 text-zinc-700"
-                          }`}
-                        >
-                          {option.image ? (
-                            <div className="aspect-[4/3] overflow-hidden bg-zinc-100">
-                              <img src={option.image} alt={`${option.label} style preview`} className="h-full w-full object-cover" />
-                            </div>
-                          ) : null}
-                          <div className="flex min-h-10 items-center justify-between gap-2 px-3 py-2 text-sm font-semibold">
-                            {option.label}
-                            {isSelected ? <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-blue-500" /> : null}
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {builderRows.map((row) => (
-                  <div key={row} className="flex items-center justify-between border-b border-black/10 px-4 py-3 last:border-b-0">
-                    <span className="text-sm font-semibold text-zinc-950">{row}</span>
-                    <ChevronDown size={17} aria-hidden="true" />
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-4 rounded-[8px] bg-zinc-950 p-4 text-zinc-100">
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-400">Adjusted prompt</p>
-                  <span className="inline-flex h-9 items-center justify-center gap-2 rounded-full bg-white px-4 text-sm font-semibold text-zinc-950">
-                    <Copy size={15} aria-hidden="true" />
-                    Copy adjusted prompt
-                  </span>
-                </div>
-                <p className="mt-4 text-sm leading-7 text-zinc-200">
-                  Create a realistic 3D render of a ceramic vase in wet clay, dusty sunlight, tactile studio details,
-                  natural imperfections, and warm craft atmosphere.
-                </p>
-              </div>
-            </div>
-          </div>
+          <HomepagePromptBuilderDemo />
         </div>
       </section>
 
-      <GalleryExplorer templates={templates} />
+      <GalleryExplorer templates={galleryTemplates} />
 
       <section className="border-t border-black/10 bg-zinc-950 text-white">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
@@ -328,10 +270,10 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="mt-12 text-lg text-white/90">1 of {templates.length}</p>
+          <p className="mt-12 text-lg text-white/90">Showing {bottomShowcaseTemplates.length} of {templates.length}</p>
 
           <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {featuredTemplates.map((template, index) => (
+            {bottomShowcaseTemplates.map((template, index) => (
               <Link
                 key={template.id}
                 href={`/templates/${template.id}`}
