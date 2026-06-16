@@ -18,17 +18,29 @@ npm run dev
 
 Open `http://localhost:3000`.
 
-## Production Asset Strategy
+## Template Source Of Truth
 
-Local demo images live in `public/templates`. For production, upload preview derivatives to R2 and set:
+The public template catalogue is synced from the NanoGPT app catalogue at:
 
-```bash
-NEXT_PUBLIC_TEMPLATE_ASSET_BASE_URL=https://img.openimagetemplates.com
+```text
+/Users/dev1/worktrees/worktree/white/app/media/promptTemplates.ts
 ```
 
-The template data prepends this base URL to `/templates/...`, so the same catalogue works locally and against CDN-hosted assets.
+Run this after adding or editing templates in NanoGPT:
 
-See [docs/architecture.md](docs/architecture.md) for cache and moderation details.
+```bash
+npm run sync:templates
+```
+
+This writes `src/data/nanogpt-prompt-templates.json`, which the site uses to generate template pages and `/templates/{id}.json` endpoints. The public site filters out templates tagged `candid`.
+
+By default, synced preview images point at `https://nano-gpt.com/prompt-templates/...`. Override with:
+
+```bash
+NANOGPT_PROJECT_DIR=/path/to/nano-gpt \
+NANOGPT_TEMPLATE_ASSET_BASE_URL=https://your-asset-host.example \
+npm run sync:templates
+```
 
 ## Schema
 
@@ -43,11 +55,12 @@ Current schema version: `1.0.0`.
 ## Project Structure
 
 ```text
-src/lib/templates.ts              Template catalogue and JSON conversion helpers
+scripts/sync-nanogpt-templates.mjs Sync NanoGPT templates into this project
+src/data/nanogpt-prompt-templates.json Generated public template catalogue
+src/lib/templates.ts              Template adapter and JSON conversion helpers
 src/components/GalleryExplorer.tsx Search and category filtering
 src/components/TemplateCard.tsx    Gallery cards
 src/app/templates/[id]/page.tsx    Static template detail pages
+src/app/api/templates/[id]/route.ts JSON template endpoint behind /templates/{id}.json
 src/app/schema/page.tsx            Schema documentation
-src/app/architecture/page.tsx      Production architecture notes
-public/templates                   Local demo preview assets
 ```

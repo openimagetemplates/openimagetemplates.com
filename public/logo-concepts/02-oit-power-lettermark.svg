@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="260" viewBox="0 0 720 260" role="img" aria-labelledby="title desc">
+  <title id="title">OIT power lettermark concept</title>
+  <desc id="desc">The O and I form a power icon, integrated with a strong T to read as OIT.</desc>
+  <rect width="720" height="260" rx="34" fill="#ffffff"/>
+  <g transform="translate(54 50)">
+    <path d="M86 12a74 74 0 1 0 0 148a74 74 0 0 0 59.4-118.2" fill="none" stroke="#08090d" stroke-width="20" stroke-linecap="round"/>
+    <rect x="76" y="0" width="20" height="92" rx="10" fill="url(#letterGradient)"/>
+    <path d="M178 20h112v24h-43v116h-26V44h-43z" fill="#08090d"/>
+    <path d="M320 20h150v24h-62v116h-26V44h-62z" fill="#08090d"/>
+  </g>
+  <text x="58" y="225" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="650" fill="#5f6368" letter-spacing="0.4">OPEN IMAGE TEMPLATES</text>
+  <defs>
+    <linearGradient id="letterGradient" x1="76" y1="92" x2="101" y2="1" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#015a9e"/>
+      <stop offset="1" stop-color="#11e9bb"/>
+    </linearGradient>
+  </defs>
+</svg>

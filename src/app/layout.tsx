@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { NanoGptMark } from "@/components/NanoGptMark";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
 const navItems = [
   { href: "/#gallery", label: "Templates" },
   { href: "/schema", label: "Schema" },
-  { href: "/architecture", label: "Architecture" },
+  { href: "/docs", label: "Docs" },
 ];
 
 export default function RootLayout({
@@ -67,10 +68,11 @@ export default function RootLayout({
               ))}
             </nav>
             <a
-              href="https://nano-gpt.com/media?mode=image"
-              className="inline-flex h-10 items-center justify-center rounded-full bg-zinc-950 px-4 text-sm font-semibold text-white transition hover:bg-zinc-800"
+              href="https://nano-gpt.com/auth/signin?callbackUrl=%2Fmedia%3Fmode%3Dimage"
+              className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-zinc-950 px-4 text-sm font-semibold text-white transition hover:bg-zinc-800"
             >
-              Generate
+              <NanoGptMark />
+              Sign in with NanoGPT
             </a>
           </div>
         </header>
@@ -81,6 +83,9 @@ export default function RootLayout({
             <div className="flex gap-4">
               <Link href="/schema" className="font-medium text-zinc-950 hover:underline">
                 Schema
+              </Link>
+              <Link href="/docs" className="font-medium text-zinc-950 hover:underline">
+                Docs
               </Link>
               <a href="https://nano-gpt.com" className="font-medium text-zinc-950 hover:underline">
                 NanoGPT

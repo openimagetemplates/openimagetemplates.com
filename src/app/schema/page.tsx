@@ -1,16 +1,43 @@
+import type { Metadata } from "next";
 import { CopyButton } from "@/components/CopyButton";
+import { JsonLd } from "@/components/JsonLd";
+import { absoluteUrl, SITE_NAME } from "@/lib/seo";
 import { TEMPLATE_SCHEMA_VERSION, toPortableTemplateJson, templates } from "@/lib/templates";
 
 const exampleJson = JSON.stringify(toPortableTemplateJson(templates[0]), null, 2);
 
+export const metadata: Metadata = {
+  title: "Open Image Template Schema",
+  description:
+    "The public JSON schema for Open Image Templates: visible prompts, editable slots, prompt-builder controls, examples, provenance, and license metadata.",
+  alternates: {
+    canonical: "/schema",
+  },
+};
+
 export default function SchemaPage() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          headline: "Open Image Template Schema",
+          description:
+            "A portable JSON format for reusable AI image generation templates with visible prompts, editable slots, controls, examples, provenance, suggested models, and license metadata.",
+          url: absoluteUrl("/schema"),
+          isPartOf: {
+            "@type": "WebSite",
+            name: SITE_NAME,
+            url: absoluteUrl("/"),
+          },
+        }}
+      />
       <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Open standard</p>
       <h1 className="mt-4 text-5xl font-semibold tracking-tight text-zinc-950">Open Image Template Schema</h1>
       <p className="mt-5 max-w-3xl text-lg leading-8 text-zinc-600">
         Version {TEMPLATE_SCHEMA_VERSION} defines a portable JSON format for reusable AI image generation templates:
-        a visible prompt, editable slots, suggested models, examples, provenance, and license metadata.
+        a visible prompt, editable slots, prompt-builder controls, suggested models, examples, provenance, and license metadata.
       </p>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <a
@@ -31,7 +58,7 @@ export default function SchemaPage() {
       <div className="mt-10 grid gap-4 md:grid-cols-3">
         {[
           ["Visible prompt", "No hidden marketplace prompt. The generation recipe is readable and copyable."],
-          ["Editable slots", "Variables describe the parts a user is expected to change."],
+          ["Prompt builder", "Slots, look controls, extra details, and toggles make the template usable without editing JSON."],
           ["Portable examples", "Example images include date and schema version for provenance."],
         ].map(([title, text]) => (
           <div key={title} className="rounded-[8px] border border-black/10 bg-white p-5 shadow-sm">
@@ -62,6 +89,7 @@ export default function SchemaPage() {
             "description",
             "prompt",
             "slots",
+            "controls",
             "suggested_models",
             "examples",
             "license",
@@ -71,6 +99,40 @@ export default function SchemaPage() {
             </code>
           ))}
         </div>
+      </section>
+
+      <section className="mt-10 grid gap-4 md:grid-cols-2">
+        {[
+          [
+            "What is a template?",
+            "A template is a reusable image generation recipe: a visible prompt plus structured metadata that explains how to customize and reuse it.",
+          ],
+          [
+            "What are slots?",
+            "Slots are the main movable parts of the prompt. Each slot has a stable name, a human label, and an example value.",
+          ],
+          [
+            "How controls compile",
+            "Controls add optional style, palette, lighting, photography, material, medium, extra detail, and toggle instructions to the prompt-builder output.",
+          ],
+          [
+            "How examples work",
+            "Example images include the image URL, generated date, and schema version so a gallery or agent can understand provenance.",
+          ],
+          [
+            "How to implement it",
+            "Render slots as inputs, look controls as selectable tiles, details as a text area, and toggles as on/off choices. Keep the full prompt visible in HTML.",
+          ],
+          [
+            "How agents retrieve it",
+            "Every template can expose /templates/{id}.json with the same data shown on the human page, including prompt, controls, examples, and license.",
+          ],
+        ].map(([title, text]) => (
+          <div key={title} className="rounded-[8px] border border-black/10 bg-white p-5 shadow-sm">
+            <h2 className="text-xl font-semibold tracking-tight text-zinc-950">{title}</h2>
+            <p className="mt-2 text-sm leading-6 text-zinc-600">{text}</p>
+          </div>
+        ))}
       </section>
     </main>
   );

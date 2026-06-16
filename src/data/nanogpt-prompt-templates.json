@@ -1,0 +1,3907 @@
+{
+  "generatedAt": "2026-06-16T09:51:41.336Z",
+  "source": "nano-gpt.com app/media/promptTemplates.ts",
+  "templates": [
+    {
+      "id": "bold-magazine-close-up",
+      "title": "Bold Magazine Close-Up",
+      "description": "A tight, glossy editorial portrait with statement accessories.",
+      "category": "Portrait",
+      "tags": [
+        "portrait",
+        "fashion",
+        "editorial",
+        "close-up"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/bold-magazine-close-up--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Bold Magazine Close-Up preview",
+      "prompt": "Create a tight editorial beauty portrait of a stylish adult model wearing oversized translucent red sunglasses, glossy red lips, gold hoop earrings, and confident high-fashion styling. Use sharp studio lighting, realistic skin texture, close-up composition, a clean pale background, and premium magazine photography polish.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "glasses_color",
+          "label": "Glasses color",
+          "example": "red"
+        },
+        {
+          "name": "lip_color",
+          "label": "Lip color",
+          "example": "glossy red"
+        },
+        {
+          "name": "prop",
+          "label": "Optional prop",
+          "example": "none"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "cozy-bedroom-selfie",
+      "title": "Cozy Bedroom Selfie",
+      "description": "A warm, candid phone selfie with room ambience.",
+      "category": "Portrait",
+      "tags": [
+        "selfie",
+        "bedroom",
+        "warm lighting",
+        "phone photo"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/cozy-bedroom-selfie--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Cozy Bedroom Selfie preview",
+      "prompt": "Create a realistic casual bedroom selfie of an adult person resting their face on one hand and looking at the camera. Use warm lamp light, string lights, soft phone-camera realism, natural facial details, slight lived-in room background, and an intimate candid composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "room_style",
+          "label": "Room style",
+          "example": "cozy bedroom"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "warm lamp and string lights"
+        },
+        {
+          "name": "pose",
+          "label": "Pose",
+          "example": "face resting on one hand"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "minimal-athleisure-studio",
+      "title": "Minimal Athleisure Studio",
+      "description": "A clean wellness or fitness lifestyle image.",
+      "category": "Lifestyle",
+      "tags": [
+        "fitness",
+        "wellness",
+        "athleisure",
+        "minimal"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/minimal-athleisure-studio--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Minimal Athleisure Studio preview",
+      "prompt": "Create a realistic lifestyle fitness photo of an adult athlete wearing a clean white athleisure outfit in a bright minimal studio. The subject is posed in a relaxed floor stretch, with beige-white walls, soft sunlight, long shadows, natural skin tones, realistic fabric texture, and calm premium wellness brand styling.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "white athleisure set"
+        },
+        {
+          "name": "pose",
+          "label": "Pose",
+          "example": "relaxed floor stretch"
+        },
+        {
+          "name": "studio_style",
+          "label": "Studio",
+          "example": "minimal beige-white"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "streetwear-bus-stop-editorial",
+      "title": "Streetwear Bus Stop Editorial",
+      "description": "Urban fashion photography with a candid editorial feel.",
+      "category": "Lifestyle",
+      "tags": [
+        "fashion",
+        "streetwear",
+        "urban",
+        "editorial"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/streetwear-bus-stop-editorial--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Streetwear Bus Stop Editorial preview",
+      "prompt": "Create a realistic streetwear editorial photo of a stylish adult model at an urban bus stop, wearing layered streetwear and sneakers. Use natural street light, candid pose, shallow depth of field, modern fashion-magazine composition, and subtle city background detail.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "urban_location",
+          "label": "Location",
+          "example": "bus stop"
+        },
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "layered streetwear"
+        },
+        {
+          "name": "mood",
+          "label": "Mood",
+          "example": "candid editorial"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "sunny-beach-product-shot",
+      "title": "Sunny Beach Product Shot",
+      "description": "A bright summer commercial image for a product.",
+      "category": "Product",
+      "tags": [
+        "product",
+        "advertising",
+        "beach",
+        "summer"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/sunny-beach-product-shot--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Sunny Beach Product Shot preview",
+      "prompt": "Create a bright commercial product photo of a yellow skincare tube standing in golden beach sand near the ocean. Add a crisp water splash, tropical leaves, and a small flower. Use sunny natural light, shallow depth of field, crisp product focus, realistic packaging material, and premium summer advertising composition. Keep label text minimal and graphic.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "product",
+          "label": "Product",
+          "example": "skincare tube"
+        },
+        {
+          "name": "background_elements",
+          "label": "Scene props",
+          "example": "water splash and tropical leaves"
+        },
+        {
+          "name": "label_text",
+          "label": "Label text",
+          "example": "short brand mark"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "luxury-perfume-packshot",
+      "title": "Luxury Perfume Packshot",
+      "description": "A polished studio packshot for fragrance or cosmetics.",
+      "category": "Product",
+      "tags": [
+        "product",
+        "perfume",
+        "luxury",
+        "commercial"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/luxury-perfume-packshot--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Luxury Perfume Packshot preview",
+      "prompt": "Create a premium product photo of a clear glass perfume bottle on polished stone, with elegant reflections, soft studio light, subtle warm background gradients, realistic glass and liquid detail, and luxury cosmetics advertising composition. Keep the product sharp and centered.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "product",
+          "label": "Product",
+          "example": "perfume bottle"
+        },
+        {
+          "name": "surface",
+          "label": "Surface",
+          "example": "polished stone"
+        },
+        {
+          "name": "color_palette",
+          "label": "Palette",
+          "example": "warm neutrals"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "bright-bedroom-mirror-selfie",
+      "title": "Bright Bedroom Mirror Selfie",
+      "description": "A clean daylight mirror selfie with phone-camera realism.",
+      "category": "Portrait",
+      "tags": [
+        "mirror selfie",
+        "bedroom",
+        "phone photo",
+        "daylight"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/bright-bedroom-mirror-selfie--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Bright Bedroom Mirror Selfie preview",
+      "prompt": "Create a realistic bright bedroom mirror selfie of an adult lifestyle model sitting on a white bed, holding a white phone up to a large grey marble framed mirror. Use soft daylight from a nearby window, white bedding, neutral walls, gold jewelry, natural skin texture, casual confident posing, and authentic phone-camera realism.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "summer outfit"
+        },
+        {
+          "name": "mirror_style",
+          "label": "Mirror",
+          "example": "grey marble frame"
+        },
+        {
+          "name": "room_style",
+          "label": "Room",
+          "example": "minimal white bedroom"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "boxed-collectible-figure",
+      "title": "Turn Me Into A Collectible Figure",
+      "description": "A miniature figure and toy packaging scene.",
+      "category": "Product",
+      "tags": [
+        "avatar",
+        "action figure",
+        "collectible",
+        "toy packaging",
+        "3d model"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/boxed-collectible-figure--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Turn Me Into A Collectible Figure preview",
+      "prompt": "Use the uploaded image as the reference subject. Create a realistic product-style scene where that adult subject has been turned into a detailed collectible figure standing on a designer desk. Include a monitor showing a 3D character modeling view of the same figure, plus retail toy packaging with a clear plastic window. Use warm desk-lamp lighting, modern creative studio background, realistic plastic packaging, and premium collectible product photography.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "figure_style",
+          "label": "Figure style",
+          "example": "realistic collectible"
+        },
+        {
+          "name": "room_style",
+          "label": "Room",
+          "example": "designer desk"
+        },
+        {
+          "name": "package_brand_text",
+          "label": "Package label",
+          "example": "short fictional label"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "sneaker-launch-hero",
+      "title": "Sneaker Launch Hero",
+      "description": "A dramatic launch image for footwear.",
+      "category": "Product",
+      "tags": [
+        "product",
+        "sneaker",
+        "advertising",
+        "commercial"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/sneaker-launch-hero--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Sneaker Launch Hero preview",
+      "prompt": "Create a commercial hero image of a futuristic running sneaker on dark reflective stone, with dynamic rim lighting, premium materials, crisp shadows, subtle mist, and high-energy launch campaign styling. Use a clean composition suitable for an ecommerce hero image.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "product",
+          "label": "Product",
+          "example": "futuristic running sneaker"
+        },
+        {
+          "name": "surface",
+          "label": "Surface",
+          "example": "dark reflective stone"
+        },
+        {
+          "name": "background_element",
+          "label": "Background",
+          "example": "subtle mist"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "step-out-of-manga-book",
+      "title": "Step Out Of A Manga Book",
+      "description": "A photoreal subject crossing out of a manga page.",
+      "category": "Character",
+      "tags": [
+        "manga",
+        "photorealistic",
+        "comic panel",
+        "transformation"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/step-out-of-manga-book--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Step Out Of A Manga Book preview",
+      "prompt": "Use the uploaded image as the reference subject. Create an image of that adult subject stepping out of a giant open manga book in a cozy bedroom. The pages show a black-and-white illustrated version of the same subject, while the real version is colorful and photorealistic. Blend crisp manga panel art with realistic lighting, playful meta-comedy, and a clean cinematic composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "cozy bedroom"
+        },
+        {
+          "name": "mood",
+          "label": "Mood",
+          "example": "playful"
+        },
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "adult character"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "anime-hero-poster",
+      "title": "Anime Hero Poster",
+      "description": "Poster-ready anime key art for a hero character.",
+      "category": "Character",
+      "tags": [
+        "anime",
+        "character",
+        "poster",
+        "hero"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/anime-hero-poster--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Anime Hero Poster preview",
+      "prompt": "Create a dramatic anime poster of an original hero character standing in a storm-lit city, with heroic pose, dynamic lighting, detailed costume, glowing power effect, cinematic composition, and clean key art suitable for a series poster.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character",
+          "label": "Character",
+          "example": "original hero"
+        },
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "storm-lit city"
+        },
+        {
+          "name": "power_theme",
+          "label": "Power",
+          "example": "glowing energy"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "cyborg-close-up",
+      "title": "Cyborg Close-Up",
+      "description": "A cinematic synthetic-human portrait.",
+      "category": "Character",
+      "tags": [
+        "sci-fi",
+        "cyborg",
+        "portrait",
+        "cinematic"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/cyborg-close-up--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Cyborg Close-Up preview",
+      "prompt": "Create a close-up portrait of an original futuristic cyborg with visible synthetic details, realistic skin-to-metal transitions, precise mechanical facial accents, dramatic low-key lighting, shallow depth of field, and cinematic sci-fi atmosphere.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "sleek synthetic cyborg"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "low-key cinematic"
+        },
+        {
+          "name": "background",
+          "label": "Background",
+          "example": "dark sci-fi studio"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "fantasy-warrior-key-art",
+      "title": "Fantasy Warrior Key Art",
+      "description": "A dramatic fantasy poster image.",
+      "category": "Character",
+      "tags": [
+        "fantasy",
+        "warrior",
+        "key art",
+        "poster"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/fantasy-warrior-key-art--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Fantasy Warrior Key Art preview",
+      "prompt": "Create fantasy key art of an original warrior standing on a wind-swept hill, holding a glowing sword, with dramatic sky, detailed armor, cinematic lighting, epic scale, and poster-ready composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character",
+          "label": "Character",
+          "example": "warrior"
+        },
+        {
+          "name": "environment",
+          "label": "Environment",
+          "example": "wind-swept hill"
+        },
+        {
+          "name": "weapon_or_object",
+          "label": "Object",
+          "example": "glowing sword"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "cinematic-car-in-flowers",
+      "title": "Cinematic Car In Flowers",
+      "description": "Low-angle automotive photography in nature.",
+      "category": "Cinematic",
+      "tags": [
+        "car",
+        "cinematic",
+        "automotive",
+        "nature"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/cinematic-car-in-flowers--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Cinematic Car In Flowers preview",
+      "prompt": "Create a low-angle cinematic photo of a forest-green sports car in a field of wildflowers, with petals in the foreground, glossy reflections, dramatic natural light, shallow depth, and premium automotive photography.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "vehicle",
+          "label": "Vehicle",
+          "example": "forest-green sports car"
+        },
+        {
+          "name": "environment",
+          "label": "Environment",
+          "example": "field of wildflowers"
+        },
+        {
+          "name": "time_of_day",
+          "label": "Light",
+          "example": "golden hour"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "abandoned-mech-cockpit",
+      "title": "Abandoned Mech Cockpit",
+      "description": "A moody sci-fi environment concept.",
+      "category": "Cinematic",
+      "tags": [
+        "sci-fi",
+        "concept art",
+        "cinematic",
+        "environment"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/abandoned-mech-cockpit--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Abandoned Mech Cockpit preview",
+      "prompt": "Create a moody sci-fi concept art scene inside an abandoned battlemech cockpit, with worn controls, cracked glass, atmospheric dust, low sunset light, massive scale, and a quiet sense of history.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "battlemech cockpit"
+        },
+        {
+          "name": "mood",
+          "label": "Mood",
+          "example": "abandoned and quiet"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "low sunset light"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "dreamy-forest-light",
+      "title": "Dreamy Forest Light",
+      "description": "An atmospheric nature scene with soft magic.",
+      "category": "Cinematic",
+      "tags": [
+        "nature",
+        "forest",
+        "cinematic",
+        "landscape"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/dreamy-forest-light--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Dreamy Forest Light preview",
+      "prompt": "Create a dreamy spring forest scene with a narrow path, soft glowing morning light, detailed foliage, wildflowers, natural depth, gentle mist, and a calm cinematic mood.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "season",
+          "label": "Season",
+          "example": "spring"
+        },
+        {
+          "name": "subject_or_focus",
+          "label": "Focus",
+          "example": "forest path"
+        },
+        {
+          "name": "time_of_day",
+          "label": "Time",
+          "example": "morning"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "minimal-interior-sunlight",
+      "title": "Minimal Interior Sunlight",
+      "description": "Bright interior photography with clean architecture.",
+      "category": "Cinematic",
+      "tags": [
+        "interior",
+        "architecture",
+        "minimal",
+        "daylight"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/minimal-interior-sunlight--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Minimal Interior Sunlight preview",
+      "prompt": "Create a realistic interior photo of a minimal living room with neutral materials, light wood, soft daylight, clean shadows, a comfortable sofa, simple decor, and premium architecture photography composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "room_type",
+          "label": "Room",
+          "example": "living room"
+        },
+        {
+          "name": "decor_style",
+          "label": "Decor",
+          "example": "minimal neutral"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "soft daylight"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "movie-poster-remix",
+      "title": "Movie Poster Remix",
+      "description": "A poster composition for a fictional film idea.",
+      "category": "Design",
+      "tags": [
+        "poster",
+        "cinematic",
+        "graphic design",
+        "movie"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/movie-poster-remix--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Movie Poster Remix preview",
+      "prompt": "Create a cinematic movie poster concept for a fictional mystery film, featuring a lone figure under a streetlight in a rainy city, dramatic lighting, bold composition, atmospheric haze, and clear empty space reserved for title typography. Do not generate readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "genre",
+          "label": "Genre",
+          "example": "mystery"
+        },
+        {
+          "name": "main_subject",
+          "label": "Subject",
+          "example": "lone figure"
+        },
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "rainy city"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "album-cover-concept",
+      "title": "Album Cover Concept",
+      "description": "Square cover art with a strong visual motif.",
+      "category": "Design",
+      "tags": [
+        "album cover",
+        "graphic design",
+        "music",
+        "cover art"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/album-cover-concept--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Album Cover Concept preview",
+      "prompt": "Create a square album cover image for a dreamy electronic music project, featuring a glowing abstract orb above a dark ocean at night, deep blue and silver palette, strong centered composition, atmospheric grain, and room for typography. Do not generate readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "genre",
+          "label": "Genre",
+          "example": "dreamy electronic"
+        },
+        {
+          "name": "visual_motif",
+          "label": "Motif",
+          "example": "glowing orb over ocean"
+        },
+        {
+          "name": "color_palette",
+          "label": "Palette",
+          "example": "deep blue and silver"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "tattoo-flash-sheet",
+      "title": "Tattoo Flash Sheet",
+      "description": "Clean printable tattoo flash motifs.",
+      "category": "Design",
+      "tags": [
+        "tattoo",
+        "design",
+        "line art",
+        "flash sheet"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/tattoo-flash-sheet--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Tattoo Flash Sheet preview",
+      "prompt": "Create a tattoo flash sheet of botanical moon and star motifs in fine-line blackwork style, with clean linework, balanced spacing, high contrast, subtle shading, and printable white background.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "motifs",
+          "label": "Motifs",
+          "example": "botanical moon and stars"
+        },
+        {
+          "name": "tattoo_style",
+          "label": "Style",
+          "example": "fine-line blackwork"
+        },
+        {
+          "name": "shading",
+          "label": "Shading",
+          "example": "subtle"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "pet-studio-portrait",
+      "title": "Pet Studio Portrait",
+      "description": "A polished portrait for a pet or animal subject.",
+      "category": "Portrait",
+      "tags": [
+        "pet",
+        "animal",
+        "portrait",
+        "studio"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/pet-studio-portrait--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Pet Studio Portrait preview",
+      "prompt": "Create a realistic studio portrait of a golden retriever with a soft sage background, professional diffused lighting, sharp fur detail, expressive eyes, and clean commercial pet photography composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "animal",
+          "label": "Animal",
+          "example": "golden retriever"
+        },
+        {
+          "name": "background_color",
+          "label": "Background",
+          "example": "soft sage"
+        },
+        {
+          "name": "mood",
+          "label": "Mood",
+          "example": "friendly"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "coffee-shop-lifestyle",
+      "title": "Coffee Shop Lifestyle",
+      "description": "A cozy editorial scene for people or products.",
+      "category": "Lifestyle",
+      "tags": [
+        "lifestyle",
+        "coffee",
+        "warm lighting",
+        "editorial"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/coffee-shop-lifestyle--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Coffee Shop Lifestyle preview",
+      "prompt": "Create a realistic lifestyle photo of a ceramic coffee cup and notebook on a cafe table, with warm window light, natural tabletop details, shallow depth of field, soft background movement, and calm editorial composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject_or_product",
+          "label": "Subject",
+          "example": "coffee cup and notebook"
+        },
+        {
+          "name": "coffee_shop_style",
+          "label": "Cafe style",
+          "example": "cozy neighborhood cafe"
+        },
+        {
+          "name": "props",
+          "label": "Props",
+          "example": "notebook"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "luxury-hotel-room",
+      "title": "Luxury Hotel Room",
+      "description": "A high-end travel interior image.",
+      "category": "Cinematic",
+      "tags": [
+        "interior",
+        "hotel",
+        "luxury",
+        "architecture"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/luxury-hotel-room--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Luxury Hotel Room preview",
+      "prompt": "Create a realistic luxury hotel room interior with warm modern design, premium bedding, elegant lighting, marble accents, a city view, clean architectural composition, and high-end travel photography styling.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "design_style",
+          "label": "Design",
+          "example": "warm modern"
+        },
+        {
+          "name": "view",
+          "label": "View",
+          "example": "city view"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "elegant warm light"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "food-magazine-flat-lay",
+      "title": "Food Magazine Flat Lay",
+      "description": "An overhead editorial food spread with styled table details.",
+      "category": "Lifestyle",
+      "tags": [
+        "food",
+        "flat lay",
+        "brunch",
+        "editorial"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/food-magazine-flat-lay--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Food Magazine Flat Lay preview",
+      "prompt": "Create an overhead editorial food photograph of a colorful brunch table with ceramic plates, fresh pastries, sliced fruit, coffee cups, linen napkins, and natural window light. Use careful composition, appetizing textures, realistic crumbs and reflections, and premium food magazine styling.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "food",
+          "label": "Food",
+          "example": "brunch"
+        },
+        {
+          "name": "tableware",
+          "label": "Tableware",
+          "example": "ceramic plates"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "natural window light"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "macro-jewelry-sparkle",
+      "title": "Macro Jewelry Sparkle",
+      "description": "A close commercial macro shot for jewelry or small luxury objects.",
+      "category": "Product",
+      "tags": [
+        "jewelry",
+        "macro",
+        "luxury",
+        "product"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/macro-jewelry-sparkle--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Macro Jewelry Sparkle preview",
+      "prompt": "Create a macro commercial product photo of a delicate gold ring with a gemstone on dark velvet, with crisp facets, realistic metal reflections, shallow depth of field, tiny dust-level detail, and luxury jewelry advertising polish.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "product",
+          "label": "Product",
+          "example": "gold ring"
+        },
+        {
+          "name": "surface",
+          "label": "Surface",
+          "example": "dark velvet"
+        },
+        {
+          "name": "gemstone",
+          "label": "Gemstone",
+          "example": "emerald"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "exploded-tech-diagram",
+      "title": "Exploded Tech Diagram",
+      "description": "A clean product visualization showing parts suspended in space.",
+      "category": "Design",
+      "tags": [
+        "technical",
+        "diagram",
+        "product",
+        "industrial design"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/exploded-tech-diagram--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Exploded Tech Diagram preview",
+      "prompt": "Create a clean exploded-view product visualization of a compact wireless earbud, with individual components separated in precise layers, subtle annotation lines without readable text, white technical background, soft shadows, and polished industrial design rendering.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "product",
+          "label": "Product",
+          "example": "wireless earbud"
+        },
+        {
+          "name": "background",
+          "label": "Background",
+          "example": "white technical"
+        },
+        {
+          "name": "render_style",
+          "label": "Render style",
+          "example": "polished industrial"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "isometric-app-dashboard",
+      "title": "Isometric App Dashboard",
+      "description": "A polished 3D product mockup for app or SaaS screens.",
+      "category": "Design",
+      "tags": [
+        "app mockup",
+        "isometric",
+        "saas",
+        "ui"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/isometric-app-dashboard--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Isometric App Dashboard preview",
+      "prompt": "Create a polished isometric 3D mockup of a modern analytics app dashboard floating above a clean desk surface, with layered UI panels, charts represented as abstract shapes, soft shadows, glassy highlights, and a refined SaaS product visual style. Do not generate readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "analytics dashboard"
+        },
+        {
+          "name": "surface",
+          "label": "Surface",
+          "example": "clean desk"
+        },
+        {
+          "name": "ui_style",
+          "label": "UI style",
+          "example": "modern SaaS"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "storybook-watercolor-scene",
+      "title": "Storybook Watercolor Scene",
+      "description": "A gentle illustrated scene for childrens books or cozy stories.",
+      "category": "Design",
+      "tags": [
+        "watercolor",
+        "storybook",
+        "illustration",
+        "cozy"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/storybook-watercolor-scene--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Storybook Watercolor Scene preview",
+      "prompt": "Create a soft watercolor storybook illustration of a small cottage beside a winding path, with wildflowers, warm window light, gentle skies, hand-painted paper texture, charming details, and a calm picture-book composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "scene",
+          "label": "Scene",
+          "example": "cottage path"
+        },
+        {
+          "name": "mood",
+          "label": "Mood",
+          "example": "gentle and cozy"
+        },
+        {
+          "name": "details",
+          "label": "Details",
+          "example": "wildflowers"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "pixel-art-game-scene",
+      "title": "Pixel Art Game Scene",
+      "description": "A retro game environment with tileable visual language.",
+      "category": "Design",
+      "tags": [
+        "pixel art",
+        "game",
+        "fantasy",
+        "environment"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/pixel-art-game-scene--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Pixel Art Game Scene preview",
+      "prompt": "Create a detailed pixel art game scene of a cozy fantasy village at dusk, with small houses, lanterns, cobblestone path, readable silhouettes, limited color palette, crisp pixel edges, and a side-scrolling game background composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "fantasy village"
+        },
+        {
+          "name": "time_of_day",
+          "label": "Time",
+          "example": "dusk"
+        },
+        {
+          "name": "game_style",
+          "label": "Game style",
+          "example": "side-scrolling"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "travel-postcard-landmark",
+      "title": "Travel Postcard Landmark",
+      "description": "A vintage-style travel poster or postcard composition.",
+      "category": "Design",
+      "tags": [
+        "travel",
+        "postcard",
+        "vintage",
+        "poster"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/travel-postcard-landmark--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Travel Postcard Landmark preview",
+      "prompt": "Create a vintage travel postcard illustration of a coastal cliff town at sunset, with simplified architectural shapes, warm retro colors, grainy print texture, bold scenic composition, and empty space reserved for title lettering. Do not generate readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "location",
+          "label": "Location",
+          "example": "coastal cliff town"
+        },
+        {
+          "name": "palette",
+          "label": "Palette",
+          "example": "warm retro colors"
+        },
+        {
+          "name": "texture",
+          "label": "Texture",
+          "example": "grainy print"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "fashion-runway-motion",
+      "title": "Fashion Runway Motion",
+      "description": "A dramatic full-body runway editorial with movement and lights.",
+      "category": "Lifestyle",
+      "tags": [
+        "fashion",
+        "runway",
+        "editorial",
+        "motion"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/fashion-runway-motion--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Fashion Runway Motion preview",
+      "prompt": "Create a realistic fashion runway photograph of an adult model walking under dramatic spotlights, wearing an avant-garde outfit with flowing fabric, motion in the garment, glossy runway reflections, audience silhouettes, and high-end editorial fashion energy.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "avant-garde look"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "dramatic spotlights"
+        },
+        {
+          "name": "venue",
+          "label": "Venue",
+          "example": "glossy runway"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "corporate-headshot-studio",
+      "title": "Corporate Headshot Studio",
+      "description": "A clean professional portrait for profiles and teams.",
+      "category": "Portrait",
+      "tags": [
+        "headshot",
+        "professional",
+        "portrait",
+        "studio"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/corporate-headshot-studio--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Corporate Headshot Studio preview",
+      "prompt": "If an image is uploaded, use it as the optional reference person. Create a polished professional headshot of an adult person in business-casual clothing, with a clean neutral studio background, soft flattering light, natural expression, realistic skin texture, crisp eyes, and modern profile-photo composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "business casual"
+        },
+        {
+          "name": "background",
+          "label": "Background",
+          "example": "neutral studio"
+        },
+        {
+          "name": "expression",
+          "label": "Expression",
+          "example": "natural smile"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "sports-action-freeze",
+      "title": "Sports Action Freeze",
+      "description": "A high-speed athletic moment with dramatic energy.",
+      "category": "Lifestyle",
+      "tags": [
+        "sports",
+        "action",
+        "athlete",
+        "cinematic"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/sports-action-freeze--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Sports Action Freeze preview",
+      "prompt": "Create a high-speed sports action photograph of an adult athlete leaping through rain on a stadium field, with frozen water droplets, dramatic backlight, realistic motion tension, detailed athletic clothing, and cinematic sports-advertising intensity.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "sport",
+          "label": "Sport",
+          "example": "track jump"
+        },
+        {
+          "name": "weather",
+          "label": "Weather",
+          "example": "rain"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "dramatic backlight"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "wedding-editorial-moment",
+      "title": "Wedding Editorial Moment",
+      "description": "A romantic editorial event photograph with natural emotion.",
+      "category": "Lifestyle",
+      "tags": [
+        "wedding",
+        "event",
+        "romantic",
+        "editorial"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/wedding-editorial-moment--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Wedding Editorial Moment preview",
+      "prompt": "Create an elegant wedding editorial photograph of an adult couple holding hands in a sunlit garden, with soft floral background, natural emotion, refined formalwear, gentle film-like color, shallow depth of field, and premium event photography composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "sunlit garden"
+        },
+        {
+          "name": "mood",
+          "label": "Mood",
+          "example": "romantic"
+        },
+        {
+          "name": "styling",
+          "label": "Styling",
+          "example": "refined formalwear"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "real-estate-exterior-dusk",
+      "title": "Real Estate Exterior Dusk",
+      "description": "A polished architectural exterior for property marketing.",
+      "category": "Cinematic",
+      "tags": [
+        "real estate",
+        "architecture",
+        "exterior",
+        "dusk"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/real-estate-exterior-dusk--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Real Estate Exterior Dusk preview",
+      "prompt": "Create a realistic real estate exterior photograph of a modern luxury home at blue hour, with warm interior lights, clean landscaping, wet driveway reflections, balanced architectural lines, and high-end property marketing polish.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "modern luxury home"
+        },
+        {
+          "name": "time_of_day",
+          "label": "Time",
+          "example": "blue hour"
+        },
+        {
+          "name": "landscaping",
+          "label": "Landscaping",
+          "example": "clean minimal"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "tiny-world-diorama",
+      "title": "Tiny World Diorama",
+      "description": "A miniature scene with toy-scale materials and macro depth.",
+      "category": "Cinematic",
+      "tags": [
+        "miniature",
+        "diorama",
+        "macro",
+        "whimsical"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/tiny-world-diorama--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Tiny World Diorama preview",
+      "prompt": "Create a whimsical miniature diorama of a tiny train station built on a desk, with toy-scale people, paper trees, warm desk lamp light, macro depth of field, visible craft materials, and charming handmade realism.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "tiny train station"
+        },
+        {
+          "name": "materials",
+          "label": "Materials",
+          "example": "paper trees"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "desk lamp"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "surreal-double-exposure",
+      "title": "Surreal Double Exposure",
+      "description": "A layered portrait blending a subject with a symbolic landscape.",
+      "category": "Portrait",
+      "tags": [
+        "portrait",
+        "surreal",
+        "double exposure",
+        "landscape"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/surreal-double-exposure--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Surreal Double Exposure preview",
+      "prompt": "Create a surreal double-exposure portrait of an adult silhouette blended with a mountain landscape and starry sky, with clean facial outline, layered transparent textures, cinematic contrast, subtle grain, and poetic poster-like composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "adult silhouette"
+        },
+        {
+          "name": "inner_scene",
+          "label": "Inner scene",
+          "example": "mountain landscape"
+        },
+        {
+          "name": "mood",
+          "label": "Mood",
+          "example": "poetic"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "neon-nightlife-portrait",
+      "title": "Neon Nightlife Portrait",
+      "description": "A cinematic club or city portrait with saturated colored light.",
+      "category": "Portrait",
+      "tags": [
+        "portrait",
+        "neon",
+        "nightlife",
+        "urban"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/neon-nightlife-portrait--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Neon Nightlife Portrait preview",
+      "prompt": "Create a cinematic neon nightlife portrait of a stylish adult person on a rainy city street, with magenta and cyan sign reflections, shallow depth of field, realistic wet skin and fabric highlights, confident expression, and moody urban editorial atmosphere.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "location",
+          "label": "Location",
+          "example": "rainy city street"
+        },
+        {
+          "name": "colors",
+          "label": "Colors",
+          "example": "magenta and cyan"
+        },
+        {
+          "name": "mood",
+          "label": "Mood",
+          "example": "moody editorial"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "fantasy-map-parchment",
+      "title": "Fantasy Map Parchment",
+      "description": "An illustrated world map with aged paper and symbolic landmarks.",
+      "category": "Design",
+      "tags": [
+        "map",
+        "fantasy",
+        "parchment",
+        "illustration"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/fantasy-map-parchment--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Fantasy Map Parchment preview",
+      "prompt": "Create an illustrated fantasy map on aged parchment, with coastlines, mountain ranges, forests, rivers, small symbolic landmarks, decorative compass rose, hand-inked linework, warm paper texture, and no readable labels.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "location",
+          "label": "Location",
+          "example": "fantasy kingdom"
+        },
+        {
+          "name": "landmarks",
+          "label": "Landmarks",
+          "example": "mountains and forests"
+        },
+        {
+          "name": "texture",
+          "label": "Texture",
+          "example": "aged parchment"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "science-museum-display",
+      "title": "Science Museum Display",
+      "description": "A realistic exhibit scene with educational objects and lighting.",
+      "category": "Cinematic",
+      "tags": [
+        "museum",
+        "science",
+        "exhibit",
+        "cinematic"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/science-museum-display--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Science Museum Display preview",
+      "prompt": "Create a realistic science museum exhibit photograph featuring a suspended planetary model above a dark display table, with dramatic spotlights, glass reflections, visitors as soft silhouettes, clean educational design, and cinematic documentary composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "planetary model"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "dramatic spotlights"
+        },
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "dark gallery"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "ceramic-brand-still-life",
+      "title": "Ceramic Brand Still Life",
+      "description": "A calm artisan product image for handmade objects.",
+      "category": "Product",
+      "tags": [
+        "ceramic",
+        "homeware",
+        "still life",
+        "product"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/ceramic-brand-still-life--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Ceramic Brand Still Life preview",
+      "prompt": "Create a calm artisan product still life of handmade ceramic mugs on a linen cloth, with soft morning light, natural clay texture, neutral props, gentle shadows, and boutique homeware brand photography styling.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "product",
+          "label": "Product",
+          "example": "ceramic mugs"
+        },
+        {
+          "name": "surface",
+          "label": "Surface",
+          "example": "linen cloth"
+        },
+        {
+          "name": "brand_mood",
+          "label": "Mood",
+          "example": "calm artisan"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "board-game-box-art",
+      "title": "Board Game Box Art",
+      "description": "A polished tabletop game cover with characters and environment.",
+      "category": "Design",
+      "tags": [
+        "board game",
+        "cover art",
+        "adventure",
+        "illustration"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/board-game-box-art--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Board Game Box Art preview",
+      "prompt": "Create polished board game box cover art for a cooperative adventure game, featuring a group of original explorers at the entrance to a glowing ancient ruin, dynamic composition, colorful painterly detail, clear central focal point, and empty title area. Do not generate readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "game_theme",
+          "label": "Theme",
+          "example": "cooperative adventure"
+        },
+        {
+          "name": "characters",
+          "label": "Characters",
+          "example": "explorers"
+        },
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "ancient ruin"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "botanical-science-plate",
+      "title": "Botanical Science Plate",
+      "description": "A precise natural-history illustration with specimen details.",
+      "category": "Design",
+      "tags": [
+        "botanical",
+        "science",
+        "illustration",
+        "archive"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/botanical-science-plate--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Botanical Science Plate preview",
+      "prompt": "Create a natural-history botanical illustration plate of a flowering medicinal plant, with root, stem, leaf, blossom, seed pod, and magnified detail studies arranged on warm paper. Use precise ink-and-watercolor rendering, clean spacing, archival museum quality, and no readable labels.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "medicinal flower"
+        },
+        {
+          "name": "paper",
+          "label": "Paper",
+          "example": "warm archival"
+        },
+        {
+          "name": "details",
+          "label": "Details",
+          "example": "magnified seed pod"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "minimal-line-coloring-page",
+      "title": "Minimal Coloring Page",
+      "description": "A clean black-and-white printable coloring sheet.",
+      "category": "Design",
+      "tags": [
+        "coloring page",
+        "line art",
+        "printable",
+        "kids"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/minimal-line-coloring-page--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Minimal Coloring Page preview",
+      "prompt": "Create a clean black-and-white coloring book page of an enchanted garden gate, with bold continuous outlines, charming flowers, butterflies, simple decorative details, white background, no shading, and no text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "scene",
+          "label": "Scene",
+          "example": "enchanted garden gate"
+        },
+        {
+          "name": "line_style",
+          "label": "Line style",
+          "example": "bold outlines"
+        },
+        {
+          "name": "details",
+          "label": "Details",
+          "example": "flowers and butterflies"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "comic-strip-sequence",
+      "title": "Comic Strip Sequence",
+      "description": "A clean multi-panel visual story without generated dialogue.",
+      "category": "Character",
+      "tags": [
+        "comic",
+        "sequence",
+        "storytelling",
+        "panels"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/comic-strip-sequence--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Comic Strip Sequence preview",
+      "prompt": "Create a clean four-panel comic strip showing an original inventor discovering a tiny glowing robot in a workshop. Use expressive body language, clear panel borders, cinematic lighting, consistent character design, sequential visual storytelling, and empty speech bubbles with no readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "main_character",
+          "label": "Character",
+          "example": "inventor"
+        },
+        {
+          "name": "discovery",
+          "label": "Discovery",
+          "example": "tiny glowing robot"
+        },
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "workshop"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "tarot-card-archetype",
+      "title": "Tarot Card Archetype",
+      "description": "A symbolic illustrated card with ornate framing.",
+      "category": "Design",
+      "tags": [
+        "tarot",
+        "symbolic",
+        "card",
+        "illustration"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/tarot-card-archetype--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Tarot Card Archetype preview",
+      "prompt": "Create a mystical tarot-style card illustration of an original moonlit gardener archetype, with ornate border, symbolic plants, crescent moon, rich jewel tones, symmetrical composition, vintage print texture, and an empty title banner with no readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "archetype",
+          "label": "Archetype",
+          "example": "moonlit gardener"
+        },
+        {
+          "name": "symbols",
+          "label": "Symbols",
+          "example": "plants and crescent moon"
+        },
+        {
+          "name": "palette",
+          "label": "Palette",
+          "example": "jewel tones"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "claymation-character-still",
+      "title": "Claymation Character Still",
+      "description": "A tactile stop-motion character scene.",
+      "category": "Character",
+      "tags": [
+        "claymation",
+        "character",
+        "stop motion",
+        "miniature"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/claymation-character-still--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Claymation Character Still preview",
+      "prompt": "Create a stop-motion claymation still of an original tiny chef character holding an oversized wooden spoon in a miniature kitchen. Use tactile clay fingerprints, handmade props, warm practical lighting, shallow depth of field, and charming animated-film staging.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character",
+          "label": "Character",
+          "example": "tiny chef"
+        },
+        {
+          "name": "prop",
+          "label": "Prop",
+          "example": "wooden spoon"
+        },
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "miniature kitchen"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "embroidered-patch-design",
+      "title": "Embroidered Patch Design",
+      "description": "A tactile stitched badge or merchandise concept.",
+      "category": "Design",
+      "tags": [
+        "embroidery",
+        "patch",
+        "merch",
+        "textile"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/embroidered-patch-design--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Embroidered Patch Design preview",
+      "prompt": "Create a realistic embroidered patch design of a mountain sunrise emblem on dark fabric, with raised thread texture, merrowed border, simplified shapes, limited color palette, subtle fabric shadows, and no readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "emblem",
+          "label": "Emblem",
+          "example": "mountain sunrise"
+        },
+        {
+          "name": "fabric",
+          "label": "Fabric",
+          "example": "dark canvas"
+        },
+        {
+          "name": "palette",
+          "label": "Palette",
+          "example": "limited warm colors"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "museum-artifact-photogrammetry",
+      "title": "Museum Artifact Scan",
+      "description": "A neutral catalog image of an ancient object or artifact.",
+      "category": "Product",
+      "tags": [
+        "museum",
+        "artifact",
+        "catalog",
+        "ceramic"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/museum-artifact-photogrammetry--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Museum Artifact Scan preview",
+      "prompt": "Create a museum catalog photograph of an ancient ceramic mask on a neutral gray plinth, with soft conservation-lab lighting, visible cracks and patina, accurate material texture, scale-card-like empty space without text, and archival documentation clarity.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "ceramic mask"
+        },
+        {
+          "name": "surface",
+          "label": "Surface",
+          "example": "gray plinth"
+        },
+        {
+          "name": "condition",
+          "label": "Condition",
+          "example": "cracked patina"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "architectural-section-cutaway",
+      "title": "Architectural Section Cutaway",
+      "description": "A precise architecture visual showing interior structure.",
+      "category": "Design",
+      "tags": [
+        "architecture",
+        "cutaway",
+        "section",
+        "cabin"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/architectural-section-cutaway--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Architectural Section Cutaway preview",
+      "prompt": "Create a detailed architectural section cutaway of a compact hillside cabin, showing rooms, stairs, roof structure, furniture, terrain, and natural light paths. Use clean architectural rendering, warm material accents, crisp linework, and no readable labels.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "hillside cabin"
+        },
+        {
+          "name": "features",
+          "label": "Features",
+          "example": "stairs and roof structure"
+        },
+        {
+          "name": "terrain",
+          "label": "Terrain",
+          "example": "sloped hillside"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "blacklight-concert-stage",
+      "title": "Blacklight Concert Stage",
+      "description": "A saturated live-event scene with stage design and haze.",
+      "category": "Cinematic",
+      "tags": [
+        "concert",
+        "stage",
+        "blacklight",
+        "event"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/blacklight-concert-stage--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Blacklight Concert Stage preview",
+      "prompt": "Create a dramatic live concert stage photograph with a silhouetted performer at center, ultraviolet blacklight, laser beams, haze, giant LED shapes, crowd silhouettes, high-energy atmosphere, and crisp event-photography realism.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "performer",
+          "label": "Performer",
+          "example": "silhouetted musician"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "ultraviolet lasers"
+        },
+        {
+          "name": "atmosphere",
+          "label": "Atmosphere",
+          "example": "haze and crowd"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "underwater-fashion-dream",
+      "title": "Underwater Fashion Dream",
+      "description": "A surreal editorial portrait staged beneath the surface.",
+      "category": "Portrait",
+      "tags": [
+        "underwater",
+        "fashion",
+        "surreal",
+        "portrait"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/underwater-fashion-dream--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Underwater Fashion Dream preview",
+      "prompt": "Create a surreal underwater fashion portrait of an adult model in flowing fabric, with suspended bubbles, rippling sunlight, graceful pose, dreamlike movement, realistic water distortion, and high-fashion editorial composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "flowing fabric"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "rippling sunlight"
+        },
+        {
+          "name": "mood",
+          "label": "Mood",
+          "example": "dreamlike"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "drone-top-down-landscape",
+      "title": "Drone Top-Down Landscape",
+      "description": "A graphic aerial landscape with natural geometry.",
+      "category": "Cinematic",
+      "tags": [
+        "drone",
+        "aerial",
+        "landscape",
+        "abstract"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/drone-top-down-landscape--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Drone Top-Down Landscape preview",
+      "prompt": "Create a top-down drone photograph of winding turquoise river channels through red desert sand, with graphic natural geometry, crisp aerial detail, high contrast textures, and a clean abstract landscape composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "landscape",
+          "label": "Landscape",
+          "example": "desert river channels"
+        },
+        {
+          "name": "colors",
+          "label": "Colors",
+          "example": "turquoise and red"
+        },
+        {
+          "name": "composition",
+          "label": "Composition",
+          "example": "top-down abstract"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "weather-satellite-map",
+      "title": "Weather Satellite Map",
+      "description": "A scientific Earth-view image with clouds and data aesthetics.",
+      "category": "Design",
+      "tags": [
+        "satellite",
+        "weather",
+        "map",
+        "science"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/weather-satellite-map--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Weather Satellite Map preview",
+      "prompt": "Create a stylized weather satellite image of a swirling storm system over ocean and coastline, with realistic cloud bands, subtle infrared color accents, clean data-visualization aesthetics, dark map background, and no readable text or labels.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "swirling storm system"
+        },
+        {
+          "name": "region",
+          "label": "Region",
+          "example": "ocean and coastline"
+        },
+        {
+          "name": "data_style",
+          "label": "Data style",
+          "example": "infrared accents"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "noir-detective-scene",
+      "title": "Noir Detective Scene",
+      "description": "A moody black-and-white cinematic story frame.",
+      "category": "Cinematic",
+      "tags": [
+        "noir",
+        "cinematic",
+        "detective",
+        "black and white"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/noir-detective-scene--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Noir Detective Scene preview",
+      "prompt": "Create a black-and-white noir detective movie still of an original investigator standing in a rain-slick alley, with venetian blind shadows, cigarette-smoke-like mist, dramatic contrast, wet pavement reflections, and classic 1940s cinema atmosphere.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character",
+          "label": "Character",
+          "example": "investigator"
+        },
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "rain-slick alley"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "venetian shadows"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "luxury-watch-wristshot",
+      "title": "Luxury Watch Wristshot",
+      "description": "A lifestyle product image focused on watch detail and context.",
+      "category": "Product",
+      "tags": [
+        "watch",
+        "luxury",
+        "wristshot",
+        "product"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/luxury-watch-wristshot--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Luxury Watch Wristshot preview",
+      "prompt": "Create a realistic luxury product wristshot inside a vintage car, featuring a polished metal watch with detailed dial, leather strap, hand on steering wheel, warm dashboard light, shallow depth of field, and premium lifestyle product photography.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "product",
+          "label": "Product",
+          "example": "polished metal watch"
+        },
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "vintage car"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "warm dashboard light"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "low-poly-icon-set",
+      "title": "Low-Poly Icon Set",
+      "description": "A consistent set of simple 3D icons for product UI or decks.",
+      "category": "Design",
+      "tags": [
+        "icons",
+        "low poly",
+        "3d",
+        "productivity"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/low-poly-icon-set--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Low-Poly Icon Set preview",
+      "prompt": "Create a consistent low-poly 3D icon set of productivity objects, including calendar, notebook, clock, pencil, inbox tray, and checklist. Use simple geometric forms, cohesive lighting, soft shadows, pastel colors, grid layout, and no readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "theme",
+          "label": "Theme",
+          "example": "productivity"
+        },
+        {
+          "name": "objects",
+          "label": "Objects",
+          "example": "calendar and notebook"
+        },
+        {
+          "name": "palette",
+          "label": "Palette",
+          "example": "pastel colors"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "street-documentary-market",
+      "title": "Street Documentary Market",
+      "description": "A candid documentary scene with environmental detail.",
+      "category": "Lifestyle",
+      "tags": [
+        "street",
+        "market",
+        "documentary",
+        "travel"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/street-documentary-market--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Street Documentary Market preview",
+      "prompt": "Create a candid street documentary photograph of a busy open-air night market, with food stalls, steam, colorful awnings, people moving naturally, realistic ambient light, layered depth, and human-scale travel photography energy.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "location",
+          "label": "Location",
+          "example": "night market"
+        },
+        {
+          "name": "activity",
+          "label": "Activity",
+          "example": "food stalls"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "ambient stall light"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "haunted-library-interior",
+      "title": "Haunted Library Interior",
+      "description": "A gothic interior scene with atmosphere and story detail.",
+      "category": "Cinematic",
+      "tags": [
+        "gothic",
+        "library",
+        "interior",
+        "cinematic"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/haunted-library-interior--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Haunted Library Interior preview",
+      "prompt": "Create a cinematic gothic library interior with towering shelves, floating dust, moonlight through tall windows, scattered open books, candlelight, deep shadows, ornate architecture, and a mysterious but non-horror adventure atmosphere.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "room",
+          "label": "Room",
+          "example": "gothic library"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "moonlight and candles"
+        },
+        {
+          "name": "mood",
+          "label": "Mood",
+          "example": "mysterious adventure"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "streetwear-lookbook-grid",
+      "title": "Streetwear Lookbook Grid",
+      "description": "A multi-outfit fashion layout for collection browsing.",
+      "category": "Lifestyle",
+      "tags": [
+        "streetwear",
+        "lookbook",
+        "fashion",
+        "grid"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/streetwear-lookbook-grid--generated-2026-06-01--schema-v1.0.0.webp",
+      "imageAlt": "Streetwear Lookbook Grid preview",
+      "prompt": "Create a clean streetwear lookbook grid showing four coordinated outfits on adult models against simple urban backdrops. Use consistent lighting, full-body poses, modern editorial styling, clear outfit variation, and a catalogue layout with no readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "streetwear outfits"
+        },
+        {
+          "name": "backdrop",
+          "label": "Backdrop",
+          "example": "urban walls"
+        },
+        {
+          "name": "layout",
+          "label": "Layout",
+          "example": "four-look grid"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-01",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "solarpunk-rooftop-garden",
+      "title": "Solarpunk Rooftop Garden",
+      "description": "An optimistic near-future city scene filled with plants and glass.",
+      "category": "Cinematic",
+      "tags": [
+        "solarpunk",
+        "city",
+        "garden",
+        "future"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/solarpunk-rooftop-garden--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Solarpunk Rooftop Garden preview",
+      "prompt": "Create a cinematic solarpunk rooftop garden above a dense city, with glass greenhouses, hanging vines, warm sunrise, people tending plants at human scale, optimistic near-future architecture, rich environmental detail, and a wide hopeful composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "city_type",
+          "label": "City type",
+          "example": "dense modern city"
+        },
+        {
+          "name": "greenery",
+          "label": "Greenery",
+          "example": "hanging vines"
+        },
+        {
+          "name": "time_of_day",
+          "label": "Time of day",
+          "example": "warm sunrise"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "artisan-workshop-process",
+      "title": "Artisan Workshop Process",
+      "description": "A documentary craft scene focused on hands, tools, and material texture.",
+      "category": "Lifestyle",
+      "tags": [
+        "artisan",
+        "workshop",
+        "documentary",
+        "craft"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/artisan-workshop-process--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Artisan Workshop Process preview",
+      "prompt": "Create a realistic documentary photograph of an artisan working in a tactile studio, with hands shaping raw material, shelves of tools and unfinished pieces, dusty sunlight, warm craft atmosphere, natural imperfections, and human-scale editorial realism.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "craft",
+          "label": "Craft",
+          "example": "ceramics"
+        },
+        {
+          "name": "material",
+          "label": "Material",
+          "example": "wet clay"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "dusty sunlight"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "retro-futurist-control-room",
+      "title": "Retro-Futurist Control Room",
+      "description": "A 1970s-style sci-fi control room with analog screens and atmosphere.",
+      "category": "Cinematic",
+      "tags": [
+        "retro futurism",
+        "sci fi",
+        "control room",
+        "cinematic"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/retro-futurist-control-room--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Retro-Futurist Control Room preview",
+      "prompt": "Create a cinematic retro-futurist control room with analog panels, glowing radar screens, curved 1970s space-age furniture, orange and teal practical lights, original sci-fi worldbuilding, polished production design, and a wide story-frame composition.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "era_style",
+          "label": "Era style",
+          "example": "1970s space-age"
+        },
+        {
+          "name": "screens",
+          "label": "Screens",
+          "example": "glowing radar panels"
+        },
+        {
+          "name": "color_mood",
+          "label": "Color mood",
+          "example": "orange and teal"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "paper-cut-shadowbox-scene",
+      "title": "Paper-Cut Shadowbox Scene",
+      "description": "A layered paper illustration with visible depth and handcrafted edges.",
+      "category": "Design",
+      "tags": [
+        "paper cut",
+        "shadowbox",
+        "storybook",
+        "craft"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/paper-cut-shadowbox-scene--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Paper-Cut Shadowbox Scene preview",
+      "prompt": "Create a layered paper-cut shadowbox illustration of a charming scene, with visible paper edges, stacked foreground and background depth, soft backlight, handcrafted texture, clean cut shapes, and whimsical storybook atmosphere.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "scene",
+          "label": "Scene",
+          "example": "mountain village"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "moonlit backlight"
+        },
+        {
+          "name": "depth",
+          "label": "Depth",
+          "example": "stacked paper layers"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "luxury-candle-still-life",
+      "title": "Luxury Candle Still Life",
+      "description": "A warm premium still life for home fragrance or wellness products.",
+      "category": "Product",
+      "tags": [
+        "candle",
+        "wellness",
+        "still life",
+        "product"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/luxury-candle-still-life--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Luxury Candle Still Life preview",
+      "prompt": "Create a premium product still life of a minimalist scented candle in frosted glass, with linen fabric, dried flowers, warm window light, soft shadows, elegant wellness brand photography, realistic wax and glass texture, and no readable label text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "product",
+          "label": "Product",
+          "example": "scented candle"
+        },
+        {
+          "name": "props",
+          "label": "Props",
+          "example": "linen and dried flowers"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "warm window light"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "vinyl-toy-mascot",
+      "title": "Vinyl Toy Mascot",
+      "description": "A cute collectible mascot rendered like a designer toy.",
+      "category": "Character",
+      "tags": [
+        "mascot",
+        "vinyl toy",
+        "cute",
+        "character"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/vinyl-toy-mascot--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Vinyl Toy Mascot preview",
+      "prompt": "Create a cute original vinyl toy mascot character on a clean studio surface, with oversized head, glossy material, playful pose, simple appealing silhouette, collectible designer-toy aesthetic, soft shadows, and polished product render lighting.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "animal_or_shape",
+          "label": "Mascot base",
+          "example": "leaf-eared creature"
+        },
+        {
+          "name": "expression",
+          "label": "Expression",
+          "example": "playful wink"
+        },
+        {
+          "name": "material",
+          "label": "Material",
+          "example": "glossy vinyl"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "architectural-concept-model",
+      "title": "Architectural Concept Model",
+      "description": "A physical scale model photographed like an architecture presentation.",
+      "category": "Design",
+      "tags": [
+        "architecture",
+        "scale model",
+        "presentation",
+        "concept"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/architectural-concept-model--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Architectural Concept Model preview",
+      "prompt": "Create a physical architectural concept model made of white card and basswood, with tiny trees, clean desk surface, dramatic side light, shallow depth of field, precise model craftsmanship, and premium architecture presentation photography.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "building_type",
+          "label": "Building type",
+          "example": "museum pavilion"
+        },
+        {
+          "name": "materials",
+          "label": "Materials",
+          "example": "white card and basswood"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "dramatic side light"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "recipe-card-flat-lay",
+      "title": "Recipe Card Flat Lay",
+      "description": "An overhead food composition with ingredients arranged around a blank card.",
+      "category": "Lifestyle",
+      "tags": [
+        "food",
+        "recipe",
+        "flat lay",
+        "editorial"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/recipe-card-flat-lay--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Recipe Card Flat Lay preview",
+      "prompt": "Create a bright editorial flat lay of recipe ingredients arranged around a blank recipe card, with fresh herbs, citrus, ceramic bowls, clean overhead composition, natural kitchen light, food magazine styling, and no readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "dish_theme",
+          "label": "Dish theme",
+          "example": "lemon herb pasta"
+        },
+        {
+          "name": "ingredients",
+          "label": "Ingredients",
+          "example": "citrus and herbs"
+        },
+        {
+          "name": "surface",
+          "label": "Surface",
+          "example": "white marble"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "music-festival-poster-scene",
+      "title": "Music Festival Poster Scene",
+      "description": "A bold screen-print style festival scene with space for custom text.",
+      "category": "Design",
+      "tags": [
+        "festival",
+        "poster",
+        "screen print",
+        "music"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/music-festival-poster-scene--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Music Festival Poster Scene preview",
+      "prompt": "Create a bold illustrated music festival poster scene with a stage, abstract sun, crowd silhouettes, speakers, vivid screen-print colors, strong graphic composition, and clean open space for custom title text. Do not include readable text by default.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "venue",
+          "label": "Venue",
+          "example": "desert stage"
+        },
+        {
+          "name": "palette",
+          "label": "Palette",
+          "example": "sunset orange"
+        },
+        {
+          "name": "layout",
+          "label": "Layout",
+          "example": "open top title area"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "sports-trading-card-portrait",
+      "title": "Sports Trading Card Portrait",
+      "description": "A glossy athlete portrait with action-card energy.",
+      "category": "Portrait",
+      "tags": [
+        "sports",
+        "trading card",
+        "athlete",
+        "portrait"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/sports-trading-card-portrait--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Sports Trading Card Portrait preview",
+      "prompt": "Create a dynamic sports trading card style portrait of an original adult athlete, with dramatic stadium lights, action pose, glossy card-frame elements, energetic color streaks, crisp uniform texture, and no logos or readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "sport",
+          "label": "Sport",
+          "example": "football"
+        },
+        {
+          "name": "pose",
+          "label": "Pose",
+          "example": "sprinting forward"
+        },
+        {
+          "name": "effects",
+          "label": "Effects",
+          "example": "electric color streaks"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "futuristic-lab-product-demo",
+      "title": "Futuristic Lab Product Demo",
+      "description": "A clean technology launch scene set inside a modern lab.",
+      "category": "Product",
+      "tags": [
+        "technology",
+        "lab",
+        "prototype",
+        "product"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/futuristic-lab-product-demo--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Futuristic Lab Product Demo preview",
+      "prompt": "Create a futuristic lab product demo scene with a transparent device prototype on a glowing bench, glass panels, clean researchers in the background, cool blue-white light, reflective surfaces, premium technology launch photography, and no readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "product",
+          "label": "Product",
+          "example": "transparent device"
+        },
+        {
+          "name": "environment",
+          "label": "Environment",
+          "example": "clean lab"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "blue-white glow"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "cozy-bookshop-reading-nook",
+      "title": "Cozy Bookshop Reading Nook",
+      "description": "A warm lifestyle interior for reading, retail, or cozy brand imagery.",
+      "category": "Lifestyle",
+      "tags": [
+        "bookshop",
+        "reading",
+        "interior",
+        "cozy"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/cozy-bookshop-reading-nook--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Cozy Bookshop Reading Nook preview",
+      "prompt": "Create a cozy independent bookshop reading nook with a comfortable armchair, stacked books, warm lamps, rain on the window, wood shelves, inviting lifestyle interior photography, and no readable book titles.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "location",
+          "label": "Location",
+          "example": "independent bookshop"
+        },
+        {
+          "name": "weather",
+          "label": "Weather",
+          "example": "rain on the window"
+        },
+        {
+          "name": "props",
+          "label": "Props",
+          "example": "stacked books and lamps"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "botanical-perfume-ad",
+      "title": "Botanical Perfume Ad",
+      "description": "A fragrance campaign image with oversized floral and botanical detail.",
+      "category": "Product",
+      "tags": [
+        "perfume",
+        "botanical",
+        "fragrance",
+        "product"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/botanical-perfume-ad--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Botanical Perfume Ad preview",
+      "prompt": "Create a luxury perfume advertising image with a sculptural glass bottle surrounded by oversized fresh botanicals, dew, reflective surface, soft green daylight, premium fragrance campaign styling, and no readable label text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "product",
+          "label": "Product",
+          "example": "glass perfume bottle"
+        },
+        {
+          "name": "botanicals",
+          "label": "Botanicals",
+          "example": "white lilies"
+        },
+        {
+          "name": "mood",
+          "label": "Mood",
+          "example": "fresh luxury"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "stained-glass-character-portrait",
+      "title": "Stained Glass Character Portrait",
+      "description": "A luminous fantasy portrait rendered as stained glass.",
+      "category": "Character",
+      "tags": [
+        "stained glass",
+        "fantasy",
+        "character",
+        "portrait"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/stained-glass-character-portrait--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Stained Glass Character Portrait preview",
+      "prompt": "Create an original fantasy character portrait rendered as luminous stained glass, with jewel-toned panes, lead outlines, halo-like backlight, cathedral-window composition, ornate costume shapes, and clean readable silhouette.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character",
+          "label": "Character",
+          "example": "moonlit guardian"
+        },
+        {
+          "name": "palette",
+          "label": "Palette",
+          "example": "jewel tones"
+        },
+        {
+          "name": "symbol",
+          "label": "Symbol",
+          "example": "halo backlight"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "urban-planning-map-render",
+      "title": "Urban Planning Map Render",
+      "description": "A clean isometric neighborhood map for planning and presentation visuals.",
+      "category": "Design",
+      "tags": [
+        "urban planning",
+        "isometric",
+        "map",
+        "architecture"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/urban-planning-map-render--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Urban Planning Map Render preview",
+      "prompt": "Create a clean isometric urban planning map render of a walkable neighborhood, with parks, bike lanes, mixed-use buildings, tiny people, soft colors, presentation-board clarity, and no labels or readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "district",
+          "label": "District",
+          "example": "walkable neighborhood"
+        },
+        {
+          "name": "features",
+          "label": "Features",
+          "example": "parks and bike lanes"
+        },
+        {
+          "name": "style",
+          "label": "Style",
+          "example": "soft isometric render"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "macro-insect-nature-study",
+      "title": "Macro Nature Study",
+      "description": "A detailed macro wildlife image with scientific beauty.",
+      "category": "Cinematic",
+      "tags": [
+        "macro",
+        "nature",
+        "wildlife",
+        "study"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/macro-insect-nature-study--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Macro Nature Study preview",
+      "prompt": "Create a macro nature-study photograph of a small natural subject on moss or foliage, with dew droplets, detailed texture, shallow depth of field, natural morning light, quiet scientific beauty, and no labels or readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "jewel beetle"
+        },
+        {
+          "name": "surface",
+          "label": "Surface",
+          "example": "moss"
+        },
+        {
+          "name": "detail",
+          "label": "Detail",
+          "example": "dew droplets"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "minimal-saas-dashboard-hero",
+      "title": "Minimal SaaS Dashboard Hero",
+      "description": "A polished product-marketing mockup for app dashboards and analytics.",
+      "category": "Design",
+      "tags": [
+        "saas",
+        "dashboard",
+        "ui",
+        "marketing"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/minimal-saas-dashboard-hero--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Minimal SaaS Dashboard Hero preview",
+      "prompt": "Create a polished SaaS dashboard hero mockup on floating screens, with charts and cards represented as abstract UI shapes, clean white workspace, soft depth, subtle shadows, product marketing polish, and no readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "product_area",
+          "label": "Product area",
+          "example": "analytics"
+        },
+        {
+          "name": "screen_count",
+          "label": "Screen count",
+          "example": "three floating screens"
+        },
+        {
+          "name": "palette",
+          "label": "Palette",
+          "example": "clean white and blue"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "racing-pit-stop-action",
+      "title": "Racing Pit Stop Action",
+      "description": "A high-speed motorsport scene with motion and teamwork.",
+      "category": "Cinematic",
+      "tags": [
+        "racing",
+        "motorsport",
+        "action",
+        "pit stop"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/racing-pit-stop-action--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Racing Pit Stop Action preview",
+      "prompt": "Create a high-speed racing pit stop scene with mechanics changing tires, controlled motion blur, sparks, glossy race car without logos, dramatic track lighting, teamwork choreography, and cinematic action photography.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "vehicle",
+          "label": "Vehicle",
+          "example": "open-wheel race car"
+        },
+        {
+          "name": "action",
+          "label": "Action",
+          "example": "tire change"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "dramatic track lights"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "handmade-jewelry-bench",
+      "title": "Handmade Jewelry Bench",
+      "description": "A macro craft-luxury image focused on tools, hands, and fine detail.",
+      "category": "Product",
+      "tags": [
+        "jewelry",
+        "craft",
+        "macro",
+        "luxury"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/handmade-jewelry-bench--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Handmade Jewelry Bench preview",
+      "prompt": "Create a macro artisan jewelry bench photograph with a fine object being set or polished, tiny tools, metal filings, warm task lamp, realistic hands, shallow depth, craft luxury detail, and no readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "object",
+          "label": "Object",
+          "example": "gold ring"
+        },
+        {
+          "name": "tools",
+          "label": "Tools",
+          "example": "setting tools"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "warm task lamp"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "arctic-research-station",
+      "title": "Arctic Research Station",
+      "description": "A cold expedition environment with cinematic scale and warm detail.",
+      "category": "Cinematic",
+      "tags": [
+        "arctic",
+        "research station",
+        "expedition",
+        "cinematic"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/arctic-research-station--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Arctic Research Station preview",
+      "prompt": "Create a cinematic arctic research station at blue hour, with modular buildings, snow vehicles, aurora glow, blowing snow, warm window lights, realistic expedition atmosphere, and a wide establishing shot.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "location",
+          "label": "Location",
+          "example": "arctic coast"
+        },
+        {
+          "name": "weather",
+          "label": "Weather",
+          "example": "blowing snow"
+        },
+        {
+          "name": "sky",
+          "label": "Sky",
+          "example": "aurora glow"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "plush-character-story-scene",
+      "title": "Plush Character Story Scene",
+      "description": "A soft toy-photography scene with miniature props and narrative charm.",
+      "category": "Character",
+      "tags": [
+        "plush",
+        "toy",
+        "character",
+        "miniature"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/plush-character-story-scene--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Plush Character Story Scene preview",
+      "prompt": "Create a soft plush character in a miniature story scene, with visible fabric texture, button-like eyes, tiny props, warm lamp light, charming toy photography, safe whimsical mood, and no readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character",
+          "label": "Character",
+          "example": "plush rabbit"
+        },
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "mini bedroom"
+        },
+        {
+          "name": "props",
+          "label": "Props",
+          "example": "tiny books"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "fashion-textile-pattern-sheet",
+      "title": "Fashion Textile Pattern Sheet",
+      "description": "A coordinated pattern-board layout for fabric, fashion, or surface design.",
+      "category": "Design",
+      "tags": [
+        "textile",
+        "pattern",
+        "fashion",
+        "swatches"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/fashion-textile-pattern-sheet--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Fashion Textile Pattern Sheet preview",
+      "prompt": "Create a fashion textile pattern sheet with four coordinated repeat patterns, fabric swatches, refined color chips, clean presentation layout, sophisticated palette, crisp surface-design detail, and no readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "motif",
+          "label": "Motif",
+          "example": "botanical geometry"
+        },
+        {
+          "name": "palette",
+          "label": "Palette",
+          "example": "navy and sage"
+        },
+        {
+          "name": "layout",
+          "label": "Layout",
+          "example": "four swatches"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "floating-island-fantasy",
+      "title": "Floating Island Fantasy",
+      "description": "An epic fantasy environment with vertical scale and adventure mood.",
+      "category": "Cinematic",
+      "tags": [
+        "fantasy",
+        "landscape",
+        "floating islands",
+        "concept art"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/floating-island-fantasy--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Floating Island Fantasy preview",
+      "prompt": "Create a cinematic fantasy landscape of floating islands with waterfalls, tiny bridges, misty sunrise, distant birds, epic vertical scale, painterly realism, and adventure-game concept art atmosphere.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "landscape",
+          "label": "Landscape",
+          "example": "floating islands"
+        },
+        {
+          "name": "weather",
+          "label": "Weather",
+          "example": "misty sunrise"
+        },
+        {
+          "name": "scale_detail",
+          "label": "Scale detail",
+          "example": "tiny bridges"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "editorial-makeup-swatch",
+      "title": "Editorial Makeup Swatch",
+      "description": "A close-up cosmetics texture image with studio polish.",
+      "category": "Portrait",
+      "tags": [
+        "makeup",
+        "cosmetics",
+        "swatch",
+        "beauty"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/editorial-makeup-swatch--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Editorial Makeup Swatch preview",
+      "prompt": "Create a close-up editorial beauty image focused on colorful makeup swatches on skin, with glossy texture, precise studio lighting, abstract composition, premium cosmetics campaign style, realistic skin detail, and no explicit nudity.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "product_type",
+          "label": "Product type",
+          "example": "eyeshadow swatches"
+        },
+        {
+          "name": "colors",
+          "label": "Colors",
+          "example": "copper and violet"
+        },
+        {
+          "name": "finish",
+          "label": "Finish",
+          "example": "glossy shimmer"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "children-science-poster",
+      "title": "Children Science Poster",
+      "description": "A friendly educational illustration with blank label spaces.",
+      "category": "Design",
+      "tags": [
+        "science",
+        "education",
+        "poster",
+        "children"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/children-science-poster--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Children Science Poster preview",
+      "prompt": "Create a friendly educational science poster illustration for children, showing a clear natural process with simple arrows, bright classroom colors, readable visual flow, blank label spaces, and no actual readable text by default.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "topic",
+          "label": "Topic",
+          "example": "water cycle"
+        },
+        {
+          "name": "elements",
+          "label": "Elements",
+          "example": "clouds and river"
+        },
+        {
+          "name": "style",
+          "label": "Style",
+          "example": "bright classroom"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "chiaroscuro-studio-portrait",
+      "title": "Chiaroscuro Studio Portrait",
+      "description": "A dramatic low-key studio portrait with sculpted shadow.",
+      "category": "Portrait",
+      "tags": [
+        "portrait",
+        "studio",
+        "chiaroscuro",
+        "editorial"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/chiaroscuro-studio-portrait--generated-2026-06-15--schema-v1.0.0.webp",
+      "imageAlt": "Chiaroscuro Studio Portrait preview",
+      "prompt": "Create a dramatic chiaroscuro studio portrait of an adult subject wearing simple dark wardrobe, face turned slightly toward camera, with one strong side key light, deep shadow falloff, realistic skin texture, black background, painterly photographic contrast, and elegant editorial mood. Keep the subject fully clothed, non-explicit, and avoid readable text or logos.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "adult model"
+        },
+        {
+          "name": "wardrobe",
+          "label": "Wardrobe",
+          "example": "black turtleneck"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "single side key light"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-15",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "bathroom-mirror-routine-selfie",
+      "title": "Bathroom Mirror Routine Selfie",
+      "description": "A real bathroom mirror selfie with phone glare and everyday clutter.",
+      "category": "Portrait",
+      "tags": [
+        "portrait",
+        "bathroom",
+        "mirror selfie",
+        "phone photo"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/bathroom-mirror-routine-selfie--generated-2026-06-15--schema-v1.0.0.webp",
+      "imageAlt": "Bathroom Mirror Routine Selfie preview",
+      "prompt": "Create a casual bathroom mirror phone selfie of an adult subject getting ready, wearing public-safe skin-forward loungewear such as a cropped tank top and shorts, with shoulders, arms, and midriff visible but no nudity. Show one hand near their face, visible phone partially blocking the face, mirror smudges, towel and toiletry clutter, soft overhead bathroom light, slight wide-angle phone distortion, realistic skin texture, and imperfect social-feed framing. Avoid ad-campaign polish, readable labels, logos, exposed nipples, exposed genitals, or explicit posing.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "small bathroom mirror"
+        },
+        {
+          "name": "wardrobe",
+          "label": "Wardrobe",
+          "example": "cropped tank and shorts"
+        },
+        {
+          "name": "imperfection",
+          "label": "Imperfection",
+          "example": "mirror smudges and clutter"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-15",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "messy-bedroom-outfit-check",
+      "title": "Messy Bedroom Outfit Check",
+      "description": "A casual mirror outfit selfie in a lived-in room.",
+      "category": "Portrait",
+      "tags": [
+        "portrait",
+        "mirror selfie",
+        "outfit",
+        "bedroom"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/messy-bedroom-outfit-check--generated-2026-06-15--schema-v1.0.0.webp",
+      "imageAlt": "Messy Bedroom Outfit Check preview",
+      "prompt": "Create a casual bedroom mirror outfit-check selfie of an adult subject holding a phone, wearing public-safe skin-forward everyday fashion such as a fitted crop top with low-rise jeans or a short summer outfit. Show natural arms, shoulders, and midriff while keeping the subject non-nude. Place them in a lived-in bedroom with rumpled sheets and clothes in the background. Use natural phone-camera realism, slight tilted framing, mirror glare, soft daylight mixed with room light, realistic fabric texture, and unpolished social-feed authenticity. Avoid studio polish, readable text, logos, exposed nipples, exposed genitals, or explicit posing.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "crop top and low-rise jeans"
+        },
+        {
+          "name": "room_detail",
+          "label": "Room detail",
+          "example": "rumpled sheets and clothes"
+        },
+        {
+          "name": "camera_style",
+          "label": "Camera style",
+          "example": "tilted mirror phone photo"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-15",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "bedside-front-camera-selfie",
+      "title": "Bedside Front-Camera Selfie",
+      "description": "A low-effort front-camera selfie in a dim bedroom.",
+      "category": "Portrait",
+      "tags": [
+        "portrait",
+        "selfie",
+        "bedroom",
+        "phone photo"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/bedside-front-camera-selfie--generated-2026-06-15--schema-v1.0.0.webp",
+      "imageAlt": "Bedside Front-Camera Selfie preview",
+      "prompt": "Create a low-effort front-camera selfie of an adult subject sitting on or beside a bed in a dim bedroom, wearing public-safe skin-forward loungewear such as a fitted tank top, crop top, or athletic shorts, with shoulders and arms visible but no nudity. Put the face close to camera, one hand near the cheek, warm string lights or bedside lamp in the background, slight phone blur, compressed perspective, visible room clutter, and realistic unedited social-feed texture. Avoid beauty-ad polish, readable text, logos, exposed nipples, exposed genitals, or explicit posing.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "dim bedroom"
+        },
+        {
+          "name": "wardrobe",
+          "label": "Wardrobe",
+          "example": "fitted tank and shorts"
+        },
+        {
+          "name": "background_light",
+          "label": "Background light",
+          "example": "warm string lights"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-15",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "disposable-camera-night-snap",
+      "title": "Disposable-Camera Night Snap",
+      "description": "A harsh-flash party snapshot with visible imperfections.",
+      "category": "Portrait",
+      "tags": [
+        "portrait",
+        "flash",
+        "night out",
+        "snapshot"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/disposable-camera-night-snap--generated-2026-06-15--schema-v1.0.0.webp",
+      "imageAlt": "Disposable-Camera Night Snap preview",
+      "prompt": "Create a disposable-camera style night-out snapshot of an adult subject wearing public-safe skin-forward party clothes such as a fitted crop top, sleeveless top, mini skirt, or shorts, photographed from slightly above with harsh direct flash, red-eye risk, glossy skin highlights, dark messy room or bar background, mild blur, grain, timestamp-like nostalgia without readable text, and spontaneous social-photo energy. Avoid polished editorial lighting, readable logos, nudity, exposed nipples, exposed genitals, or explicit posing.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "dark messy room"
+        },
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "fitted crop top and shorts"
+        },
+        {
+          "name": "camera_style",
+          "label": "Camera style",
+          "example": "disposable-camera flash"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-15",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "rain-window-cinematic-portrait",
+      "title": "Rain Window Cinematic Portrait",
+      "description": "A moody film-still portrait framed by rain and neon reflections.",
+      "category": "Portrait",
+      "tags": [
+        "portrait",
+        "cinematic",
+        "rain",
+        "neon"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/rain-window-cinematic-portrait--generated-2026-06-15--schema-v1.0.0.webp",
+      "imageAlt": "Rain Window Cinematic Portrait preview",
+      "prompt": "Create a cinematic portrait of an adult subject beside a rain-covered window at night, with soft neon reflections, moody blue and amber light, visible droplets on glass, shallow depth of field, thoughtful expression, and film-still atmosphere. Keep the subject fully clothed, non-explicit, and avoid readable text or logos.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "rainy window at night"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "blue and amber neon"
+        },
+        {
+          "name": "mood",
+          "label": "Mood",
+          "example": "thoughtful film still"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-15",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "gilded-fantasy-painterly-portrait",
+      "title": "Gilded Fantasy Painterly Portrait",
+      "description": "A dark blue fantasy portrait with ornate gold detailing.",
+      "category": "Portrait",
+      "tags": [
+        "portrait",
+        "fantasy",
+        "painterly",
+        "gold"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/gilded-fantasy-painterly-portrait--generated-2026-06-15--schema-v1.0.0.webp",
+      "imageAlt": "Gilded Fantasy Painterly Portrait preview",
+      "prompt": "Create a painterly fantasy portrait of an adult subject with long dark hair, ornate gold accessories, deep navy and dark teal atmosphere, luminous skin, frame-like ornamental composition, fine digital painting detail, and romantic fantasy illustration mood. Keep the subject fully clothed, non-explicit, and avoid readable text or logos.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "long dark-haired adult"
+        },
+        {
+          "name": "ornamentation",
+          "label": "Ornamentation",
+          "example": "gold filigree jewelry"
+        },
+        {
+          "name": "palette",
+          "label": "Palette",
+          "example": "deep navy and gold"
+        }
+      ],
+      "suggestedModel": "midjourney",
+      "suggestedModelLabel": "Midjourney",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-15",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "sepia-fashion-model-portrait",
+      "title": "Sepia Fashion Model Portrait",
+      "description": "A warm editorial model portrait with vintage magazine polish.",
+      "category": "Portrait",
+      "tags": [
+        "portrait",
+        "fashion",
+        "sepia",
+        "editorial"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/sepia-fashion-model-portrait--generated-2026-06-15--schema-v1.0.0.webp",
+      "imageAlt": "Sepia Fashion Model Portrait preview",
+      "prompt": "Create a high-fashion model portrait of an adult subject in warm sepia tones, fully clothed in structured couture styling, with soft studio haze, elegant cheekbone lighting, shallow depth of field, realistic skin texture, and vintage editorial magazine mood. Avoid readable text, logos, and explicit styling.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "wardrobe",
+          "label": "Wardrobe",
+          "example": "structured cream couture"
+        },
+        {
+          "name": "tone",
+          "label": "Tone",
+          "example": "warm sepia"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "soft studio haze"
+        }
+      ],
+      "suggestedModel": "midjourney",
+      "suggestedModelLabel": "Midjourney",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-15",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "glowing-word-forest-installation",
+      "title": "Glowing Word Forest Installation",
+      "description": "A cinematic translucent word sculpture in a foggy forest.",
+      "category": "Design",
+      "tags": [
+        "typography",
+        "forest",
+        "neon",
+        "installation"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/glowing-word-forest-installation--generated-2026-06-15--schema-v1.0.0.webp",
+      "imageAlt": "Glowing Word Forest Installation preview",
+      "prompt": "Create a hyper-realistic cinematic typographic installation shaped like the word {Word}, with translucent glowing blue letters in a dense foggy pine forest at night. Use volumetric mist, neon light spill on wet ground, dramatic depth, realistic materials, and clean large letterforms. Avoid extra readable text beyond the chosen word.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "word",
+          "label": "Word",
+          "example": "FOREST"
+        },
+        {
+          "name": "environment",
+          "label": "Environment",
+          "example": "foggy pine forest"
+        },
+        {
+          "name": "material",
+          "label": "Material",
+          "example": "translucent glowing blue glass"
+        }
+      ],
+      "suggestedModel": "midjourney",
+      "suggestedModelLabel": "Midjourney",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-15",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "neon-city-album-cover-portrait",
+      "title": "Neon City Album Cover Portrait",
+      "description": "A soft-focus neon city portrait with album-cover framing.",
+      "category": "Portrait",
+      "tags": [
+        "portrait",
+        "album cover",
+        "neon",
+        "city"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/neon-city-album-cover-portrait--generated-2026-06-15--schema-v1.0.0.webp",
+      "imageAlt": "Neon City Album Cover Portrait preview",
+      "prompt": "Create an iconic album-cover style portrait of an adult subject in a saturated purple outfit, fully clothed, standing in a neon city street with stylized East Asian cyberpunk-inspired signage shapes without readable text. Use soft focus, magenta and cyan glow, cinematic street haze, centered cover composition, wet pavement reflections, and no logos.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "wardrobe",
+          "label": "Wardrobe",
+          "example": "purple top"
+        },
+        {
+          "name": "city_style",
+          "label": "City style",
+          "example": "neon cyberpunk street"
+        },
+        {
+          "name": "cover_mood",
+          "label": "Cover mood",
+          "example": "soft-focus album cover"
+        }
+      ],
+      "suggestedModel": "midjourney",
+      "suggestedModelLabel": "Midjourney",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-15",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "abstract-glassmorphism-wallpaper",
+      "title": "Abstract Glassmorphism Wallpaper",
+      "description": "A translucent abstract background for app, deck, or brand visuals.",
+      "category": "Other",
+      "tags": [
+        "abstract",
+        "glassmorphism",
+        "wallpaper",
+        "background"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/abstract-glassmorphism-wallpaper--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Abstract Glassmorphism Wallpaper preview",
+      "prompt": "Create an abstract glassmorphism wallpaper with translucent layered shapes, subtle refractions, soft light caustics, balanced composition, modern app-background aesthetic, generous negative space, and no text or logo.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "palette",
+          "label": "Palette",
+          "example": "blue and violet"
+        },
+        {
+          "name": "shape_style",
+          "label": "Shape style",
+          "example": "translucent layers"
+        },
+        {
+          "name": "use_case",
+          "label": "Use case",
+          "example": "app background"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "eco-packaging-mockup",
+      "title": "Eco Packaging Mockup",
+      "description": "A sustainable packaging scene with recycled textures and clean brand styling.",
+      "category": "Product",
+      "tags": [
+        "packaging",
+        "eco",
+        "mockup",
+        "sustainable"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/eco-packaging-mockup--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Eco Packaging Mockup preview",
+      "prompt": "Create a premium eco packaging mockup with recycled paper boxes, molded pulp tray, small product inserts, soft daylight, subtle plant props, clean sustainable brand photography, tactile material texture, and no readable text or logos.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "product_type",
+          "label": "Product type",
+          "example": "skin care set"
+        },
+        {
+          "name": "material",
+          "label": "Material",
+          "example": "recycled paper"
+        },
+        {
+          "name": "props",
+          "label": "Props",
+          "example": "subtle plant props"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "neon-arcade-cabinet",
+      "title": "Neon Arcade Cabinet",
+      "description": "A retro game cabinet concept with saturated lights and product angle.",
+      "category": "Product",
+      "tags": [
+        "arcade",
+        "neon",
+        "retro",
+        "game"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/neon-arcade-cabinet--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Neon Arcade Cabinet preview",
+      "prompt": "Create a retro neon arcade cabinet concept in a dark game room, with glowing controls, pixel-art screen shapes, reflective floor, saturated magenta and cyan lighting, cinematic product angle, and no readable text or logos.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "cabinet_theme",
+          "label": "Cabinet theme",
+          "example": "space shooter"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "magenta and cyan neon"
+        },
+        {
+          "name": "room_style",
+          "label": "Room style",
+          "example": "dark game room"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "scientific-cutaway-fruit",
+      "title": "Scientific Cutaway Fruit",
+      "description": "A precise educational cutaway image with clean diagram composition.",
+      "category": "Design",
+      "tags": [
+        "science",
+        "cutaway",
+        "fruit",
+        "educational"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/scientific-cutaway-fruit--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Scientific Cutaway Fruit preview",
+      "prompt": "Create a clean scientific cutaway illustration of a natural object, showing outer surface, inner structure, seeds or core details, precise diagram-like composition, bright white background, crisp material detail, and no labels or readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "citrus fruit"
+        },
+        {
+          "name": "visible_parts",
+          "label": "Visible parts",
+          "example": "peel, pulp, seeds"
+        },
+        {
+          "name": "background",
+          "label": "Background",
+          "example": "clean white"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "miniature-train-table-world",
+      "title": "Miniature Train Table World",
+      "description": "A charming tilt-shift hobby scene with tiny scenery and warm detail.",
+      "category": "Cinematic",
+      "tags": [
+        "miniature",
+        "train",
+        "model",
+        "tilt shift"
+      ],
+      "image": "https://nano-gpt.com/prompt-templates/miniature-train-table-world--generated-2026-06-11--schema-v1.0.0.webp",
+      "imageAlt": "Miniature Train Table World preview",
+      "prompt": "Create a charming miniature train-table world with tiny houses, winding tracks, painted hills, small trees, warm hobby-room lighting, tilt-shift photography, detailed handmade model scenery, and no readable text.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "world_theme",
+          "label": "World theme",
+          "example": "mountain village"
+        },
+        {
+          "name": "tracks",
+          "label": "Tracks",
+          "example": "winding railway"
+        },
+        {
+          "name": "lighting",
+          "label": "Lighting",
+          "example": "warm hobby-room light"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "schemaVersion": "1.0.0",
+      "generatedAt": "2026-06-11",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0"
+    }
+  ]
+}

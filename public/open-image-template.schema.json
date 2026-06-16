@@ -12,70 +12,183 @@
     "description",
     "prompt",
     "slots",
+    "controls",
     "suggested_models",
     "examples",
     "license"
   ],
   "properties": {
     "standard": {
+      "description": "The standard identifier. Open Image Template documents use the constant open-image-template.",
       "const": "open-image-template"
     },
     "schema_version": {
+      "description": "Semantic version of the Open Image Template schema used by this document.",
       "type": "string",
       "pattern": "^\\d+\\.\\d+\\.\\d+$"
     },
     "id": {
+      "description": "Stable URL-safe template identifier, used in /templates/{id} and /templates/{id}.json.",
       "type": "string",
       "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
     },
     "title": {
+      "description": "Human-facing template title.",
       "type": "string",
       "minLength": 1
     },
     "description": {
+      "description": "Short explanation of what the template helps generate.",
       "type": "string",
       "minLength": 1
     },
     "category": {
+      "description": "Primary gallery category for browsing and discovery.",
       "type": "string"
     },
     "prompt": {
+      "description": "The full visible prompt. Open Image Templates should not depend on hidden prompt text.",
       "type": "string",
       "minLength": 1
     },
     "negative_prompt": {
+      "description": "Optional negative prompt phrases or constraints.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "slots": {
+      "description": "Main editable variables in the template. Render these as user-editable fields in prompt-builder interfaces.",
       "type": "array",
       "items": {
         "type": "object",
         "required": ["name", "label", "example"],
         "properties": {
           "name": {
+            "description": "Stable machine-readable field name.",
             "type": "string",
             "pattern": "^[a-z][a-z0-9_]*$"
           },
           "label": {
+            "description": "Human-facing label for the slot.",
             "type": "string"
           },
           "example": {
+            "description": "Example value that shows how the slot should be filled.",
             "type": "string"
           }
         },
         "additionalProperties": false
       }
     },
+    "controls": {
+      "type": "object",
+      "description": "Human-facing prompt-builder controls for adjusting a reusable image template.",
+      "required": ["slots", "look", "details", "toggles"],
+      "properties": {
+        "slots": {
+          "$ref": "#/properties/slots"
+        },
+        "look": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "label", "promptLabel", "options"],
+            "properties": {
+              "name": {
+                "description": "Stable control group name.",
+                "type": "string"
+              },
+              "label": {
+                "description": "Human-facing label for opening or rendering this control group.",
+                "type": "string"
+              },
+              "promptLabel": {
+                "description": "Label used when compiling the selected value back into a prompt.",
+                "type": "string"
+              },
+              "options": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["value", "label"],
+                  "properties": {
+                    "value": {
+                      "description": "Prompt value inserted when this option is selected.",
+                      "type": "string"
+                    },
+                    "label": {
+                      "description": "Human-facing option label.",
+                      "type": "string"
+                    },
+                    "image": {
+                      "description": "Optional preview image for visual tile selection.",
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "details": {
+          "type": "object",
+          "required": ["name", "label", "placeholder"],
+          "properties": {
+            "name": {
+              "description": "Stable details field name.",
+              "type": "string"
+            },
+            "label": {
+              "description": "Human-facing label for the freeform detail field.",
+              "type": "string"
+            },
+            "placeholder": {
+              "description": "Placeholder text that explains what extra details can contain.",
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "toggles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "label", "instruction"],
+            "properties": {
+              "name": {
+                "description": "Stable toggle name.",
+                "type": "string"
+              },
+              "label": {
+                "description": "Human-facing toggle label.",
+                "type": "string"
+              },
+              "instruction": {
+                "description": "Prompt instruction appended when the toggle is enabled.",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": true
+    },
     "suggested_models": {
+      "description": "Model suggestions for this template. These are recommendations, not requirements.",
       "type": "array",
       "items": {
         "type": "object",
         "required": ["id", "role"],
         "properties": {
           "id": {
+            "type": "string"
+          },
+          "label": {
             "type": "string"
           },
           "role": {
@@ -86,19 +199,23 @@
       }
     },
     "examples": {
+      "description": "Preview examples generated for the template, including provenance.",
       "type": "array",
       "items": {
         "type": "object",
         "required": ["image_url", "generated_at", "schema_version"],
         "properties": {
           "image_url": {
+            "description": "URL of the example image.",
             "type": "string"
           },
           "generated_at": {
+            "description": "Date the example image was generated.",
             "type": "string",
             "format": "date"
           },
           "schema_version": {
+            "description": "Schema version used when the example was generated.",
             "type": "string"
           }
         },
@@ -106,9 +223,11 @@
       }
     },
     "creator": {
+      "description": "Template creator or publishing entity.",
       "type": "string"
     },
     "license": {
+      "description": "License governing template reuse.",
       "type": "string"
     }
   },
