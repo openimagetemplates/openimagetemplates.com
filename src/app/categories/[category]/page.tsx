@@ -79,7 +79,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           },
         }}
       />
-      <Link href="/#gallery" className="text-sm font-semibold text-zinc-600 hover:text-zinc-950">
+      <Link href="/templates" className="text-sm font-semibold text-zinc-600 hover:text-zinc-950">
         Back to all templates
       </Link>
       <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Category</p>

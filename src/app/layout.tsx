@@ -93,7 +93,7 @@ export const viewport: Viewport = {
 };
 
 const navItems = [
-  { href: "/#gallery", label: "Templates" },
+  { href: "/templates", label: "Templates" },
   { href: "/schema", label: "Schema" },
   { href: "/docs", label: "Docs" },
 ];

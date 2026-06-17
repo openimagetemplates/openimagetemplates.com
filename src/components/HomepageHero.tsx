@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { ArrowRight, Braces, Check, ImagePlus, Images, Search, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
 import { useEffect, useState } from "react";
 import type { ImageTemplate } from "@/lib/templates";
@@ -30,7 +31,7 @@ const modes = {
       "Copy the finished prompt or generate with NanoGPT",
     ],
     primary: {
-      href: "#gallery",
+      href: "/templates",
       label: "Browse templates",
       icon: Search,
     },
@@ -85,6 +86,7 @@ function getClampedFrameRatio(ratio: number) {
 }
 
 export function HomepageHero({ templates, templateCount, schemaVersion }: HomepageHeroProps) {
+  const router = useRouter();
   const [mode, setMode] = useState<ModeName>("find");
   const [accentIndex, setAccentIndex] = useState(0);
   const [templateIndex, setTemplateIndex] = useState(0);
@@ -112,16 +114,11 @@ export function HomepageHero({ templates, templateCount, schemaVersion }: Homepa
 
   function applyGallerySearch(value: string) {
     const query = value.trim();
-    const url = new URL(window.location.href);
+    const url = new URL("/templates", window.location.origin);
     if (query) {
       url.searchParams.set("q", query);
-    } else {
-      url.searchParams.delete("q");
     }
-    url.hash = "gallery";
-    window.history.replaceState(null, "", url.toString());
-    window.dispatchEvent(new CustomEvent("oit-gallery-search", { detail: { query } }));
-    document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    router.push(`${url.pathname}${url.search}`);
   }
 
   function handleSearchSubmit(event: FormEvent<HTMLFormElement>) {
@@ -337,10 +334,10 @@ export function HomepageHero({ templates, templateCount, schemaVersion }: Homepa
                 {query}
               </button>
             ))}
-            <a href="#gallery" className="ml-auto hidden items-center gap-1 rounded-full border border-black/10 bg-white px-4 py-2 font-semibold text-zinc-950 transition hover:bg-zinc-50 sm:inline-flex">
+            <Link href="/templates" className="ml-auto hidden items-center gap-1 rounded-full border border-black/10 bg-white px-4 py-2 font-semibold text-zinc-950 transition hover:bg-zinc-50 sm:inline-flex">
               Explore all
               <ArrowRight size={15} aria-hidden="true" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

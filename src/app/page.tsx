@@ -101,9 +101,9 @@ export default function Home() {
           </div>
 
           <div className="mt-16 flex justify-center">
-            <a href="#gallery" className="border-b border-zinc-950 text-lg font-medium text-zinc-950 hover:text-zinc-600">
+            <Link href="/templates" className="border-b border-zinc-950 text-lg font-medium text-zinc-950 hover:text-zinc-600">
               Explore more
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -189,12 +189,12 @@ export default function Home() {
             <p className="mx-auto max-w-3xl text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl lg:text-7xl">
               Open Image Templates is forever free.
             </p>
-            <a
-              href="#gallery"
+            <Link
+              href="/templates"
               className="mt-8 inline-flex rounded-[8px] bg-zinc-950 px-6 py-3 text-2xl font-semibold tracking-tight text-white transition hover:bg-zinc-800 sm:text-3xl"
             >
               Start browsing
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -245,12 +245,12 @@ export default function Home() {
               <h2 className="max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
                 Start with a template. Make just about anything.
               </h2>
-              <a
-                href="#gallery"
+              <Link
+                href="/templates"
                 className="mt-8 inline-flex h-12 items-center justify-center rounded-[8px] border border-white/60 px-5 text-sm font-semibold text-white transition hover:border-white hover:bg-white hover:text-zinc-950"
               >
                 Explore all templates
-              </a>
+              </Link>
             </div>
             <div className="flex items-center gap-3">
               <button

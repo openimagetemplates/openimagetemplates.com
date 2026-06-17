@@ -74,7 +74,7 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
                 "@type": "ListItem",
                 position: 1,
                 name: "Templates",
-                item: absoluteUrl("/#gallery"),
+                item: absoluteUrl("/templates"),
               },
               {
                 "@type": "ListItem",
@@ -120,7 +120,7 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
           },
         ]}
       />
-      <Link href="/#gallery" className="inline-flex items-center gap-2 text-sm font-medium text-zinc-600 hover:text-zinc-950">
+      <Link href="/templates" className="inline-flex items-center gap-2 text-sm font-medium text-zinc-600 hover:text-zinc-950">
         <ArrowLeft size={16} aria-hidden="true" />
         Back to gallery
       </Link>
