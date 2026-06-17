@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import { NanoGptAuthButton } from "@/components/NanoGptAuthButton";
@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  applicationName: "Open Image Templates",
   metadataBase: new URL("https://openimagetemplates.com"),
   title: {
     default: "Open Image Templates",
@@ -23,14 +24,72 @@ export const metadata: Metadata = {
   },
   description:
     "A free, open standard and community gallery for reusable AI image generation templates.",
+  keywords: [
+    "Open Image Templates",
+    "AI image templates",
+    "image prompt templates",
+    "AI prompt gallery",
+    "prompt builder",
+    "open prompt schema",
+    "NanoGPT",
+  ],
+  authors: [{ name: "Open Image Templates", url: "https://openimagetemplates.com" }],
+  creator: "Open Image Templates",
+  publisher: "Open Image Templates",
+  category: "technology",
+  manifest: "/manifest.webmanifest",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  appleWebApp: {
+    capable: true,
+    title: "Open Image Templates",
+    statusBarStyle: "default",
+  },
   openGraph: {
     title: "Open Image Templates",
     description:
       "Copy visible prompts, inspect portable template JSON, and generate with NanoGPT in one click.",
     url: "https://openimagetemplates.com",
     siteName: "Open Image Templates",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Open Image Templates logo and prompt-template preview",
+      },
+    ],
+    locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Open Image Templates",
+    description:
+      "Copy visible prompts, inspect portable template JSON, and generate with NanoGPT in one click.",
+    images: ["/twitter-image.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#f5f3ef",
+  colorScheme: "light",
 };
 
 const navItems = [
