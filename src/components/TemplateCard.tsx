@@ -4,7 +4,6 @@ import Link from "next/link";
 import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
 import { categoryPath, tagPath } from "@/lib/seo";
 import type { ImageTemplate } from "@/lib/templates";
-import { CopyButton } from "./CopyButton";
 
 type TemplateCardProps = {
   template: ImageTemplate;
@@ -15,12 +14,14 @@ export function TemplateCard({ template }: TemplateCardProps) {
     <article className="group mb-5 break-inside-avoid overflow-hidden rounded-[8px] border border-black/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-xl">
       <div className="relative bg-zinc-100">
         <Link href={`/templates/${template.id}`} className="block">
-          <img
-            src={template.image}
-            alt={template.imageAlt}
-            className="h-auto w-full object-cover"
-            loading="lazy"
-          />
+          <span className="block aspect-[4/3] overflow-hidden bg-zinc-100">
+            <img
+              src={template.image}
+              alt={template.imageAlt}
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </span>
         </Link>
         <Link
           href={categoryPath(template.category)}
@@ -45,11 +46,10 @@ export function TemplateCard({ template }: TemplateCardProps) {
             </Link>
           ))}
         </div>
-        <div className="flex items-center gap-2">
-          <CopyButton value={template.prompt} label="Copy" className="h-9 flex-1" />
+        <div>
           <a
             href={getNanoGptGenerateUrl(template)}
-            className="inline-flex h-9 items-center justify-center gap-2 rounded-full bg-zinc-950 px-3 text-sm font-medium text-white transition hover:bg-zinc-800"
+            className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-3 text-sm font-medium text-white transition hover:bg-zinc-800"
             target="_blank"
             rel="noreferrer"
           >

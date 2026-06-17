@@ -1,17 +1,24 @@
 "use client";
 
 import { ChevronDown, ChevronUp, Search } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { trackTemplateSearch } from "@/lib/search-events";
 import { categories, type ImageTemplate, type TemplateCategory } from "@/lib/templates";
 import { TemplateCard } from "./TemplateCard";
 
 type GalleryExplorerProps = {
   templates: ImageTemplate[];
+  loadingMode?: "collapsed" | "infinite";
 };
 
-export function GalleryExplorer({ templates }: GalleryExplorerProps) {
+const INITIAL_VISIBLE_TEMPLATES = 36;
+const VISIBLE_TEMPLATE_BATCH = 24;
+
+export function GalleryExplorer({ templates, loadingMode = "collapsed" }: GalleryExplorerProps) {
   const [category, setCategory] = useState<"All" | TemplateCategory>("All");
   const [isExpanded, setIsExpanded] = useState(false);
+  const [pagination, setPagination] = useState({ key: "", count: INITIAL_VISIBLE_TEMPLATES });
+  const loadMoreRef = useRef<HTMLDivElement | null>(null);
   const [query, setQuery] = useState(() => {
     if (typeof window === "undefined") return "";
     return new URLSearchParams(window.location.search).get("q") ?? "";
@@ -49,7 +56,48 @@ export function GalleryExplorer({ templates }: GalleryExplorerProps) {
     });
   }, [category, query, templates]);
 
+  const isInfinite = loadingMode === "infinite";
+  const paginationKey = `${category}:${query.trim().toLowerCase()}:${templates.length}`;
+  const visibleCount = pagination.key === paginationKey ? pagination.count : INITIAL_VISIBLE_TEMPLATES;
+  const visibleTemplates = isInfinite ? filtered.slice(0, visibleCount) : filtered;
+  const hasMore = isInfinite && visibleTemplates.length < filtered.length;
   const shouldCollapse = filtered.length > 16;
+
+  useEffect(() => {
+    if (!isInfinite || !hasMore) return;
+    const target = loadMoreRef.current;
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        setPagination((current) => ({
+          key: paginationKey,
+          count: Math.min((current.key === paginationKey ? current.count : INITIAL_VISIBLE_TEMPLATES) + VISIBLE_TEMPLATE_BATCH, filtered.length),
+        }));
+      },
+      { rootMargin: "900px 0px" },
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, [filtered.length, hasMore, isInfinite, paginationKey]);
+
+  useEffect(() => {
+    const trimmedQuery = query.trim();
+    if (trimmedQuery.length < 2) return;
+
+    const timeout = window.setTimeout(() => {
+      trackTemplateSearch({
+        query: trimmedQuery,
+        source: "gallery",
+        category,
+        resultCount: filtered.length,
+      });
+    }, 700);
+
+    return () => window.clearTimeout(timeout);
+  }, [category, filtered.length, query]);
 
   return (
     <section id="gallery" className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
@@ -84,6 +132,12 @@ export function GalleryExplorer({ templates }: GalleryExplorerProps) {
             onClick={() => {
               setCategory(item);
               setIsExpanded(false);
+              trackTemplateSearch({
+                query: query || item,
+                source: "gallery",
+                category: item,
+                resultCount: item === "All" ? templates.length : templates.filter((template) => template.category === item).length,
+              });
             }}
             className={`h-10 whitespace-nowrap rounded-full px-4 text-sm font-medium transition ${
               category === item
@@ -95,18 +149,47 @@ export function GalleryExplorer({ templates }: GalleryExplorerProps) {
           </button>
         ))}
       </div>
+      {isInfinite ? (
+        <p className="mb-4 text-sm font-medium text-zinc-500">
+          Showing {visibleTemplates.length} of {filtered.length} matching templates
+        </p>
+      ) : null}
       <div className="relative">
         <div
-          className={`columns-1 gap-5 sm:columns-2 lg:columns-3 xl:columns-4 ${
-            shouldCollapse && !isExpanded ? "max-h-[980px] overflow-hidden" : ""
-          }`}
+          className={
+            isInfinite
+              ? "grid grid-cols-1 items-start gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+              : `columns-1 gap-5 sm:columns-2 lg:columns-3 xl:columns-4 ${
+                  shouldCollapse && !isExpanded ? "max-h-[980px] overflow-hidden" : ""
+                }`
+          }
         >
-          {filtered.map((template) => (
+          {visibleTemplates.map((template) => (
             <TemplateCard key={template.id} template={template} />
           ))}
         </div>
 
-        {shouldCollapse ? (
+        {isInfinite ? (
+          <div ref={loadMoreRef} className="flex min-h-24 items-center justify-center pt-8">
+            {hasMore ? (
+              <button
+                type="button"
+                onClick={() =>
+                  setPagination((current) => ({
+                    key: paginationKey,
+                    count: Math.min((current.key === paginationKey ? current.count : INITIAL_VISIBLE_TEMPLATES) + VISIBLE_TEMPLATE_BATCH, filtered.length),
+                  }))
+                }
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-5 text-sm font-semibold text-zinc-950 shadow-sm transition hover:border-black/20 hover:bg-zinc-50"
+              >
+                Load more templates
+                <ChevronDown size={17} aria-hidden="true" />
+              </button>
+            ) : filtered.length > INITIAL_VISIBLE_TEMPLATES ? (
+              <p className="text-sm font-medium text-zinc-500">All matching templates loaded</p>
+            ) : null}
+          </div>
+        ) : shouldCollapse ? (
           <div
             className={
               isExpanded

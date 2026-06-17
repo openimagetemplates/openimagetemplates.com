@@ -9,6 +9,10 @@ import {
 
 export const runtime = "nodejs";
 
+type TokenResponse = {
+  access_token?: unknown;
+};
+
 function redirectWithAuthError(requestUrl: URL, message: string) {
   const url = new URL("/", requestUrl.origin);
   url.searchParams.set("nanogptAuth", "error");
@@ -55,7 +59,7 @@ export async function GET(request: Request) {
     }),
   });
 
-  const tokenData = await tokenResponse.json().catch(() => ({}));
+  const tokenData = (await tokenResponse.json().catch(() => ({}))) as TokenResponse;
   if (!tokenResponse.ok || typeof tokenData?.access_token !== "string") {
     return redirectWithAuthError(requestUrl, "NanoGPT token exchange failed. Please try again.");
   }

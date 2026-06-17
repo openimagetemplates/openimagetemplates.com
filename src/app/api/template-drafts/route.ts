@@ -28,6 +28,11 @@ type NanoGptDraft = {
   suggestedModelLabel?: unknown;
 };
 
+type NanoGptDraftResponse = {
+  template?: unknown;
+  message?: unknown;
+};
+
 function errorResponse(status: number, message: string) {
   return NextResponse.json({ message }, { status });
 }
@@ -155,7 +160,7 @@ export async function POST(request: Request) {
     }),
   });
 
-  const upstreamData = await upstream.json().catch(() => ({}));
+  const upstreamData = (await upstream.json().catch(() => ({}))) as NanoGptDraftResponse;
   if (!upstream.ok || !upstreamData?.template) {
     return errorResponse(
       upstream.status || 502,

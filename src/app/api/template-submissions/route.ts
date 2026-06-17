@@ -1,5 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { NextResponse } from "next/server";
+import { normalizeOitApiUrl } from "@/lib/oit-api-url";
 import { TEMPLATE_SCHEMA_VERSION, TEMPLATE_STANDARD } from "@/lib/templates";
 
 export const runtime = "nodejs";
@@ -18,6 +19,10 @@ type SubmissionTemplate = {
   examples?: unknown;
   creator?: unknown;
   license?: unknown;
+};
+
+type SubmissionRequest = {
+  template?: unknown;
 };
 
 function errorResponse(status: number, message: string) {
@@ -57,8 +62,24 @@ async function submitToWebhook(payload: unknown) {
   return true;
 }
 
+async function submitToCloudflare(payload: unknown) {
+  const apiUrl = normalizeOitApiUrl(process.env.OIT_API_URL || process.env.NEXT_PUBLIC_OIT_API_URL);
+
+  const response = await fetch(`${apiUrl}/api/submissions`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Cloudflare submission failed with ${response.status}`);
+  }
+
+  return true;
+}
+
 export async function POST(request: Request) {
-  const body = await request.json().catch(() => null);
+  const body = (await request.json().catch(() => null)) as SubmissionRequest | null;
   const template = body?.template as SubmissionTemplate | null;
   const validationError = validateTemplate(template);
   if (validationError) return errorResponse(400, validationError);
@@ -74,13 +95,17 @@ export async function POST(request: Request) {
   };
 
   try {
-    const forwarded = await submitToWebhook(payload);
+    const [stored, forwarded] = await Promise.all([
+      submitToCloudflare(payload),
+      submitToWebhook(payload),
+    ]);
 
     return NextResponse.json({
       ok: true,
       submissionId,
       status: "pending_review",
       submittedAt,
+      stored,
       forwarded,
     });
   } catch (error) {

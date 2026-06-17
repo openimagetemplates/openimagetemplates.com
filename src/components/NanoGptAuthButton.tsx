@@ -4,6 +4,10 @@ import { Check, LogOut } from "lucide-react";
 import { useEffect, useState } from "react";
 import { NanoGptMark } from "./NanoGptMark";
 
+type AuthStatusResponse = {
+  connected?: unknown;
+};
+
 export function NanoGptAuthButton() {
   const [isConnected, setIsConnected] = useState(false);
 
@@ -13,7 +17,8 @@ export function NanoGptAuthButton() {
     fetch("/api/nanogpt-auth/status", { cache: "no-store" })
       .then((response) => response.json())
       .then((data) => {
-        if (active) setIsConnected(Boolean(data?.connected));
+        const status = data as AuthStatusResponse;
+        if (active) setIsConnected(Boolean(status?.connected));
       })
       .catch(() => {
         if (active) setIsConnected(false);

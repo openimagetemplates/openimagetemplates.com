@@ -1,6 +1,7 @@
 type OpenImageTemplatesLogoProps = {
   className?: string;
   maskId: string;
+  animated?: boolean;
   variant?: "solid" | "outline";
   showWordmark?: boolean;
 };
@@ -8,6 +9,7 @@ type OpenImageTemplatesLogoProps = {
 export function OpenImageTemplatesLogo({
   className = "h-10 w-auto",
   maskId,
+  animated = false,
   variant = "solid",
   showWordmark = true,
 }: OpenImageTemplatesLogoProps) {
@@ -27,7 +29,7 @@ export function OpenImageTemplatesLogo({
         </defs>
       ) : null}
 
-      <g transform="translate(28 44)">
+      <g className={animated ? "oit-logo-mark" : undefined} transform="translate(28 44)">
         {variant === "solid" ? (
           <rect x="0" y="0" width="140" height="72" rx="36" fill="#08090d" mask={`url(#${maskId})`} />
         ) : (
@@ -37,6 +39,16 @@ export function OpenImageTemplatesLogo({
             <rect x="92" y="20" width="8" height="32" rx="4" fill="#08090d" />
           </>
         )}
+        {animated ? (
+          <g className="oit-logo-bento" aria-hidden="true">
+            <rect className="oit-logo-bento-cell oit-logo-bento-cell-1" x="4" y="4" width="36" height="28" rx="13" fill="#015a9e" />
+            <rect className="oit-logo-bento-cell oit-logo-bento-cell-2" x="44" y="4" width="36" height="28" rx="13" fill="#11e9bb" />
+            <rect className="oit-logo-bento-cell oit-logo-bento-cell-3" x="84" y="4" width="52" height="28" rx="13" fill="#08090d" />
+            <rect className="oit-logo-bento-cell oit-logo-bento-cell-4" x="4" y="40" width="56" height="28" rx="13" fill="#08090d" />
+            <rect className="oit-logo-bento-cell oit-logo-bento-cell-5" x="64" y="40" width="32" height="28" rx="13" fill="#015a9e" />
+            <rect className="oit-logo-bento-cell oit-logo-bento-cell-6" x="100" y="40" width="36" height="28" rx="13" fill="#11e9bb" />
+          </g>
+        ) : null}
       </g>
 
       {showWordmark ? (

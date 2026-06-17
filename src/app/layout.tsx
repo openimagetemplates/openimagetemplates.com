@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next";
 import { NanoGptAuthButton } from "@/components/NanoGptAuthButton";
 import { OpenImageTemplatesLogo } from "@/components/OpenImageTemplatesLogo";
 import "./globals.css";
@@ -111,8 +112,9 @@ export default function RootLayout({
             <Link href="/" className="flex items-center gap-2.5" aria-label="Open Image Templates home">
               <OpenImageTemplatesLogo
                 maskId="header-open-image-templates-logo-mask"
+                animated
                 showWordmark={false}
-                className="h-9 w-auto"
+                className="h-12 w-auto"
               />
               <span className="leading-none text-zinc-950">
                 <span className="block text-sm font-extrabold tracking-tight">Open Image</span>
@@ -153,6 +155,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );

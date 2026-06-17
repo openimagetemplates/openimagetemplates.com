@@ -1,0 +1,16 @@
+name = "oit-api"
+main = "src/index.ts"
+compatibility_date = "2026-06-17"
+workers_dev = true
+
+[[analytics_engine_datasets]]
+binding = "SEARCH_EVENTS"
+dataset = "oit_search_events"
+
+[[r2_buckets]]
+binding = "R2_SUBMISSIONS"
+bucket_name = "oit-private-submissions"
+
+[[r2_buckets]]
+binding = "R2_PUBLIC_ASSETS"
+bucket_name = "oit-public-assets"

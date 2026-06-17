@@ -200,8 +200,8 @@ export default function Home() {
       </section>
 
       <section className="border-b border-black/10 bg-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8 lg:py-24">
-          <div className="flex flex-col justify-center">
+        <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8 lg:py-24">
+          <div className="flex flex-col">
             <div className="flex h-12 w-12 items-center justify-center rounded-[8px] bg-[#e4fbf6] text-[#017e9e]">
               <SlidersHorizontal size={23} aria-hidden="true" />
             </div>

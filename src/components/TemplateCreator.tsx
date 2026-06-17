@@ -21,13 +21,20 @@ import {
 import type { ImageTemplate } from "@/lib/templates";
 
 type TemplateCreatorProps = {
-  baseTemplate: ImageTemplate;
+  baseTemplate?: ImageTemplate;
+  initiallyOpen?: boolean;
+};
+
+type CommunitySubmissionResponse = {
+  submissionId?: unknown;
+  submittedAt?: unknown;
+  message?: unknown;
 };
 
 const maxImageBytes = 4 * 1024 * 1024;
 
-export function TemplateCreator({ baseTemplate }: TemplateCreatorProps) {
-  const [open, setOpen] = useState(false);
+export function TemplateCreator({ baseTemplate, initiallyOpen = false }: TemplateCreatorProps) {
+  const [open, setOpen] = useState(initiallyOpen);
   const [draft, setDraft] = useState<TemplateCreatorDraft>(() => createEmptyTemplateDraft(baseTemplate));
   const [idea, setIdea] = useState("");
   const [referenceImage, setReferenceImage] = useState("");
@@ -50,6 +57,26 @@ export function TemplateCreator({ baseTemplate }: TemplateCreatorProps) {
   function openCreator() {
     setDraft(createEmptyTemplateDraft(baseTemplate));
     setIdea("");
+    setReferenceImage("");
+    setReferenceFileName("");
+    setSavedTemplate(null);
+    setSavedSignature("");
+    setCommunitySubmission(null);
+    setCommunitySubmitting(false);
+    setCommunityError("");
+    setCopied(false);
+    setError("");
+    setOpen(true);
+  }
+
+  function openFromCurrentTemplate() {
+    if (!baseTemplate) {
+      openCreator();
+      return;
+    }
+
+    setDraft(draftFromTemplate(baseTemplate));
+    setIdea(baseTemplate.description);
     setReferenceImage("");
     setReferenceFileName("");
     setSavedTemplate(null);
@@ -100,8 +127,8 @@ export function TemplateCreator({ baseTemplate }: TemplateCreatorProps) {
         body: JSON.stringify({
           ...(referenceImage ? { image: referenceImage } : {}),
           ...(trimmedIdea ? { idea: trimmedIdea } : {}),
-          suggestedModel: baseTemplate.suggestedModel,
-          suggestedModelLabel: baseTemplate.suggestedModelLabel,
+          suggestedModel: baseTemplate?.suggestedModel ?? "gpt-image-2",
+          suggestedModelLabel: baseTemplate?.suggestedModelLabel ?? "GPT Image 2",
         }),
       });
       const data = (await response.json().catch(() => ({}))) as TemplateAnalysisResponse;
@@ -121,6 +148,7 @@ export function TemplateCreator({ baseTemplate }: TemplateCreatorProps) {
   }
 
   function useCurrentTemplateAsStart() {
+    if (!baseTemplate) return;
     setDraft(draftFromTemplate(baseTemplate));
     setIdea(baseTemplate.description);
     setReferenceImage("");
@@ -191,9 +219,9 @@ export function TemplateCreator({ baseTemplate }: TemplateCreatorProps) {
           template: toCreatorJson(savedTemplate),
         }),
       });
-      const data = await response.json().catch(() => ({}));
+      const data = (await response.json().catch(() => ({}))) as CommunitySubmissionResponse;
       if (!response.ok || !data.submissionId) {
-        throw new Error(data.message || "Could not submit the template.");
+        throw new Error(typeof data.message === "string" ? data.message : "Could not submit the template.");
       }
 
       const now = typeof data.submittedAt === "string" ? data.submittedAt : new Date().toISOString();
@@ -226,19 +254,35 @@ export function TemplateCreator({ baseTemplate }: TemplateCreatorProps) {
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">Create</p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-zinc-950">Make your own image template</h2>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-zinc-950">
+              {baseTemplate ? "Make your own version" : "Create an image template"}
+            </h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-zinc-600">
-              Fill the schema fields manually, start from this template, or generate a draft from an image or idea.
+              {baseTemplate
+                ? "Fill the schema fields manually, start from this template, or generate a draft from an image or idea."
+                : "Fill the schema fields manually or generate a draft from an image or idea."}
             </p>
           </div>
-          <button
-            type="button"
-            onClick={openCreator}
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800"
-          >
-            <Plus size={17} aria-hidden="true" />
-            Create template
-          </button>
+          <div className="flex flex-col gap-2 sm:flex-row">
+            {baseTemplate ? (
+              <button
+                type="button"
+                onClick={openFromCurrentTemplate}
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-5 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-50"
+              >
+                <Copy size={17} aria-hidden="true" />
+                Start from this template
+              </button>
+            ) : null}
+            <button
+              type="button"
+              onClick={openCreator}
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800"
+            >
+              <Plus size={17} aria-hidden="true" />
+              Start from scratch
+            </button>
+          </div>
         </div>
       </section>
 
@@ -490,13 +534,15 @@ export function TemplateCreator({ baseTemplate }: TemplateCreatorProps) {
             </div>
 
             <div className="flex flex-col gap-3 border-t border-black/10 bg-white px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-              <button
-                type="button"
-                onClick={useCurrentTemplateAsStart}
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-4 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-50"
-              >
-                Use this template as start
-              </button>
+              {baseTemplate ? (
+                <button
+                  type="button"
+                  onClick={useCurrentTemplateAsStart}
+                  className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-4 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-50"
+                >
+                  Use this template as start
+                </button>
+              ) : <span />}
 
               <div className="flex flex-col gap-2 sm:flex-row">
                 <button

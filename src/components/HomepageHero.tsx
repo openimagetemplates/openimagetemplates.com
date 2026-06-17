@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
 import { useEffect, useState } from "react";
+import { trackTemplateSearch } from "@/lib/search-events";
 import type { ImageTemplate } from "@/lib/templates";
 
 type HomepageHeroProps = {
@@ -72,18 +73,6 @@ const modes = {
 type ModeName = keyof typeof modes;
 
 const popularSearches = ["portrait", "product", "cinematic", "selfie", "logo", "album cover", "packaging", "anime"];
-const portraitLikeCategories = new Set<ImageTemplate["category"]>(["Portrait", "Character", "Lifestyle"]);
-
-function getFallbackRatio(template: ImageTemplate | undefined) {
-  if (!template) return 16 / 11;
-  if (portraitLikeCategories.has(template.category)) return 2 / 3;
-  if (template.category === "Design" || template.category === "Product") return 3 / 2;
-  return 16 / 11;
-}
-
-function getClampedFrameRatio(ratio: number) {
-  return Math.min(1.85, Math.max(0.78, ratio));
-}
 
 export function HomepageHero({ templates, templateCount, schemaVersion }: HomepageHeroProps) {
   const router = useRouter();
@@ -91,16 +80,12 @@ export function HomepageHero({ templates, templateCount, schemaVersion }: Homepa
   const [accentIndex, setAccentIndex] = useState(0);
   const [templateIndex, setTemplateIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
-  const [templateRatios, setTemplateRatios] = useState<Record<string, number>>({});
   const active = modes[mode];
   const accent = active.accents[accentIndex % active.accents.length];
   const modeTemplateOffset = mode === "find" ? 0 : Math.max(1, Math.floor(templates.length / 3));
   const heroTemplate = templates.length > 0
     ? templates[(templateIndex + modeTemplateOffset) % templates.length]
     : undefined;
-  const heroRatio = heroTemplate ? templateRatios[heroTemplate.id] ?? getFallbackRatio(heroTemplate) : getFallbackRatio(undefined);
-  const frameRatio = getClampedFrameRatio(heroRatio);
-  const frameWidth = frameRatio < 1 ? "min(72%, 31rem)" : "100%";
   const Icon = active.primary.icon;
   const SecondaryIcon = active.secondary.icon;
 
@@ -126,11 +111,13 @@ export function HomepageHero({ templates, templateCount, schemaVersion }: Homepa
     const formData = new FormData(event.currentTarget);
     const formQuery = String(formData.get("query") ?? searchQuery);
     setSearchQuery(formQuery);
+    trackTemplateSearch({ query: formQuery, source: "homepage", resultCount: templateCount });
     applyGallerySearch(formQuery);
   }
 
   function handlePopularSearch(query: string) {
     setSearchQuery(query);
+    trackTemplateSearch({ query, source: "homepage", resultCount: templateCount });
     applyGallerySearch(query);
   }
 
@@ -141,32 +128,6 @@ export function HomepageHero({ templates, templateCount, schemaVersion }: Homepa
 
     return () => window.clearInterval(interval);
   }, []);
-
-  useEffect(() => {
-    if (!heroTemplate || templateRatios[heroTemplate.id]) return;
-
-    const image = new window.Image();
-    image.onload = () => {
-      if (!image.naturalWidth || !image.naturalHeight) return;
-      const nextRatio = image.naturalWidth / image.naturalHeight;
-      setTemplateRatios((current) => {
-        const currentRatio = current[heroTemplate.id];
-        if (currentRatio && Math.abs(currentRatio - nextRatio) < 0.001) return current;
-        return { ...current, [heroTemplate.id]: nextRatio };
-      });
-    };
-    image.src = heroTemplate.image;
-  }, [heroTemplate, templateRatios]);
-
-  function rememberTemplateRatio(templateId: string, naturalWidth: number, naturalHeight: number) {
-    if (!naturalWidth || !naturalHeight) return;
-    const nextRatio = naturalWidth / naturalHeight;
-    setTemplateRatios((current) => {
-      const currentRatio = current[templateId];
-      if (currentRatio && Math.abs(currentRatio - nextRatio) < 0.001) return current;
-      return { ...current, [templateId]: nextRatio };
-    });
-  }
 
   return (
     <section className="bg-white">
@@ -193,7 +154,7 @@ export function HomepageHero({ templates, templateCount, schemaVersion }: Homepa
             ))}
           </div>
 
-          <h1 className="mt-12 max-w-3xl pb-2 text-5xl font-semibold leading-[1.08] tracking-tight text-zinc-950 sm:text-6xl lg:text-7xl">
+          <h1 className="mt-12 min-h-[3.35em] max-w-3xl pb-2 text-5xl font-semibold leading-[1.08] tracking-tight text-zinc-950 sm:text-6xl lg:text-7xl">
             {active.headline}{" "}
             <span
               key={`${mode}-${accent}`}
@@ -252,23 +213,13 @@ export function HomepageHero({ templates, templateCount, schemaVersion }: Homepa
         </div>
 
         <div className="flex items-center">
-          <div
-            className="oit-hero-preview-frame relative mx-auto overflow-hidden rounded-[24px] bg-zinc-200 p-4 shadow-[0_28px_80px_rgba(24,24,27,0.16)]"
-            style={{
-              aspectRatio: String(frameRatio),
-              width: frameWidth,
-            }}
-          >
+          <div className="oit-hero-preview-frame relative mx-auto aspect-[16/11] w-full max-w-[38rem] overflow-hidden rounded-[24px] bg-zinc-200 p-4 shadow-[0_28px_80px_rgba(24,24,27,0.16)]">
             <div className="h-full w-full overflow-hidden rounded-[18px] bg-zinc-950">
               {heroTemplate ? (
                 <img
                   key={`${mode}-${heroTemplate.id}`}
                   src={heroTemplate.image}
                   alt={heroTemplate.imageAlt}
-                  onLoad={(event) => {
-                    const { naturalWidth, naturalHeight } = event.currentTarget;
-                    rememberTemplateRatio(heroTemplate.id, naturalWidth, naturalHeight);
-                  }}
                   className="oit-hero-preview-image h-full w-full object-cover object-top"
                 />
               ) : null}
