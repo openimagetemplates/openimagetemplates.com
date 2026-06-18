@@ -1,7 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import { ArrowUpRight, Braces, Check, Clock3, Copy, ImageIcon, Loader2, Plus, Send, Sparkles, Trash2, Upload, X } from "lucide-react";
+import { ArrowUpRight, Braces, Check, Clock3, Copy, ExternalLink, ImageIcon, Loader2, Plus, Send, Sparkles, Trash2, Upload, X } from "lucide-react";
 import type React from "react";
 import { useMemo, useRef, useState } from "react";
 import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
@@ -31,6 +31,14 @@ type CommunitySubmissionResponse = {
   message?: unknown;
 };
 
+type TemplateImageGenerationResponse = {
+  imageUrl?: unknown;
+  cost?: unknown;
+  paymentSource?: unknown;
+  requestId?: unknown;
+  message?: unknown;
+};
+
 const maxImageBytes = 4 * 1024 * 1024;
 
 export function TemplateCreator({ baseTemplate, initiallyOpen = false }: TemplateCreatorProps) {
@@ -46,6 +54,9 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false }: Templat
   const [communityError, setCommunityError] = useState("");
   const [copied, setCopied] = useState(false);
   const [analyzing, setAnalyzing] = useState(false);
+  const [imageGenerating, setImageGenerating] = useState(false);
+  const [generatedImageMeta, setGeneratedImageMeta] = useState("");
+  const [imageGenerationError, setImageGenerationError] = useState("");
   const [error, setError] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -65,6 +76,8 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false }: Templat
     setCommunitySubmitting(false);
     setCommunityError("");
     setCopied(false);
+    setGeneratedImageMeta("");
+    setImageGenerationError("");
     setError("");
     setOpen(true);
   }
@@ -85,6 +98,8 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false }: Templat
     setCommunitySubmitting(false);
     setCommunityError("");
     setCopied(false);
+    setGeneratedImageMeta("");
+    setImageGenerationError("");
     setError("");
     setOpen(true);
   }
@@ -106,6 +121,8 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false }: Templat
         image: dataUrl,
         imageAlt: current.imageAlt || `${current.title || "Template"} preview`,
       }));
+      setGeneratedImageMeta("");
+      setImageGenerationError("");
     } catch (fileError) {
       setError(fileError instanceof Error ? fileError.message : "Unable to read image file.");
     }
@@ -140,6 +157,8 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false }: Templat
       setSavedSignature("");
       setCommunitySubmission(null);
       setCommunityError("");
+      setGeneratedImageMeta("");
+      setImageGenerationError("");
     } catch (analysisError) {
       setError(analysisError instanceof Error ? analysisError.message : "Template AI request failed.");
     } finally {
@@ -157,6 +176,8 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false }: Templat
     setSavedSignature("");
     setCommunitySubmission(null);
     setCommunityError("");
+    setGeneratedImageMeta("");
+    setImageGenerationError("");
     setError("");
   }
 
@@ -164,7 +185,50 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false }: Templat
     setDraft((current) => ({ ...current, ...patch }));
     setSavedSignature("");
     setCommunityError("");
+    setImageGenerationError("");
     setError("");
+  }
+
+  async function generatePreviewImage() {
+    const prompt = draft.prompt.trim();
+    if (prompt.length < 3) {
+      setImageGenerationError("Write a model-ready prompt before generating an image.");
+      return;
+    }
+
+    setImageGenerating(true);
+    setImageGenerationError("");
+    setError("");
+    try {
+      const response = await fetch("/api/template-image-generations", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          prompt,
+          model: draft.suggestedModel || "gpt-image-2",
+        }),
+      });
+      const data = (await response.json().catch(() => ({}))) as TemplateImageGenerationResponse;
+      if (!response.ok || typeof data.imageUrl !== "string") {
+        throw new Error(typeof data.message === "string" ? data.message : "Could not generate the image.");
+      }
+
+      setDraft((current) => ({
+        ...current,
+        image: data.imageUrl as string,
+        imageAlt: current.imageAlt || `${current.title || "Generated template"} preview`,
+      }));
+      const cost = typeof data.cost === "number" ? `$${data.cost.toFixed(4)}` : "";
+      setGeneratedImageMeta(cost ? `Generated with NanoGPT. Cost: ${cost}.` : "Generated with NanoGPT.");
+      setReferenceImage("");
+      setReferenceFileName("");
+      setSavedSignature("");
+      setCommunitySubmission(null);
+    } catch (generationError) {
+      setImageGenerationError(generationError instanceof Error ? generationError.message : "Could not generate the image.");
+    } finally {
+      setImageGenerating(false);
+    }
   }
 
   function updateSlot(id: string, patch: Partial<TemplateCreatorDraft["slots"][number]>) {
@@ -473,6 +537,49 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false }: Templat
                       {analyzing ? <Loader2 className="animate-spin" size={17} aria-hidden="true" /> : <ImageIcon size={17} aria-hidden="true" />}
                       Generate template with AI
                     </button>
+                  </div>
+
+                  <div className="rounded-[8px] border border-black/10 bg-white p-4">
+                    <div className="flex items-center gap-2 text-zinc-950">
+                      <ImageIcon size={18} aria-hidden="true" />
+                      <h3 className="text-lg font-semibold">Generate image</h3>
+                    </div>
+                    <p className="mt-2 text-sm leading-6 text-zinc-600">
+                      Create a preview from the current model-ready prompt. The image is added to this template before you submit it.
+                    </p>
+                    <div className="mt-4 overflow-hidden rounded-[8px] bg-zinc-100">
+                      {draft.image ? (
+                        <img src={draft.image} alt={draft.imageAlt || "Template preview"} className="max-h-72 w-full object-contain" />
+                      ) : (
+                        <div className="grid min-h-56 place-items-center px-6 text-center text-sm font-medium text-zinc-500">
+                          Generated previews will appear here.
+                        </div>
+                      )}
+                    </div>
+                    {generatedImageMeta ? <p className="mt-3 text-xs leading-5 text-zinc-500">{generatedImageMeta}</p> : null}
+                    {imageGenerationError ? (
+                      <p className="mt-3 rounded-[8px] bg-red-50 p-3 text-sm leading-6 text-red-700">{imageGenerationError}</p>
+                    ) : null}
+                    <div className="mt-4 flex flex-col gap-2 sm:flex-row">
+                      <button
+                        type="button"
+                        onClick={() => void generatePreviewImage()}
+                        disabled={imageGenerating || draft.prompt.trim().length < 3}
+                        className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-full bg-zinc-950 px-4 text-sm font-semibold text-white transition hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-45"
+                      >
+                        {imageGenerating ? <Loader2 className="animate-spin" size={16} aria-hidden="true" /> : <ImageIcon size={16} aria-hidden="true" />}
+                        Generate image
+                      </button>
+                      <a
+                        href={getNanoGptGenerateUrl(previewTemplate)}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-4 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-50"
+                      >
+                        Open in NanoGPT
+                        <ExternalLink size={15} aria-hidden="true" />
+                      </a>
+                    </div>
                   </div>
 
                   <div className="rounded-[8px] border border-black/10 bg-white p-4">

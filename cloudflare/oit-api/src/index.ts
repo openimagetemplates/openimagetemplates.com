@@ -71,8 +71,8 @@ async function handleSubmission(request: Request, env: Env) {
   if (validationError) return jsonResponse(request, { message: validationError }, { status: 400 });
   if (!template) return jsonResponse(request, { message: "Missing template." }, { status: 400 });
 
-  const submittedAt = new Date().toISOString();
-  const submissionId = crypto.randomUUID();
+  const submittedAt = normalizeIsoTimestamp(body.submittedAt) || new Date().toISOString();
+  const submissionId = normalizeSubmissionId(body.submissionId) || crypto.randomUUID();
   const payload = {
     submissionId,
     submittedAt,
@@ -153,6 +153,19 @@ function normalizeString(value: unknown, maxLength: number) {
 
 function normalizeNumber(value: unknown) {
   return typeof value === "number" && Number.isFinite(value) ? value : 0;
+}
+
+function normalizeSubmissionId(value: unknown) {
+  if (typeof value !== "string") return "";
+  const trimmed = value.trim();
+  return /^[a-f0-9-]{16,80}$/i.test(trimmed) ? trimmed : "";
+}
+
+function normalizeIsoTimestamp(value: unknown) {
+  if (typeof value !== "string") return "";
+  const timestamp = value.trim();
+  const parsed = Date.parse(timestamp);
+  return Number.isFinite(parsed) ? new Date(parsed).toISOString() : "";
 }
 
 function hashForIndex(input: string) {
