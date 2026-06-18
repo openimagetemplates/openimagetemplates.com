@@ -179,17 +179,18 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
             View this template as JSON
           </a>
 
-          <section className="mt-12">
-            <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">Related templates</h2>
-            <p className="mt-2 text-sm leading-6 text-zinc-600">
-              Similar templates by category, tags, or suggested model.
-            </p>
-            <div className="mt-5">
-              <TemplateCollectionGrid templates={relatedTemplates} />
-            </div>
-          </section>
         </div>
       </div>
+
+      <section className="mt-14">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">Related templates</h2>
+        <p className="mt-2 text-sm leading-6 text-zinc-600">
+          Similar templates by category, tags, or suggested model.
+        </p>
+        <div className="mt-5">
+          <TemplateCollectionGrid templates={relatedTemplates} />
+        </div>
+      </section>
     </main>
   );
 }

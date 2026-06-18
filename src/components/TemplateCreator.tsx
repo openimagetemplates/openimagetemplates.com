@@ -2,6 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 import { ArrowUpRight, Braces, Check, Clock3, Copy, ExternalLink, ImageIcon, Loader2, Plus, Send, Sparkles, Trash2, Upload, X } from "lucide-react";
+import Link from "next/link";
 import type React from "react";
 import { useMemo, useRef, useState } from "react";
 import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
@@ -23,6 +24,7 @@ import type { ImageTemplate } from "@/lib/templates";
 type TemplateCreatorProps = {
   baseTemplate?: ImageTemplate;
   initiallyOpen?: boolean;
+  mode?: "modal" | "inline";
 };
 
 type CommunitySubmissionResponse = {
@@ -41,8 +43,9 @@ type TemplateImageGenerationResponse = {
 
 const maxImageBytes = 4 * 1024 * 1024;
 
-export function TemplateCreator({ baseTemplate, initiallyOpen = false }: TemplateCreatorProps) {
-  const [open, setOpen] = useState(initiallyOpen);
+export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "modal" }: TemplateCreatorProps) {
+  const isInline = mode === "inline";
+  const [open, setOpen] = useState(initiallyOpen || isInline);
   const [draft, setDraft] = useState<TemplateCreatorDraft>(() => createEmptyTemplateDraft(baseTemplate));
   const [idea, setIdea] = useState("");
   const [referenceImage, setReferenceImage] = useState("");
@@ -314,8 +317,9 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false }: Templat
 
   return (
     <>
+      {!isInline ? (
       <section className="mt-8 rounded-[8px] border border-black/10 bg-white p-5 shadow-sm sm:p-6">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-5">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">Create</p>
             <h2 className="mt-2 text-2xl font-semibold tracking-tight text-zinc-950">
@@ -327,32 +331,37 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false }: Templat
                 : "Fill the schema fields manually or generate a draft from an image or idea."}
             </p>
           </div>
-          <div className="flex flex-col gap-2 sm:flex-row">
+          <div className="grid gap-2">
             {baseTemplate ? (
               <button
                 type="button"
                 onClick={openFromCurrentTemplate}
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-5 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-50"
+                className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-4 py-3 text-sm font-semibold leading-none text-zinc-950 transition hover:bg-zinc-50"
               >
-                <Copy size={17} aria-hidden="true" />
-                Start from this template
+                <Copy className="shrink-0" size={17} aria-hidden="true" />
+                <span className="truncate">Start from this template</span>
               </button>
             ) : null}
-            <button
-              type="button"
-              onClick={openCreator}
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800"
+            <Link
+              href="/templates/create"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-4 py-3 text-sm font-semibold leading-none text-white transition hover:bg-zinc-800"
             >
-              <Plus size={17} aria-hidden="true" />
-              Start from scratch
-            </button>
+              <Plus className="shrink-0" size={17} aria-hidden="true" />
+              <span className="truncate">Start from scratch</span>
+            </Link>
           </div>
         </div>
       </section>
+      ) : null}
 
       {open ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-3 py-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Create image template">
-          <div className="flex max-h-[94dvh] w-full max-w-6xl flex-col overflow-hidden rounded-[8px] bg-white shadow-2xl">
+        <div
+          className={isInline ? "mt-10" : "fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-3 py-4 backdrop-blur-sm"}
+          role={isInline ? undefined : "dialog"}
+          aria-modal={isInline ? undefined : "true"}
+          aria-label={isInline ? undefined : "Create image template"}
+        >
+          <div className={isInline ? "flex w-full flex-col overflow-hidden rounded-[8px] border border-black/10 bg-white shadow-sm" : "flex max-h-[94dvh] w-full max-w-6xl flex-col overflow-hidden rounded-[8px] bg-white shadow-2xl"}>
             <div className="flex items-start justify-between gap-4 border-b border-black/10 px-5 py-4 sm:px-6">
               <div>
                 <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">Create template</h2>
@@ -360,7 +369,8 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false }: Templat
                   AI can draft the structure, but the editable fields stay yours to review.
                 </p>
               </div>
-              <button
+              {!isInline ? (
+                <button
                 type="button"
                 onClick={() => setOpen(false)}
                 className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-black/10 bg-white text-zinc-950 transition hover:bg-zinc-50"
@@ -368,9 +378,10 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false }: Templat
               >
                 <X size={18} aria-hidden="true" />
               </button>
+              ) : null}
             </div>
 
-            <div className="min-h-0 flex-1 overflow-auto px-5 py-5 sm:px-6">
+            <div className={isInline ? "px-5 py-5 sm:px-6" : "min-h-0 flex-1 overflow-auto px-5 py-5 sm:px-6"}>
               <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
                 <div className="space-y-5">
                   <div className="grid gap-3 sm:grid-cols-2">

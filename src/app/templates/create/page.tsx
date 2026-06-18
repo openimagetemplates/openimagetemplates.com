@@ -36,7 +36,7 @@ export default function CreateTemplatePage() {
           for you to review.
         </p>
 
-        <TemplateCreator initiallyOpen />
+        <TemplateCreator mode="inline" />
       </section>
     </main>
   );
