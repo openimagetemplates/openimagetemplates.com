@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { ArrowLeft, ArrowRight, Check, Download, Globe2, ShieldCheck, SlidersHorizontal } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -6,6 +5,7 @@ import { GalleryExplorer } from "@/components/GalleryExplorer";
 import { HomepageHero } from "@/components/HomepageHero";
 import { HomepagePromptBuilderDemo } from "@/components/HomepagePromptBuilderDemo";
 import { JsonLd } from "@/components/JsonLd";
+import { TemplatePreviewImage } from "@/components/TemplatePreviewImage";
 import { absoluteUrl, SITE_DESCRIPTION, SITE_NAME, templateUrl } from "@/lib/seo";
 import { selectDiverseTemplates, TEMPLATE_SCHEMA_VERSION, templates } from "@/lib/templates";
 
@@ -87,7 +87,7 @@ export default function Home() {
             {makingTemplates.map((template) => (
               <Link key={template.id} href={`/templates/${template.id}`} className="group block">
                 <div className="aspect-[16/9] overflow-hidden rounded-[8px] bg-zinc-100">
-                  <img
+                  <TemplatePreviewImage
                     src={template.image}
                     alt={template.imageAlt}
                     className="h-full w-full object-cover object-top transition duration-300 group-hover:scale-[1.03]"
@@ -164,9 +164,9 @@ export default function Home() {
 
           <div className="oit-shape-float absolute right-8 top-24 hidden h-64 w-80 rotate-[6deg] rounded-[8px] bg-[#4bb3f0] p-4 shadow-2xl lg:block">
             <div className="h-full overflow-hidden rounded-[8px] bg-white/35 p-3">
-              <img
+              <TemplatePreviewImage
                 src={collageTemplates[0]?.image}
-                alt={collageTemplates[0]?.imageAlt}
+                alt={collageTemplates[0]?.imageAlt ?? "Template preview"}
                 className="h-full w-full rounded-[8px] object-cover object-top shadow-xl"
               />
             </div>
@@ -175,7 +175,7 @@ export default function Home() {
           <div className="oit-shape-drift absolute bottom-10 right-24 hidden h-56 w-56 rounded-[8px] bg-[#bdb8f8] p-5 shadow-xl md:block">
             <div className="grid h-full grid-cols-2 gap-3">
               {collageTemplates.slice(1, 5).map((template) => (
-                <img
+                <TemplatePreviewImage
                   key={template.id}
                   src={template.image}
                   alt={template.imageAlt}
@@ -285,7 +285,7 @@ export default function Home() {
                   <p className="mt-2 text-sm font-medium text-black/60">{template.title}</p>
                 </div>
                 <div className="h-72 overflow-hidden px-5 pb-5">
-                  <img
+                  <TemplatePreviewImage
                     src={template.image}
                     alt={template.imageAlt}
                     className="h-full w-full rounded-[8px] object-cover object-top shadow-2xl transition duration-300 group-hover:scale-[1.03]"

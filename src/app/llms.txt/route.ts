@@ -13,6 +13,7 @@ export function GET() {
     "",
     "## Core URLs",
     `- Homepage: ${absoluteUrl("/")}`,
+    `- Full template catalogue JSON: ${absoluteUrl("/templates.json")}`,
     `- Schema page: ${absoluteUrl("/schema")}`,
     `- Raw JSON Schema: ${absoluteUrl("/open-image-template.schema.json")}`,
     `- Full AI index: ${absoluteUrl("/llms-full.txt")}`,

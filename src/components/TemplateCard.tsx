@@ -1,9 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
 import { categoryPath, tagPath } from "@/lib/seo";
 import type { ImageTemplate } from "@/lib/templates";
+import { TemplatePreviewImage } from "@/components/TemplatePreviewImage";
 
 type TemplateCardProps = {
   template: ImageTemplate;
@@ -15,11 +15,10 @@ export function TemplateCard({ template }: TemplateCardProps) {
       <div className="relative bg-zinc-100">
         <Link href={`/templates/${template.id}`} className="block">
           <span className="block aspect-[4/3] overflow-hidden bg-zinc-100">
-            <img
+            <TemplatePreviewImage
               src={template.image}
               alt={template.imageAlt}
               className="h-full w-full object-cover"
-              loading="lazy"
             />
           </span>
         </Link>

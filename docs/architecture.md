@@ -8,13 +8,15 @@ Open Image Templates should be mostly static, crawlable, and cheap to operate ev
 
 - Next.js app on Vercel or Cloudflare Pages for HTML, routes, and static data.
 - Cloudflare R2 as the image origin.
-- Cloudflare custom domain for public assets, for example `img.openimagetemplates.com`.
+- Cloudflare custom domain for public assets: `assets.openimagetemplates.com`.
 - Template metadata in git for curated public templates.
 - Community submissions stored in a private R2 prefix until moderation.
 
 ## Image Delivery
 
 Do not route gallery images through the application server.
+
+Open Image Templates owns the public asset URLs. NanoGPT and other generators should consume template JSON and preview images from this project and the `assets.openimagetemplates.com` asset host.
 
 Store these derivatives per template:
 

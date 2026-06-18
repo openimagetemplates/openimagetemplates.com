@@ -8,7 +8,9 @@ const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const nanoGptDir = resolve(process.env.NANOGPT_PROJECT_DIR ?? "/Users/dev1/worktrees/worktree/white");
 const nanoGptTemplatePath = resolve(nanoGptDir, "app/media/promptTemplates.ts");
 const outputPath = resolve(rootDir, "src/data/nanogpt-prompt-templates.json");
-const defaultAssetBaseUrl = process.env.NANOGPT_TEMPLATE_ASSET_BASE_URL ?? "https://nano-gpt.com";
+const defaultAssetBaseUrl = process.env.OIT_TEMPLATE_ASSET_BASE_URL
+  ?? process.env.NANOGPT_TEMPLATE_ASSET_BASE_URL
+  ?? "https://assets.openimagetemplates.com";
 
 const source = readFileSync(nanoGptTemplatePath, "utf8");
 const compiled = ts.transpileModule(source, {
@@ -69,7 +71,7 @@ writeFileSync(
   `${JSON.stringify(
     {
       generatedAt: new Date().toISOString(),
-      source: "nano-gpt.com app/media/promptTemplates.ts",
+      source: "openimagetemplates.com public catalogue",
       templates: publicTemplates,
     },
     null,

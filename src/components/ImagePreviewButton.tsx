@@ -1,8 +1,8 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
 import { X } from "lucide-react";
 import { useState } from "react";
+import { TemplatePreviewImage } from "@/components/TemplatePreviewImage";
 
 type ImagePreviewButtonProps = {
   src: string;
@@ -18,7 +18,7 @@ export function ImagePreviewButton({ src, alt, label, className = "", imageClass
   return (
     <>
       <button type="button" onClick={() => setOpen(true)} className={`block w-full text-left ${className}`} aria-label={`Open ${label} preview`}>
-        <img src={src} alt={alt} className={imageClassName} />
+        <TemplatePreviewImage src={src} alt={alt} className={imageClassName} />
       </button>
       {open ? (
         <div
@@ -43,7 +43,7 @@ export function ImagePreviewButton({ src, alt, label, className = "", imageClass
                 <X size={18} aria-hidden="true" />
               </button>
             </div>
-            <img src={src} alt={alt} className="max-h-[78vh] w-full bg-zinc-100 object-contain" />
+            <TemplatePreviewImage src={src} alt={alt} className="max-h-[78vh] w-full bg-zinc-100 object-contain" fallbackClassName="min-h-[24rem]" />
           </div>
         </div>
       ) : null}

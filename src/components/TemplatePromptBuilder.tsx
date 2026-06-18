@@ -1,6 +1,7 @@
 "use client";
 import { Check, Copy } from "lucide-react";
 import { useMemo, useState } from "react";
+import { NanoGptGenerateButton } from "@/components/NanoGptGenerateButton";
 import { TemplateLookControls } from "@/components/TemplateLookControls";
 import {
   compileTemplatePrompt,
@@ -144,16 +145,20 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
       </div>
 
       <div className="mt-6 rounded-[8px] bg-zinc-950 p-4 text-zinc-100">
-        <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-400">Generated prompt</h3>
+        <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-400">Full prompt</h3>
         <p className="mt-4 max-h-64 overflow-auto text-sm leading-7 text-zinc-200">{adjustedPrompt}</p>
+      </div>
+
+      <div className="mt-4 flex flex-col gap-3 sm:flex-row">
         <button
           type="button"
           onClick={copyAdjustedPrompt}
-          className="mt-5 inline-flex h-10 items-center justify-center gap-2 rounded-full bg-white px-4 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-100"
+          className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-5 text-sm font-semibold text-zinc-950 shadow-sm transition hover:bg-zinc-50"
         >
           <Copy size={15} aria-hidden="true" />
           {copied ? "Copied" : "Copy prompt"}
         </button>
+        <NanoGptGenerateButton template={template} prompt={adjustedPrompt} className="h-12 px-5" />
       </div>
     </section>
   );

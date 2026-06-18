@@ -1,7 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import { ArrowRight, Braces, Check, ImagePlus, Images, Search, Sparkles } from "lucide-react";
+import { ArrowRight, Braces, Check, ImageIcon, ImagePlus, Images, Search, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
@@ -80,6 +80,8 @@ export function HomepageHero({ templates, templateCount, schemaVersion }: Homepa
   const [accentIndex, setAccentIndex] = useState(0);
   const [templateIndex, setTemplateIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
+  const [imageAspectRatio, setImageAspectRatio] = useState(16 / 11);
+  const [failedImageUrls, setFailedImageUrls] = useState<Record<string, true>>({});
   const active = modes[mode];
   const accent = active.accents[accentIndex % active.accents.length];
   const modeTemplateOffset = mode === "find" ? 0 : Math.max(1, Math.floor(templates.length / 3));
@@ -128,6 +130,35 @@ export function HomepageHero({ templates, templateCount, schemaVersion }: Homepa
 
     return () => window.clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    if (!heroTemplate?.image) return;
+
+    let activeImage = true;
+    const image = new window.Image();
+
+    const updateAspectRatio = () => {
+      if (activeImage && image.naturalWidth > 0 && image.naturalHeight > 0) {
+        setImageAspectRatio(image.naturalWidth / image.naturalHeight);
+      }
+    };
+
+    image.onload = updateAspectRatio;
+    image.onerror = () => {
+      if (activeImage) {
+        setFailedImageUrls((current) => ({ ...current, [heroTemplate.image]: true }));
+      }
+    };
+    image.src = heroTemplate.image;
+
+    if (image.complete && image.naturalWidth > 0 && image.naturalHeight > 0) {
+      window.requestAnimationFrame(updateAspectRatio);
+    }
+
+    return () => {
+      activeImage = false;
+    };
+  }, [heroTemplate?.image]);
 
   return (
     <section className="bg-white">
@@ -212,17 +243,35 @@ export function HomepageHero({ templates, templateCount, schemaVersion }: Homepa
           </div>
         </div>
 
-        <div className="flex items-center">
-          <div className="oit-hero-preview-frame relative mx-auto aspect-[16/11] w-full max-w-[38rem] overflow-hidden rounded-[24px] bg-zinc-200 p-4 shadow-[0_28px_80px_rgba(24,24,27,0.16)]">
+        <div className="flex min-h-[34rem] items-center">
+          <div
+            className="oit-hero-preview-frame relative mx-auto w-full overflow-hidden rounded-[24px] bg-zinc-200 p-4 shadow-[0_28px_80px_rgba(24,24,27,0.16)] transition-[aspect-ratio,max-width] duration-700 ease-out"
+            style={{
+              aspectRatio: imageAspectRatio,
+              maxWidth: `min(38rem, calc(34rem * ${imageAspectRatio}))`,
+            }}
+          >
             <div className="h-full w-full overflow-hidden rounded-[18px] bg-zinc-950">
-              {heroTemplate ? (
+              {heroTemplate && !failedImageUrls[heroTemplate.image] ? (
                 <img
                   key={`${mode}-${heroTemplate.id}`}
                   src={heroTemplate.image}
                   alt={heroTemplate.imageAlt}
+                  onError={() => setFailedImageUrls((current) => ({ ...current, [heroTemplate.image]: true }))}
+                  onLoad={(event) => {
+                    const { naturalWidth, naturalHeight } = event.currentTarget;
+                    if (naturalWidth > 0 && naturalHeight > 0) {
+                      setImageAspectRatio(naturalWidth / naturalHeight);
+                    }
+                  }}
                   className="oit-hero-preview-image h-full w-full object-cover object-top"
                 />
-              ) : null}
+              ) : (
+                <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-zinc-100 px-6 text-center text-zinc-500">
+                  <ImageIcon size={32} aria-hidden="true" />
+                  <span className="text-sm font-semibold">Preview coming soon</span>
+                </div>
+              )}
             </div>
             <div
               key={`${mode}-${heroTemplate?.id ?? "template"}-label`}

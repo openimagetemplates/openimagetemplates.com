@@ -43,6 +43,12 @@ type SyncedTemplate = Omit<ImageTemplate, "category" | "schemaVersion"> & {
   schemaVersion: string;
 };
 
+type TemplateCatalog = {
+  generatedAt?: string;
+  source?: string;
+  templates: SyncedTemplate[];
+};
+
 const categoryOrder: Array<"All" | TemplateCategory> = [
   "All",
   "Portrait",
@@ -54,7 +60,9 @@ const categoryOrder: Array<"All" | TemplateCategory> = [
   "Other",
 ];
 
-export const templates: ImageTemplate[] = (templateCatalog.templates as SyncedTemplate[]).map((template) => ({
+const syncedTemplateCatalog = templateCatalog as TemplateCatalog;
+
+export const templates: ImageTemplate[] = syncedTemplateCatalog.templates.map((template) => ({
   ...template,
   category: toTemplateCategory(template.category),
   schemaVersion: TEMPLATE_SCHEMA_VERSION,
@@ -158,6 +166,17 @@ export function toPortableTemplateJson(template: ImageTemplate) {
     ],
     creator: template.creator,
     license: template.license,
+  };
+}
+
+export function toPortableTemplateCatalogJson() {
+  return {
+    standard: TEMPLATE_STANDARD,
+    schema_version: TEMPLATE_SCHEMA_VERSION,
+    generated_at: syncedTemplateCatalog.generatedAt,
+    source: "openimagetemplates.com",
+    asset_base_url: "https://assets.openimagetemplates.com",
+    templates: templates.map(toPortableTemplateJson),
   };
 }
 

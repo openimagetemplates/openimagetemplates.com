@@ -11,7 +11,7 @@ import {
 } from "@/lib/seo";
 import { templates } from "@/lib/templates";
 
-const staticPaths = ["/", "/templates", "/templates/create", "/schema", "/docs", "/llms.txt", "/llms-full.txt", "/open-image-template.schema.json"];
+const staticPaths = ["/", "/templates", "/templates.json", "/templates/create", "/schema", "/docs", "/llms.txt", "/llms-full.txt", "/open-image-template.schema.json"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

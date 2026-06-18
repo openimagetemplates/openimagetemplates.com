@@ -3,9 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
-import { CopyButton } from "@/components/CopyButton";
 import { ImagePreviewButton } from "@/components/ImagePreviewButton";
-import { NanoGptGenerateButton } from "@/components/NanoGptGenerateButton";
 import { TemplateJsonDisclosure } from "@/components/TemplateJsonDisclosure";
 import { TemplateCreator } from "@/components/TemplateCreator";
 import { TemplatePromptBuilder } from "@/components/TemplatePromptBuilder";
@@ -125,13 +123,16 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
         Back to gallery
       </Link>
       <div className="mt-8 grid min-w-0 gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-        <div className="self-start overflow-hidden rounded-[8px] border border-black/10 bg-white shadow-sm">
-          <ImagePreviewButton
-            src={template.image}
-            alt={template.imageAlt}
-            label={template.title}
-            imageClassName="w-full object-cover transition duration-300 hover:scale-[1.01]"
-          />
+        <div className="self-start">
+          <div className="overflow-hidden rounded-[8px] border border-black/10 bg-white shadow-sm">
+            <ImagePreviewButton
+              src={template.image}
+              alt={template.imageAlt}
+              label={template.title}
+              imageClassName="w-full object-cover transition duration-300 hover:scale-[1.01]"
+            />
+          </div>
+          <TemplateCreator baseTemplate={template} />
         </div>
         <div className="min-w-0">
           <div className="flex flex-wrap gap-2">
@@ -162,27 +163,7 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <CopyButton value={template.prompt} label="Copy full prompt" className="h-12 px-5 text-sm font-semibold" />
-            <NanoGptGenerateButton template={template} className="h-12 px-5" />
-          </div>
-
           <TemplatePromptBuilder template={template} />
-
-          <TemplateCreator baseTemplate={template} />
-
-          <section className="mt-8">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">Full prompt</h2>
-              <div className="flex flex-col gap-2 sm:flex-row">
-                <CopyButton value={template.prompt} label="Copy prompt" className="h-10" />
-                <NanoGptGenerateButton template={template} className="h-10 px-4" />
-              </div>
-            </div>
-            <div className="mt-4 rounded-[8px] border border-black/10 bg-white p-5 text-sm leading-7 text-zinc-700">
-              {template.prompt}
-            </div>
-          </section>
 
           <TemplateJsonDisclosure json={templateJson} />
 

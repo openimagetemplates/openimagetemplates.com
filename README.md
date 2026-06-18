@@ -20,13 +20,15 @@ Open `http://localhost:3000`.
 
 ## Template Source Of Truth
 
-The public template catalogue is synced from the NanoGPT app catalogue at:
+The public template catalogue lives in this project. Public preview assets are served from the Open Image Templates R2-backed asset domain:
 
 ```text
-/Users/dev1/worktrees/worktree/white/app/media/promptTemplates.ts
+https://assets.openimagetemplates.com
 ```
 
-Run this after adding or editing templates in NanoGPT:
+NanoGPT should consume templates and preview images from Open Image Templates, not act as the public asset source of truth.
+
+The current seed catalogue can still be imported from the NanoGPT app catalogue:
 
 ```bash
 npm run sync:templates
@@ -34,11 +36,17 @@ npm run sync:templates
 
 This writes `src/data/nanogpt-prompt-templates.json`, which the site uses to generate template pages and `/templates/{id}.json` endpoints. The public site filters out templates tagged `candid`.
 
-By default, synced preview images point at `https://nano-gpt.com/prompt-templates/...`. Override with:
+Consumers can fetch the full public catalogue from:
+
+```text
+/templates.json
+```
+
+By default, imported preview images point at `https://assets.openimagetemplates.com/...`. Override with:
 
 ```bash
 NANOGPT_PROJECT_DIR=/path/to/nano-gpt \
-NANOGPT_TEMPLATE_ASSET_BASE_URL=https://your-asset-host.example \
+OIT_TEMPLATE_ASSET_BASE_URL=https://your-asset-host.example \
 npm run sync:templates
 ```
 

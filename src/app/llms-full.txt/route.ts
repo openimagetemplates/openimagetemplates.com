@@ -19,6 +19,7 @@ export function GET() {
     SITE_DESCRIPTION,
     "",
     `Schema version: ${TEMPLATE_SCHEMA_VERSION}`,
+    `Full template catalogue JSON: ${absoluteUrl("/templates.json")}`,
     `Raw JSON Schema: ${absoluteUrl("/open-image-template.schema.json")}`,
     "",
     "## Docs",

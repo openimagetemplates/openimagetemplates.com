@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-06-16T09:51:41.336Z",
-  "source": "nano-gpt.com app/media/promptTemplates.ts",
+  "source": "openimagetemplates.com public catalogue",
   "templates": [
     {
       "id": "bold-magazine-close-up",
@@ -13,7 +13,7 @@
         "editorial",
         "close-up"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/bold-magazine-close-up--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/bold-magazine-close-up--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Bold Magazine Close-Up preview",
       "prompt": "Create a tight editorial beauty portrait of a stylish adult model wearing oversized translucent red sunglasses, glossy red lips, gold hoop earrings, and confident high-fashion styling. Use sharp studio lighting, realistic skin texture, close-up composition, a clean pale background, and premium magazine photography polish.",
       "negativePrompt": [],
@@ -52,7 +52,7 @@
         "warm lighting",
         "phone photo"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/cozy-bedroom-selfie--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/cozy-bedroom-selfie--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Cozy Bedroom Selfie preview",
       "prompt": "Create a realistic casual bedroom selfie of an adult person resting their face on one hand and looking at the camera. Use warm lamp light, string lights, soft phone-camera realism, natural facial details, slight lived-in room background, and an intimate candid composition.",
       "negativePrompt": [],
@@ -91,7 +91,7 @@
         "athleisure",
         "minimal"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/minimal-athleisure-studio--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/minimal-athleisure-studio--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Minimal Athleisure Studio preview",
       "prompt": "Create a realistic lifestyle fitness photo of an adult athlete wearing a clean white athleisure outfit in a bright minimal studio. The subject is posed in a relaxed floor stretch, with beige-white walls, soft sunlight, long shadows, natural skin tones, realistic fabric texture, and calm premium wellness brand styling.",
       "negativePrompt": [],
@@ -130,7 +130,7 @@
         "urban",
         "editorial"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/streetwear-bus-stop-editorial--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/streetwear-bus-stop-editorial--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Streetwear Bus Stop Editorial preview",
       "prompt": "Create a realistic streetwear editorial photo of a stylish adult model at an urban bus stop, wearing layered streetwear and sneakers. Use natural street light, candid pose, shallow depth of field, modern fashion-magazine composition, and subtle city background detail.",
       "negativePrompt": [],
@@ -169,7 +169,7 @@
         "beach",
         "summer"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/sunny-beach-product-shot--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/sunny-beach-product-shot--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Sunny Beach Product Shot preview",
       "prompt": "Create a bright commercial product photo of a yellow skincare tube standing in golden beach sand near the ocean. Add a crisp water splash, tropical leaves, and a small flower. Use sunny natural light, shallow depth of field, crisp product focus, realistic packaging material, and premium summer advertising composition. Keep label text minimal and graphic.",
       "negativePrompt": [],
@@ -208,7 +208,7 @@
         "luxury",
         "commercial"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/luxury-perfume-packshot--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/luxury-perfume-packshot--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Luxury Perfume Packshot preview",
       "prompt": "Create a premium product photo of a clear glass perfume bottle on polished stone, with elegant reflections, soft studio light, subtle warm background gradients, realistic glass and liquid detail, and luxury cosmetics advertising composition. Keep the product sharp and centered.",
       "negativePrompt": [],
@@ -247,7 +247,7 @@
         "phone photo",
         "daylight"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/bright-bedroom-mirror-selfie--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/bright-bedroom-mirror-selfie--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Bright Bedroom Mirror Selfie preview",
       "prompt": "Create a realistic bright bedroom mirror selfie of an adult lifestyle model sitting on a white bed, holding a white phone up to a large grey marble framed mirror. Use soft daylight from a nearby window, white bedding, neutral walls, gold jewelry, natural skin texture, casual confident posing, and authentic phone-camera realism.",
       "negativePrompt": [],
@@ -287,7 +287,7 @@
         "toy packaging",
         "3d model"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/boxed-collectible-figure--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/boxed-collectible-figure--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Turn Me Into A Collectible Figure preview",
       "prompt": "Use the uploaded image as the reference subject. Create a realistic product-style scene where that adult subject has been turned into a detailed collectible figure standing on a designer desk. Include a monitor showing a 3D character modeling view of the same figure, plus retail toy packaging with a clear plastic window. Use warm desk-lamp lighting, modern creative studio background, realistic plastic packaging, and premium collectible product photography.",
       "negativePrompt": [],
@@ -326,7 +326,7 @@
         "advertising",
         "commercial"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/sneaker-launch-hero--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/sneaker-launch-hero--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Sneaker Launch Hero preview",
       "prompt": "Create a commercial hero image of a futuristic running sneaker on dark reflective stone, with dynamic rim lighting, premium materials, crisp shadows, subtle mist, and high-energy launch campaign styling. Use a clean composition suitable for an ecommerce hero image.",
       "negativePrompt": [],
@@ -365,7 +365,7 @@
         "comic panel",
         "transformation"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/step-out-of-manga-book--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/step-out-of-manga-book--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Step Out Of A Manga Book preview",
       "prompt": "Use the uploaded image as the reference subject. Create an image of that adult subject stepping out of a giant open manga book in a cozy bedroom. The pages show a black-and-white illustrated version of the same subject, while the real version is colorful and photorealistic. Blend crisp manga panel art with realistic lighting, playful meta-comedy, and a clean cinematic composition.",
       "negativePrompt": [],
@@ -404,7 +404,7 @@
         "poster",
         "hero"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/anime-hero-poster--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/anime-hero-poster--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Anime Hero Poster preview",
       "prompt": "Create a dramatic anime poster of an original hero character standing in a storm-lit city, with heroic pose, dynamic lighting, detailed costume, glowing power effect, cinematic composition, and clean key art suitable for a series poster.",
       "negativePrompt": [],
@@ -443,7 +443,7 @@
         "portrait",
         "cinematic"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/cyborg-close-up--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/cyborg-close-up--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Cyborg Close-Up preview",
       "prompt": "Create a close-up portrait of an original futuristic cyborg with visible synthetic details, realistic skin-to-metal transitions, precise mechanical facial accents, dramatic low-key lighting, shallow depth of field, and cinematic sci-fi atmosphere.",
       "negativePrompt": [],
@@ -482,7 +482,7 @@
         "key art",
         "poster"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/fantasy-warrior-key-art--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/fantasy-warrior-key-art--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Fantasy Warrior Key Art preview",
       "prompt": "Create fantasy key art of an original warrior standing on a wind-swept hill, holding a glowing sword, with dramatic sky, detailed armor, cinematic lighting, epic scale, and poster-ready composition.",
       "negativePrompt": [],
@@ -521,7 +521,7 @@
         "automotive",
         "nature"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/cinematic-car-in-flowers--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/cinematic-car-in-flowers--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Cinematic Car In Flowers preview",
       "prompt": "Create a low-angle cinematic photo of a forest-green sports car in a field of wildflowers, with petals in the foreground, glossy reflections, dramatic natural light, shallow depth, and premium automotive photography.",
       "negativePrompt": [],
@@ -560,7 +560,7 @@
         "cinematic",
         "environment"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/abandoned-mech-cockpit--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/abandoned-mech-cockpit--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Abandoned Mech Cockpit preview",
       "prompt": "Create a moody sci-fi concept art scene inside an abandoned battlemech cockpit, with worn controls, cracked glass, atmospheric dust, low sunset light, massive scale, and a quiet sense of history.",
       "negativePrompt": [],
@@ -599,7 +599,7 @@
         "cinematic",
         "landscape"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/dreamy-forest-light--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/dreamy-forest-light--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Dreamy Forest Light preview",
       "prompt": "Create a dreamy spring forest scene with a narrow path, soft glowing morning light, detailed foliage, wildflowers, natural depth, gentle mist, and a calm cinematic mood.",
       "negativePrompt": [],
@@ -638,7 +638,7 @@
         "minimal",
         "daylight"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/minimal-interior-sunlight--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/minimal-interior-sunlight--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Minimal Interior Sunlight preview",
       "prompt": "Create a realistic interior photo of a minimal living room with neutral materials, light wood, soft daylight, clean shadows, a comfortable sofa, simple decor, and premium architecture photography composition.",
       "negativePrompt": [],
@@ -677,7 +677,7 @@
         "graphic design",
         "movie"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/movie-poster-remix--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/movie-poster-remix--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Movie Poster Remix preview",
       "prompt": "Create a cinematic movie poster concept for a fictional mystery film, featuring a lone figure under a streetlight in a rainy city, dramatic lighting, bold composition, atmospheric haze, and clear empty space reserved for title typography. Do not generate readable text.",
       "negativePrompt": [],
@@ -716,7 +716,7 @@
         "music",
         "cover art"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/album-cover-concept--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/album-cover-concept--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Album Cover Concept preview",
       "prompt": "Create a square album cover image for a dreamy electronic music project, featuring a glowing abstract orb above a dark ocean at night, deep blue and silver palette, strong centered composition, atmospheric grain, and room for typography. Do not generate readable text.",
       "negativePrompt": [],
@@ -755,7 +755,7 @@
         "line art",
         "flash sheet"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/tattoo-flash-sheet--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/tattoo-flash-sheet--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Tattoo Flash Sheet preview",
       "prompt": "Create a tattoo flash sheet of botanical moon and star motifs in fine-line blackwork style, with clean linework, balanced spacing, high contrast, subtle shading, and printable white background.",
       "negativePrompt": [],
@@ -794,7 +794,7 @@
         "portrait",
         "studio"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/pet-studio-portrait--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/pet-studio-portrait--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Pet Studio Portrait preview",
       "prompt": "Create a realistic studio portrait of a golden retriever with a soft sage background, professional diffused lighting, sharp fur detail, expressive eyes, and clean commercial pet photography composition.",
       "negativePrompt": [],
@@ -833,7 +833,7 @@
         "warm lighting",
         "editorial"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/coffee-shop-lifestyle--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/coffee-shop-lifestyle--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Coffee Shop Lifestyle preview",
       "prompt": "Create a realistic lifestyle photo of a ceramic coffee cup and notebook on a cafe table, with warm window light, natural tabletop details, shallow depth of field, soft background movement, and calm editorial composition.",
       "negativePrompt": [],
@@ -872,7 +872,7 @@
         "luxury",
         "architecture"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/luxury-hotel-room--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/luxury-hotel-room--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Luxury Hotel Room preview",
       "prompt": "Create a realistic luxury hotel room interior with warm modern design, premium bedding, elegant lighting, marble accents, a city view, clean architectural composition, and high-end travel photography styling.",
       "negativePrompt": [],
@@ -911,7 +911,7 @@
         "brunch",
         "editorial"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/food-magazine-flat-lay--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/food-magazine-flat-lay--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Food Magazine Flat Lay preview",
       "prompt": "Create an overhead editorial food photograph of a colorful brunch table with ceramic plates, fresh pastries, sliced fruit, coffee cups, linen napkins, and natural window light. Use careful composition, appetizing textures, realistic crumbs and reflections, and premium food magazine styling.",
       "negativePrompt": [],
@@ -950,7 +950,7 @@
         "luxury",
         "product"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/macro-jewelry-sparkle--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/macro-jewelry-sparkle--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Macro Jewelry Sparkle preview",
       "prompt": "Create a macro commercial product photo of a delicate gold ring with a gemstone on dark velvet, with crisp facets, realistic metal reflections, shallow depth of field, tiny dust-level detail, and luxury jewelry advertising polish.",
       "negativePrompt": [],
@@ -989,7 +989,7 @@
         "product",
         "industrial design"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/exploded-tech-diagram--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/exploded-tech-diagram--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Exploded Tech Diagram preview",
       "prompt": "Create a clean exploded-view product visualization of a compact wireless earbud, with individual components separated in precise layers, subtle annotation lines without readable text, white technical background, soft shadows, and polished industrial design rendering.",
       "negativePrompt": [],
@@ -1028,7 +1028,7 @@
         "saas",
         "ui"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/isometric-app-dashboard--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/isometric-app-dashboard--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Isometric App Dashboard preview",
       "prompt": "Create a polished isometric 3D mockup of a modern analytics app dashboard floating above a clean desk surface, with layered UI panels, charts represented as abstract shapes, soft shadows, glassy highlights, and a refined SaaS product visual style. Do not generate readable text.",
       "negativePrompt": [],
@@ -1067,7 +1067,7 @@
         "illustration",
         "cozy"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/storybook-watercolor-scene--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/storybook-watercolor-scene--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Storybook Watercolor Scene preview",
       "prompt": "Create a soft watercolor storybook illustration of a small cottage beside a winding path, with wildflowers, warm window light, gentle skies, hand-painted paper texture, charming details, and a calm picture-book composition.",
       "negativePrompt": [],
@@ -1106,7 +1106,7 @@
         "fantasy",
         "environment"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/pixel-art-game-scene--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/pixel-art-game-scene--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Pixel Art Game Scene preview",
       "prompt": "Create a detailed pixel art game scene of a cozy fantasy village at dusk, with small houses, lanterns, cobblestone path, readable silhouettes, limited color palette, crisp pixel edges, and a side-scrolling game background composition.",
       "negativePrompt": [],
@@ -1145,7 +1145,7 @@
         "vintage",
         "poster"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/travel-postcard-landmark--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/travel-postcard-landmark--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Travel Postcard Landmark preview",
       "prompt": "Create a vintage travel postcard illustration of a coastal cliff town at sunset, with simplified architectural shapes, warm retro colors, grainy print texture, bold scenic composition, and empty space reserved for title lettering. Do not generate readable text.",
       "negativePrompt": [],
@@ -1184,7 +1184,7 @@
         "editorial",
         "motion"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/fashion-runway-motion--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/fashion-runway-motion--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Fashion Runway Motion preview",
       "prompt": "Create a realistic fashion runway photograph of an adult model walking under dramatic spotlights, wearing an avant-garde outfit with flowing fabric, motion in the garment, glossy runway reflections, audience silhouettes, and high-end editorial fashion energy.",
       "negativePrompt": [],
@@ -1223,7 +1223,7 @@
         "portrait",
         "studio"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/corporate-headshot-studio--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/corporate-headshot-studio--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Corporate Headshot Studio preview",
       "prompt": "If an image is uploaded, use it as the optional reference person. Create a polished professional headshot of an adult person in business-casual clothing, with a clean neutral studio background, soft flattering light, natural expression, realistic skin texture, crisp eyes, and modern profile-photo composition.",
       "negativePrompt": [],
@@ -1262,7 +1262,7 @@
         "athlete",
         "cinematic"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/sports-action-freeze--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/sports-action-freeze--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Sports Action Freeze preview",
       "prompt": "Create a high-speed sports action photograph of an adult athlete leaping through rain on a stadium field, with frozen water droplets, dramatic backlight, realistic motion tension, detailed athletic clothing, and cinematic sports-advertising intensity.",
       "negativePrompt": [],
@@ -1301,7 +1301,7 @@
         "romantic",
         "editorial"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/wedding-editorial-moment--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/wedding-editorial-moment--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Wedding Editorial Moment preview",
       "prompt": "Create an elegant wedding editorial photograph of an adult couple holding hands in a sunlit garden, with soft floral background, natural emotion, refined formalwear, gentle film-like color, shallow depth of field, and premium event photography composition.",
       "negativePrompt": [],
@@ -1340,7 +1340,7 @@
         "exterior",
         "dusk"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/real-estate-exterior-dusk--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/real-estate-exterior-dusk--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Real Estate Exterior Dusk preview",
       "prompt": "Create a realistic real estate exterior photograph of a modern luxury home at blue hour, with warm interior lights, clean landscaping, wet driveway reflections, balanced architectural lines, and high-end property marketing polish.",
       "negativePrompt": [],
@@ -1379,7 +1379,7 @@
         "macro",
         "whimsical"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/tiny-world-diorama--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/tiny-world-diorama--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Tiny World Diorama preview",
       "prompt": "Create a whimsical miniature diorama of a tiny train station built on a desk, with toy-scale people, paper trees, warm desk lamp light, macro depth of field, visible craft materials, and charming handmade realism.",
       "negativePrompt": [],
@@ -1418,7 +1418,7 @@
         "double exposure",
         "landscape"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/surreal-double-exposure--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/surreal-double-exposure--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Surreal Double Exposure preview",
       "prompt": "Create a surreal double-exposure portrait of an adult silhouette blended with a mountain landscape and starry sky, with clean facial outline, layered transparent textures, cinematic contrast, subtle grain, and poetic poster-like composition.",
       "negativePrompt": [],
@@ -1457,7 +1457,7 @@
         "nightlife",
         "urban"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/neon-nightlife-portrait--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/neon-nightlife-portrait--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Neon Nightlife Portrait preview",
       "prompt": "Create a cinematic neon nightlife portrait of a stylish adult person on a rainy city street, with magenta and cyan sign reflections, shallow depth of field, realistic wet skin and fabric highlights, confident expression, and moody urban editorial atmosphere.",
       "negativePrompt": [],
@@ -1496,7 +1496,7 @@
         "parchment",
         "illustration"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/fantasy-map-parchment--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/fantasy-map-parchment--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Fantasy Map Parchment preview",
       "prompt": "Create an illustrated fantasy map on aged parchment, with coastlines, mountain ranges, forests, rivers, small symbolic landmarks, decorative compass rose, hand-inked linework, warm paper texture, and no readable labels.",
       "negativePrompt": [],
@@ -1535,7 +1535,7 @@
         "exhibit",
         "cinematic"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/science-museum-display--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/science-museum-display--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Science Museum Display preview",
       "prompt": "Create a realistic science museum exhibit photograph featuring a suspended planetary model above a dark display table, with dramatic spotlights, glass reflections, visitors as soft silhouettes, clean educational design, and cinematic documentary composition.",
       "negativePrompt": [],
@@ -1574,7 +1574,7 @@
         "still life",
         "product"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/ceramic-brand-still-life--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/ceramic-brand-still-life--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Ceramic Brand Still Life preview",
       "prompt": "Create a calm artisan product still life of handmade ceramic mugs on a linen cloth, with soft morning light, natural clay texture, neutral props, gentle shadows, and boutique homeware brand photography styling.",
       "negativePrompt": [],
@@ -1613,7 +1613,7 @@
         "adventure",
         "illustration"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/board-game-box-art--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/board-game-box-art--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Board Game Box Art preview",
       "prompt": "Create polished board game box cover art for a cooperative adventure game, featuring a group of original explorers at the entrance to a glowing ancient ruin, dynamic composition, colorful painterly detail, clear central focal point, and empty title area. Do not generate readable text.",
       "negativePrompt": [],
@@ -1652,7 +1652,7 @@
         "illustration",
         "archive"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/botanical-science-plate--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/botanical-science-plate--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Botanical Science Plate preview",
       "prompt": "Create a natural-history botanical illustration plate of a flowering medicinal plant, with root, stem, leaf, blossom, seed pod, and magnified detail studies arranged on warm paper. Use precise ink-and-watercolor rendering, clean spacing, archival museum quality, and no readable labels.",
       "negativePrompt": [],
@@ -1691,7 +1691,7 @@
         "printable",
         "kids"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/minimal-line-coloring-page--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/minimal-line-coloring-page--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Minimal Coloring Page preview",
       "prompt": "Create a clean black-and-white coloring book page of an enchanted garden gate, with bold continuous outlines, charming flowers, butterflies, simple decorative details, white background, no shading, and no text.",
       "negativePrompt": [],
@@ -1730,7 +1730,7 @@
         "storytelling",
         "panels"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/comic-strip-sequence--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/comic-strip-sequence--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Comic Strip Sequence preview",
       "prompt": "Create a clean four-panel comic strip showing an original inventor discovering a tiny glowing robot in a workshop. Use expressive body language, clear panel borders, cinematic lighting, consistent character design, sequential visual storytelling, and empty speech bubbles with no readable text.",
       "negativePrompt": [],
@@ -1769,7 +1769,7 @@
         "card",
         "illustration"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/tarot-card-archetype--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/tarot-card-archetype--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Tarot Card Archetype preview",
       "prompt": "Create a mystical tarot-style card illustration of an original moonlit gardener archetype, with ornate border, symbolic plants, crescent moon, rich jewel tones, symmetrical composition, vintage print texture, and an empty title banner with no readable text.",
       "negativePrompt": [],
@@ -1808,7 +1808,7 @@
         "stop motion",
         "miniature"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/claymation-character-still--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/claymation-character-still--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Claymation Character Still preview",
       "prompt": "Create a stop-motion claymation still of an original tiny chef character holding an oversized wooden spoon in a miniature kitchen. Use tactile clay fingerprints, handmade props, warm practical lighting, shallow depth of field, and charming animated-film staging.",
       "negativePrompt": [],
@@ -1847,7 +1847,7 @@
         "merch",
         "textile"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/embroidered-patch-design--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/embroidered-patch-design--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Embroidered Patch Design preview",
       "prompt": "Create a realistic embroidered patch design of a mountain sunrise emblem on dark fabric, with raised thread texture, merrowed border, simplified shapes, limited color palette, subtle fabric shadows, and no readable text.",
       "negativePrompt": [],
@@ -1886,7 +1886,7 @@
         "catalog",
         "ceramic"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/museum-artifact-photogrammetry--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/museum-artifact-photogrammetry--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Museum Artifact Scan preview",
       "prompt": "Create a museum catalog photograph of an ancient ceramic mask on a neutral gray plinth, with soft conservation-lab lighting, visible cracks and patina, accurate material texture, scale-card-like empty space without text, and archival documentation clarity.",
       "negativePrompt": [],
@@ -1925,7 +1925,7 @@
         "section",
         "cabin"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/architectural-section-cutaway--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/architectural-section-cutaway--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Architectural Section Cutaway preview",
       "prompt": "Create a detailed architectural section cutaway of a compact hillside cabin, showing rooms, stairs, roof structure, furniture, terrain, and natural light paths. Use clean architectural rendering, warm material accents, crisp linework, and no readable labels.",
       "negativePrompt": [],
@@ -1964,7 +1964,7 @@
         "blacklight",
         "event"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/blacklight-concert-stage--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/blacklight-concert-stage--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Blacklight Concert Stage preview",
       "prompt": "Create a dramatic live concert stage photograph with a silhouetted performer at center, ultraviolet blacklight, laser beams, haze, giant LED shapes, crowd silhouettes, high-energy atmosphere, and crisp event-photography realism.",
       "negativePrompt": [],
@@ -2003,7 +2003,7 @@
         "surreal",
         "portrait"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/underwater-fashion-dream--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/underwater-fashion-dream--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Underwater Fashion Dream preview",
       "prompt": "Create a surreal underwater fashion portrait of an adult model in flowing fabric, with suspended bubbles, rippling sunlight, graceful pose, dreamlike movement, realistic water distortion, and high-fashion editorial composition.",
       "negativePrompt": [],
@@ -2042,7 +2042,7 @@
         "landscape",
         "abstract"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/drone-top-down-landscape--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/drone-top-down-landscape--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Drone Top-Down Landscape preview",
       "prompt": "Create a top-down drone photograph of winding turquoise river channels through red desert sand, with graphic natural geometry, crisp aerial detail, high contrast textures, and a clean abstract landscape composition.",
       "negativePrompt": [],
@@ -2081,7 +2081,7 @@
         "map",
         "science"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/weather-satellite-map--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/weather-satellite-map--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Weather Satellite Map preview",
       "prompt": "Create a stylized weather satellite image of a swirling storm system over ocean and coastline, with realistic cloud bands, subtle infrared color accents, clean data-visualization aesthetics, dark map background, and no readable text or labels.",
       "negativePrompt": [],
@@ -2120,7 +2120,7 @@
         "detective",
         "black and white"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/noir-detective-scene--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/noir-detective-scene--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Noir Detective Scene preview",
       "prompt": "Create a black-and-white noir detective movie still of an original investigator standing in a rain-slick alley, with venetian blind shadows, cigarette-smoke-like mist, dramatic contrast, wet pavement reflections, and classic 1940s cinema atmosphere.",
       "negativePrompt": [],
@@ -2159,7 +2159,7 @@
         "wristshot",
         "product"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/luxury-watch-wristshot--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/luxury-watch-wristshot--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Luxury Watch Wristshot preview",
       "prompt": "Create a realistic luxury product wristshot inside a vintage car, featuring a polished metal watch with detailed dial, leather strap, hand on steering wheel, warm dashboard light, shallow depth of field, and premium lifestyle product photography.",
       "negativePrompt": [],
@@ -2198,7 +2198,7 @@
         "3d",
         "productivity"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/low-poly-icon-set--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/low-poly-icon-set--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Low-Poly Icon Set preview",
       "prompt": "Create a consistent low-poly 3D icon set of productivity objects, including calendar, notebook, clock, pencil, inbox tray, and checklist. Use simple geometric forms, cohesive lighting, soft shadows, pastel colors, grid layout, and no readable text.",
       "negativePrompt": [],
@@ -2237,7 +2237,7 @@
         "documentary",
         "travel"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/street-documentary-market--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/street-documentary-market--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Street Documentary Market preview",
       "prompt": "Create a candid street documentary photograph of a busy open-air night market, with food stalls, steam, colorful awnings, people moving naturally, realistic ambient light, layered depth, and human-scale travel photography energy.",
       "negativePrompt": [],
@@ -2276,7 +2276,7 @@
         "interior",
         "cinematic"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/haunted-library-interior--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/haunted-library-interior--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Haunted Library Interior preview",
       "prompt": "Create a cinematic gothic library interior with towering shelves, floating dust, moonlight through tall windows, scattered open books, candlelight, deep shadows, ornate architecture, and a mysterious but non-horror adventure atmosphere.",
       "negativePrompt": [],
@@ -2315,7 +2315,7 @@
         "fashion",
         "grid"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/streetwear-lookbook-grid--generated-2026-06-01--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/streetwear-lookbook-grid--generated-2026-06-01--schema-v1.0.0.webp",
       "imageAlt": "Streetwear Lookbook Grid preview",
       "prompt": "Create a clean streetwear lookbook grid showing four coordinated outfits on adult models against simple urban backdrops. Use consistent lighting, full-body poses, modern editorial styling, clear outfit variation, and a catalogue layout with no readable text.",
       "negativePrompt": [],
@@ -2354,7 +2354,7 @@
         "garden",
         "future"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/solarpunk-rooftop-garden--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/solarpunk-rooftop-garden--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Solarpunk Rooftop Garden preview",
       "prompt": "Create a cinematic solarpunk rooftop garden above a dense city, with glass greenhouses, hanging vines, warm sunrise, people tending plants at human scale, optimistic near-future architecture, rich environmental detail, and a wide hopeful composition.",
       "negativePrompt": [],
@@ -2393,7 +2393,7 @@
         "documentary",
         "craft"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/artisan-workshop-process--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/artisan-workshop-process--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Artisan Workshop Process preview",
       "prompt": "Create a realistic documentary photograph of an artisan working in a tactile studio, with hands shaping raw material, shelves of tools and unfinished pieces, dusty sunlight, warm craft atmosphere, natural imperfections, and human-scale editorial realism.",
       "negativePrompt": [],
@@ -2432,7 +2432,7 @@
         "control room",
         "cinematic"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/retro-futurist-control-room--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/retro-futurist-control-room--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Retro-Futurist Control Room preview",
       "prompt": "Create a cinematic retro-futurist control room with analog panels, glowing radar screens, curved 1970s space-age furniture, orange and teal practical lights, original sci-fi worldbuilding, polished production design, and a wide story-frame composition.",
       "negativePrompt": [],
@@ -2471,7 +2471,7 @@
         "storybook",
         "craft"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/paper-cut-shadowbox-scene--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/paper-cut-shadowbox-scene--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Paper-Cut Shadowbox Scene preview",
       "prompt": "Create a layered paper-cut shadowbox illustration of a charming scene, with visible paper edges, stacked foreground and background depth, soft backlight, handcrafted texture, clean cut shapes, and whimsical storybook atmosphere.",
       "negativePrompt": [],
@@ -2510,7 +2510,7 @@
         "still life",
         "product"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/luxury-candle-still-life--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/luxury-candle-still-life--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Luxury Candle Still Life preview",
       "prompt": "Create a premium product still life of a minimalist scented candle in frosted glass, with linen fabric, dried flowers, warm window light, soft shadows, elegant wellness brand photography, realistic wax and glass texture, and no readable label text.",
       "negativePrompt": [],
@@ -2549,7 +2549,7 @@
         "cute",
         "character"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/vinyl-toy-mascot--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/vinyl-toy-mascot--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Vinyl Toy Mascot preview",
       "prompt": "Create a cute original vinyl toy mascot character on a clean studio surface, with oversized head, glossy material, playful pose, simple appealing silhouette, collectible designer-toy aesthetic, soft shadows, and polished product render lighting.",
       "negativePrompt": [],
@@ -2588,7 +2588,7 @@
         "presentation",
         "concept"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/architectural-concept-model--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/architectural-concept-model--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Architectural Concept Model preview",
       "prompt": "Create a physical architectural concept model made of white card and basswood, with tiny trees, clean desk surface, dramatic side light, shallow depth of field, precise model craftsmanship, and premium architecture presentation photography.",
       "negativePrompt": [],
@@ -2627,7 +2627,7 @@
         "flat lay",
         "editorial"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/recipe-card-flat-lay--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/recipe-card-flat-lay--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Recipe Card Flat Lay preview",
       "prompt": "Create a bright editorial flat lay of recipe ingredients arranged around a blank recipe card, with fresh herbs, citrus, ceramic bowls, clean overhead composition, natural kitchen light, food magazine styling, and no readable text.",
       "negativePrompt": [],
@@ -2666,7 +2666,7 @@
         "screen print",
         "music"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/music-festival-poster-scene--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/music-festival-poster-scene--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Music Festival Poster Scene preview",
       "prompt": "Create a bold illustrated music festival poster scene with a stage, abstract sun, crowd silhouettes, speakers, vivid screen-print colors, strong graphic composition, and clean open space for custom title text. Do not include readable text by default.",
       "negativePrompt": [],
@@ -2705,7 +2705,7 @@
         "athlete",
         "portrait"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/sports-trading-card-portrait--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/sports-trading-card-portrait--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Sports Trading Card Portrait preview",
       "prompt": "Create a dynamic sports trading card style portrait of an original adult athlete, with dramatic stadium lights, action pose, glossy card-frame elements, energetic color streaks, crisp uniform texture, and no logos or readable text.",
       "negativePrompt": [],
@@ -2744,7 +2744,7 @@
         "prototype",
         "product"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/futuristic-lab-product-demo--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/futuristic-lab-product-demo--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Futuristic Lab Product Demo preview",
       "prompt": "Create a futuristic lab product demo scene with a transparent device prototype on a glowing bench, glass panels, clean researchers in the background, cool blue-white light, reflective surfaces, premium technology launch photography, and no readable text.",
       "negativePrompt": [],
@@ -2783,7 +2783,7 @@
         "interior",
         "cozy"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/cozy-bookshop-reading-nook--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/cozy-bookshop-reading-nook--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Cozy Bookshop Reading Nook preview",
       "prompt": "Create a cozy independent bookshop reading nook with a comfortable armchair, stacked books, warm lamps, rain on the window, wood shelves, inviting lifestyle interior photography, and no readable book titles.",
       "negativePrompt": [],
@@ -2822,7 +2822,7 @@
         "fragrance",
         "product"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/botanical-perfume-ad--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/botanical-perfume-ad--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Botanical Perfume Ad preview",
       "prompt": "Create a luxury perfume advertising image with a sculptural glass bottle surrounded by oversized fresh botanicals, dew, reflective surface, soft green daylight, premium fragrance campaign styling, and no readable label text.",
       "negativePrompt": [],
@@ -2861,7 +2861,7 @@
         "character",
         "portrait"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/stained-glass-character-portrait--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/stained-glass-character-portrait--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Stained Glass Character Portrait preview",
       "prompt": "Create an original fantasy character portrait rendered as luminous stained glass, with jewel-toned panes, lead outlines, halo-like backlight, cathedral-window composition, ornate costume shapes, and clean readable silhouette.",
       "negativePrompt": [],
@@ -2900,7 +2900,7 @@
         "map",
         "architecture"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/urban-planning-map-render--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/urban-planning-map-render--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Urban Planning Map Render preview",
       "prompt": "Create a clean isometric urban planning map render of a walkable neighborhood, with parks, bike lanes, mixed-use buildings, tiny people, soft colors, presentation-board clarity, and no labels or readable text.",
       "negativePrompt": [],
@@ -2939,7 +2939,7 @@
         "wildlife",
         "study"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/macro-insect-nature-study--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/macro-insect-nature-study--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Macro Nature Study preview",
       "prompt": "Create a macro nature-study photograph of a small natural subject on moss or foliage, with dew droplets, detailed texture, shallow depth of field, natural morning light, quiet scientific beauty, and no labels or readable text.",
       "negativePrompt": [],
@@ -2978,7 +2978,7 @@
         "ui",
         "marketing"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/minimal-saas-dashboard-hero--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/minimal-saas-dashboard-hero--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Minimal SaaS Dashboard Hero preview",
       "prompt": "Create a polished SaaS dashboard hero mockup on floating screens, with charts and cards represented as abstract UI shapes, clean white workspace, soft depth, subtle shadows, product marketing polish, and no readable text.",
       "negativePrompt": [],
@@ -3017,7 +3017,7 @@
         "action",
         "pit stop"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/racing-pit-stop-action--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/racing-pit-stop-action--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Racing Pit Stop Action preview",
       "prompt": "Create a high-speed racing pit stop scene with mechanics changing tires, controlled motion blur, sparks, glossy race car without logos, dramatic track lighting, teamwork choreography, and cinematic action photography.",
       "negativePrompt": [],
@@ -3056,7 +3056,7 @@
         "macro",
         "luxury"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/handmade-jewelry-bench--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/handmade-jewelry-bench--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Handmade Jewelry Bench preview",
       "prompt": "Create a macro artisan jewelry bench photograph with a fine object being set or polished, tiny tools, metal filings, warm task lamp, realistic hands, shallow depth, craft luxury detail, and no readable text.",
       "negativePrompt": [],
@@ -3095,7 +3095,7 @@
         "expedition",
         "cinematic"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/arctic-research-station--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/arctic-research-station--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Arctic Research Station preview",
       "prompt": "Create a cinematic arctic research station at blue hour, with modular buildings, snow vehicles, aurora glow, blowing snow, warm window lights, realistic expedition atmosphere, and a wide establishing shot.",
       "negativePrompt": [],
@@ -3134,7 +3134,7 @@
         "character",
         "miniature"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/plush-character-story-scene--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/plush-character-story-scene--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Plush Character Story Scene preview",
       "prompt": "Create a soft plush character in a miniature story scene, with visible fabric texture, button-like eyes, tiny props, warm lamp light, charming toy photography, safe whimsical mood, and no readable text.",
       "negativePrompt": [],
@@ -3173,7 +3173,7 @@
         "fashion",
         "swatches"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/fashion-textile-pattern-sheet--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/fashion-textile-pattern-sheet--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Fashion Textile Pattern Sheet preview",
       "prompt": "Create a fashion textile pattern sheet with four coordinated repeat patterns, fabric swatches, refined color chips, clean presentation layout, sophisticated palette, crisp surface-design detail, and no readable text.",
       "negativePrompt": [],
@@ -3212,7 +3212,7 @@
         "floating islands",
         "concept art"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/floating-island-fantasy--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/floating-island-fantasy--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Floating Island Fantasy preview",
       "prompt": "Create a cinematic fantasy landscape of floating islands with waterfalls, tiny bridges, misty sunrise, distant birds, epic vertical scale, painterly realism, and adventure-game concept art atmosphere.",
       "negativePrompt": [],
@@ -3251,7 +3251,7 @@
         "swatch",
         "beauty"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/editorial-makeup-swatch--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/editorial-makeup-swatch--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Editorial Makeup Swatch preview",
       "prompt": "Create a close-up editorial beauty image focused on colorful makeup swatches on skin, with glossy texture, precise studio lighting, abstract composition, premium cosmetics campaign style, realistic skin detail, and no explicit nudity.",
       "negativePrompt": [],
@@ -3290,7 +3290,7 @@
         "poster",
         "children"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/children-science-poster--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/children-science-poster--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Children Science Poster preview",
       "prompt": "Create a friendly educational science poster illustration for children, showing a clear natural process with simple arrows, bright classroom colors, readable visual flow, blank label spaces, and no actual readable text by default.",
       "negativePrompt": [],
@@ -3329,7 +3329,7 @@
         "chiaroscuro",
         "editorial"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/chiaroscuro-studio-portrait--generated-2026-06-15--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/chiaroscuro-studio-portrait--generated-2026-06-15--schema-v1.0.0.webp",
       "imageAlt": "Chiaroscuro Studio Portrait preview",
       "prompt": "Create a dramatic chiaroscuro studio portrait of an adult subject wearing simple dark wardrobe, face turned slightly toward camera, with one strong side key light, deep shadow falloff, realistic skin texture, black background, painterly photographic contrast, and elegant editorial mood. Keep the subject fully clothed, non-explicit, and avoid readable text or logos.",
       "negativePrompt": [],
@@ -3368,7 +3368,7 @@
         "mirror selfie",
         "phone photo"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/bathroom-mirror-routine-selfie--generated-2026-06-15--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/bathroom-mirror-routine-selfie--generated-2026-06-15--schema-v1.0.0.webp",
       "imageAlt": "Bathroom Mirror Routine Selfie preview",
       "prompt": "Create a casual bathroom mirror phone selfie of an adult subject getting ready, wearing public-safe skin-forward loungewear such as a cropped tank top and shorts, with shoulders, arms, and midriff visible but no nudity. Show one hand near their face, visible phone partially blocking the face, mirror smudges, towel and toiletry clutter, soft overhead bathroom light, slight wide-angle phone distortion, realistic skin texture, and imperfect social-feed framing. Avoid ad-campaign polish, readable labels, logos, exposed nipples, exposed genitals, or explicit posing.",
       "negativePrompt": [],
@@ -3407,7 +3407,7 @@
         "outfit",
         "bedroom"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/messy-bedroom-outfit-check--generated-2026-06-15--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/messy-bedroom-outfit-check--generated-2026-06-15--schema-v1.0.0.webp",
       "imageAlt": "Messy Bedroom Outfit Check preview",
       "prompt": "Create a casual bedroom mirror outfit-check selfie of an adult subject holding a phone, wearing public-safe skin-forward everyday fashion such as a fitted crop top with low-rise jeans or a short summer outfit. Show natural arms, shoulders, and midriff while keeping the subject non-nude. Place them in a lived-in bedroom with rumpled sheets and clothes in the background. Use natural phone-camera realism, slight tilted framing, mirror glare, soft daylight mixed with room light, realistic fabric texture, and unpolished social-feed authenticity. Avoid studio polish, readable text, logos, exposed nipples, exposed genitals, or explicit posing.",
       "negativePrompt": [],
@@ -3446,7 +3446,7 @@
         "bedroom",
         "phone photo"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/bedside-front-camera-selfie--generated-2026-06-15--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/bedside-front-camera-selfie--generated-2026-06-15--schema-v1.0.0.webp",
       "imageAlt": "Bedside Front-Camera Selfie preview",
       "prompt": "Create a low-effort front-camera selfie of an adult subject sitting on or beside a bed in a dim bedroom, wearing public-safe skin-forward loungewear such as a fitted tank top, crop top, or athletic shorts, with shoulders and arms visible but no nudity. Put the face close to camera, one hand near the cheek, warm string lights or bedside lamp in the background, slight phone blur, compressed perspective, visible room clutter, and realistic unedited social-feed texture. Avoid beauty-ad polish, readable text, logos, exposed nipples, exposed genitals, or explicit posing.",
       "negativePrompt": [],
@@ -3485,7 +3485,7 @@
         "night out",
         "snapshot"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/disposable-camera-night-snap--generated-2026-06-15--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/disposable-camera-night-snap--generated-2026-06-15--schema-v1.0.0.webp",
       "imageAlt": "Disposable-Camera Night Snap preview",
       "prompt": "Create a disposable-camera style night-out snapshot of an adult subject wearing public-safe skin-forward party clothes such as a fitted crop top, sleeveless top, mini skirt, or shorts, photographed from slightly above with harsh direct flash, red-eye risk, glossy skin highlights, dark messy room or bar background, mild blur, grain, timestamp-like nostalgia without readable text, and spontaneous social-photo energy. Avoid polished editorial lighting, readable logos, nudity, exposed nipples, exposed genitals, or explicit posing.",
       "negativePrompt": [],
@@ -3524,7 +3524,7 @@
         "rain",
         "neon"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/rain-window-cinematic-portrait--generated-2026-06-15--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/rain-window-cinematic-portrait--generated-2026-06-15--schema-v1.0.0.webp",
       "imageAlt": "Rain Window Cinematic Portrait preview",
       "prompt": "Create a cinematic portrait of an adult subject beside a rain-covered window at night, with soft neon reflections, moody blue and amber light, visible droplets on glass, shallow depth of field, thoughtful expression, and film-still atmosphere. Keep the subject fully clothed, non-explicit, and avoid readable text or logos.",
       "negativePrompt": [],
@@ -3563,7 +3563,7 @@
         "painterly",
         "gold"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/gilded-fantasy-painterly-portrait--generated-2026-06-15--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/gilded-fantasy-painterly-portrait--generated-2026-06-15--schema-v1.0.0.webp",
       "imageAlt": "Gilded Fantasy Painterly Portrait preview",
       "prompt": "Create a painterly fantasy portrait of an adult subject with long dark hair, ornate gold accessories, deep navy and dark teal atmosphere, luminous skin, frame-like ornamental composition, fine digital painting detail, and romantic fantasy illustration mood. Keep the subject fully clothed, non-explicit, and avoid readable text or logos.",
       "negativePrompt": [],
@@ -3602,7 +3602,7 @@
         "sepia",
         "editorial"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/sepia-fashion-model-portrait--generated-2026-06-15--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/sepia-fashion-model-portrait--generated-2026-06-15--schema-v1.0.0.webp",
       "imageAlt": "Sepia Fashion Model Portrait preview",
       "prompt": "Create a high-fashion model portrait of an adult subject in warm sepia tones, fully clothed in structured couture styling, with soft studio haze, elegant cheekbone lighting, shallow depth of field, realistic skin texture, and vintage editorial magazine mood. Avoid readable text, logos, and explicit styling.",
       "negativePrompt": [],
@@ -3641,7 +3641,7 @@
         "neon",
         "installation"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/glowing-word-forest-installation--generated-2026-06-15--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/glowing-word-forest-installation--generated-2026-06-15--schema-v1.0.0.webp",
       "imageAlt": "Glowing Word Forest Installation preview",
       "prompt": "Create a hyper-realistic cinematic typographic installation shaped like the word {Word}, with translucent glowing blue letters in a dense foggy pine forest at night. Use volumetric mist, neon light spill on wet ground, dramatic depth, realistic materials, and clean large letterforms. Avoid extra readable text beyond the chosen word.",
       "negativePrompt": [],
@@ -3680,7 +3680,7 @@
         "neon",
         "city"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/neon-city-album-cover-portrait--generated-2026-06-15--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/neon-city-album-cover-portrait--generated-2026-06-15--schema-v1.0.0.webp",
       "imageAlt": "Neon City Album Cover Portrait preview",
       "prompt": "Create an iconic album-cover style portrait of an adult subject in a saturated purple outfit, fully clothed, standing in a neon city street with stylized East Asian cyberpunk-inspired signage shapes without readable text. Use soft focus, magenta and cyan glow, cinematic street haze, centered cover composition, wet pavement reflections, and no logos.",
       "negativePrompt": [],
@@ -3719,7 +3719,7 @@
         "wallpaper",
         "background"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/abstract-glassmorphism-wallpaper--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/abstract-glassmorphism-wallpaper--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Abstract Glassmorphism Wallpaper preview",
       "prompt": "Create an abstract glassmorphism wallpaper with translucent layered shapes, subtle refractions, soft light caustics, balanced composition, modern app-background aesthetic, generous negative space, and no text or logo.",
       "negativePrompt": [],
@@ -3758,7 +3758,7 @@
         "mockup",
         "sustainable"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/eco-packaging-mockup--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/eco-packaging-mockup--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Eco Packaging Mockup preview",
       "prompt": "Create a premium eco packaging mockup with recycled paper boxes, molded pulp tray, small product inserts, soft daylight, subtle plant props, clean sustainable brand photography, tactile material texture, and no readable text or logos.",
       "negativePrompt": [],
@@ -3797,7 +3797,7 @@
         "retro",
         "game"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/neon-arcade-cabinet--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/neon-arcade-cabinet--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Neon Arcade Cabinet preview",
       "prompt": "Create a retro neon arcade cabinet concept in a dark game room, with glowing controls, pixel-art screen shapes, reflective floor, saturated magenta and cyan lighting, cinematic product angle, and no readable text or logos.",
       "negativePrompt": [],
@@ -3836,7 +3836,7 @@
         "fruit",
         "educational"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/scientific-cutaway-fruit--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/scientific-cutaway-fruit--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Scientific Cutaway Fruit preview",
       "prompt": "Create a clean scientific cutaway illustration of a natural object, showing outer surface, inner structure, seeds or core details, precise diagram-like composition, bright white background, crisp material detail, and no labels or readable text.",
       "negativePrompt": [],
@@ -3875,7 +3875,7 @@
         "model",
         "tilt shift"
       ],
-      "image": "https://nano-gpt.com/prompt-templates/miniature-train-table-world--generated-2026-06-11--schema-v1.0.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/miniature-train-table-world--generated-2026-06-11--schema-v1.0.0.webp",
       "imageAlt": "Miniature Train Table World preview",
       "prompt": "Create a charming miniature train-table world with tiny houses, winding tracks, painted hills, small trees, warm hobby-room lighting, tilt-shift photography, detailed handmade model scenery, and no readable text.",
       "negativePrompt": [],
