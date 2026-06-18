@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { TemplateCreator } from "@/components/TemplateCreator";
 import { absoluteUrl, SITE_NAME } from "@/lib/seo";
+import { getTemplateById } from "@/lib/templates";
 
 export const metadata: Metadata = {
   title: "Create Image Template",
@@ -19,24 +20,33 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CreateTemplatePage() {
+type CreateTemplatePageProps = {
+  searchParams: Promise<{ from?: string }>;
+};
+
+export default async function CreateTemplatePage({ searchParams }: CreateTemplatePageProps) {
+  const { from } = await searchParams;
+  const baseTemplate = from ? getTemplateById(from) : undefined;
+  const backHref = baseTemplate ? `/templates/${baseTemplate.id}` : "/templates";
+
   return (
     <main className="bg-white">
       <section className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <Link href="/templates" className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-600 hover:text-zinc-950">
+        <Link href={backHref} className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-600 hover:text-zinc-950">
           <ArrowLeft size={16} aria-hidden="true" />
-          Back to templates
+          {baseTemplate ? "Back to template" : "Back to templates"}
         </Link>
         <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Create</p>
         <h1 className="mt-4 max-w-4xl text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl">
-          Create an image template
+          {baseTemplate ? `Create from ${baseTemplate.title}` : "Create an image template"}
         </h1>
         <p className="mt-5 max-w-3xl text-lg leading-8 text-zinc-600">
-          Start from blank fields, upload a reference image, or describe an idea and let AI fill the template structure
-          for you to review.
+          {baseTemplate
+            ? "Start with this template's structure, then adjust the fields, prompt, preview, and community submission before saving."
+            : "Start from blank fields, upload a reference image, or describe an idea and let AI fill the template structure for you to review."}
         </p>
 
-        <TemplateCreator mode="inline" />
+        <TemplateCreator baseTemplate={baseTemplate} mode="inline" />
       </section>
     </main>
   );

@@ -46,8 +46,10 @@ const maxImageBytes = 4 * 1024 * 1024;
 export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "modal" }: TemplateCreatorProps) {
   const isInline = mode === "inline";
   const [open, setOpen] = useState(initiallyOpen || isInline);
-  const [draft, setDraft] = useState<TemplateCreatorDraft>(() => createEmptyTemplateDraft(baseTemplate));
-  const [idea, setIdea] = useState("");
+  const [draft, setDraft] = useState<TemplateCreatorDraft>(() => (
+    isInline && baseTemplate ? draftFromTemplate(baseTemplate) : createEmptyTemplateDraft(baseTemplate)
+  ));
+  const [idea, setIdea] = useState(isInline && baseTemplate ? baseTemplate.description : "");
   const [referenceImage, setReferenceImage] = useState("");
   const [referenceFileName, setReferenceFileName] = useState("");
   const [savedTemplate, setSavedTemplate] = useState<ImageTemplate | null>(null);
@@ -67,45 +69,6 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
   const isSaved = Boolean(savedTemplate && savedSignature === signature);
   const previewTemplate = useMemo(() => templateFromCreatorDraft(draft, savedTemplate?.id), [draft, savedTemplate?.id]);
   const templateJson = useMemo(() => JSON.stringify(toCreatorJson(previewTemplate), null, 2), [previewTemplate]);
-
-  function openCreator() {
-    setDraft(createEmptyTemplateDraft(baseTemplate));
-    setIdea("");
-    setReferenceImage("");
-    setReferenceFileName("");
-    setSavedTemplate(null);
-    setSavedSignature("");
-    setCommunitySubmission(null);
-    setCommunitySubmitting(false);
-    setCommunityError("");
-    setCopied(false);
-    setGeneratedImageMeta("");
-    setImageGenerationError("");
-    setError("");
-    setOpen(true);
-  }
-
-  function openFromCurrentTemplate() {
-    if (!baseTemplate) {
-      openCreator();
-      return;
-    }
-
-    setDraft(draftFromTemplate(baseTemplate));
-    setIdea(baseTemplate.description);
-    setReferenceImage("");
-    setReferenceFileName("");
-    setSavedTemplate(null);
-    setSavedSignature("");
-    setCommunitySubmission(null);
-    setCommunitySubmitting(false);
-    setCommunityError("");
-    setCopied(false);
-    setGeneratedImageMeta("");
-    setImageGenerationError("");
-    setError("");
-    setOpen(true);
-  }
 
   async function handleFile(file: File | null) {
     if (!file) return;
@@ -333,14 +296,13 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
           </div>
           <div className="grid gap-2">
             {baseTemplate ? (
-              <button
-                type="button"
-                onClick={openFromCurrentTemplate}
+              <Link
+                href={`/templates/create?from=${baseTemplate.id}`}
                 className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-4 py-3 text-sm font-semibold leading-none text-zinc-950 transition hover:bg-zinc-50"
               >
                 <Copy className="shrink-0" size={17} aria-hidden="true" />
                 <span className="truncate">Start from this template</span>
-              </button>
+              </Link>
             ) : null}
             <Link
               href="/templates/create"
