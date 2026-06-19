@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { blogPosts } from "@/lib/blog";
+import { getPublishedBlogPosts } from "@/lib/blog";
 import { docs } from "@/lib/docs";
 import {
   absoluteUrl,
@@ -12,7 +12,9 @@ import {
 } from "@/lib/seo";
 import { templates } from "@/lib/templates";
 
-const staticPaths = ["/", "/templates", "/templates.json", "/templates/create", "/schema", "/docs", "/blog", "/llms.txt", "/llms-full.txt", "/open-image-template.schema.json"];
+export const revalidate = 3600;
+
+const staticPaths = ["/", "/templates", "/templates.json", "/templates/create", "/schema", "/docs", "/blog", "/rss.xml", "/llms.txt", "/llms-full.txt", "/open-image-template.schema.json"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -30,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
-    ...blogPosts.map((post) => ({
+    ...getPublishedBlogPosts(now).map((post) => ({
       url: absoluteUrl(`/blog/${post.slug}`),
       lastModified: new Date(post.publishedAt),
       changeFrequency: "monthly" as const,

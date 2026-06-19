@@ -1,4 +1,4 @@
-import { blogPosts } from "@/lib/blog";
+import { getPublishedBlogPosts } from "@/lib/blog";
 import { docs } from "@/lib/docs";
 import {
   absoluteUrl,
@@ -13,7 +13,10 @@ import {
 } from "@/lib/seo";
 import { TEMPLATE_SCHEMA_VERSION, templates } from "@/lib/templates";
 
+export const revalidate = 3600;
+
 export function GET() {
+  const publishedPosts = getPublishedBlogPosts();
   const body = [
     `# ${SITE_NAME} Full AI Index`,
     "",
@@ -29,7 +32,7 @@ export function GET() {
     "## Docs",
     ...docs.flatMap((doc) => [`### ${doc.title}`, doc.description, absoluteUrl(`/docs/${doc.slug}`), ""]),
     "## Blog Posts",
-    ...blogPosts.flatMap((post) => [`### ${post.title}`, post.description, absoluteUrl(`/blog/${post.slug}`), ""]),
+    ...publishedPosts.flatMap((post) => [`### ${post.title}`, post.description, absoluteUrl(`/blog/${post.slug}`), ""]),
     "## Categories",
     ...templateCategories.map((category) => `- ${category}: ${absoluteUrl(categoryPath(category))}`),
     "",

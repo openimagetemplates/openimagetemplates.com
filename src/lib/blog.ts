@@ -331,10 +331,185 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+
+  {
+    slug: "open-image-templates-vs-prompthero",
+    title: "Open Image Templates vs. PromptHero: Prompt Gallery or Prompt Standard?",
+    description: "A practical comparison of prompt galleries and open prompt-template standards for AI image generation workflows.",
+    publishedAt: "2026-06-20T08:00:00.000Z",
+    readMinutes: 7,
+    keywords: ["Open Image Templates vs PromptHero", "PromptHero alternative", "AI prompt gallery", "prompt template standard"],
+    sections: [
+      {
+        heading: "Two different jobs",
+        paragraphs: [
+          "Prompt galleries are useful because they give people visual starting points. You browse examples, find a look, and borrow language that might help your next generation. That is a good discovery workflow, especially when you are exploring a new style or category.",
+          "Open Image Templates is designed for a different job: turning good prompts into reusable structures. Instead of treating a prompt as one fixed block of text, a template separates the stable composition from editable details, look controls, examples, and portable JSON metadata.",
+        ],
+      },
+      {
+        heading: "What changes for the user",
+        paragraphs: [
+          "In a prompt gallery workflow, the user often has to reverse-engineer what should change. Which words describe the subject? Which words control the camera? Which parts are style, lighting, material, or composition? That can work for experienced prompt writers, but it is slower for repeatable work.",
+          "A template workflow makes those decisions visible. The prompt remains copyable, but the editable parts are exposed as slots. Style, color palette, lighting, photography style, material, and medium can be adjusted without rewriting the entire prompt.",
+        ],
+      },
+      {
+        heading: "Why an open standard matters",
+        paragraphs: [
+          "The bigger difference is portability. Open Image Templates publishes a human page and a machine-readable JSON endpoint for each template. That means other image tools can fetch the same structure and render their own interface around it.",
+          "Prompt galleries help people find inspiration. Open templates help people reuse, inspect, modify, and integrate that inspiration across tools. The strongest workflow may use both: browse for direction, then save the repeatable structure as an open template.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "prompthero-alternatives-reusable-ai-image-prompts",
+    title: "PromptHero Alternatives for Reusable AI Image Prompts",
+    description: "What to look for when choosing a PromptHero alternative for reusable, visible, and portable AI image prompts.",
+    publishedAt: "2026-06-21T08:00:00.000Z",
+    readMinutes: 6,
+    keywords: ["PromptHero alternatives", "reusable AI prompts", "AI image prompt templates", "visible prompts"],
+    sections: [
+      {
+        heading: "Start with the real need",
+        paragraphs: [
+          "People search for PromptHero alternatives for different reasons. Some want more examples. Some want prompts they can copy quickly. Others want a workflow that works across models, teams, and repeated projects.",
+          "For reusable AI image prompts, the important question is not only whether a site has a large gallery. It is whether the prompt can be understood, modified, and reused without guesswork.",
+        ],
+      },
+      {
+        heading: "What a reusable alternative should provide",
+        paragraphs: [
+          "A useful prompt resource should show the full prompt, explain the editable parts, include examples, and make the structure portable. If the prompt only exists as a block of text, every user has to decide how to adapt it on their own.",
+          "Open Image Templates approaches this by using slots and controls. A portrait template might expose subject, setting, wardrobe, and expression. A product template might expose product, surface, background, lighting, and usage context. The final prompt stays visible before generation.",
+        ],
+      },
+      {
+        heading: "Choose discovery and structure",
+        paragraphs: [
+          "A good prompt workflow needs discovery and structure. Discovery helps users find a direction. Structure helps users repeat it. If you are comparing alternatives, look for visible prompts, stable URLs, JSON endpoints, clear licensing, and integration guidance for other platforms.",
+          "That combination is what makes a prompt library useful beyond browsing. It becomes a reusable prompt layer that people and tools can build on.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "prompt-galleries-vs-prompt-template-standards",
+    title: "Prompt Galleries vs. Prompt Template Standards: What Is the Difference?",
+    description: "A clear explanation of how prompt galleries and prompt-template standards serve different parts of the AI image workflow.",
+    publishedAt: "2026-06-22T08:00:00.000Z",
+    readMinutes: 6,
+    keywords: ["prompt galleries", "prompt template standard", "AI image workflow", "prompt schema"],
+    sections: [
+      {
+        heading: "Galleries are for discovery",
+        paragraphs: [
+          "Prompt galleries are built around browsing. They show examples, categories, and visual inspiration. That is valuable when the user does not yet know what they want, or when they need vocabulary for a style they can recognize but not describe.",
+          "The limitation appears when the user wants repeatability. A gallery prompt might produce one good image, but it may not explain which parts should change for another product, person, scene, or brand.",
+        ],
+      },
+      {
+        heading: "Standards are for reuse",
+        paragraphs: [
+          "A prompt-template standard defines the shape around the prompt. It can include slots, controls, examples, preview images, suggested models, license metadata, provenance, and a compiled prompt. That structure lets software render a prompt builder instead of a plain text box.",
+          "The prompt is still visible. The standard simply makes the prompt easier to edit, validate, and transport between tools.",
+        ],
+      },
+      {
+        heading: "The best systems connect both",
+        paragraphs: [
+          "Discovery and reuse should not compete. A public gallery can help users find templates, while an open schema can help other platforms implement them. This is especially useful for AI search engines and agents, which can retrieve exact JSON endpoints instead of scraping unclear page content.",
+          "For users, the result is simpler: find a template, adjust the fields, inspect the full prompt, and use it wherever they generate images.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "open-image-templates-vs-prompt-marketplaces",
+    title: "Open Image Templates vs. Prompt Marketplaces",
+    description: "How an open prompt-template catalogue differs from marketplaces that sell or package prompts as fixed assets.",
+    publishedAt: "2026-06-23T08:00:00.000Z",
+    readMinutes: 6,
+    keywords: ["prompt marketplace", "open prompt templates", "AI prompt marketplace", "free prompt templates"],
+    sections: [
+      {
+        heading: "Prompts are more useful when they can move",
+        paragraphs: [
+          "Prompt marketplaces can package useful ideas, but the prompt often behaves like a finished asset. That can be fine for one-off use. It is less useful when a team wants to adapt the same structure across products, campaigns, tools, and models.",
+          "Open Image Templates treats prompts as portable structures. The human page is designed for browsing and editing. The JSON endpoint is designed for tools, agents, and integrations.",
+        ],
+      },
+      {
+        heading: "Openness changes the workflow",
+        paragraphs: [
+          "When the prompt is visible and the schema is open, users do not have to stay inside one interface. They can copy the full prompt, generate with NanoGPT, or bring the template into another platform that supports the format.",
+          "That openness also helps template authors. A well-structured template can be reviewed, indexed, cited, and reused more easily than a screenshot or a locked prompt card.",
+        ],
+      },
+      {
+        heading: "Marketplaces sell prompts; standards spread workflows",
+        paragraphs: [
+          "The distinction is simple. A marketplace is usually optimized around access to a prompt. A standard is optimized around interoperability. Both can have a place, but reusable creative workflows benefit from interoperability.",
+          "For AI image generation, the long-term value is not just collecting more prompts. It is making the best prompt structures easier to share, inspect, and implement anywhere.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "free-ai-image-prompt-templates-vs-paid-prompt-collections",
+    title: "Free AI Image Prompt Templates vs. Paid Prompt Collections",
+    description: "A comparison of free open prompt templates and paid prompt collections for AI image generation.",
+    publishedAt: "2026-06-24T08:00:00.000Z",
+    readMinutes: 6,
+    keywords: ["free AI image prompt templates", "paid prompt collections", "AI prompt templates", "open image templates"],
+    sections: [
+      {
+        heading: "Price is not the only difference",
+        paragraphs: [
+          "Paid prompt collections can be useful when they contain carefully tested examples. Free prompt templates can be useful when they are open, visible, and easy to adapt. The better question is what the user receives: a phrase to copy, or a structure they can reuse.",
+          "A free template with clear slots, examples, controls, and a visible final prompt can be more practical than a paid prompt that only works in one narrow context.",
+        ],
+      },
+      {
+        heading: "What to evaluate",
+        paragraphs: [
+          "Look for prompt visibility, editability, licensing, preview quality, and portability. Can the user change the subject without breaking the composition? Can another tool read the template? Is there a stable URL? Is the JSON available? Are examples and provenance included?",
+          "These details matter because AI image prompting is iterative. A prompt that cannot be inspected or adapted becomes harder to trust over time.",
+        ],
+      },
+      {
+        heading: "Open templates make reuse cheaper",
+        paragraphs: [
+          "Open Image Templates is built around the idea that the template structure should be free to inspect and reuse. Users can copy the prompt, modify the slots, generate through NanoGPT, or use another generator.",
+          "For many creators, the cost should be in the image generation itself, not in discovering whether a prompt structure is useful. Free open templates make that exploration easier, while still leaving room for high-quality curation and community review.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
+}
+
+export function isBlogPostPublished(post: BlogPost, now = new Date()) {
+  return new Date(post.publishedAt).getTime() <= now.getTime();
+}
+
+export function getPublishedBlogPosts(now = new Date()) {
+  return blogPosts
+    .filter((post) => isBlogPostPublished(post, now))
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+}
+
+export function formatBlogDate(value: string) {
+  return new Intl.DateTimeFormat("en", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(value));
 }
 
 export function getBlogPostBody(post: BlogPost) {

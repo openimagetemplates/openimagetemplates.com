@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
-import { blogPosts } from "@/lib/blog";
+import { formatBlogDate, getPublishedBlogPosts } from "@/lib/blog";
 import { absoluteUrl, SITE_DESCRIPTION, SITE_NAME } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -19,7 +19,11 @@ export const metadata: Metadata = {
   },
 };
 
+export const revalidate = 3600;
+
 export default function BlogIndexPage() {
+  const publishedPosts = getPublishedBlogPosts();
+
   return (
     <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
       <JsonLd
@@ -34,7 +38,7 @@ export default function BlogIndexPage() {
             name: SITE_NAME,
             url: absoluteUrl("/"),
           },
-          blogPost: blogPosts.map((post) => ({
+          blogPost: publishedPosts.map((post) => ({
             "@type": "BlogPosting",
             headline: post.title,
             description: post.description,
@@ -49,10 +53,10 @@ export default function BlogIndexPage() {
         Practical notes on building, reusing, and sharing AI image prompts as open templates with visible prompts and portable JSON.
       </p>
       <div className="mt-10 grid gap-4">
-        {blogPosts.map((post) => (
+        {publishedPosts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`} className="rounded-[8px] border border-black/10 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
             <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">
-              <span>{post.publishedAt}</span>
+              <span>{formatBlogDate(post.publishedAt)}</span>
               <span>{post.readMinutes} min read</span>
             </div>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight text-zinc-950">{post.title}</h2>

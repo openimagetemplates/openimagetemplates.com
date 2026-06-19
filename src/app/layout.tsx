@@ -39,6 +39,11 @@ export const metadata: Metadata = {
   publisher: "Open Image Templates",
   category: "technology",
   manifest: "/manifest.webmanifest",
+  alternates: {
+    types: {
+      "application/rss+xml": "/rss.xml",
+    },
+  },
   robots: {
     index: true,
     follow: true,

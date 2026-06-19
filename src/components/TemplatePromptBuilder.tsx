@@ -256,7 +256,7 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
 
       <div className="mt-6 rounded-[8px] border border-black/10 bg-zinc-50 p-4">
         <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">Full prompt</h3>
-        <p className="mt-4 max-h-64 overflow-auto rounded-[8px] bg-white p-4 text-sm leading-7 text-zinc-700 shadow-inner">
+        <p className="mt-4 max-h-64 overflow-auto text-sm leading-7 text-zinc-700">
           {adjustedPrompt}
         </p>
       </div>

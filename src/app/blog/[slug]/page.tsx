@@ -2,21 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
-import { blogPosts, getBlogPostBody, getBlogPostBySlug } from "@/lib/blog";
+import { formatBlogDate, getBlogPostBody, getBlogPostBySlug, getPublishedBlogPosts, isBlogPostPublished } from "@/lib/blog";
 import { absoluteUrl, SITE_NAME } from "@/lib/seo";
 
 type BlogPostPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+export const revalidate = 3600;
+export const dynamicParams = true;
+
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  return getPublishedBlogPosts().map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
-  if (!post) return {};
+  if (!post || !isBlogPostPublished(post)) return {};
 
   return {
     title: post.title,
@@ -45,7 +48,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
-  if (!post) notFound();
+  if (!post || !isBlogPostPublished(post)) notFound();
 
   const pageUrl = absoluteUrl(`/blog/${post.slug}`);
 
@@ -86,7 +89,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Open Image Templates Blog</p>
       <h1 className="mt-3 text-5xl font-semibold tracking-tight text-zinc-950">{post.title}</h1>
       <div className="mt-5 flex flex-wrap gap-2 text-sm font-medium text-zinc-500">
-        <span>{post.publishedAt}</span>
+        <span>{formatBlogDate(post.publishedAt)}</span>
         <span>{post.readMinutes} minute read</span>
       </div>
       <p className="mt-6 text-xl leading-9 text-zinc-600">{post.description}</p>
