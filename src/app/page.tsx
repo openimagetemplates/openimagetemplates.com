@@ -55,6 +55,11 @@ export default function Home() {
             name: SITE_NAME,
             url: absoluteUrl("/"),
             description: SITE_DESCRIPTION,
+            potentialAction: {
+              "@type": "SearchAction",
+              target: `${absoluteUrl("/templates")}?q={search_term_string}`,
+              "query-input": "required name=search_term_string",
+            },
           },
           {
             "@context": "https://schema.org",

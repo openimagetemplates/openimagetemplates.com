@@ -53,7 +53,7 @@ export function TemplateLookControls({
                   type="button"
                   data-testid={optionTestIdPrefix ? `${optionTestIdPrefix}-toggle-${group.name}` : undefined}
                   onClick={() => onToggleGroup(group.name)}
-                  className="flex min-w-0 flex-1 items-center justify-between gap-4 text-left"
+                  className="flex min-w-0 flex-1 cursor-pointer items-center justify-between gap-4 text-left"
                   aria-expanded={isOpen}
                 >
                   <span>
@@ -68,7 +68,7 @@ export function TemplateLookControls({
                   <button
                     type="button"
                     onClick={() => onClear(group.name)}
-                    className="rounded-full border border-blue-500 px-3 py-1 text-xs font-semibold text-blue-600 transition hover:bg-blue-50"
+                    className="cursor-pointer rounded-full border border-blue-500 px-3 py-1 text-xs font-semibold text-blue-600 transition hover:bg-blue-50"
                   >
                     Unselect
                   </button>
@@ -86,7 +86,7 @@ export function TemplateLookControls({
                           optionTestIdPrefix ? `${optionTestIdPrefix}-option-${group.name}-${toControlId(option.value)}` : undefined
                         }
                         onClick={() => handleOptionClick(group, option)}
-                        className={`group/tile overflow-hidden rounded-[8px] border bg-white text-left shadow-sm transition ${
+                        className={`group/tile cursor-pointer overflow-hidden rounded-[8px] border bg-white text-left shadow-sm transition ${
                           isSelected
                             ? "border-blue-500 text-blue-600 ring-2 ring-blue-100"
                             : "border-black/10 text-zinc-700 hover:border-black/25 hover:text-zinc-950 hover:shadow-md"
@@ -132,7 +132,7 @@ export function TemplateLookControls({
               <button
                 type="button"
                 onClick={() => setPreviewOption(null)}
-                className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white text-zinc-950 transition hover:bg-zinc-50"
+                className="grid h-10 w-10 cursor-pointer place-items-center rounded-full border border-black/10 bg-white text-zinc-950 transition hover:bg-zinc-50"
                 aria-label="Close preview"
               >
                 <X size={18} aria-hidden="true" />
