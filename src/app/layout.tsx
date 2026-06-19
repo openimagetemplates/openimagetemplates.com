@@ -97,6 +97,7 @@ const navItems = [
   { href: "/templates", label: "Templates" },
   { href: "/schema", label: "Schema" },
   { href: "/docs", label: "Docs" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export default function RootLayout({
@@ -148,6 +149,9 @@ export default function RootLayout({
               </Link>
               <Link href="/docs" className="font-medium text-zinc-950 hover:underline">
                 Docs
+              </Link>
+              <Link href="/blog" className="font-medium text-zinc-950 hover:underline">
+                Blog
               </Link>
               <a href="https://nano-gpt.com" className="font-medium text-zinc-950 hover:underline">
                 NanoGPT

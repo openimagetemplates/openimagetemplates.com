@@ -1,3 +1,4 @@
+import { blogPosts } from "@/lib/blog";
 import { docs } from "@/lib/docs";
 import { absoluteUrl, categoryPath, SITE_DESCRIPTION, SITE_NAME, templateCategories, templateJsonUrl, templateUrl } from "@/lib/seo";
 import { TEMPLATE_SCHEMA_VERSION, templates } from "@/lib/templates";
@@ -15,6 +16,7 @@ export function GET() {
     `- Homepage: ${absoluteUrl("/")}`,
     `- Full template catalogue JSON: ${absoluteUrl("/templates.json")}`,
     `- Schema page: ${absoluteUrl("/schema")}`,
+    `- Blog: ${absoluteUrl("/blog")}`,
     `- Raw JSON Schema: ${absoluteUrl("/open-image-template.schema.json")}`,
     `- Full AI index: ${absoluteUrl("/llms-full.txt")}`,
     "",
@@ -35,6 +37,9 @@ export function GET() {
     "",
     "## Important Docs",
     ...docs.map((doc) => `- ${doc.title}: ${absoluteUrl(`/docs/${doc.slug}`)}`),
+    "",
+    "## Blog Posts",
+    ...blogPosts.map((post) => `- ${post.title}: ${absoluteUrl(`/blog/${post.slug}`)}`),
     "",
     "## Featured Templates",
     ...featured.map((template) => `- ${template.title}: ${templateUrl(template)} | JSON: ${templateJsonUrl(template)}`),

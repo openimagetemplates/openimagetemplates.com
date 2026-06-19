@@ -30,14 +30,14 @@ export default async function CreateTemplatePage({ searchParams }: CreateTemplat
   const backHref = baseTemplate ? `/templates/${baseTemplate.id}` : "/templates";
 
   return (
-    <main className="bg-white">
-      <section className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+    <main className="bg-[#f5f3ef]">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <Link href={backHref} className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-600 hover:text-zinc-950">
           <ArrowLeft size={16} aria-hidden="true" />
           {baseTemplate ? "Back to template" : "Back to templates"}
         </Link>
         <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Create</p>
-        <h1 className="mt-4 max-w-4xl text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl">
+        <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl">
           {baseTemplate ? `Create from ${baseTemplate.title}` : "Create an image template"}
         </h1>
         <p className="mt-5 max-w-3xl text-lg leading-8 text-zinc-600">

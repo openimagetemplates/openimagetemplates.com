@@ -323,8 +323,8 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
           aria-modal={isInline ? undefined : "true"}
           aria-label={isInline ? undefined : "Create image template"}
         >
-          <div className={isInline ? "flex w-full flex-col overflow-hidden rounded-[8px] border border-black/10 bg-white shadow-sm" : "flex max-h-[94dvh] w-full max-w-6xl flex-col overflow-hidden rounded-[8px] bg-white shadow-2xl"}>
-            <div className="flex items-start justify-between gap-4 border-b border-black/10 px-5 py-4 sm:px-6">
+          <div className={isInline ? "flex w-full flex-col gap-5" : "flex max-h-[94dvh] w-full max-w-6xl flex-col overflow-hidden rounded-[8px] bg-white shadow-2xl"}>
+            <div className={isInline ? "hidden" : "flex items-start justify-between gap-4 border-b border-black/10 px-5 py-4 sm:px-6"}>
               <div>
                 <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">Create template</h2>
                 <p className="mt-1 text-sm leading-6 text-zinc-600">
@@ -343,9 +343,9 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
               ) : null}
             </div>
 
-            <div className={isInline ? "px-5 py-5 sm:px-6" : "min-h-0 flex-1 overflow-auto px-5 py-5 sm:px-6"}>
-              <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-                <div className="space-y-5">
+            <div className={isInline ? "space-y-5" : "min-h-0 flex-1 overflow-auto px-5 py-5 sm:px-6"}>
+              <div className={isInline ? "grid gap-5" : "grid gap-6 lg:grid-cols-[1.05fr_0.95fr]"}>
+                <div className={isInline ? "space-y-5 rounded-[8px] border border-black/10 bg-white p-5 shadow-sm sm:p-6" : "space-y-5"}>
                   <div className="grid gap-3 sm:grid-cols-2">
                     <Field label="Title">
                       <input
@@ -452,24 +452,24 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="rounded-[8px] bg-zinc-950 p-5 text-white">
-                    <div className="flex items-center gap-2">
+                <div className={isInline ? "grid gap-5 lg:grid-cols-2" : "space-y-4"}>
+                  <div className="rounded-[8px] border border-black/10 bg-zinc-50 p-5 shadow-sm">
+                    <div className="flex items-center gap-2 text-zinc-950">
                       <Sparkles size={18} aria-hidden="true" />
                       <h3 className="text-lg font-semibold">Generate template with AI</h3>
                     </div>
-                    <p className="mt-2 text-sm leading-6 text-zinc-300">
+                    <p className="mt-2 text-sm leading-6 text-zinc-600">
                       Upload a reference image, describe an idea, or do both. The result fills the fields on the left for review.
                     </p>
 
                     <label className="mt-4 block">
-                      <span className="text-sm font-semibold text-zinc-100">Template idea</span>
+                      <span className="text-sm font-semibold text-zinc-950">Template idea</span>
                       <textarea
                         value={idea}
                         onChange={(event) => setIdea(event.target.value)}
                         placeholder="Turn this into a reusable editorial close-up template..."
                         rows={4}
-                        className="mt-2 w-full resize-y rounded-[8px] border border-white/15 bg-white/10 px-3 py-3 text-sm leading-6 text-white outline-none transition placeholder:text-zinc-400 focus:border-white"
+                        className="creator-input mt-2 min-h-32 resize-y py-3 leading-6"
                       />
                     </label>
 
@@ -484,7 +484,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                       <button
                         type="button"
                         onClick={() => fileInputRef.current?.click()}
-                        className="flex min-h-52 w-full flex-col items-center justify-center rounded-[8px] border border-dashed border-white/25 bg-white/5 p-4 text-center transition hover:bg-white/10"
+                        className="flex min-h-52 w-full flex-col items-center justify-center rounded-[8px] border border-dashed border-black/15 bg-white p-4 text-center text-zinc-700 transition hover:bg-zinc-50"
                       >
                         {referenceImage ? (
                           <img src={referenceImage} alt="Uploaded reference" className="max-h-64 w-full rounded-[8px] object-contain" />
@@ -492,20 +492,20 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                           <>
                             <Upload size={28} aria-hidden="true" />
                             <span className="mt-3 text-sm font-semibold">Upload reference image</span>
-                            <span className="mt-1 text-xs text-zinc-400">PNG, JPEG, or WebP up to 4 MB</span>
+                            <span className="mt-1 text-xs text-zinc-500">PNG, JPEG, or WebP up to 4 MB</span>
                           </>
                         )}
                       </button>
-                      {referenceFileName ? <p className="mt-2 text-xs text-zinc-400">Selected: {referenceFileName}</p> : null}
+                      {referenceFileName ? <p className="mt-2 text-xs text-zinc-500">Selected: {referenceFileName}</p> : null}
                     </div>
 
-                    {error ? <p className="mt-4 rounded-[8px] bg-red-500/15 p-3 text-sm leading-6 text-red-100">{error}</p> : null}
+                    {error ? <p className="mt-4 rounded-[8px] bg-red-50 p-3 text-sm leading-6 text-red-700">{error}</p> : null}
 
                     <button
                       type="button"
                       onClick={() => void generateWithAi()}
                       disabled={analyzing}
-                      className="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-white px-5 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-100 disabled:cursor-wait disabled:opacity-70"
+                      className="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800 disabled:cursor-wait disabled:opacity-70"
                     >
                       {analyzing ? <Loader2 className="animate-spin" size={17} aria-hidden="true" /> : <ImageIcon size={17} aria-hidden="true" />}
                       Generate template with AI
@@ -555,12 +555,16 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                     </div>
                   </div>
 
-                  <div className="rounded-[8px] border border-black/10 bg-white p-4">
-                    <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">Preview JSON</h3>
-                    <pre className="mt-3 max-h-72 overflow-auto rounded-[8px] bg-zinc-950 p-4 text-xs leading-5 text-zinc-100">
+                  <details className="group rounded-[8px] border border-black/10 bg-white p-4">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">
+                      Preview JSON
+                      <span className="text-xs normal-case tracking-normal text-zinc-500 group-open:hidden">Show</span>
+                      <span className="hidden text-xs normal-case tracking-normal text-zinc-500 group-open:inline">Hide</span>
+                    </summary>
+                    <pre className="mt-3 max-h-72 overflow-auto rounded-[8px] border border-black/10 bg-white p-4 text-xs leading-5 text-zinc-700 shadow-sm">
                       <code>{templateJson}</code>
                     </pre>
-                  </div>
+                  </details>
 
                   <div className="rounded-[8px] border border-black/10 bg-white p-4">
                     <div className="flex items-start justify-between gap-3">
@@ -613,7 +617,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 border-t border-black/10 bg-white px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+            <div className={isInline ? "flex flex-col gap-3 rounded-[8px] border border-black/10 bg-white px-5 py-4 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:px-6" : "flex flex-col gap-3 border-t border-black/10 bg-white px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6"}>
               {baseTemplate ? (
                 <button
                   type="button"

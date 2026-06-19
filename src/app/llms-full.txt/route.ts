@@ -1,3 +1,4 @@
+import { blogPosts } from "@/lib/blog";
 import { docs } from "@/lib/docs";
 import {
   absoluteUrl,
@@ -27,6 +28,8 @@ export function GET() {
     "",
     "## Docs",
     ...docs.flatMap((doc) => [`### ${doc.title}`, doc.description, absoluteUrl(`/docs/${doc.slug}`), ""]),
+    "## Blog Posts",
+    ...blogPosts.flatMap((post) => [`### ${post.title}`, post.description, absoluteUrl(`/blog/${post.slug}`), ""]),
     "## Categories",
     ...templateCategories.map((category) => `- ${category}: ${absoluteUrl(categoryPath(category))}`),
     "",
