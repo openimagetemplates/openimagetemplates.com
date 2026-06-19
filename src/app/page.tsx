@@ -210,7 +210,7 @@ export default function Home() {
             <div className="flex h-12 w-12 items-center justify-center rounded-[8px] bg-[#e4fbf6] text-[#017e9e]">
               <SlidersHorizontal size={23} aria-hidden="true" />
             </div>
-            <p className="mt-8 text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">
+            <p className="mt-8 text-sm font-semibold uppercase tracking-[0.16em] text-zinc-600">
               Prompt builder
             </p>
             <h2 className="mt-3 max-w-2xl text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl">
@@ -287,7 +287,7 @@ export default function Home() {
               >
                 <div className="p-6">
                   <p className="text-2xl font-semibold tracking-tight">{template.category}</p>
-                  <p className="mt-2 text-sm font-medium text-black/60">{template.title}</p>
+                  <p className="mt-2 text-sm font-medium text-black/75">{template.title}</p>
                 </div>
                 <div className="h-72 overflow-hidden px-5 pb-5">
                   <TemplatePreviewImage

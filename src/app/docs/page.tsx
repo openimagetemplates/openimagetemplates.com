@@ -28,7 +28,7 @@ export default function DocsIndexPage() {
           },
         }}
       />
-      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Documentation</p>
+      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-600">Documentation</p>
       <h1 className="mt-4 text-5xl font-semibold tracking-tight text-zinc-950">Open Image Templates Docs</h1>
       <p className="mt-5 max-w-3xl text-lg leading-8 text-zinc-600">
         Learn how the open schema works, how to use templates, and how to build a compatible gallery or image generation flow.

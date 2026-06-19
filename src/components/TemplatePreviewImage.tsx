@@ -9,6 +9,10 @@ type TemplatePreviewImageProps = {
   alt: string;
   className?: string;
   fallbackClassName?: string;
+  loading?: "eager" | "lazy";
+  fetchPriority?: "high" | "low" | "auto";
+  width?: number;
+  height?: number;
 };
 
 export function TemplatePreviewImage({
@@ -16,13 +20,17 @@ export function TemplatePreviewImage({
   alt,
   className = "",
   fallbackClassName = "",
+  loading = "lazy",
+  fetchPriority = "auto",
+  width = 1024,
+  height = 1024,
 }: TemplatePreviewImageProps) {
   const [failed, setFailed] = useState(false);
 
   if (!src || failed) {
     return (
       <div
-        className={`flex h-full min-h-32 w-full flex-col items-center justify-center gap-2 bg-zinc-100 px-4 text-center text-zinc-500 ${fallbackClassName}`}
+        className={`flex h-full min-h-32 w-full flex-col items-center justify-center gap-2 bg-zinc-100 px-4 text-center text-zinc-600 ${fallbackClassName}`}
         role="img"
         aria-label={alt}
       >
@@ -37,7 +45,10 @@ export function TemplatePreviewImage({
       src={src}
       alt={alt}
       className={className}
-      loading="lazy"
+      width={width}
+      height={height}
+      loading={loading}
+      fetchPriority={fetchPriority}
       onError={() => setFailed(true)}
     />
   );

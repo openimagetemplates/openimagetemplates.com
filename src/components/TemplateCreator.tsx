@@ -1,7 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import { ArrowUpRight, Braces, Check, Clock3, Copy, ExternalLink, ImageIcon, Loader2, Plus, Send, Sparkles, Trash2, Upload, X } from "lucide-react";
+import { ArrowUpRight, Braces, Check, ChevronDown, Clock3, Copy, ExternalLink, ImageIcon, Loader2, Plus, Send, Sparkles, Trash2, Upload, X } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
 import { useMemo, useRef, useState } from "react";
@@ -46,6 +46,7 @@ const maxImageBytes = 4 * 1024 * 1024;
 export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "modal" }: TemplateCreatorProps) {
   const isInline = mode === "inline";
   const [open, setOpen] = useState(initiallyOpen || isInline);
+  const [aiDraftOpen, setAiDraftOpen] = useState(false);
   const [draft, setDraft] = useState<TemplateCreatorDraft>(() => (
     isInline && baseTemplate ? draftFromTemplate(baseTemplate) : createEmptyTemplateDraft(baseTemplate)
   ));
@@ -344,6 +345,101 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
             </div>
 
             <div className={isInline ? "space-y-5" : "min-h-0 flex-1 overflow-auto px-5 py-5 sm:px-6"}>
+              <section className="overflow-hidden rounded-[8px] border border-black/10 bg-white shadow-sm">
+                <button
+                  type="button"
+                  onClick={() => setAiDraftOpen((current) => !current)}
+                  className="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left transition hover:bg-zinc-50 sm:px-6"
+                  aria-expanded={aiDraftOpen}
+                  aria-controls="template-ai-draft-panel"
+                >
+                  <span className="flex min-w-0 items-center gap-3">
+                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-zinc-950 text-white">
+                      <Sparkles size={18} aria-hidden="true" />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block text-base font-semibold text-zinc-950">Start from an image or idea</span>
+                      <span className="mt-1 block text-sm leading-5 text-zinc-600">
+                        Upload a reference or describe the template. AI fills the fields below for review.
+                      </span>
+                    </span>
+                  </span>
+                  <span className="inline-flex shrink-0 items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-2 text-sm font-semibold text-zinc-950">
+                    Generate with AI
+                    <ChevronDown
+                      className={`transition-transform duration-300 ${aiDraftOpen ? "rotate-180" : ""}`}
+                      size={16}
+                      aria-hidden="true"
+                    />
+                  </span>
+                </button>
+
+                <div
+                  id="template-ai-draft-panel"
+                  className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
+                    aiDraftOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="border-t border-black/10 bg-zinc-50 p-5 sm:p-6">
+                      <div className="grid gap-5 lg:grid-cols-[1fr_0.9fr]">
+                        <div>
+                          <label className="block">
+                            <span className="text-sm font-semibold text-zinc-950">Template idea</span>
+                            <textarea
+                              value={idea}
+                              onChange={(event) => setIdea(event.target.value)}
+                              placeholder="Turn this into a reusable editorial close-up template..."
+                              rows={4}
+                              className="creator-input mt-2 min-h-32 resize-y py-3 leading-6"
+                            />
+                          </label>
+                          <p className="mt-3 text-sm leading-6 text-zinc-600">
+                            The draft updates the title, category, prompt, tags, and editable slots. You can change everything before saving.
+                          </p>
+                          {error ? <p className="mt-4 rounded-[8px] bg-red-50 p-3 text-sm leading-6 text-red-700">{error}</p> : null}
+                          <button
+                            type="button"
+                            onClick={() => void generateWithAi()}
+                            disabled={analyzing}
+                            className="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800 disabled:cursor-wait disabled:opacity-70 sm:w-auto"
+                          >
+                            {analyzing ? <Loader2 className="animate-spin" size={17} aria-hidden="true" /> : <ImageIcon size={17} aria-hidden="true" />}
+                            Generate template with AI
+                          </button>
+                        </div>
+
+                        <div>
+                          <input
+                            ref={fileInputRef}
+                            type="file"
+                            accept="image/png,image/jpeg,image/webp"
+                            className="hidden"
+                            onChange={(event) => void handleFile(event.target.files?.[0] ?? null)}
+                          />
+                          <button
+                            type="button"
+                            onClick={() => fileInputRef.current?.click()}
+                            className="flex min-h-52 w-full cursor-pointer flex-col items-center justify-center rounded-[8px] border border-dashed border-black/15 bg-white p-4 text-center text-zinc-700 transition hover:bg-zinc-50"
+                          >
+                            {referenceImage ? (
+                              <img src={referenceImage} alt="Uploaded reference" className="max-h-64 w-full rounded-[8px] object-contain" />
+                            ) : (
+                              <>
+                                <Upload size={28} aria-hidden="true" />
+                                <span className="mt-3 text-sm font-semibold">Upload reference image</span>
+                                <span className="mt-1 text-xs text-zinc-500">PNG, JPEG, or WebP up to 4 MB</span>
+                              </>
+                            )}
+                          </button>
+                          {referenceFileName ? <p className="mt-2 text-xs text-zinc-500">Selected: {referenceFileName}</p> : null}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
               <div className={isInline ? "grid gap-5" : "grid gap-6 lg:grid-cols-[1.05fr_0.95fr]"}>
                 <div className={isInline ? "space-y-5 rounded-[8px] border border-black/10 bg-white p-5 shadow-sm sm:p-6" : "space-y-5"}>
                   <div className="grid gap-3 sm:grid-cols-2">
@@ -407,7 +503,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
 
                   <div>
                     <div className="flex items-center justify-between gap-3">
-                      <h3 className="text-sm font-semibold text-zinc-950">Editable slots</h3>
+                      <h2 className="text-sm font-semibold text-zinc-950">Editable slots</h2>
                       <button
                         type="button"
                         onClick={addSlot}
@@ -453,69 +549,10 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                 </div>
 
                 <div className={isInline ? "grid gap-5 lg:grid-cols-2" : "space-y-4"}>
-                  <div className="rounded-[8px] border border-black/10 bg-zinc-50 p-5 shadow-sm">
-                    <div className="flex items-center gap-2 text-zinc-950">
-                      <Sparkles size={18} aria-hidden="true" />
-                      <h3 className="text-lg font-semibold">Generate template with AI</h3>
-                    </div>
-                    <p className="mt-2 text-sm leading-6 text-zinc-600">
-                      Upload a reference image, describe an idea, or do both. The result fills the fields on the left for review.
-                    </p>
-
-                    <label className="mt-4 block">
-                      <span className="text-sm font-semibold text-zinc-950">Template idea</span>
-                      <textarea
-                        value={idea}
-                        onChange={(event) => setIdea(event.target.value)}
-                        placeholder="Turn this into a reusable editorial close-up template..."
-                        rows={4}
-                        className="creator-input mt-2 min-h-32 resize-y py-3 leading-6"
-                      />
-                    </label>
-
-                    <div className="mt-4">
-                      <input
-                        ref={fileInputRef}
-                        type="file"
-                        accept="image/png,image/jpeg,image/webp"
-                        className="hidden"
-                        onChange={(event) => void handleFile(event.target.files?.[0] ?? null)}
-                      />
-                      <button
-                        type="button"
-                        onClick={() => fileInputRef.current?.click()}
-                        className="flex min-h-52 w-full flex-col items-center justify-center rounded-[8px] border border-dashed border-black/15 bg-white p-4 text-center text-zinc-700 transition hover:bg-zinc-50"
-                      >
-                        {referenceImage ? (
-                          <img src={referenceImage} alt="Uploaded reference" className="max-h-64 w-full rounded-[8px] object-contain" />
-                        ) : (
-                          <>
-                            <Upload size={28} aria-hidden="true" />
-                            <span className="mt-3 text-sm font-semibold">Upload reference image</span>
-                            <span className="mt-1 text-xs text-zinc-500">PNG, JPEG, or WebP up to 4 MB</span>
-                          </>
-                        )}
-                      </button>
-                      {referenceFileName ? <p className="mt-2 text-xs text-zinc-500">Selected: {referenceFileName}</p> : null}
-                    </div>
-
-                    {error ? <p className="mt-4 rounded-[8px] bg-red-50 p-3 text-sm leading-6 text-red-700">{error}</p> : null}
-
-                    <button
-                      type="button"
-                      onClick={() => void generateWithAi()}
-                      disabled={analyzing}
-                      className="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800 disabled:cursor-wait disabled:opacity-70"
-                    >
-                      {analyzing ? <Loader2 className="animate-spin" size={17} aria-hidden="true" /> : <ImageIcon size={17} aria-hidden="true" />}
-                      Generate template with AI
-                    </button>
-                  </div>
-
                   <div className="rounded-[8px] border border-black/10 bg-white p-4">
                     <div className="flex items-center gap-2 text-zinc-950">
                       <ImageIcon size={18} aria-hidden="true" />
-                      <h3 className="text-lg font-semibold">Generate image</h3>
+                      <h2 className="text-lg font-semibold">Generate image</h2>
                     </div>
                     <p className="mt-2 text-sm leading-6 text-zinc-600">
                       Create a preview from the current model-ready prompt. The image is added to this template before you submit it.
@@ -524,7 +561,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                       {draft.image ? (
                         <img src={draft.image} alt={draft.imageAlt || "Template preview"} className="max-h-72 w-full object-contain" />
                       ) : (
-                        <div className="grid min-h-56 place-items-center px-6 text-center text-sm font-medium text-zinc-500">
+                        <div className="grid min-h-56 place-items-center px-6 text-center text-sm font-medium text-zinc-600">
                           Generated previews will appear here.
                         </div>
                       )}
@@ -556,7 +593,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                   </div>
 
                   <details className="group rounded-[8px] border border-black/10 bg-white p-4">
-                    <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold uppercase tracking-[0.16em] text-zinc-600">
                       Preview JSON
                       <span className="text-xs normal-case tracking-normal text-zinc-500 group-open:hidden">Show</span>
                       <span className="hidden text-xs normal-case tracking-normal text-zinc-500 group-open:inline">Hide</span>
@@ -569,7 +606,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                   <div className="rounded-[8px] border border-black/10 bg-white p-4">
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">Community templates</h3>
+                        <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-600">Community templates</h2>
                         <p className="mt-2 text-sm leading-6 text-zinc-600">
                           Submit your created template for public review. Approved templates can be added to the gallery for everyone to copy and use.
                         </p>

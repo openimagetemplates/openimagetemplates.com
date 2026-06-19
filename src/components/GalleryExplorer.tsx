@@ -103,7 +103,7 @@ export function GalleryExplorer({ templates, loadingMode = "collapsed" }: Galler
     <section id="gallery" className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
       <div className="mb-6 flex flex-col gap-4 border-t border-black/10 pt-6 lg:flex-row lg:items-center lg:justify-between">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-600">
             Community gallery
           </p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-zinc-950">

@@ -33,7 +33,7 @@ export default function SchemaPage() {
           },
         }}
       />
-      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Open standard</p>
+      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-600">Open standard</p>
       <h1 className="mt-4 text-5xl font-semibold tracking-tight text-zinc-950">Open Image Template Schema</h1>
       <p className="mt-5 max-w-3xl text-lg leading-8 text-zinc-600">
         Version {TEMPLATE_SCHEMA_VERSION} defines a portable JSON format for reusable AI image generation templates:

@@ -31,6 +31,11 @@ a {
   text-decoration: none;
 }
 
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+
 .creator-input {
   width: 100%;
   border-radius: 8px;

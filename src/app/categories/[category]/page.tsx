@@ -86,7 +86,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <Link href="/templates" className="text-sm font-semibold text-zinc-600 hover:text-zinc-950">
         Back to all templates
       </Link>
-      <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Category</p>
+      <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-zinc-600">Category</p>
       <h1 className="mt-3 text-5xl font-semibold tracking-tight text-zinc-950">{category} AI Image Templates</h1>
       <p className="mt-5 max-w-3xl text-lg leading-8 text-zinc-600">
         {copy.intro}

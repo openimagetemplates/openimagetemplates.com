@@ -102,7 +102,7 @@ export function templateFromCreatorDraft(draft: TemplateCreatorDraft, existingId
   const generatedAt = new Date().toISOString().slice(0, 10);
 
   return {
-    id: existingId || `local-${slugifyTemplateId(title)}-${Date.now().toString(36)}`,
+    id: existingId || `local-${slugifyTemplateId(title)}`,
     title,
     description,
     category: draft.category,

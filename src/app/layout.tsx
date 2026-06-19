@@ -112,10 +112,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <head>
+        <link rel="preconnect" href="https://assets.openimagetemplates.com" />
+        <link rel="dns-prefetch" href="https://assets.openimagetemplates.com" />
+      </head>
       <body>
         <header className="sticky top-0 z-40 border-b border-black/10 bg-[#f5f3ef]/90 backdrop-blur-xl">
           <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-            <Link href="/" className="flex items-center gap-2.5" aria-label="Open Image Templates home">
+            <Link href="/" className="flex items-center gap-2.5">
               <OpenImageTemplatesLogo
                 maskId="header-open-image-templates-logo-mask"
                 animated
@@ -164,7 +168,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
-        <Analytics />
+        {process.env.VERCEL ? <Analytics /> : null}
       </body>
     </html>
   );

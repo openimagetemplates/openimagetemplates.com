@@ -177,7 +177,7 @@ export function HomepageHero({ templates, templateCount, schemaVersion }: Homepa
                 className={`h-10 rounded-full px-5 text-sm font-semibold uppercase tracking-[0.04em] transition ${
                   mode === item
                     ? "bg-white text-zinc-950 shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_8px_18px_rgba(0,0,0,0.08)]"
-                    : "text-zinc-500 hover:text-zinc-950"
+                    : "text-zinc-600 hover:text-zinc-950"
                 }`}
               >
                 {modes[item].label}
@@ -267,7 +267,7 @@ export function HomepageHero({ templates, templateCount, schemaVersion }: Homepa
                   className="oit-hero-preview-image h-full w-full object-cover object-top"
                 />
               ) : (
-                <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-zinc-100 px-6 text-center text-zinc-500">
+                <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-zinc-100 px-6 text-center text-zinc-600">
                   <ImageIcon size={32} aria-hidden="true" />
                   <span className="text-sm font-semibold">Preview coming soon</span>
                 </div>
@@ -288,7 +288,7 @@ export function HomepageHero({ templates, templateCount, schemaVersion }: Homepa
 
       <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
         <div className="border-t border-black/10 pt-6">
-          <div className="flex flex-wrap items-center gap-5 text-sm font-semibold text-zinc-500">
+          <div className="flex flex-wrap items-center gap-5 text-sm font-semibold text-zinc-600">
             <span className="inline-flex items-center gap-2 rounded-full bg-zinc-100 px-4 py-2 text-zinc-950">
               <Images size={17} aria-hidden="true" />
               Templates

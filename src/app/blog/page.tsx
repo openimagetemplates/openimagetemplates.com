@@ -54,7 +54,7 @@ export default function BlogIndexPage() {
       />
 
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Blog</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-600">Blog</p>
         <h1 className="mt-4 max-w-5xl text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl">
           Prompt templates, visual examples, and reusable AI image workflows
         </h1>

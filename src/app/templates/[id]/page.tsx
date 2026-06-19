@@ -133,18 +133,22 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
         Back to gallery
       </Link>
       <div className="mt-8 grid min-w-0 gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-        <div className="self-start">
+        <div className="order-2 self-start lg:order-1">
           <div className="overflow-hidden rounded-[8px] border border-black/10 bg-white shadow-sm">
             <ImagePreviewButton
               src={template.image}
               alt={template.imageAlt}
               label={template.title}
               imageClassName="w-full object-cover transition duration-300 hover:scale-[1.01]"
+              imageWidth={683}
+              imageHeight={1024}
+              loading="eager"
+              fetchPriority="high"
             />
           </div>
           <TemplateCreator baseTemplate={template} />
         </div>
-        <div className="min-w-0">
+        <div className="order-1 min-w-0 lg:order-2">
           <div className="flex flex-wrap gap-2">
             <Link href={categoryPath(template.category)} className="rounded-full bg-zinc-950 px-3 py-1 text-xs font-medium text-white">
               {template.category}
@@ -158,7 +162,7 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
           </div>
           <h1 className="mt-5 text-4xl font-semibold tracking-tight text-zinc-950">{template.title}</h1>
           <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-600">{template.description}</p>
-          <p className="mt-3 text-sm text-zinc-500">
+          <p className="mt-3 text-sm text-zinc-600">
             Generated {template.generatedAt} with Open Image Template schema {template.schemaVersion}. JSON endpoint:{" "}
             <a href={templateJsonPathForPage} className="font-medium text-zinc-950 underline">
               {templateJsonPathForPage}

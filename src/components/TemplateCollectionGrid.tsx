@@ -8,8 +8,8 @@ type TemplateCollectionGridProps = {
 export function TemplateCollectionGrid({ templates }: TemplateCollectionGridProps) {
   return (
     <div className="columns-1 gap-5 sm:columns-2 lg:columns-3">
-      {templates.map((template) => (
-        <TemplateCard key={template.id} template={template} />
+      {templates.map((template, index) => (
+        <TemplateCard key={template.id} template={template} priority={index === 0} />
       ))}
     </div>
   );

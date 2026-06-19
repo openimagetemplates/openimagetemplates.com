@@ -36,7 +36,7 @@ export default async function CreateTemplatePage({ searchParams }: CreateTemplat
           <ArrowLeft size={16} aria-hidden="true" />
           {baseTemplate ? "Back to template" : "Back to templates"}
         </Link>
-        <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Create</p>
+        <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-zinc-600">Create</p>
         <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl">
           {baseTemplate ? `Create from ${baseTemplate.title}` : "Create an image template"}
         </h1>

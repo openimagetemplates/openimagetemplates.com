@@ -7,18 +7,23 @@ import { TemplatePreviewImage } from "@/components/TemplatePreviewImage";
 
 type TemplateCardProps = {
   template: ImageTemplate;
+  priority?: boolean;
 };
 
-export function TemplateCard({ template }: TemplateCardProps) {
+export function TemplateCard({ template, priority = false }: TemplateCardProps) {
   return (
     <article className="group mb-5 break-inside-avoid overflow-hidden rounded-[8px] border border-black/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-xl">
       <div className="relative bg-zinc-100">
         <Link href={`/templates/${template.id}`} className="block">
-          <span className="block aspect-[4/3] overflow-hidden bg-zinc-100">
+          <span className="block aspect-[3/1] overflow-hidden bg-zinc-100 sm:aspect-[4/3]">
             <TemplatePreviewImage
               src={template.image}
               alt={template.imageAlt}
               className="h-full w-full object-cover"
+              width={1024}
+              height={768}
+              loading={priority ? "eager" : "lazy"}
+              fetchPriority={priority ? "high" : "auto"}
             />
           </span>
         </Link>
@@ -32,9 +37,9 @@ export function TemplateCard({ template }: TemplateCardProps) {
       <div className="space-y-4 p-4">
         <div>
           <Link href={`/templates/${template.id}`} className="block">
-            <h3 className="text-base font-semibold tracking-tight text-zinc-950 group-hover:underline">
+            <h2 className="text-base font-semibold tracking-tight text-zinc-950 group-hover:underline">
               {template.title}
-            </h3>
+            </h2>
           </Link>
           <p className="mt-1 text-sm leading-5 text-zinc-600">{template.description}</p>
         </div>

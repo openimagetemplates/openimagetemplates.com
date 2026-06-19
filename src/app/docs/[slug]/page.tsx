@@ -60,7 +60,7 @@ export default async function DocPage({ params }: DocPageProps) {
       <Link href="/docs" className="text-sm font-semibold text-zinc-600 hover:text-zinc-950">
         Back to docs
       </Link>
-      <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Open standard docs</p>
+      <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-zinc-600">Open standard docs</p>
       <h1 className="mt-3 text-5xl font-semibold tracking-tight text-zinc-950">{doc.title}</h1>
       <p className="mt-5 text-lg leading-8 text-zinc-600">{doc.description}</p>
       <div className="mt-10 space-y-8">

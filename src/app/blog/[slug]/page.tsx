@@ -118,9 +118,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         <div className="mt-8 grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Open Image Templates Blog</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-600">Open Image Templates Blog</p>
             <h1 className="mt-4 text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl">{post.title}</h1>
-            <div className="mt-5 flex flex-wrap gap-2 text-sm font-medium text-zinc-500">
+            <div className="mt-5 flex flex-wrap gap-2 text-sm font-medium text-zinc-600">
               <span>{formatBlogDate(post.publishedAt)}</span>
               <span>{post.readMinutes} minute read</span>
             </div>
@@ -138,7 +138,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
               <div className="flex items-center justify-between gap-3 px-1 py-3">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Featured template</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-600">Featured template</p>
                   <p className="mt-1 text-lg font-semibold text-zinc-950">{heroTemplate.title}</p>
                 </div>
                 <ArrowUpRight size={18} aria-hidden="true" />
@@ -155,7 +155,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <TemplatePreviewImage src={template.image} alt={template.imageAlt} className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]" />
             </div>
             <div className="p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Example {index + 1}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-600">Example {index + 1}</p>
               <h2 className="mt-1 text-base font-semibold tracking-tight text-zinc-950 group-hover:underline">{template.title}</h2>
               <p className="mt-1 line-clamp-2 text-sm leading-5 text-zinc-600">{template.description}</p>
             </div>
@@ -178,7 +178,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               key={section.heading}
               className={index % 2 === 0 ? "rounded-[8px] border border-black/10 bg-white p-6 shadow-sm" : "rounded-[8px] border border-black/10 bg-[#e4fbf6] p-6 shadow-sm"}
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500">0{index + 1}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-600">0{index + 1}</p>
               <h2 className="mt-2 text-3xl font-semibold tracking-tight text-zinc-950">{section.heading}</h2>
               <div className="mt-5 space-y-4">
                 {section.paragraphs.map((paragraph) => (

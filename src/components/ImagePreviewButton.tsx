@@ -10,15 +10,37 @@ type ImagePreviewButtonProps = {
   label: string;
   className?: string;
   imageClassName?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  loading?: "eager" | "lazy";
+  fetchPriority?: "high" | "low" | "auto";
 };
 
-export function ImagePreviewButton({ src, alt, label, className = "", imageClassName = "" }: ImagePreviewButtonProps) {
+export function ImagePreviewButton({
+  src,
+  alt,
+  label,
+  className = "",
+  imageClassName = "",
+  imageWidth = 1024,
+  imageHeight = 1024,
+  loading = "lazy",
+  fetchPriority = "auto",
+}: ImagePreviewButtonProps) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <button type="button" onClick={() => setOpen(true)} className={`block w-full text-left ${className}`} aria-label={`Open ${label} preview`}>
-        <TemplatePreviewImage src={src} alt={alt} className={imageClassName} />
+        <TemplatePreviewImage
+          src={src}
+          alt={alt}
+          className={imageClassName}
+          width={imageWidth}
+          height={imageHeight}
+          loading={loading}
+          fetchPriority={fetchPriority}
+        />
       </button>
       {open ? (
         <div
@@ -31,7 +53,7 @@ export function ImagePreviewButton({ src, alt, label, className = "", imageClass
           <div className="w-full max-w-5xl overflow-hidden rounded-[8px] bg-white shadow-2xl" onClick={(event) => event.stopPropagation()}>
             <div className="flex items-center justify-between gap-4 border-b border-black/10 px-5 py-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500">Example image</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-600">Example image</p>
                 <h3 className="mt-1 text-xl font-semibold tracking-tight text-zinc-950">{label}</h3>
               </div>
               <button
