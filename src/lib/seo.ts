@@ -1,7 +1,7 @@
 import type { ImageTemplate, TemplateCategory } from "@/lib/templates";
 import { categories, templates } from "@/lib/templates";
 
-export const SITE_URL = "https://openimagetemplates.com";
+export const SITE_URL = "https://www.openimagetemplates.com";
 export const SITE_NAME = "Open Image Templates";
 export const SITE_DESCRIPTION = "A free, open standard and community gallery for reusable AI image generation templates.";
 

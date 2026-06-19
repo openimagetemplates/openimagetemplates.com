@@ -53,6 +53,14 @@ export default function SchemaPage() {
         >
           Download schema
         </a>
+        <a
+          href="https://github.com/openimagetemplates"
+          className="inline-flex h-12 items-center justify-center rounded-full border border-black/10 bg-white px-5 text-sm font-semibold text-zinc-950 shadow-sm transition hover:bg-zinc-50"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View on GitHub
+        </a>
       </div>
 
       <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -76,6 +84,17 @@ export default function SchemaPage() {
         <pre className="mt-4 overflow-auto rounded-[8px] border border-black/10 bg-zinc-950 p-5 text-sm leading-6 text-zinc-100">
           <code>{exampleJson}</code>
         </pre>
+      </section>
+
+      <section className="mt-10 rounded-[8px] border border-black/10 bg-white p-6 shadow-sm">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">Open source schema</h2>
+        <p className="mt-3 text-sm leading-6 text-zinc-600">
+          The schema is intended to live as an open standard. The public GitHub organization is available at{" "}
+          <a href="https://github.com/openimagetemplates" className="font-semibold text-zinc-950 underline" target="_blank" rel="noreferrer">
+            github.com/openimagetemplates
+          </a>
+          , and every template page links to a machine-readable JSON endpoint.
+        </p>
       </section>
 
       <section className="mt-10 rounded-[8px] border border-black/10 bg-white p-6 shadow-sm">

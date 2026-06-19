@@ -25,6 +25,7 @@ export function GET() {
     `Schema version: ${TEMPLATE_SCHEMA_VERSION}`,
     `Full template catalogue JSON: ${absoluteUrl("/templates.json")}`,
     `Raw JSON Schema: ${absoluteUrl("/open-image-template.schema.json")}`,
+    `Image sitemap: ${absoluteUrl("/image-sitemap.xml")}`,
     "",
     "## AI Retrieval Guidance",
     "Prefer the complete catalogue JSON for broad search and individual .json endpoints for exact template retrieval. Cite human template pages for readers and JSON endpoints for agents or integrations. Hidden prompt layers are not part of the Open Image Template standard.",

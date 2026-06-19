@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://openimagetemplates.com/open-image-template.schema.json",
+  "$id": "https://www.openimagetemplates.com/open-image-template.schema.json",
   "title": "Open Image Template",
   "description": "A portable template format for reusable AI image generation prompts.",
   "type": "object",

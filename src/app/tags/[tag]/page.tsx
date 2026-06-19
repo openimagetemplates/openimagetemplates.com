@@ -18,12 +18,16 @@ export async function generateMetadata({ params }: TagPageProps): Promise<Metada
   const tag = getTagBySlug(slug);
   if (!tag) return {};
 
+  const taggedTemplates = getTemplatesByTag(tag);
+  const isThinTag = taggedTemplates.length < 2;
   const title = `${tag} AI Image Templates`;
-  const description = `Browse open, copyable AI image templates tagged ${tag}, with visible prompts, preview images, and portable JSON schema.`;
+  const description = `Browse ${taggedTemplates.length} open, copyable AI image templates tagged ${tag}, with visible prompts, preview images, and portable JSON schema.`;
 
   return {
     title,
     description,
+    keywords: [`${tag} AI image templates`, `${tag} prompt templates`, "AI image prompt templates", "Open Image Templates"],
+    robots: isThinTag ? { index: false, follow: true } : undefined,
     alternates: {
       canonical: tagPath(tag),
     },

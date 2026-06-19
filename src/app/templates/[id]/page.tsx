@@ -27,8 +27,18 @@ export async function generateMetadata({ params }: TemplatePageProps): Promise<M
   return {
     title: template.title,
     description: template.description,
+    keywords: [
+      template.title,
+      `${template.category} AI image template`,
+      "AI image prompt template",
+      "Open Image Templates",
+      ...template.tags,
+    ],
     alternates: {
       canonical: templatePath(template),
+      types: {
+        "application/json": templateJsonUrl(template),
+      },
     },
     openGraph: {
       title: template.title,

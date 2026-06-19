@@ -26,7 +26,7 @@ const bottomShowcaseTemplates = selectDiverseTemplates(templates, 12, {
   startCategoryIndex: 5,
   startTemplateIndex: 6,
 });
-const galleryTemplates = selectDiverseTemplates(templates, templates.length, {
+const galleryTemplates = selectDiverseTemplates(templates, 36, {
   startCategoryIndex: 2,
   startTemplateIndex: 8,
 });
@@ -47,7 +47,7 @@ export default function Home() {
             "@type": "Organization",
             name: SITE_NAME,
             url: absoluteUrl("/"),
-            sameAs: ["https://nano-gpt.com"],
+            sameAs: ["https://nano-gpt.com", "https://github.com/openimagetemplates"],
           },
           {
             "@context": "https://schema.org",

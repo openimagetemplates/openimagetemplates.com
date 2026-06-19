@@ -4,6 +4,7 @@ import { docs } from "@/lib/docs";
 import {
   absoluteUrl,
   categoryPath,
+  getTemplatesByTag,
   tagPath,
   templateCategories,
   templateJsonPath,
@@ -14,7 +15,7 @@ import { templates } from "@/lib/templates";
 
 export const revalidate = 3600;
 
-const staticPaths = ["/", "/templates", "/templates.json", "/templates/create", "/schema", "/docs", "/blog", "/rss.xml", "/llms.txt", "/llms-full.txt", "/open-image-template.schema.json"];
+const staticPaths = ["/", "/templates", "/templates.json", "/templates/create", "/schema", "/docs", "/blog", "/rss.xml", "/image-sitemap.xml", "/llms.txt", "/llms-full.txt", "/open-image-template.schema.json"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -44,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),
-    ...templateTags.map((tag) => ({
+    ...templateTags.filter((tag) => getTemplatesByTag(tag).length >= 2).map((tag) => ({
       url: absoluteUrl(tagPath(tag)),
       lastModified: now,
       changeFrequency: "weekly" as const,

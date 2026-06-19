@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
+import { categorySeoCopy } from "@/lib/category-copy";
 import { TemplateCollectionGrid } from "@/components/TemplateCollectionGrid";
 import {
   absoluteUrl,
@@ -27,12 +28,14 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const category = getCategoryBySlug(slug);
   if (!category) return {};
 
-  const title = `${category} Image Templates`;
-  const description = `Browse open, copyable ${category.toLowerCase()} AI image templates with visible prompts, JSON schema, preview images, and NanoGPT generation links.`;
+  const copy = categorySeoCopy[category];
+  const title = `${category} AI Image Templates`;
+  const description = `${copy.intro} Browse open, copyable ${category.toLowerCase()} AI image templates with visible prompts and JSON schema.`;
 
   return {
     title,
     description,
+    keywords: [`${category} AI image templates`, `${category} prompt templates`, "AI image prompt templates", "Open Image Templates"],
     alternates: {
       canonical: categoryPath(category),
     },
@@ -52,6 +55,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   if (!category) notFound();
 
   const categoryTemplates = getTemplatesByCategory(category);
+  const copy = categorySeoCopy[category];
   const pageUrl = absoluteUrl(categoryPath(category));
 
   return (
@@ -61,7 +65,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           name: `${category} Image Templates`,
-          description: `Open Image Templates in the ${category} category.`,
+          description: copy.intro,
           url: pageUrl,
           isPartOf: {
             "@type": "WebSite",
@@ -83,11 +87,34 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         Back to all templates
       </Link>
       <p className="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Category</p>
-      <h1 className="mt-3 text-5xl font-semibold tracking-tight text-zinc-950">{category} Image Templates</h1>
+      <h1 className="mt-3 text-5xl font-semibold tracking-tight text-zinc-950">{category} AI Image Templates</h1>
       <p className="mt-5 max-w-3xl text-lg leading-8 text-zinc-600">
-        Browse {categoryTemplates.length} open templates for {category.toLowerCase()} image generation. Every template includes
-        a visible prompt, editable controls, a preview image, and a portable JSON endpoint.
+        {copy.intro}
       </p>
+      <div className="mt-8 grid gap-4 md:grid-cols-2">
+        <section className="rounded-[8px] border border-black/10 bg-white p-5 shadow-sm">
+          <h2 className="text-xl font-semibold tracking-tight text-zinc-950">Common uses</h2>
+          <ul className="mt-4 grid gap-2 text-sm leading-6 text-zinc-600">
+            {copy.useCases.map((useCase) => (
+              <li key={useCase}>- {useCase}</li>
+            ))}
+          </ul>
+        </section>
+        <section className="rounded-[8px] border border-black/10 bg-white p-5 shadow-sm">
+          <h2 className="text-xl font-semibold tracking-tight text-zinc-950">What is included</h2>
+          <p className="mt-3 text-sm leading-6 text-zinc-600">
+            Browse {categoryTemplates.length} open templates for {category.toLowerCase()} image generation. Every template includes a visible prompt, editable controls, a preview image, and a portable JSON endpoint.
+          </p>
+        </section>
+      </div>
+      <section className="mt-8 grid gap-4 md:grid-cols-2">
+        {copy.faq.map((item) => (
+          <div key={item.question} className="rounded-[8px] border border-black/10 bg-white p-5 shadow-sm">
+            <h2 className="text-lg font-semibold tracking-tight text-zinc-950">{item.question}</h2>
+            <p className="mt-2 text-sm leading-6 text-zinc-600">{item.answer}</p>
+          </div>
+        ))}
+      </section>
       <div className="mt-10">
         <TemplateCollectionGrid templates={categoryTemplates} />
       </div>

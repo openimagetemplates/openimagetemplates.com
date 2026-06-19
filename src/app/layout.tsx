@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   applicationName: "Open Image Templates",
-  metadataBase: new URL("https://openimagetemplates.com"),
+  metadataBase: new URL("https://www.openimagetemplates.com"),
   title: {
     default: "Open Image Templates",
     template: "%s | Open Image Templates",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "open prompt schema",
     "NanoGPT",
   ],
-  authors: [{ name: "Open Image Templates", url: "https://openimagetemplates.com" }],
+  authors: [{ name: "Open Image Templates", url: "https://www.openimagetemplates.com" }],
   creator: "Open Image Templates",
   publisher: "Open Image Templates",
   category: "technology",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "Open Image Templates",
     description:
       "Copy visible prompts, inspect portable template JSON, and generate with NanoGPT in one click.",
-    url: "https://openimagetemplates.com",
+    url: "https://www.openimagetemplates.com",
     siteName: "Open Image Templates",
     images: [
       {

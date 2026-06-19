@@ -1,3 +1,5 @@
+import { templates, type ImageTemplate } from "@/lib/templates";
+
 export type BlogPostSection = {
   heading: string;
   paragraphs: string[];
@@ -487,6 +489,131 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+
+  {
+    slug: "open-image-templates-vs-lexica-prompt-search",
+    title: "Open Image Templates vs. Lexica: Prompt Search or Reusable Template?",
+    description: "A comparison of prompt search galleries and reusable open image templates for repeatable AI image generation.",
+    publishedAt: "2026-06-25T08:00:00.000Z",
+    readMinutes: 6,
+    keywords: ["Open Image Templates vs Lexica", "Lexica alternative", "AI prompt search", "reusable prompt templates"],
+    sections: [
+      {
+        heading: "Search is useful, structure is reusable",
+        paragraphs: [
+          "Prompt search engines help users discover visual language. They are useful when you want to inspect many examples quickly and learn how other people describe a look.",
+          "Reusable templates solve the next problem: how to turn a good prompt into a repeatable workflow. Open Image Templates keeps the full prompt visible, then adds slots, controls, examples, and JSON metadata so the prompt can be adapted without starting over.",
+        ],
+      },
+      {
+        heading: "What changes when prompts become templates",
+        paragraphs: [
+          "A search result can show inspiration, but the user still has to decide which words to replace. A template makes the editable parts explicit. Subject, setting, product, lighting, palette, and medium can become fields or selectable controls.",
+          "That structure matters for teams, agents, and platforms because the same template can be rendered as a form, retrieved as JSON, or copied as a final prompt.",
+        ],
+      },
+      {
+        heading: "Use search to find ideas, templates to repeat them",
+        paragraphs: [
+          "The strongest workflow is not search versus templates. Search helps people find directions. Templates help people reuse directions with less drift.",
+          "If a prompt is worth using more than once, it is worth turning into a template with visible fields and a portable endpoint.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "midjourney-prompt-galleries-vs-open-image-templates",
+    title: "Midjourney Prompt Galleries vs. Open Image Templates",
+    description: "How Midjourney-focused prompt galleries compare with open, generator-neutral image prompt templates.",
+    publishedAt: "2026-06-26T08:00:00.000Z",
+    readMinutes: 6,
+    keywords: ["Midjourney prompt galleries", "Midjourney prompt templates", "Open Image Templates", "generator neutral prompts"],
+    sections: [
+      {
+        heading: "Model-specific inspiration is not always portable",
+        paragraphs: [
+          "Midjourney prompt galleries can be excellent for learning visual vocabulary. The challenge is that many prompt examples are shaped around one generator, one model version, or one interface.",
+          "Open Image Templates treats model choice as metadata. A template can recommend a model, but the visible prompt and JSON structure stay generator-neutral by design.",
+        ],
+      },
+      {
+        heading: "Why generator-neutral structure helps",
+        paragraphs: [
+          "A neutral template describes the image in plain language, then exposes controls for style, palette, lighting, material, medium, and photography style. That makes it easier to translate across tools.",
+          "Not every generator will interpret a prompt identically, but the creative intent remains inspectable. That is better for users and easier for AI agents to retrieve.",
+        ],
+      },
+      {
+        heading: "Templates make prompt knowledge less fragile",
+        paragraphs: [
+          "Prompt galleries capture examples. Open templates capture the reusable structure behind examples. That distinction matters when model syntax changes or when users want to move between tools.",
+          "The practical result is a prompt workflow that is less tied to one platform and easier to build into other products.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "best-prompt-template-sites-for-ai-image-generation",
+    title: "Best Prompt Template Sites for AI Image Generation: What to Look For",
+    description: "A buyer-style checklist for evaluating AI image prompt template sites, galleries, and reusable prompt libraries.",
+    publishedAt: "2026-06-27T08:00:00.000Z",
+    readMinutes: 7,
+    keywords: ["best prompt template sites", "AI image prompt sites", "AI prompt templates", "prompt template library"],
+    sections: [
+      {
+        heading: "Look beyond the number of prompts",
+        paragraphs: [
+          "A large gallery is useful, but volume alone does not make a prompt site valuable. The better question is whether the prompts are visible, editable, categorized, licensed, and easy to reuse.",
+          "For image generation, the best resources combine visual examples with structured prompts. Users should understand what the prompt does and what can safely change.",
+        ],
+      },
+      {
+        heading: "The checklist",
+        paragraphs: [
+          "Strong prompt template sites should include visible full prompts, editable slots, preview images, category and tag pages, stable URLs, JSON endpoints, RSS or update feeds, clear licensing, and integration guidance for other tools.",
+          "They should also avoid hiding important prompt layers. Hidden prompts make it harder for users to learn, inspect, and move their workflow across platforms.",
+        ],
+      },
+      {
+        heading: "Why Open Image Templates is built this way",
+        paragraphs: [
+          "Open Image Templates is designed as both a gallery and a standard. The gallery helps humans browse. The schema helps tools and AI agents retrieve the same template structure directly.",
+          "That combination makes templates more discoverable, more portable, and easier to implement in image platforms that want structured prompt workflows.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "hidden-prompts-vs-visible-prompts-ai-image-generation",
+    title: "Hidden Prompts vs. Visible Prompts in AI Image Generation",
+    description: "Why visible prompts are better for learning, reuse, AI search, and open image generation workflows.",
+    publishedAt: "2026-06-28T08:00:00.000Z",
+    readMinutes: 6,
+    keywords: ["hidden prompts", "visible prompts", "AI image prompts", "open prompt templates"],
+    sections: [
+      {
+        heading: "Hidden prompts limit reuse",
+        paragraphs: [
+          "A hidden prompt can produce a good result, but it does not teach the user how the result was made. It also makes it harder to move the workflow to another generator or inspect why an image came out a certain way.",
+          "Visible prompts are more useful for creators because they can be copied, adjusted, reviewed, and improved over time.",
+        ],
+      },
+      {
+        heading: "Visibility helps AI search too",
+        paragraphs: [
+          "AI search engines and agents need retrievable content. If the prompt, slots, controls, and examples are visible in HTML and JSON, an agent can understand what the template is for and cite the right page.",
+          "This is one reason Open Image Templates exposes both a human page and a .json endpoint for every template.",
+        ],
+      },
+      {
+        heading: "The open workflow",
+        paragraphs: [
+          "Open templates do not remove curation. They make curation inspectable. A good template can still be carefully designed, reviewed, and presented with a polished preview image.",
+          "The difference is that users can see the recipe. That is better for trust, learning, portability, and long-term creative reuse.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string) {
@@ -512,6 +639,100 @@ export function formatBlogDate(value: string) {
   }).format(new Date(value));
 }
 
+const blogTemplateHints: Record<string, string[]> = {
+  "ai-image-prompt-templates-faster-creative-work": ["bold-magazine-close-up", "sneaker-launch-hero", "cinematic-car-in-flowers", "isometric-app-dashboard"],
+  "write-reusable-ai-image-prompts-with-variables": ["streetwear-lookbook-grid", "luxury-perfume-packshot", "movie-poster-remix"],
+  "fixed-prompts-vs-template-prompts": ["sunny-beach-product-shot", "chiaroscuro-studio-portrait", "minimal-saas-dashboard-hero"],
+  "build-prompt-template-product-photography": ["sneaker-launch-hero", "luxury-perfume-packshot", "eco-packaging-mockup", "luxury-candle-still-life"],
+  "consistent-portrait-generation-prompt-templates": ["bold-magazine-close-up", "chiaroscuro-studio-portrait", "corporate-headshot-studio", "neon-city-album-cover-portrait"],
+  "ai-image-prompts-checklist-before-you-generate": ["product", "portrait", "cinematic"],
+  "inconsistent-ai-images-structured-templates": ["streetwear-lookbook-grid", "movie-poster-remix", "product"],
+  "cinematic-scene-prompt-templates-ai-art": ["cinematic-car-in-flowers", "abandoned-mech-cockpit", "noir-detective-scene", "haunted-library-interior"],
+  "reuse-ai-prompts-across-different-image-tools": ["open", "schema", "design"],
+  "complete-guide-ai-image-prompt-structures": ["bold-magazine-close-up", "sneaker-launch-hero", "abandoned-mech-cockpit", "storybook-watercolor-scene"],
+  "open-image-templates-vs-prompthero": ["bold-magazine-close-up", "streetwear-bus-stop-editorial", "luxury-perfume-packshot"],
+  "prompthero-alternatives-reusable-ai-image-prompts": ["bathroom-mirror-routine-selfie", "sneaker-launch-hero", "glowing-word-forest-installation"],
+  "prompt-galleries-vs-prompt-template-standards": ["streetwear-lookbook-grid", "isometric-app-dashboard", "cinematic-car-in-flowers"],
+  "open-image-templates-vs-prompt-marketplaces": ["eco-packaging-mockup", "album-cover-concept", "tattoo-flash-sheet"],
+  "free-ai-image-prompt-templates-vs-paid-prompt-collections": ["luxury-candle-still-life", "minimal-athleisure-studio", "pet-studio-portrait"],
+  "open-image-templates-vs-lexica-prompt-search": ["neon-nightlife-portrait", "dreamy-forest-light", "surreal-double-exposure"],
+  "midjourney-prompt-galleries-vs-open-image-templates": ["gilded-fantasy-painterly-portrait", "fantasy-warrior-key-art", "step-out-of-manga-book"],
+  "best-prompt-template-sites-for-ai-image-generation": ["bold-magazine-close-up", "sneaker-launch-hero", "minimal-saas-dashboard-hero", "movie-poster-remix"],
+  "hidden-prompts-vs-visible-prompts-ai-image-generation": ["glowing-word-forest-installation", "exploded-tech-diagram", "botanical-perfume-ad"],
+};
+
+const defaultChecklist = [
+  "Pick the closest reusable composition before changing style words.",
+  "Fill subject, setting, product, or mood slots before generating.",
+  "Use look controls for style, palette, lighting, material, and medium.",
+  "Read the full prompt once before spending credits.",
+];
+
 export function getBlogPostBody(post: BlogPost) {
   return post.sections.flatMap((section) => [section.heading, ...section.paragraphs]).join("\n\n");
+}
+
+export function getBlogPostTemplates(post: BlogPost, limit = 4): ImageTemplate[] {
+  const hints = blogTemplateHints[post.slug] ?? [];
+  const selected: ImageTemplate[] = [];
+  const selectedIds = new Set<string>();
+
+  for (const hint of hints) {
+    const direct = templates.find((template) => template.id === hint);
+    const fuzzy = direct ?? templates.find((template) => {
+      const haystack = [template.id, template.title, template.category, template.tags.join(" ")].join(" ").toLowerCase();
+      return haystack.includes(hint.toLowerCase());
+    });
+    if (fuzzy && !selectedIds.has(fuzzy.id)) {
+      selected.push(fuzzy);
+      selectedIds.add(fuzzy.id);
+    }
+    if (selected.length >= limit) return selected;
+  }
+
+  const topic = [post.title, post.description, post.keywords.join(" ")].join(" ").toLowerCase();
+  const scored = templates
+    .map((template) => {
+      const words = [template.category, ...template.tags, ...template.title.split(/\s+/)].map((word) => word.toLowerCase());
+      const score = words.reduce((sum, word) => sum + (word.length > 2 && topic.includes(word) ? 1 : 0), 0);
+      return { template, score };
+    })
+    .filter(({ template, score }) => score > 0 && !selectedIds.has(template.id))
+    .sort((a, b) => b.score - a.score || a.template.title.localeCompare(b.template.title));
+
+  for (const item of scored) {
+    selected.push(item.template);
+    selectedIds.add(item.template.id);
+    if (selected.length >= limit) return selected;
+  }
+
+  for (const template of templates) {
+    if (selectedIds.has(template.id)) continue;
+    selected.push(template);
+    if (selected.length >= limit) break;
+  }
+
+  return selected;
+}
+
+export function getBlogPostChecklist(post: BlogPost) {
+  if (post.slug.includes("product")) {
+    return ["Name the exact product and surface.", "Choose lighting before adding decorative style.", "Keep the product readable at thumbnail size.", "Add brand context only after the composition works."];
+  }
+  if (post.slug.includes("portrait")) {
+    return ["Lock framing and camera distance first.", "Describe expression, wardrobe, and background separately.", "Use lighting controls instead of vague quality words.", "Keep identity details editable with slots."];
+  }
+  if (post.slug.includes("vs") || post.slug.includes("alternatives")) {
+    return ["Check whether the full prompt is visible.", "Look for editable slots, not only copied text.", "Prefer stable URLs and JSON endpoints.", "Avoid workflows that hide the recipe from the user."];
+  }
+  if (post.slug.includes("schema") || post.slug.includes("structures")) {
+    return ["Separate visible prompt from metadata.", "Expose slots for the details that change.", "Keep examples and provenance with the template.", "Make the JSON endpoint easy for agents to retrieve."];
+  }
+  return defaultChecklist;
+}
+
+export function getBlogPostSnippet(post: BlogPost) {
+  const template = getBlogPostTemplates(post, 1)[0];
+  if (!template) return "Use this template as the composition recipe. Fill the editable slots, then add style, lighting, palette, material, and medium controls before generating.";
+  return template.prompt.length > 420 ? `${template.prompt.slice(0, 420).trim()}...` : template.prompt;
 }

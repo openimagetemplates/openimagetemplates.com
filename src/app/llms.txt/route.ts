@@ -21,6 +21,7 @@ export function GET() {
     `- Schema page: ${absoluteUrl("/schema")}`,
     `- Blog: ${absoluteUrl("/blog")}`,
     `- Blog RSS: ${absoluteUrl("/rss.xml")}`,
+    `- Image sitemap: ${absoluteUrl("/image-sitemap.xml")}`,
     `- Raw JSON Schema: ${absoluteUrl("/open-image-template.schema.json")}`,
     `- Full AI index: ${absoluteUrl("/llms-full.txt")}`,
     "",
