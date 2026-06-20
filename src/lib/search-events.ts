@@ -1,5 +1,6 @@
 "use client";
 
+import { trackEngagement } from "./analytics-events";
 import { normalizeOitApiUrl } from "./oit-api-url";
 
 type SearchEventInput = {
@@ -13,7 +14,16 @@ const apiUrl = normalizeOitApiUrl(process.env.NEXT_PUBLIC_OIT_API_URL);
 
 export function trackTemplateSearch(input: SearchEventInput) {
   const query = input.query.trim();
-  if (!apiUrl || query.length < 2) return;
+  if (query.length < 2) return;
+
+  trackEngagement("search_templates", {
+    query,
+    source: input.source,
+    category: input.category ?? "All",
+    result_count: input.resultCount ?? 0,
+  });
+
+  if (!apiUrl) return;
 
   const payload = JSON.stringify({
     query,

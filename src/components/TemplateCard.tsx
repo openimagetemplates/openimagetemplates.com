@@ -4,6 +4,7 @@ import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
 import { categoryPath, tagPath } from "@/lib/seo";
 import type { ImageTemplate } from "@/lib/templates";
 import { TemplatePreviewImage } from "@/components/TemplatePreviewImage";
+import { TrackedExternalLink } from "@/components/TrackedExternalLink";
 
 type TemplateCardProps = {
   template: ImageTemplate;
@@ -51,8 +52,14 @@ export function TemplateCard({ template, priority = false }: TemplateCardProps) 
           ))}
         </div>
         <div>
-          <a
+          <TrackedExternalLink
             href={getNanoGptGenerateUrl(template)}
+            eventName="modify_template"
+            eventProperties={{
+              template_id: template.id,
+              category: template.category,
+              suggested_model: template.suggestedModel,
+            }}
             className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-3 text-sm font-medium text-white transition hover:bg-zinc-800"
             target="_blank"
             rel="noreferrer"
@@ -60,7 +67,7 @@ export function TemplateCard({ template, priority = false }: TemplateCardProps) 
             <Sparkles size={15} aria-hidden="true" />
             Modify
             <ArrowUpRight size={14} aria-hidden="true" />
-          </a>
+          </TrackedExternalLink>
         </div>
       </div>
     </article>

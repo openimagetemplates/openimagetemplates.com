@@ -2,19 +2,25 @@
 
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
+import { type AnalyticsProperties, trackEngagement } from "@/lib/analytics-events";
 
 type CopyButtonProps = {
   value: string;
   label?: string;
   className?: string;
   iconOnly?: boolean;
+  trackEventName?: string;
+  trackEventProperties?: AnalyticsProperties;
 };
 
-export function CopyButton({ value, label = "Copy", className = "", iconOnly = false }: CopyButtonProps) {
+export function CopyButton({ value, label = "Copy", className = "", iconOnly = false, trackEventName, trackEventProperties }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
 
   async function handleCopy() {
     await navigator.clipboard.writeText(value);
+    if (trackEventName) {
+      trackEngagement(trackEventName, trackEventProperties);
+    }
     setCopied(true);
     window.setTimeout(() => setCopied(false), 1500);
   }

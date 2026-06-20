@@ -5,6 +5,7 @@ import { ArrowUpRight, Braces, Check, ChevronDown, Clock3, Copy, ExternalLink, I
 import Link from "next/link";
 import type React from "react";
 import { useMemo, useRef, useState } from "react";
+import { trackEngagement } from "@/lib/analytics-events";
 import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
 import {
   createEmptyTemplateDraft,
@@ -70,6 +71,25 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
   const isSaved = Boolean(savedTemplate && savedSignature === signature);
   const previewTemplate = useMemo(() => templateFromCreatorDraft(draft, savedTemplate?.id), [draft, savedTemplate?.id]);
   const templateJson = useMemo(() => JSON.stringify(toCreatorJson(previewTemplate), null, 2), [previewTemplate]);
+  const creatorSource = baseTemplate ? "template" : "scratch";
+  const baseTemplateId = baseTemplate?.id ?? null;
+
+  function creatorEventProperties(extra: Record<string, string | number | boolean | null> = {}) {
+    return {
+      source: creatorSource,
+      base_template_id: baseTemplateId,
+      category: draft.category,
+      ...extra,
+    };
+  }
+
+  function toggleAiDraftOpen() {
+    const nextOpen = !aiDraftOpen;
+    if (nextOpen) {
+      trackEngagement("open_ai_template_draft", creatorEventProperties());
+    }
+    setAiDraftOpen(nextOpen);
+  }
 
   async function handleFile(file: File | null) {
     if (!file) return;
@@ -87,6 +107,10 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
         ...current,
         image: dataUrl,
         imageAlt: current.imageAlt || `${current.title || "Template"} preview`,
+      }));
+      trackEngagement("upload_template_reference", creatorEventProperties({
+        file_type: file.type || "unknown",
+        file_size: file.size,
       }));
       setGeneratedImageMeta("");
       setImageGenerationError("");
@@ -126,7 +150,15 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
       setCommunityError("");
       setGeneratedImageMeta("");
       setImageGenerationError("");
+      trackEngagement("generate_template_with_ai", creatorEventProperties({
+        has_reference_image: Boolean(referenceImage),
+        has_idea: trimmedIdea.length >= 3,
+      }));
     } catch (analysisError) {
+      trackEngagement("generate_template_with_ai_error", creatorEventProperties({
+        has_reference_image: Boolean(referenceImage),
+        has_idea: trimmedIdea.length >= 3,
+      }));
       setError(analysisError instanceof Error ? analysisError.message : "Template AI request failed.");
     } finally {
       setAnalyzing(false);
@@ -146,6 +178,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
     setGeneratedImageMeta("");
     setImageGenerationError("");
     setError("");
+    trackEngagement("use_template_as_start", creatorEventProperties());
   }
 
   function updateDraft(patch: Partial<TemplateCreatorDraft>) {
@@ -191,7 +224,11 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
       setReferenceFileName("");
       setSavedSignature("");
       setCommunitySubmission(null);
+      trackEngagement("generate_template_preview_image", creatorEventProperties({
+        cost: typeof data.cost === "number" ? data.cost : null,
+      }));
     } catch (generationError) {
+      trackEngagement("generate_template_preview_image_error", creatorEventProperties());
       setImageGenerationError(generationError instanceof Error ? generationError.message : "Could not generate the image.");
     } finally {
       setImageGenerating(false);
@@ -232,6 +269,12 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
     setSavedSignature(JSON.stringify(draft));
     setCommunitySubmission(readCommunitySubmissionForTemplate(template.id));
     setCommunityError("");
+    trackEngagement("create_template", creatorEventProperties({
+      template_id: template.id,
+      slot_count: template.slots.length,
+      tag_count: template.tags.length,
+      has_image: Boolean(template.image),
+    }));
   }
 
   async function submitCommunityTemplate() {
@@ -266,7 +309,13 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
       };
       writeCommunitySubmission(record);
       setCommunitySubmission(record);
+      trackEngagement("submit_community_template", creatorEventProperties({
+        template_id: savedTemplate.id,
+      }));
     } catch (submitError) {
+      trackEngagement("submit_community_template_error", creatorEventProperties({
+        template_id: savedTemplate.id,
+      }));
       setCommunityError(submitError instanceof Error ? submitError.message : "Could not submit the template.");
     } finally {
       setCommunitySubmitting(false);
@@ -275,6 +324,9 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
 
   async function copyJson() {
     await navigator.clipboard.writeText(templateJson);
+    trackEngagement("copy_created_template_json", creatorEventProperties({
+      template_id: previewTemplate.id,
+    }));
     setCopied(true);
     window.setTimeout(() => setCopied(false), 1500);
   }
@@ -299,6 +351,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
             {baseTemplate ? (
               <Link
                 href={`/templates/create?from=${baseTemplate.id}`}
+                onClick={() => trackEngagement("start_create_template", creatorEventProperties({ mode: "from_template" }))}
                 className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-4 py-3 text-sm font-semibold leading-none text-zinc-950 transition hover:bg-zinc-50"
               >
                 <Copy className="shrink-0" size={17} aria-hidden="true" />
@@ -307,6 +360,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
             ) : null}
             <Link
               href="/templates/create"
+              onClick={() => trackEngagement("start_create_template", creatorEventProperties({ mode: "scratch" }))}
               className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-4 py-3 text-sm font-semibold leading-none text-white transition hover:bg-zinc-800"
             >
               <Plus className="shrink-0" size={17} aria-hidden="true" />
@@ -348,7 +402,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
               <section className="overflow-hidden rounded-[8px] border border-black/10 bg-white shadow-sm">
                 <button
                   type="button"
-                  onClick={() => setAiDraftOpen((current) => !current)}
+                  onClick={toggleAiDraftOpen}
                   className="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left transition hover:bg-zinc-50 sm:px-6"
                   aria-expanded={aiDraftOpen}
                   aria-controls="template-ai-draft-panel"
@@ -584,6 +638,10 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                         href={getNanoGptGenerateUrl(previewTemplate)}
                         target="_blank"
                         rel="noreferrer"
+                        onClick={() => trackEngagement("open_created_template_in_nanogpt", creatorEventProperties({
+                          template_id: previewTemplate.id,
+                          placement: "preview",
+                        }))}
                         className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-4 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-50"
                       >
                         Open in NanoGPT
@@ -679,6 +737,10 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                     href={getNanoGptGenerateUrl(savedTemplate)}
                     target="_blank"
                     rel="noreferrer"
+                    onClick={() => trackEngagement("open_created_template_in_nanogpt", creatorEventProperties({
+                      template_id: savedTemplate.id,
+                      placement: "footer",
+                    }))}
                     className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-4 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-50"
                   >
                     Generate with NanoGPT

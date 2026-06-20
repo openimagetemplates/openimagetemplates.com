@@ -179,7 +179,12 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
 
           <TemplatePromptBuilder template={template} />
 
-          <TemplateJsonDisclosure json={templateJson} />
+          <TemplateJsonDisclosure
+            json={templateJson}
+            templateId={template.id}
+            category={template.category}
+            suggestedModel={template.suggestedModel}
+          />
 
           <Link href="/schema" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-zinc-950 hover:underline">
             <Braces size={16} aria-hidden="true" />

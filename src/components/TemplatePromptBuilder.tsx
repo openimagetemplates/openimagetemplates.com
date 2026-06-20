@@ -3,6 +3,7 @@
 import { Check, ChevronDown, Copy, ImageIcon, Loader2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { TemplateLookControls } from "@/components/TemplateLookControls";
+import { templateEventProperties, trackEngagement } from "@/lib/analytics-events";
 import {
   compileTemplatePrompt,
   getDefaultBuilderState,
@@ -57,6 +58,7 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
   const [costEstimateLoading, setCostEstimateLoading] = useState(false);
 
   const adjustedPrompt = useMemo(() => compileTemplatePrompt(template, state), [template, state]);
+  const analyticsProperties = useMemo(() => templateEventProperties(template), [template]);
   const generatedFromCurrentPrompt = Boolean(generatedImageUrl && generatedPrompt === adjustedPrompt);
   const estimatedCostLabel = estimatedImageCost === null ? "" : `$${estimatedImageCost.toFixed(4)}`;
 
@@ -112,6 +114,11 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
   }
 
   function selectLookValue(name: TemplateLookGroupName, value: string) {
+    trackEngagement("select_look_control", {
+      ...analyticsProperties,
+      group: name,
+      value,
+    });
     setState((current) => ({
       ...current,
       lookValues: {
@@ -122,6 +129,10 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
   }
 
   function clearLookValue(name: TemplateLookGroupName) {
+    trackEngagement("clear_look_control", {
+      ...analyticsProperties,
+      group: name,
+    });
     setState((current) => ({
       ...current,
       lookValues: {
@@ -132,17 +143,46 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
   }
 
   function toggleControl(name: TemplateToggleControl["name"]) {
+    const enabled = !state.toggles[name];
+    trackEngagement("toggle_prompt_option", {
+      ...analyticsProperties,
+      option: name,
+      enabled,
+    });
     setState((current) => ({
       ...current,
       toggles: {
         ...current.toggles,
-        [name]: !current.toggles[name],
+        [name]: enabled,
       },
     }));
   }
 
+  function toggleLookGroup(name: TemplateLookGroupName) {
+    const expanded = !openGroups[name];
+    if (expanded) {
+      trackEngagement("expand_look_group", {
+        ...analyticsProperties,
+        group: name,
+      });
+    }
+    setOpenGroups((current) => ({ ...current, [name]: expanded }));
+  }
+
+  function toggleWhyNanoGpt() {
+    const expanded = !whyNanoGptOpen;
+    if (expanded) {
+      trackEngagement("open_why_nanogpt", analyticsProperties);
+    }
+    setWhyNanoGptOpen(expanded);
+  }
+
   async function copyAdjustedPrompt() {
     await navigator.clipboard.writeText(adjustedPrompt);
+    trackEngagement("copy_prompt", {
+      ...analyticsProperties,
+      prompt_length: adjustedPrompt.length,
+    });
     setCopied(true);
     window.setTimeout(() => setCopied(false), 1500);
   }
@@ -174,7 +214,12 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
       setGeneratedPrompt(prompt);
       const cost = typeof data.cost === "number" ? `$${data.cost.toFixed(4)}` : "";
       setGeneratedImageMeta(cost ? `Generated image. Cost: ${cost}.` : "Generated image.");
+      trackEngagement("generate_image", {
+        ...analyticsProperties,
+        cost: typeof data.cost === "number" ? data.cost : null,
+      });
     } catch (generationError) {
+      trackEngagement("generate_image_error", analyticsProperties);
       setImageGenerationError(generationError instanceof Error ? generationError.message : "Could not generate the image.");
     } finally {
       setImageGenerating(false);
@@ -215,7 +260,7 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
             groups={controls.look}
             lookValues={state.lookValues}
             openGroups={openGroups}
-            onToggleGroup={(name) => setOpenGroups((current) => ({ ...current, [name]: !current[name] }))}
+            onToggleGroup={toggleLookGroup}
             onSelect={selectLookValue}
             onClear={clearLookValue}
           />
@@ -292,7 +337,7 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
       <div className="mt-3">
         <button
           type="button"
-          onClick={() => setWhyNanoGptOpen((current) => !current)}
+          onClick={toggleWhyNanoGpt}
           className="inline-flex items-center gap-1.5 rounded-full px-0 py-2 text-sm font-semibold text-zinc-700 transition hover:text-zinc-950"
           aria-expanded={whyNanoGptOpen}
         >
