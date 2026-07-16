@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run validate:catalog",
     "build": "next build",
     "start": "next start",
-    "sync:templates": "node scripts/sync-nanogpt-templates.mjs",
+    "assets:publish": "node scripts/publish-r2-assets.mjs",
+    "validate:catalog": "node scripts/validate-template-catalog.mjs",
     "cloudflare:deploy": "wrangler deploy --config cloudflare/oit-api/wrangler.toml",
     "lint": "eslint"
   },

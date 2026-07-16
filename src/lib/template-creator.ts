@@ -30,12 +30,17 @@ export type TemplateCreatorDraft = {
   description: string;
   category: TemplateCategory;
   tags: string;
+  simplePrompt: string;
   prompt: string;
+  demoPrompt: string;
   slots: TemplateCreatorSlot[];
   image: string;
   imageAlt: string;
   suggestedModel: string;
   suggestedModelLabel: string;
+  suggestedSettings: ImageTemplate["suggestedSettings"];
+  contentTier: ImageTemplate["contentTier"];
+  inputRequirements?: ImageTemplate["inputRequirements"];
 };
 
 export type TemplateAnalysisResponse = {
@@ -66,12 +71,17 @@ export function createEmptyTemplateDraft(base?: Partial<ImageTemplate>): Templat
     description: "",
     category: base?.category ?? "Design",
     tags: base?.tags?.slice(0, 5).join(", ") ?? "",
+    simplePrompt: base?.simplePrompt ?? "",
     prompt: "",
+    demoPrompt: base?.demoPrompt ?? "",
     slots: DEFAULT_CREATOR_SLOTS,
     image: "",
     imageAlt: "",
     suggestedModel: base?.suggestedModel ?? "gpt-image-2",
     suggestedModelLabel: base?.suggestedModelLabel ?? "GPT Image 2",
+    suggestedSettings: base?.suggestedSettings ?? {},
+    contentTier: base?.contentTier ?? "sfw",
+    inputRequirements: base?.inputRequirements,
   };
 }
 
@@ -81,7 +91,9 @@ export function draftFromTemplate(template: ImageTemplate): TemplateCreatorDraft
     description: template.description,
     category: template.category,
     tags: template.tags.join(", "),
+    simplePrompt: template.simplePrompt ?? template.description,
     prompt: template.prompt,
+    demoPrompt: template.demoPrompt ?? template.prompt,
     slots: template.slots.map((slot) => ({
       id: slot.name,
       label: slot.label,
@@ -91,6 +103,9 @@ export function draftFromTemplate(template: ImageTemplate): TemplateCreatorDraft
     imageAlt: template.imageAlt,
     suggestedModel: template.suggestedModel,
     suggestedModelLabel: template.suggestedModelLabel ?? template.suggestedModel,
+    suggestedSettings: template.suggestedSettings ?? {},
+    contentTier: template.contentTier ?? "sfw",
+    inputRequirements: template.inputRequirements,
   };
 }
 
@@ -109,12 +124,18 @@ export function templateFromCreatorDraft(draft: TemplateCreatorDraft, existingId
     tags: normalizeTags(draft.tags, draft.category, title),
     image: draft.image.trim(),
     imageAlt: draft.imageAlt.trim() || `${title} preview`,
+    simplePrompt: draft.simplePrompt.trim() || description,
     prompt,
+    demoPrompt: draft.demoPrompt.trim() || prompt,
     negativePrompt: [],
     slots,
     suggestedModel: draft.suggestedModel.trim() || "gpt-image-2",
     suggestedModelLabel: draft.suggestedModelLabel.trim() || draft.suggestedModel.trim() || "GPT Image 2",
+    suggestedSettings: draft.suggestedSettings ?? {},
+    contentTier: draft.contentTier === "suggestive-capable" ? "suggestive-capable" : "sfw",
+    inputRequirements: draft.inputRequirements,
     schemaVersion: TEMPLATE_SCHEMA_VERSION,
+    exampleSchemaVersion: TEMPLATE_SCHEMA_VERSION,
     generatedAt,
     creator: "Open Image Templates user",
     license: "User supplied",
@@ -129,27 +150,35 @@ export function toCreatorJson(template: ImageTemplate) {
     title: template.title,
     description: template.description,
     category: template.category,
+    tags: template.tags,
+    summary_prompt: template.simplePrompt,
     prompt: template.prompt,
+    demo_prompt: template.demoPrompt,
     negative_prompt: template.negativePrompt,
+    content_tier: template.contentTier,
+    input_requirements: template.inputRequirements,
     slots: template.slots,
     suggested_models: [
       {
         id: template.suggestedModel,
         label: template.suggestedModelLabel,
         role: "suggested",
+        settings: template.suggestedSettings,
       },
     ],
     examples: template.image
       ? [
           {
             image_url: template.image,
+            image_alt: template.imageAlt,
             generated_at: template.generatedAt,
-            schema_version: template.schemaVersion,
+            schema_version: template.exampleSchemaVersion,
           },
         ]
       : [],
     creator: template.creator,
     license: template.license,
+    source_notes: template.sourceNotes,
   };
 }
 

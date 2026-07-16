@@ -1,5 +1,6 @@
-import templateCatalog from "@/data/nanogpt-prompt-templates.json";
+import templateCatalog from "@/data/templates.json";
 import { getTemplateBuilderControls } from "@/lib/prompt-builder";
+import { TEMPLATE_ASSET_BASE_URL, TEMPLATE_SITE_URL } from "@/lib/template-urls";
 
 export const TEMPLATE_STANDARD = "open-image-template";
 export const TEMPLATE_SCHEMA_VERSION = "1.1.0";
@@ -19,6 +20,14 @@ export type TemplateSlot = {
   example: string;
 };
 
+export type TemplateInputRequirements = {
+  image?: {
+    required: boolean;
+    label: string;
+    description: string;
+  };
+};
+
 export type ImageTemplate = {
   id: string;
   title: string;
@@ -27,26 +36,32 @@ export type ImageTemplate = {
   tags: string[];
   image: string;
   imageAlt: string;
+  simplePrompt: string;
   prompt: string;
+  demoPrompt: string;
   negativePrompt: string[];
   slots: TemplateSlot[];
   suggestedModel: string;
   suggestedModelLabel?: string;
+  suggestedSettings: Record<string, unknown>;
+  contentTier: "sfw" | "suggestive-capable";
+  inputRequirements?: TemplateInputRequirements;
+  sourceNotes?: string;
   schemaVersion: typeof TEMPLATE_SCHEMA_VERSION;
+  exampleSchemaVersion: string;
   generatedAt: string;
   creator: string;
   license: string;
 };
 
-type SyncedTemplate = Omit<ImageTemplate, "category" | "schemaVersion"> & {
+type CatalogTemplate = Omit<ImageTemplate, "category" | "schemaVersion"> & {
   category: string;
-  schemaVersion: string;
 };
 
 type TemplateCatalog = {
   generatedAt?: string;
   source?: string;
-  templates: SyncedTemplate[];
+  templates: CatalogTemplate[];
 };
 
 const categoryOrder: Array<"All" | TemplateCategory> = [
@@ -60,9 +75,9 @@ const categoryOrder: Array<"All" | TemplateCategory> = [
   "Other",
 ];
 
-const syncedTemplateCatalog = templateCatalog as TemplateCatalog;
+const canonicalTemplateCatalog = templateCatalog as TemplateCatalog;
 
-export const templates: ImageTemplate[] = syncedTemplateCatalog.templates.map((template) => ({
+export const templates: ImageTemplate[] = canonicalTemplateCatalog.templates.map((template) => ({
   ...template,
   category: toTemplateCategory(template.category),
   schemaVersion: TEMPLATE_SCHEMA_VERSION,
@@ -146,8 +161,14 @@ export function toPortableTemplateJson(template: ImageTemplate) {
     title: template.title,
     description: template.description,
     category: template.category,
+    tags: template.tags,
+    canonical_url: `${TEMPLATE_SITE_URL}/templates/${template.id}`,
+    summary_prompt: template.simplePrompt,
     prompt: template.prompt,
+    demo_prompt: template.demoPrompt,
     negative_prompt: template.negativePrompt,
+    content_tier: template.contentTier,
+    input_requirements: template.inputRequirements,
     slots: template.slots,
     controls: getTemplateBuilderControls(template),
     suggested_models: [
@@ -155,17 +176,20 @@ export function toPortableTemplateJson(template: ImageTemplate) {
         id: template.suggestedModel,
         label: template.suggestedModelLabel,
         role: "suggested",
+        settings: template.suggestedSettings,
       },
     ],
     examples: [
       {
         image_url: template.image,
+        image_alt: template.imageAlt,
         generated_at: template.generatedAt,
-        schema_version: template.schemaVersion,
+        schema_version: template.exampleSchemaVersion,
       },
     ],
     creator: template.creator,
     license: template.license,
+    source_notes: template.sourceNotes,
   };
 }
 
@@ -173,9 +197,10 @@ export function toPortableTemplateCatalogJson() {
   return {
     standard: TEMPLATE_STANDARD,
     schema_version: TEMPLATE_SCHEMA_VERSION,
-    generated_at: syncedTemplateCatalog.generatedAt,
-    source: "openimagetemplates.com",
-    asset_base_url: "https://assets.openimagetemplates.com",
+    generated_at: canonicalTemplateCatalog.generatedAt,
+    source: "openimagetemplates.com canonical catalogue",
+    canonical_url: `${TEMPLATE_SITE_URL}/templates.json`,
+    asset_base_url: TEMPLATE_ASSET_BASE_URL,
     templates: templates.map(toPortableTemplateJson),
   };
 }

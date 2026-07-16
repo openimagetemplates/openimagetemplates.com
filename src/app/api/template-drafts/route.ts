@@ -21,11 +21,14 @@ type NanoGptDraft = {
   simplePrompt?: unknown;
   compiledPrompt?: unknown;
   demoPrompt?: unknown;
+  contentTier?: unknown;
+  inputRequirements?: unknown;
   tags?: unknown;
   slots?: unknown;
   previewImage?: unknown;
   suggestedModel?: unknown;
   suggestedModelLabel?: unknown;
+  suggestedSettings?: unknown;
 };
 
 type NanoGptDraftResponse = {
@@ -46,6 +49,24 @@ function parseTags(value: unknown) {
     return value.map((item) => parseString(item)).filter(Boolean).join(", ");
   }
   return parseString(value);
+}
+
+function parseRecord(value: unknown): Record<string, unknown> | undefined {
+  return value && typeof value === "object" && !Array.isArray(value)
+    ? value as Record<string, unknown>
+    : undefined;
+}
+
+function parseInputRequirements(value: unknown): TemplateCreatorDraft["inputRequirements"] {
+  const requirements = parseRecord(value);
+  const image = parseRecord(requirements?.image);
+  if (!image || typeof image.required !== "boolean") return undefined;
+
+  const label = parseString(image.label);
+  const description = parseString(image.description);
+  if (!label || !description) return undefined;
+
+  return { image: { required: image.required, label, description } };
 }
 
 function parseSlots(value: unknown): TemplateCreatorSlot[] {
@@ -82,7 +103,9 @@ function normalizeNanoGptDraft(rawTemplate: NanoGptDraft, fallbackImage: string)
     suggestedModelLabel: parseString(rawTemplate.suggestedModelLabel, "GPT Image 2"),
   });
   const title = parseString(rawTemplate.title, "Custom image template");
+  const simplePrompt = parseString(rawTemplate.simplePrompt, `Create ${title.toLowerCase()}.`);
   const prompt = parseString(rawTemplate.compiledPrompt, parseString(rawTemplate.demoPrompt, parseString(rawTemplate.simplePrompt, `Create ${title.toLowerCase()}.`)));
+  const demoPrompt = parseString(rawTemplate.demoPrompt, prompt);
 
   return {
     ...defaultDraft,
@@ -90,12 +113,17 @@ function normalizeNanoGptDraft(rawTemplate: NanoGptDraft, fallbackImage: string)
     description: parseString(rawTemplate.description, `A reusable image template for ${title.toLowerCase()}.`),
     category: normalizeCategory(rawTemplate.category),
     tags: parseTags(rawTemplate.tags),
+    simplePrompt,
     prompt,
+    demoPrompt,
     slots: parseSlots(rawTemplate.slots),
     image: parseString(rawTemplate.previewImage, fallbackImage),
     imageAlt: `${title} preview`,
     suggestedModel: parseString(rawTemplate.suggestedModel, defaultDraft.suggestedModel),
     suggestedModelLabel: parseString(rawTemplate.suggestedModelLabel, defaultDraft.suggestedModelLabel),
+    suggestedSettings: parseRecord(rawTemplate.suggestedSettings) ?? defaultDraft.suggestedSettings,
+    contentTier: rawTemplate.contentTier === "suggestive-capable" ? "suggestive-capable" : "sfw",
+    inputRequirements: parseInputRequirements(rawTemplate.inputRequirements),
   };
 }
 

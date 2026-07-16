@@ -1,4 +1,5 @@
 import type { ImageTemplate, TemplateSlot } from "@/lib/templates";
+import { TEMPLATE_ASSET_BASE_URL } from "@/lib/template-urls";
 
 export type TemplateLookGroupName = "style" | "palette" | "lighting" | "photography_style" | "material" | "medium";
 
@@ -210,7 +211,7 @@ function toLookOption(assetGroup: string, label: string): TemplateLookOption {
   return {
     label,
     value: label,
-    image: `https://nano-gpt.com/prompt-template-knobs/${assetGroup}-${toAssetSlug(label)}--generated-2026-06-08--preview.webp`,
+    image: `${TEMPLATE_ASSET_BASE_URL}/prompt-template-knobs/${assetGroup}-${toAssetSlug(label)}--generated-2026-06-08--preview.webp?v=2026-06-08`,
   };
 }
 

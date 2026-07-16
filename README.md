@@ -18,37 +18,50 @@ npm run dev
 
 Open `http://localhost:3000`.
 
-## Template Source Of Truth
+## Canonical Catalogue
 
-The public template catalogue lives in this project. Public preview assets are served from the Open Image Templates R2-backed asset domain:
+This repository is the source of truth for public template metadata. Edit and review the canonical catalogue here:
+
+```text
+src/data/templates.json
+```
+
+Public template previews and visual-control thumbnails are served from the Open Image Templates R2-backed asset domain:
 
 ```text
 https://assets.openimagetemplates.com
 ```
 
-NanoGPT should consume templates and preview images from Open Image Templates, not act as the public asset source of truth.
+NanoGPT and other integrations consume the published catalogue and asset URLs. They must not define a second public catalogue or copy these assets into their application deployments.
 
-The current seed catalogue can still be imported from the NanoGPT app catalogue:
+Validate catalogue changes before committing:
 
 ```bash
-npm run sync:templates
+npm run validate:catalog
 ```
 
-This writes `src/data/nanogpt-prompt-templates.json`, which the site uses to generate template pages and `/templates/{id}.json` endpoints. The public site filters out templates tagged `candid`.
+Publish a directory of immutable previews before referencing them from the catalogue:
+
+```bash
+npm run assets:publish -- \
+  --source-dir /path/to/previews \
+  --prefix prompt-templates \
+  --env-file /path/to/cloudflare.env
+```
 
 Consumers can fetch the full public catalogue from:
 
 ```text
-/templates.json
+https://www.openimagetemplates.com/templates.json
 ```
 
-By default, imported preview images point at `https://assets.openimagetemplates.com/...`. Override with:
+Individual portable templates are available at:
 
-```bash
-NANOGPT_PROJECT_DIR=/path/to/nano-gpt \
-OIT_TEMPLATE_ASSET_BASE_URL=https://your-asset-host.example \
-npm run sync:templates
+```text
+https://www.openimagetemplates.com/templates/{id}.json
 ```
+
+Both endpoints allow cross-origin reads and publish CDN cache headers. See [the NanoGPT integration contract](docs/nanogpt-integration.md) for the consumer mapping and release order.
 
 ## Schema
 
@@ -58,13 +71,13 @@ The Open Image Template schema is published at:
 /open-image-template.schema.json
 ```
 
-Current schema version: `1.0.0`.
+Current schema version: `1.1.0`.
 
 ## Project Structure
 
 ```text
-scripts/sync-nanogpt-templates.mjs Sync NanoGPT templates into this project
-src/data/nanogpt-prompt-templates.json Generated public template catalogue
+scripts/validate-template-catalog.mjs Validate canonical metadata and asset ownership
+src/data/templates.json             Canonical public template catalogue
 src/lib/templates.ts              Template adapter and JSON conversion helpers
 src/components/GalleryExplorer.tsx Search and category filtering
 src/components/TemplateCard.tsx    Gallery cards

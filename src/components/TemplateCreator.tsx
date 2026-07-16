@@ -529,6 +529,15 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                     />
                   </Field>
 
+                  <Field label="Short prompt summary">
+                    <input
+                      value={draft.simplePrompt}
+                      onChange={(event) => updateDraft({ simplePrompt: event.target.value })}
+                      placeholder="Create a polished editorial portrait."
+                      className="creator-input"
+                    />
+                  </Field>
+
                   <Field label="Tags">
                     <input
                       value={draft.tags}
@@ -545,6 +554,16 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                       placeholder="Write the full visible prompt. Use variables like {Subject}, then add matching editable slots below."
                       rows={7}
                       className="creator-input min-h-40 resize-y py-3 leading-6"
+                    />
+                  </Field>
+
+                  <Field label="No-input demo prompt">
+                    <textarea
+                      value={draft.demoPrompt}
+                      onChange={(event) => updateDraft({ demoPrompt: event.target.value })}
+                      placeholder="Provide a complete example prompt that works when no reference image is supplied."
+                      rows={4}
+                      className="creator-input min-h-28 resize-y py-3 leading-6"
                     />
                   </Field>
 

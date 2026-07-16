@@ -1,9 +1,10 @@
+import { PUBLIC_TEMPLATE_API_HEADERS } from "@/lib/public-template-api";
 import { toPortableTemplateCatalogJson } from "@/lib/templates";
+
+export const dynamic = "force-static";
 
 export function GET() {
   return Response.json(toPortableTemplateCatalogJson(), {
-    headers: {
-      "Cache-Control": "public, max-age=3600, s-maxage=86400",
-    },
+    headers: PUBLIC_TEMPLATE_API_HEADERS,
   });
 }

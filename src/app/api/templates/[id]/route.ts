@@ -1,8 +1,11 @@
+import { PUBLIC_TEMPLATE_API_HEADERS } from "@/lib/public-template-api";
 import { getTemplateById, templates, toPortableTemplateJson } from "@/lib/templates";
 
 type TemplateJsonRouteProps = {
   params: Promise<{ id: string }>;
 };
+
+export const dynamic = "force-static";
 
 export function generateStaticParams() {
   return templates.map((template) => ({ id: template.id }));
@@ -18,6 +21,7 @@ export async function GET(_request: Request, { params }: TemplateJsonRouteProps)
       {
         status: 404,
         headers: {
+          ...PUBLIC_TEMPLATE_API_HEADERS,
           "Cache-Control": "public, max-age=60",
         },
       },
@@ -25,8 +29,6 @@ export async function GET(_request: Request, { params }: TemplateJsonRouteProps)
   }
 
   return Response.json(toPortableTemplateJson(template), {
-    headers: {
-      "Cache-Control": "public, max-age=3600, s-maxage=86400",
-    },
+    headers: PUBLIC_TEMPLATE_API_HEADERS,
   });
 }

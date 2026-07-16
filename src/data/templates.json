@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-16T09:51:41.336Z",
-  "source": "openimagetemplates.com public catalogue",
+  "generatedAt": "2026-07-16T10:24:03.000Z",
+  "source": "openimagetemplates.com canonical catalogue",
   "templates": [
     {
       "id": "bold-magazine-close-up",
@@ -36,10 +36,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a close-up fashion portrait with oversized colored sunglasses.",
+      "demoPrompt": "A tight editorial beauty portrait of a stylish adult model wearing oversized translucent red sunglasses, glossy red lips, gold hoop earrings, and confident high-fashion styling. Sharp studio lighting, realistic skin texture, close-up composition, clean pale background, premium magazine photography.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "cozy-bedroom-selfie",
@@ -75,10 +84,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a casual bedroom selfie with warm lights.",
+      "demoPrompt": "A realistic casual bedroom selfie of an adult person resting their face on one hand and looking at the camera. Warm lamp light, string lights, soft phone-camera realism, natural facial details, slight lived-in room background, intimate candid composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "minimal-athleisure-studio",
@@ -114,10 +132,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a clean fitness lifestyle photo in a bright minimal studio.",
+      "demoPrompt": "A realistic lifestyle fitness photo of an adult athlete wearing a clean white athleisure outfit in a bright minimal studio, posed in a relaxed floor stretch. Beige-white walls, soft sunlight, long shadows, natural skin tones, realistic fabric texture, calm premium wellness brand styling.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "streetwear-bus-stop-editorial",
@@ -153,10 +180,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a streetwear fashion photo at a bus stop.",
+      "demoPrompt": "A realistic streetwear editorial photo of a stylish adult model at an urban bus stop, wearing layered streetwear and sneakers. Natural street light, candid pose, shallow depth of field, modern fashion-magazine composition, subtle city background detail.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "sunny-beach-product-shot",
@@ -192,10 +228,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Put my product on a sunny beach like a summer ad.",
+      "demoPrompt": "A bright commercial product photo of a yellow skincare tube standing in golden beach sand near the ocean. Crisp water splash, tropical leaves, small flower, sunny natural light, shallow depth of field, realistic packaging material, premium summer advertising composition, minimal graphic label.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "luxury-perfume-packshot",
@@ -231,10 +276,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a luxury perfume product photo.",
+      "demoPrompt": "A premium product photo of a clear glass perfume bottle on polished stone, with elegant reflections, soft studio light, subtle warm background gradients, realistic glass and liquid detail, luxury cosmetics advertising composition, product sharp and centered.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "bright-bedroom-mirror-selfie",
@@ -270,10 +324,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a bright mirror selfie in a clean bedroom.",
+      "demoPrompt": "A realistic bright bedroom mirror selfie of an adult lifestyle model sitting on a white bed, holding a white phone up to a large grey marble framed mirror. Soft daylight from a nearby window, white bedding, neutral walls, gold jewelry, natural skin texture, casual confident pose, authentic phone-camera realism.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "boxed-collectible-figure",
@@ -310,10 +373,26 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Turn my photo into a realistic collectible action figure on a designer desk.",
+      "demoPrompt": "A realistic product-style scene where a stylish adult character has been turned into a detailed collectible figure standing on a designer desk. A monitor shows a 3D character modeling view of the same figure, with retail toy packaging beside it with a clear plastic window. Warm desk-lamp lighting, modern creative studio background, realistic plastic packaging, premium collectible product photography.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": true,
+          "label": "Upload subject image",
+          "description": "Use an uploaded photo as the person or subject to turn into the collectible figure."
+        }
+      }
     },
     {
       "id": "sneaker-launch-hero",
@@ -349,10 +428,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a dramatic sneaker launch ad.",
+      "demoPrompt": "A commercial hero image of a futuristic running sneaker on dark reflective stone, with dynamic rim lighting, premium materials, crisp shadows, subtle mist, high-energy launch campaign styling, clean ecommerce hero composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "step-out-of-manga-book",
@@ -388,10 +476,26 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Make me step out of a manga comic book into a real room.",
+      "demoPrompt": "An adult character stepping out of a giant open manga book in a cozy bedroom. The pages show a black-and-white illustrated version of the same character, while the real version is colorful and photorealistic. Crisp manga panel art blended with realistic lighting, playful meta-comedy, clean cinematic composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": true,
+          "label": "Upload subject image",
+          "description": "Use an uploaded photo as the subject stepping out of the manga book."
+        }
+      }
     },
     {
       "id": "anime-hero-poster",
@@ -427,10 +531,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an anime hero poster of this character.",
+      "demoPrompt": "A dramatic anime poster of an original hero character standing in a storm-lit city, heroic pose, dynamic lighting, detailed costume, glowing power effect, cinematic composition, clean key art suitable for a series poster.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "cyborg-close-up",
@@ -466,10 +579,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a close-up portrait of a futuristic cyborg.",
+      "demoPrompt": "A close-up portrait of an original futuristic cyborg with visible synthetic details, realistic skin-to-metal transitions, precise mechanical facial accents, dramatic low-key lighting, shallow depth of field, cinematic sci-fi atmosphere.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "fantasy-warrior-key-art",
@@ -505,10 +627,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create fantasy key art of a warrior on a hill.",
+      "demoPrompt": "Fantasy key art of an original warrior standing on a wind-swept hill, holding a glowing sword, with dramatic sky, detailed armor, cinematic lighting, epic scale, poster-ready composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "cinematic-car-in-flowers",
@@ -544,10 +675,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a low-angle cinematic car photo in a flower field.",
+      "demoPrompt": "A low-angle cinematic photo of a forest-green sports car in a field of wildflowers, with petals in the foreground, glossy reflections, dramatic natural light, shallow depth, premium automotive photography.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "abandoned-mech-cockpit",
@@ -583,10 +723,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a moody sci-fi cockpit scene.",
+      "demoPrompt": "A moody sci-fi concept art scene inside an abandoned battlemech cockpit, with worn controls, cracked glass, atmospheric dust, low sunset light, massive scale, quiet sense of history.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "dreamy-forest-light",
@@ -622,10 +771,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a dreamy forest scene with magical light.",
+      "demoPrompt": "A dreamy spring forest scene with a narrow path, soft glowing morning light, detailed foliage, wildflowers, natural depth, gentle mist, calm cinematic mood.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "minimal-interior-sunlight",
@@ -661,10 +819,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a bright minimal interior with beautiful sunlight.",
+      "demoPrompt": "A realistic interior photo of a minimal living room with neutral materials, light wood, soft daylight, clean shadows, comfortable sofa, simple decor, premium architecture photography composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "movie-poster-remix",
@@ -700,10 +867,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a cinematic movie poster for my idea.",
+      "demoPrompt": "A cinematic movie poster concept for a fictional mystery film, featuring a lone figure under a streetlight in a rainy city, dramatic lighting, bold composition, atmospheric haze, clear empty space reserved for title typography, no readable text.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "album-cover-concept",
@@ -739,10 +915,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an album cover concept.",
+      "demoPrompt": "A square album cover image for a dreamy electronic music project, featuring a glowing abstract orb above a dark ocean at night, deep blue and silver palette, strong centered composition, atmospheric grain, room for typography, no readable text.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "tattoo-flash-sheet",
@@ -778,10 +963,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a tattoo flash design sheet.",
+      "demoPrompt": "A tattoo flash sheet of botanical moon and star motifs in fine-line blackwork style, clean linework, balanced spacing, high contrast, subtle shading, printable white background.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "pet-studio-portrait",
@@ -817,10 +1011,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a polished studio portrait of my pet.",
+      "demoPrompt": "A realistic studio portrait of a golden retriever with a soft sage background, professional diffused lighting, sharp fur detail, expressive eyes, clean commercial pet photography composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "coffee-shop-lifestyle",
@@ -856,10 +1059,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a cozy coffee shop lifestyle photo.",
+      "demoPrompt": "A realistic lifestyle photo of a ceramic coffee cup and notebook on a cafe table, with warm window light, natural tabletop details, shallow depth of field, soft background movement, calm editorial composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "luxury-hotel-room",
@@ -895,10 +1107,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a luxury hotel room interior.",
+      "demoPrompt": "A realistic luxury hotel room interior with warm modern design, premium bedding, elegant lighting, marble accents, city view, clean architectural composition, high-end travel photography styling.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "food-magazine-flat-lay",
@@ -934,10 +1155,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an overhead food magazine photo of a beautiful brunch table.",
+      "demoPrompt": "An overhead editorial food photograph of a colorful brunch table with ceramic plates, fresh pastries, sliced fruit, coffee cups, linen napkins, and natural window light. Careful composition, appetizing textures, realistic crumbs and reflections, premium food magazine styling.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "macro-jewelry-sparkle",
@@ -973,10 +1203,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a macro luxury jewelry product photo.",
+      "demoPrompt": "A macro commercial product photo of a delicate gold ring with a gemstone on dark velvet. Crisp facets, realistic metal reflections, shallow depth of field, tiny dust-level detail, luxury jewelry advertising polish.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "exploded-tech-diagram",
@@ -1012,10 +1251,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an exploded technical diagram of a gadget.",
+      "demoPrompt": "A clean exploded-view product visualization of a compact wireless earbud, with individual components separated in precise layers, subtle annotation lines without readable text, white technical background, soft shadows, polished industrial design rendering.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "isometric-app-dashboard",
@@ -1051,10 +1299,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an isometric app dashboard mockup.",
+      "demoPrompt": "A polished isometric 3D mockup of a modern analytics app dashboard floating above a clean desk surface, with layered UI panels, charts represented as abstract shapes, soft shadows, glassy highlights, refined SaaS product visual style, no readable text.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "storybook-watercolor-scene",
@@ -1090,10 +1347,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a soft watercolor storybook illustration.",
+      "demoPrompt": "A soft watercolor storybook illustration of a small cottage beside a winding path, with wildflowers, warm window light, gentle skies, hand-painted paper texture, charming details, calm picture-book composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "pixel-art-game-scene",
@@ -1129,10 +1395,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a pixel art game scene.",
+      "demoPrompt": "A detailed pixel art game scene of a cozy fantasy village at dusk, with small houses, lanterns, cobblestone path, readable silhouettes, limited color palette, crisp pixel edges, side-scrolling game background composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "travel-postcard-landmark",
@@ -1168,10 +1443,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a vintage travel postcard image.",
+      "demoPrompt": "A vintage travel postcard illustration of a coastal cliff town at sunset, with simplified architectural shapes, warm retro colors, grainy print texture, bold scenic composition, empty space reserved for title lettering, no readable text.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "fashion-runway-motion",
@@ -1207,10 +1491,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a dramatic fashion runway photo.",
+      "demoPrompt": "A realistic fashion runway photograph of an adult model walking under dramatic spotlights, wearing an avant-garde outfit with flowing fabric, motion in the garment, glossy runway reflections, audience silhouettes, high-end editorial fashion energy.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "corporate-headshot-studio",
@@ -1246,10 +1539,26 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a polished professional headshot.",
+      "demoPrompt": "A polished professional headshot of an adult person in business-casual clothing, with a clean neutral studio background, soft flattering light, natural expression, realistic skin texture, crisp eyes, modern profile-photo composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional headshot reference",
+          "description": "Upload a photo if you want the headshot to preserve a specific person."
+        }
+      }
     },
     {
       "id": "sports-action-freeze",
@@ -1285,10 +1594,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a dramatic sports action photo.",
+      "demoPrompt": "A high-speed sports action photograph of an adult athlete leaping through rain on a stadium field, with frozen water droplets, dramatic backlight, realistic motion tension, detailed athletic clothing, cinematic sports-advertising intensity.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "wedding-editorial-moment",
@@ -1324,10 +1642,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an elegant wedding editorial photo.",
+      "demoPrompt": "An elegant wedding editorial photograph of an adult couple holding hands in a sunlit garden, with soft floral background, natural emotion, refined formalwear, gentle film-like color, shallow depth of field, premium event photography composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "real-estate-exterior-dusk",
@@ -1363,10 +1690,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a luxury home exterior at dusk.",
+      "demoPrompt": "A realistic real estate exterior photograph of a modern luxury home at blue hour, with warm interior lights, clean landscaping, wet driveway reflections, balanced architectural lines, high-end property marketing polish.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "tiny-world-diorama",
@@ -1402,10 +1738,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a tiny miniature world diorama.",
+      "demoPrompt": "A whimsical miniature diorama of a tiny train station built on a desk, with toy-scale people, paper trees, warm desk lamp light, macro depth of field, visible craft materials, charming handmade realism.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "surreal-double-exposure",
@@ -1441,10 +1786,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a surreal double-exposure portrait.",
+      "demoPrompt": "A surreal double-exposure portrait of an adult silhouette blended with a mountain landscape and starry sky, with clean facial outline, layered transparent textures, cinematic contrast, subtle grain, poetic poster-like composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "neon-nightlife-portrait",
@@ -1480,10 +1834,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a neon nightlife portrait.",
+      "demoPrompt": "A cinematic neon nightlife portrait of a stylish adult person on a rainy city street, with magenta and cyan sign reflections, shallow depth of field, realistic wet skin and fabric highlights, confident expression, moody urban editorial atmosphere.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "fantasy-map-parchment",
@@ -1519,10 +1882,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an old fantasy map on parchment.",
+      "demoPrompt": "An illustrated fantasy map on aged parchment, with coastlines, mountain ranges, forests, rivers, small symbolic landmarks, decorative compass rose, hand-inked linework, warm paper texture, no readable labels.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "science-museum-display",
@@ -1558,10 +1930,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a science museum exhibit scene.",
+      "demoPrompt": "A realistic science museum exhibit photograph featuring a suspended planetary model above a dark display table, with dramatic spotlights, glass reflections, visitors as soft silhouettes, clean educational design, cinematic documentary composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "ceramic-brand-still-life",
@@ -1597,10 +1978,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an artisan ceramic product still life.",
+      "demoPrompt": "A calm artisan product still life of handmade ceramic mugs on a linen cloth, with soft morning light, natural clay texture, neutral props, gentle shadows, boutique homeware brand photography styling.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "board-game-box-art",
@@ -1636,10 +2026,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create board game box cover art.",
+      "demoPrompt": "Polished board game box cover art for a cooperative adventure game, featuring a group of original explorers at the entrance to a glowing ancient ruin, dynamic composition, colorful painterly detail, clear central focal point, empty title area, no readable text.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "botanical-science-plate",
@@ -1675,10 +2074,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a botanical science illustration plate.",
+      "demoPrompt": "A natural-history botanical illustration plate of a flowering medicinal plant, with root, stem, leaf, blossom, seed pod, and magnified detail studies arranged on warm paper. Precise ink-and-watercolor rendering, clean spacing, archival museum quality, no readable labels.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "minimal-line-coloring-page",
@@ -1714,10 +2122,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a printable coloring book page.",
+      "demoPrompt": "A clean black-and-white coloring book page of an enchanted garden gate, with bold continuous outlines, charming flowers, butterflies, simple decorative details, white background, no shading, no text.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "comic-strip-sequence",
@@ -1753,10 +2170,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a four-panel comic strip scene.",
+      "demoPrompt": "A clean four-panel comic strip showing an original inventor discovering a tiny glowing robot in a workshop. Expressive body language, clear panel borders, cinematic lighting, consistent character design, sequential visual storytelling, empty speech bubbles, no readable text.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "tarot-card-archetype",
@@ -1792,10 +2218,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a mystical tarot-style card illustration.",
+      "demoPrompt": "A mystical tarot-style card illustration of an original moonlit gardener archetype, with ornate border, symbolic plants, crescent moon, rich jewel tones, symmetrical composition, vintage print texture, empty title banner, no readable text.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "claymation-character-still",
@@ -1831,10 +2266,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a claymation character still.",
+      "demoPrompt": "A stop-motion claymation still of an original tiny chef character holding an oversized wooden spoon in a miniature kitchen. Tactile clay fingerprints, handmade props, warm practical lighting, shallow depth of field, charming animated-film staging.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "embroidered-patch-design",
@@ -1870,10 +2314,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an embroidered patch design.",
+      "demoPrompt": "A realistic embroidered patch design of a mountain sunrise emblem on dark fabric, with raised thread texture, merrowed border, simplified shapes, limited color palette, subtle fabric shadows, no readable text.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "museum-artifact-photogrammetry",
@@ -1909,10 +2362,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a museum artifact catalog photo.",
+      "demoPrompt": "A museum catalog photograph of an ancient ceramic mask on a neutral gray plinth, with soft conservation-lab lighting, visible cracks and patina, accurate material texture, scale-card-like empty space without text, archival documentation clarity.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "architectural-section-cutaway",
@@ -1948,10 +2410,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an architectural cutaway drawing.",
+      "demoPrompt": "A detailed architectural section cutaway of a compact hillside cabin, showing rooms, stairs, roof structure, furniture, terrain, and natural light paths. Clean architectural rendering, warm material accents, crisp linework, no readable labels.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "blacklight-concert-stage",
@@ -1987,10 +2458,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a dramatic concert stage photo.",
+      "demoPrompt": "A dramatic live concert stage photograph with a silhouetted performer at center, ultraviolet blacklight, laser beams, haze, giant LED shapes, crowd silhouettes, high-energy atmosphere, crisp event-photography realism.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "underwater-fashion-dream",
@@ -2026,10 +2506,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a surreal underwater fashion portrait.",
+      "demoPrompt": "A surreal underwater fashion portrait of an adult model in flowing fabric, with suspended bubbles, rippling sunlight, graceful pose, dreamlike movement, realistic water distortion, high-fashion editorial composition.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "drone-top-down-landscape",
@@ -2065,10 +2554,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a top-down drone landscape photo.",
+      "demoPrompt": "A top-down drone photograph of winding turquoise river channels through red desert sand, with graphic natural geometry, crisp aerial detail, high contrast textures, clean abstract landscape composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "weather-satellite-map",
@@ -2104,10 +2602,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a weather satellite image of Earth.",
+      "demoPrompt": "A stylized weather satellite image of a swirling storm system over ocean and coastline, with realistic cloud bands, subtle infrared color accents, clean data-visualization aesthetics, dark map background, no readable text or labels.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "noir-detective-scene",
@@ -2143,10 +2650,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a noir detective movie still.",
+      "demoPrompt": "A black-and-white noir detective movie still of an original investigator standing in a rain-slick alley, with venetian blind shadows, cigarette-smoke-like mist, dramatic contrast, wet pavement reflections, classic 1940s cinema atmosphere.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "luxury-watch-wristshot",
@@ -2182,10 +2698,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a luxury watch wrist photo.",
+      "demoPrompt": "A realistic luxury product wristshot inside a vintage car, featuring a polished metal watch with detailed dial, leather strap, hand on steering wheel, warm dashboard light, shallow depth of field, premium lifestyle product photography.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "low-poly-icon-set",
@@ -2221,10 +2746,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a low-poly 3D icon set.",
+      "demoPrompt": "A consistent low-poly 3D icon set of productivity objects, including calendar, notebook, clock, pencil, inbox tray, and checklist. Simple geometric forms, cohesive lighting, soft shadows, pastel colors, grid layout, no readable text.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "street-documentary-market",
@@ -2260,10 +2794,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a candid street market documentary photo.",
+      "demoPrompt": "A candid street documentary photograph of a busy open-air night market, with food stalls, steam, colorful awnings, people moving naturally, realistic ambient light, layered depth, human-scale travel photography energy.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "haunted-library-interior",
@@ -2299,10 +2842,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a gothic haunted library scene.",
+      "demoPrompt": "A cinematic gothic library interior with towering shelves, floating dust, moonlight through tall windows, scattered open books, candlelight, deep shadows, ornate architecture, mysterious but non-horror adventure atmosphere.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "streetwear-lookbook-grid",
@@ -2338,10 +2890,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-01",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a streetwear lookbook grid.",
+      "demoPrompt": "A clean streetwear lookbook grid showing four coordinated outfits on adult models against simple urban backdrops. Consistent lighting, full-body poses, modern editorial styling, clear outfit variation, catalogue layout, no readable text.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "solarpunk-rooftop-garden",
@@ -2377,10 +2938,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a solarpunk rooftop garden above a city.",
+      "demoPrompt": "A cinematic solarpunk rooftop garden above a dense city, with glass greenhouses, hanging vines, warm sunrise, people tending plants at human scale, optimistic near-future architecture, rich environmental detail, wide hopeful composition.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "artisan-workshop-process",
@@ -2416,10 +2986,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a documentary photo of an artisan at work.",
+      "demoPrompt": "A realistic documentary photograph of an artisan ceramic workshop, hands shaping clay on a wheel, shelves of unfinished cups, dusty sunlight, tactile material texture, warm craft atmosphere.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "retro-futurist-control-room",
@@ -2455,10 +3034,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a retro-futurist sci-fi control room.",
+      "demoPrompt": "A cinematic retro-futurist control room with analog panels, glowing radar screens, curved 1970s space-age furniture, orange and teal practical lights, original sci-fi setting, wide shot.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "paper-cut-shadowbox-scene",
@@ -2494,10 +3082,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a layered paper-cut shadowbox scene.",
+      "demoPrompt": "A layered paper-cut shadowbox illustration of a moonlit mountain village, visible paper edges, stacked depth, soft backlight, handcrafted texture, whimsical storybook mood.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "luxury-candle-still-life",
@@ -2533,10 +3130,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a luxury candle product still life.",
+      "demoPrompt": "A premium product still life of a minimalist scented candle in frosted glass, linen fabric, dried flowers, warm window light, soft shadows, elegant wellness brand photography.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "vinyl-toy-mascot",
@@ -2572,10 +3178,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a cute vinyl toy mascot.",
+      "demoPrompt": "A cute original vinyl toy mascot character on a clean studio surface, oversized head, glossy material, playful pose, collectible designer-toy aesthetic, soft shadows.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "architectural-concept-model",
@@ -2611,10 +3226,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an architectural scale model photo.",
+      "demoPrompt": "A physical architectural concept model made of white card and basswood, tiny trees, clean desk surface, dramatic side light, shallow depth of field, premium architecture presentation photo.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "recipe-card-flat-lay",
@@ -2650,10 +3274,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a recipe card flat lay with fresh ingredients.",
+      "demoPrompt": "A bright editorial flat lay of recipe ingredients arranged around a blank recipe card, citrus, herbs, ceramic bowls, overhead composition, fresh food magazine styling.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "music-festival-poster-scene",
@@ -2689,10 +3322,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a bold illustrated music festival poster scene.",
+      "demoPrompt": "A bold illustrated music festival poster scene with a desert stage, abstract sun, crowd silhouettes, speakers, vibrant screen-print colors, graphic composition, no readable text.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "sports-trading-card-portrait",
@@ -2728,10 +3370,26 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a sports trading card style portrait.",
+      "demoPrompt": "A dynamic sports trading card style portrait of an original adult athlete, dramatic stadium lights, action pose, glossy card frame elements, energetic color streaks, no logos, no readable text.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Use an uploaded reference",
+          "description": "Optional: upload a person reference to turn them into the athlete portrait."
+        }
+      }
     },
     {
       "id": "futuristic-lab-product-demo",
@@ -2767,10 +3425,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a futuristic lab product demo image.",
+      "demoPrompt": "A futuristic lab product demo scene with a transparent device prototype on a glowing bench, glass panels, clean scientists in background, cool blue-white light, premium tech launch photography.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "cozy-bookshop-reading-nook",
@@ -2806,10 +3473,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a cozy bookshop reading nook.",
+      "demoPrompt": "A cozy independent bookshop reading nook with armchair, stacked books, warm lamps, rain on window, wood shelves, inviting lifestyle interior photography.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "botanical-perfume-ad",
@@ -2845,10 +3521,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a botanical perfume advertisement image.",
+      "demoPrompt": "A luxury perfume advertising image with a sculptural glass bottle surrounded by oversized fresh botanicals, dew, reflective surface, soft green daylight, premium fragrance campaign look.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "stained-glass-character-portrait",
@@ -2884,10 +3569,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a stained-glass fantasy character portrait.",
+      "demoPrompt": "An original fantasy character portrait rendered as luminous stained glass, jewel-toned panes, lead outlines, halo-like backlight, cathedral window composition, ornate but clean.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "urban-planning-map-render",
@@ -2923,10 +3617,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an isometric urban planning map.",
+      "demoPrompt": "A clean isometric urban planning map render of a walkable neighborhood, parks, bike lanes, mixed-use buildings, tiny people, soft colors, presentation-board clarity.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "macro-insect-nature-study",
@@ -2962,10 +3665,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a macro nature study photo.",
+      "demoPrompt": "A macro nature-study photograph of a jewel-toned beetle on moss, dew droplets, detailed shell texture, shallow depth of field, natural morning light, scientific beauty.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "minimal-saas-dashboard-hero",
@@ -3001,10 +3713,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a clean SaaS dashboard hero image.",
+      "demoPrompt": "A polished SaaS dashboard hero mockup on floating screens, charts and cards as abstract UI shapes, clean white workspace, soft depth, product marketing visual.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "racing-pit-stop-action",
@@ -3040,10 +3761,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a high-speed racing pit stop image.",
+      "demoPrompt": "A high-speed racing pit stop scene, mechanics changing tires, motion blur, sparks, glossy race car with no logos, dramatic track lighting, cinematic action photography.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "handmade-jewelry-bench",
@@ -3079,10 +3809,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a handmade jewelry workbench photo.",
+      "demoPrompt": "A macro artisan jewelry bench photo with a ring being set, tiny tools, metal filings, warm task lamp, realistic hands, shallow depth, craft luxury detail.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "arctic-research-station",
@@ -3118,10 +3857,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an arctic research station scene.",
+      "demoPrompt": "A cinematic arctic research station at blue hour, modular buildings, snow vehicles, aurora glow, blowing snow, warm window lights, realistic expedition atmosphere, wide establishing shot.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "plush-character-story-scene",
@@ -3157,10 +3905,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a plush character in a tiny story scene.",
+      "demoPrompt": "A soft plush character in a miniature bedroom story scene, fabric texture, button eyes, tiny props, warm lamp light, charming toy photography, safe whimsical mood.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "fashion-textile-pattern-sheet",
@@ -3196,10 +3953,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a textile pattern sheet with coordinated swatches.",
+      "demoPrompt": "A fashion textile pattern sheet with four coordinated repeat patterns inspired by flowers and geometric shapes, fabric swatches, clean presentation layout, sophisticated color palette.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "floating-island-fantasy",
@@ -3235,10 +4001,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a fantasy landscape with floating islands.",
+      "demoPrompt": "A cinematic fantasy landscape of floating islands with waterfalls, tiny bridges, misty sunrise, birds in distance, epic scale, painterly realism, adventure-game concept art.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "editorial-makeup-swatch",
@@ -3274,10 +4049,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an editorial makeup swatch close-up.",
+      "demoPrompt": "A close-up editorial beauty image focused on colorful makeup swatches on skin, glossy texture, precise studio lighting, abstract composition, premium cosmetics campaign style.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "children-science-poster",
@@ -3313,10 +4097,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a friendly science poster illustration.",
+      "demoPrompt": "A friendly educational science poster illustration about the water cycle, clouds, mountains, river, sun, arrows as simple shapes, bright classroom style, blank areas without readable text.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "chiaroscuro-studio-portrait",
@@ -3352,10 +4145,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-15",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "A dramatic low-key studio portrait with sculpted shadow.",
+      "demoPrompt": "Create a dramatic chiaroscuro studio portrait of an adult subject wearing simple dark wardrobe, face turned slightly toward camera, with one strong side key light, deep shadow falloff, realistic skin texture, black background, painterly photographic contrast, and elegant editorial mood. Keep the subject fully clothed, non-explicit, and avoid readable text or logos.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "bathroom-mirror-routine-selfie",
@@ -3391,10 +4193,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-15",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "A real bathroom mirror selfie with phone glare and everyday clutter.",
+      "demoPrompt": "Create a casual bathroom mirror phone selfie of an adult subject getting ready, wearing public-safe skin-forward loungewear such as a cropped tank top and shorts, with shoulders, arms, and midriff visible but no nudity. Show one hand near their face, visible phone partially blocking the face, mirror smudges, towel and toiletry clutter, soft overhead bathroom light, slight wide-angle phone distortion, realistic skin texture, and imperfect social-feed framing. Avoid ad-campaign polish, readable labels, logos, exposed nipples, exposed genitals, or explicit posing.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "messy-bedroom-outfit-check",
@@ -3430,10 +4241,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-15",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "A casual mirror outfit selfie in a lived-in room.",
+      "demoPrompt": "Create a casual bedroom mirror outfit-check selfie of an adult subject holding a phone, wearing public-safe skin-forward everyday fashion such as a fitted crop top with low-rise jeans or a short summer outfit. Show natural arms, shoulders, and midriff while keeping the subject non-nude. Place them in a lived-in bedroom with rumpled sheets and clothes in the background. Use natural phone-camera realism, slight tilted framing, mirror glare, soft daylight mixed with room light, realistic fabric texture, and unpolished social-feed authenticity. Avoid studio polish, readable text, logos, exposed nipples, exposed genitals, or explicit posing.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "bedside-front-camera-selfie",
@@ -3469,10 +4289,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-15",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "A low-effort front-camera selfie in a dim bedroom.",
+      "demoPrompt": "Create a low-effort front-camera selfie of an adult subject sitting on or beside a bed in a dim bedroom, wearing public-safe skin-forward loungewear such as a fitted tank top, crop top, or athletic shorts, with shoulders and arms visible but no nudity. Put the face close to camera, one hand near the cheek, warm string lights or bedside lamp in the background, slight phone blur, compressed perspective, visible room clutter, and realistic unedited social-feed texture. Avoid beauty-ad polish, readable text, logos, exposed nipples, exposed genitals, or explicit posing.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "disposable-camera-night-snap",
@@ -3508,10 +4337,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-15",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "A harsh-flash party snapshot with visible imperfections.",
+      "demoPrompt": "Create a disposable-camera style night-out snapshot of an adult subject wearing public-safe skin-forward party clothes such as a fitted crop top, sleeveless top, mini skirt, or shorts, photographed from slightly above with harsh direct flash, red-eye risk, glossy skin highlights, dark messy room or bar background, mild blur, grain, timestamp-like nostalgia without readable text, and spontaneous social-photo energy. Avoid polished editorial lighting, readable logos, nudity, exposed nipples, exposed genitals, or explicit posing.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "rain-window-cinematic-portrait",
@@ -3547,10 +4385,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-15",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "A moody film-still portrait framed by rain and neon reflections.",
+      "demoPrompt": "Create a cinematic portrait of an adult subject beside a rain-covered window at night, with soft neon reflections, moody blue and amber light, visible droplets on glass, shallow depth of field, thoughtful expression, and film-still atmosphere. Keep the subject fully clothed, non-explicit, and avoid readable text or logos.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "gilded-fantasy-painterly-portrait",
@@ -3586,10 +4433,19 @@
       ],
       "suggestedModel": "midjourney",
       "suggestedModelLabel": "Midjourney",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-15",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "A dark blue fantasy portrait with ornate gold detailing.",
+      "demoPrompt": "Create a painterly fantasy portrait of an adult subject with long dark hair, ornate gold accessories, deep navy and dark teal atmosphere, luminous skin, frame-like ornamental composition, fine digital painting detail, and romantic fantasy illustration mood. Keep the subject fully clothed, non-explicit, and avoid readable text or logos.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "sepia-fashion-model-portrait",
@@ -3625,10 +4481,19 @@
       ],
       "suggestedModel": "midjourney",
       "suggestedModelLabel": "Midjourney",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-15",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "A warm editorial model portrait with vintage magazine polish.",
+      "demoPrompt": "Create a high-fashion model portrait of an adult subject in warm sepia tones, fully clothed in structured couture styling, with soft studio haze, elegant cheekbone lighting, shallow depth of field, realistic skin texture, and vintage editorial magazine mood. Avoid readable text, logos, and explicit styling.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "glowing-word-forest-installation",
@@ -3664,10 +4529,19 @@
       ],
       "suggestedModel": "midjourney",
       "suggestedModelLabel": "Midjourney",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-15",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "A cinematic translucent word sculpture in a foggy forest.",
+      "demoPrompt": "Create a hyper-realistic cinematic typographic installation shaped like the word {Word}, with translucent glowing blue letters in a dense foggy pine forest at night. Use volumetric mist, neon light spill on wet ground, dramatic depth, realistic materials, and clean large letterforms. Avoid extra readable text beyond the chosen word.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "neon-city-album-cover-portrait",
@@ -3703,10 +4577,19 @@
       ],
       "suggestedModel": "midjourney",
       "suggestedModelLabel": "Midjourney",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-15",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "A soft-focus neon city portrait with album-cover framing.",
+      "demoPrompt": "Create an iconic album-cover style portrait of an adult subject in a saturated purple outfit, fully clothed, standing in a neon city street with stylized East Asian cyberpunk-inspired signage shapes without readable text. Use soft focus, magenta and cyan glow, cinematic street haze, centered cover composition, wet pavement reflections, and no logos.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "abstract-glassmorphism-wallpaper",
@@ -3742,10 +4625,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an abstract glassmorphism wallpaper.",
+      "demoPrompt": "An abstract glassmorphism wallpaper with translucent layered shapes, subtle refractions, soft light caustics, balanced composition, modern app background aesthetic, no text, no logo.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "eco-packaging-mockup",
@@ -3781,10 +4673,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an eco-friendly packaging mockup.",
+      "demoPrompt": "A premium eco packaging mockup with recycled paper boxes, molded pulp tray, small product inserts, soft daylight, subtle plant props, clean sustainable brand photography.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     },
     {
       "id": "neon-arcade-cabinet",
@@ -3820,10 +4721,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a neon arcade cabinet concept.",
+      "demoPrompt": "A retro neon arcade cabinet concept in a dark game room, glowing controls, pixel-art screen shapes with no readable text, reflective floor, saturated magenta and cyan lighting.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      }
     },
     {
       "id": "scientific-cutaway-fruit",
@@ -3859,10 +4769,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a scientific cutaway illustration of fruit.",
+      "demoPrompt": "A clean scientific cutaway illustration of a citrus fruit showing peel, pulp, seeds, juice vesicles, precise diagram-like composition, bright white background, no labels.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      }
     },
     {
       "id": "miniature-train-table-world",
@@ -3898,10 +4817,19 @@
       ],
       "suggestedModel": "gpt-image-2",
       "suggestedModelLabel": "GPT Image 2",
-      "schemaVersion": "1.0.0",
+      "exampleSchemaVersion": "1.0.0",
       "generatedAt": "2026-06-11",
       "creator": "Open Image Templates",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a miniature train table world.",
+      "demoPrompt": "A charming miniature train-table world with tiny houses, winding tracks, painted hills, small trees, warm hobby-room lighting, tilt-shift photography, handmade scenery.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
     }
   ]
 }
