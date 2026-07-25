@@ -10,7 +10,8 @@
     "assets:publish": "node scripts/publish-r2-assets.mjs",
     "validate:catalog": "node scripts/validate-template-catalog.mjs",
     "cloudflare:deploy": "wrangler deploy --config cloudflare/oit-api/wrangler.toml",
-    "lint": "eslint"
+    "check:schema": "node scripts/check-schema-version.mjs",
+    "lint": "npm run check:schema && eslint"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

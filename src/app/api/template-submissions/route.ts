@@ -13,6 +13,7 @@ type SubmissionTemplate = {
   title?: unknown;
   description?: unknown;
   category?: unknown;
+  nsfw?: unknown;
   prompt?: unknown;
   slots?: unknown;
   suggested_models?: unknown;
@@ -41,6 +42,7 @@ function validateTemplate(template: SubmissionTemplate | null) {
   if (!isString(template.title) || template.title.length > 120) return "Template title is invalid.";
   if (!isString(template.description) || template.description.length > 280) return "Template description is invalid.";
   if (!isString(template.prompt) || template.prompt.length > 4000) return "Template prompt is invalid.";
+  if (template.nsfw !== undefined && typeof template.nsfw !== "boolean") return "Template NSFW flag is invalid.";
   if (!Array.isArray(template.slots) || template.slots.length < 1 || template.slots.length > 12) return "Template slots are invalid.";
   return null;
 }

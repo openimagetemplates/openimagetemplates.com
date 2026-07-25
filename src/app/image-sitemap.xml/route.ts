@@ -13,7 +13,7 @@ function escapeXml(value: string) {
 }
 
 export function GET() {
-  const entries = templates.map((template) => `  <url>
+  const entries = templates.filter((template) => !template.nsfw).map((template) => `  <url>
     <loc>${escapeXml(templateUrl(template))}</loc>
     <image:image>
       <image:loc>${escapeXml(template.image)}</image:loc>

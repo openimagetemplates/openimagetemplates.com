@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
 import { categoryPath, tagPath } from "@/lib/seo";
 import type { ImageTemplate } from "@/lib/templates";
+import { SensitiveContentBoundary } from "@/components/SensitiveContentBoundary";
 import { TemplatePreviewImage } from "@/components/TemplatePreviewImage";
 import { TrackedExternalLink } from "@/components/TrackedExternalLink";
 
@@ -15,25 +16,35 @@ export function TemplateCard({ template, priority = false }: TemplateCardProps) 
   return (
     <article className="group mb-5 break-inside-avoid overflow-hidden rounded-[8px] border border-black/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-xl">
       <div className="relative bg-zinc-100">
-        <Link href={`/templates/${template.id}`} className="block">
-          <span className="block aspect-[3/1] overflow-hidden bg-zinc-100 sm:aspect-[4/3]">
-            <TemplatePreviewImage
-              src={template.image}
-              alt={template.imageAlt}
-              className="h-full w-full object-cover"
-              width={1024}
-              height={768}
-              loading={priority ? "eager" : "lazy"}
-              fetchPriority={priority ? "high" : "auto"}
-            />
-          </span>
-        </Link>
+        <SensitiveContentBoundary
+          sensitive={template.nsfw}
+          label={`${template.title} preview`}
+        >
+          <Link href={`/templates/${template.id}`} className="block">
+            <span className="block aspect-[3/1] overflow-hidden bg-zinc-100 sm:aspect-[4/3]">
+              <TemplatePreviewImage
+                src={template.image}
+                alt={template.imageAlt}
+                className="h-full w-full object-cover"
+                width={1024}
+                height={768}
+                loading={priority ? "eager" : "lazy"}
+                fetchPriority={priority ? "high" : "auto"}
+              />
+            </span>
+          </Link>
+        </SensitiveContentBoundary>
         <Link
           href={categoryPath(template.category)}
-          className="absolute left-3 top-3 rounded-full bg-black/70 px-3 py-1 text-xs font-medium text-white backdrop-blur"
+          className="absolute left-3 top-3 z-30 rounded-full bg-black/70 px-3 py-1 text-xs font-medium text-white backdrop-blur"
         >
           {template.category}
         </Link>
+        {template.nsfw ? (
+          <span className="absolute right-3 top-3 z-30 rounded-full border border-white/25 bg-black/70 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
+            18+
+          </span>
+        ) : null}
       </div>
       <div className="space-y-4 p-4">
         <div>

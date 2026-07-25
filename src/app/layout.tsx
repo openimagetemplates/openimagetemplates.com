@@ -4,6 +4,10 @@ import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
 import { NanoGptAuthButton } from "@/components/NanoGptAuthButton";
 import { OpenImageTemplatesLogo } from "@/components/OpenImageTemplatesLogo";
+import {
+  SensitiveContentProvider,
+  SensitiveContentToggle,
+} from "@/components/SensitiveContentProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -117,57 +121,62 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://assets.openimagetemplates.com" />
       </head>
       <body>
-        <header className="sticky top-0 z-40 border-b border-black/10 bg-[#f5f3ef]/90 backdrop-blur-xl">
-          <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-            <Link href="/" className="flex items-center gap-2.5">
-              <OpenImageTemplatesLogo
-                maskId="header-open-image-templates-logo-mask"
-                animated
-                showWordmark={false}
-                className="h-12 w-auto"
-              />
-              <span className="leading-none text-zinc-950">
-                <span className="block text-sm font-extrabold tracking-tight">Open Image</span>
-                <span className="block text-sm font-normal tracking-tight">Templates</span>
-              </span>
-            </Link>
-            <nav className="hidden items-center gap-1 md:flex">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-full px-4 py-2 text-sm font-medium text-zinc-700 transition hover:bg-white hover:text-zinc-950"
-                >
-                  {item.label}
+        <SensitiveContentProvider>
+          <header className="sticky top-0 z-40 border-b border-black/10 bg-[#f5f3ef]/90 backdrop-blur-xl">
+            <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+              <Link href="/" className="flex items-center gap-2.5">
+                <OpenImageTemplatesLogo
+                  maskId="header-open-image-templates-logo-mask"
+                  animated
+                  showWordmark={false}
+                  className="h-12 w-auto"
+                />
+                <span className="hidden leading-none text-zinc-950 min-[420px]:block">
+                  <span className="block text-sm font-extrabold tracking-tight">Open Image</span>
+                  <span className="block text-sm font-normal tracking-tight">Templates</span>
+                </span>
+              </Link>
+              <nav className="hidden items-center gap-1 md:flex">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="rounded-full px-4 py-2 text-sm font-medium text-zinc-700 transition hover:bg-white hover:text-zinc-950"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+              <div className="flex items-center gap-2">
+                <SensitiveContentToggle />
+                <NanoGptAuthButton />
+              </div>
+            </div>
+          </header>
+          {children}
+          <footer className="border-t border-black/10 bg-white">
+            <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-8 text-sm text-zinc-600 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <OpenImageTemplatesLogo maskId="footer-open-image-templates-logo-mask" className="h-10 w-auto max-w-[190px]" />
+                <p>Open Image Templates is a free prompt-template standard and gallery, sponsored by NanoGPT.</p>
+              </div>
+              <div className="flex gap-4">
+                <Link href="/schema" className="font-medium text-zinc-950 hover:underline">
+                  Schema
                 </Link>
-              ))}
-            </nav>
-            <NanoGptAuthButton />
-          </div>
-        </header>
-        {children}
-        <footer className="border-t border-black/10 bg-white">
-          <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-8 text-sm text-zinc-600 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <OpenImageTemplatesLogo maskId="footer-open-image-templates-logo-mask" className="h-10 w-auto max-w-[190px]" />
-              <p>Open Image Templates is a free prompt-template standard and gallery, sponsored by NanoGPT.</p>
+                <Link href="/docs" className="font-medium text-zinc-950 hover:underline">
+                  Docs
+                </Link>
+                <Link href="/blog" className="font-medium text-zinc-950 hover:underline">
+                  Blog
+                </Link>
+                <a href="https://nano-gpt.com" className="font-medium text-zinc-950 hover:underline">
+                  NanoGPT
+                </a>
+              </div>
             </div>
-            <div className="flex gap-4">
-              <Link href="/schema" className="font-medium text-zinc-950 hover:underline">
-                Schema
-              </Link>
-              <Link href="/docs" className="font-medium text-zinc-950 hover:underline">
-                Docs
-              </Link>
-              <Link href="/blog" className="font-medium text-zinc-950 hover:underline">
-                Blog
-              </Link>
-              <a href="https://nano-gpt.com" className="font-medium text-zinc-950 hover:underline">
-                NanoGPT
-              </a>
-            </div>
-          </div>
-        </footer>
+          </footer>
+        </SensitiveContentProvider>
         {process.env.VERCEL ? <Analytics /> : null}
       </body>
     </html>

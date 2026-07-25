@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://www.openimagetemplates.com/open-image-template.schema.json",
+  "x-schema-version": "1.2.0",
   "title": "Open Image Template",
   "description": "A portable template format for reusable AI image generation prompts.",
   "type": "object",
@@ -61,6 +62,11 @@
     "summary_prompt": {
       "description": "Short human-facing prompt summary for compact browsing interfaces.",
       "type": "string"
+    },
+    "nsfw": {
+      "description": "Whether the template preview contains sensitive 18+ material and should be hidden behind a reveal control by default.",
+      "type": "boolean",
+      "default": false
     },
     "prompt": {
       "description": "The full visible prompt. Open Image Templates should not depend on hidden prompt text.",

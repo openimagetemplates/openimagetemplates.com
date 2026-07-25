@@ -6,6 +6,7 @@ import { absoluteUrl, SITE_DESCRIPTION, SITE_NAME, templateUrl } from "@/lib/seo
 import { selectDiverseTemplates, templates } from "@/lib/templates";
 
 const galleryTemplates = selectDiverseTemplates(templates, templates.length, {
+  includeNsfw: true,
   startCategoryIndex: 2,
   startTemplateIndex: 8,
 });
@@ -52,7 +53,7 @@ export default function TemplatesPage() {
               position: index + 1,
               url: templateUrl(template),
               name: template.title,
-              image: template.image,
+              ...(template.nsfw ? {} : { image: template.image }),
             })),
           },
         }}

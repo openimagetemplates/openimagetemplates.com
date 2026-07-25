@@ -71,13 +71,14 @@ The Open Image Template schema is published at:
 /open-image-template.schema.json
 ```
 
-Current schema version: `1.1.0`.
+Current schema version: `1.2.0`. Changes are recorded in [`docs/schema-changelog.md`](docs/schema-changelog.md).
 
 ## Project Structure
 
 ```text
 scripts/validate-template-catalog.mjs Validate canonical metadata and asset ownership
 src/data/templates.json             Canonical public template catalogue
+docs/template-expansion-playbook.md Process for researching, creating, previewing, reviewing, and releasing new templates
 src/lib/templates.ts              Template adapter and JSON conversion helpers
 src/components/GalleryExplorer.tsx Search and category filtering
 src/components/TemplateCard.tsx    Gallery cards

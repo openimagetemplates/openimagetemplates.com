@@ -29,6 +29,7 @@ export type TemplateCreatorDraft = {
   title: string;
   description: string;
   category: TemplateCategory;
+  nsfw: boolean;
   tags: string;
   simplePrompt: string;
   prompt: string;
@@ -70,6 +71,7 @@ export function createEmptyTemplateDraft(base?: Partial<ImageTemplate>): Templat
     title: "",
     description: "",
     category: base?.category ?? "Design",
+    nsfw: base?.nsfw ?? false,
     tags: base?.tags?.slice(0, 5).join(", ") ?? "",
     simplePrompt: base?.simplePrompt ?? "",
     prompt: "",
@@ -90,6 +92,7 @@ export function draftFromTemplate(template: ImageTemplate): TemplateCreatorDraft
     title: template.title,
     description: template.description,
     category: template.category,
+    nsfw: template.nsfw,
     tags: template.tags.join(", "),
     simplePrompt: template.simplePrompt ?? template.description,
     prompt: template.prompt,
@@ -121,6 +124,7 @@ export function templateFromCreatorDraft(draft: TemplateCreatorDraft, existingId
     title,
     description,
     category: draft.category,
+    nsfw: draft.nsfw,
     tags: normalizeTags(draft.tags, draft.category, title),
     image: draft.image.trim(),
     imageAlt: draft.imageAlt.trim() || `${title} preview`,
@@ -152,6 +156,7 @@ export function toCreatorJson(template: ImageTemplate) {
     category: template.category,
     tags: template.tags,
     summary_prompt: template.simplePrompt,
+    nsfw: template.nsfw,
     prompt: template.prompt,
     demo_prompt: template.demoPrompt,
     negative_prompt: template.negativePrompt,

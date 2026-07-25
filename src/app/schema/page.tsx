@@ -54,6 +54,14 @@ export default function SchemaPage() {
           Download schema
         </a>
         <a
+          href="https://github.com/openimagetemplates/openimagetemplates.com/blob/main/docs/schema-changelog.md"
+          className="inline-flex h-12 items-center justify-center rounded-full border border-black/10 bg-white px-5 text-sm font-semibold text-zinc-950 shadow-sm transition hover:bg-zinc-50"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View changelog
+        </a>
+        <a
           href="https://github.com/openimagetemplates"
           className="inline-flex h-12 items-center justify-center rounded-full border border-black/10 bg-white px-5 text-sm font-semibold text-zinc-950 shadow-sm transition hover:bg-zinc-50"
           target="_blank"
@@ -94,6 +102,15 @@ export default function SchemaPage() {
             github.com/openimagetemplates
           </a>
           , and every template page links to a machine-readable JSON endpoint.
+        </p>
+      </section>
+
+      <section className="mt-10 rounded-[8px] border border-black/10 bg-[#f5f3ef] p-6 shadow-sm">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">Sensitive-content metadata</h2>
+        <p className="mt-3 text-sm leading-6 text-zinc-600">
+          Templates can set the optional <code className="rounded bg-white px-1.5 py-0.5 text-zinc-950">nsfw</code>{" "}
+          boolean. Galleries should hide preview imagery for these templates by default, provide an individual reveal
+          control, and let adults persist a site-wide viewing preference.
         </p>
       </section>
 

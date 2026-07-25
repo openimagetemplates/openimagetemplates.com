@@ -5,6 +5,7 @@ import { ArrowUpRight, Braces, Check, ChevronDown, Clock3, Copy, ExternalLink, I
 import Link from "next/link";
 import type React from "react";
 import { useMemo, useRef, useState } from "react";
+import { SensitiveContentBoundary } from "@/components/SensitiveContentBoundary";
 import { trackEngagement } from "@/lib/analytics-events";
 import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
 import {
@@ -547,6 +548,23 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                     />
                   </Field>
 
+                  <label className="flex cursor-pointer items-start gap-3 rounded-[8px] border border-black/10 bg-zinc-50 p-4">
+                    <input
+                      type="checkbox"
+                      checked={draft.nsfw}
+                      onChange={(event) => updateDraft({ nsfw: event.target.checked })}
+                      className="mt-0.5 h-4 w-4 accent-zinc-950"
+                    />
+                    <span>
+                      <span className="block text-sm font-semibold text-zinc-950">
+                        Mark as 18+ / NSFW
+                      </span>
+                      <span className="mt-1 block text-xs leading-5 text-zinc-600">
+                        Sensitive preview images are hidden behind a reveal overlay by default.
+                      </span>
+                    </span>
+                  </label>
+
                   <Field label="Model-ready prompt">
                     <textarea
                       value={draft.prompt}
@@ -632,7 +650,12 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                     </p>
                     <div className="mt-4 overflow-hidden rounded-[8px] bg-zinc-100">
                       {draft.image ? (
-                        <img src={draft.image} alt={draft.imageAlt || "Template preview"} className="max-h-72 w-full object-contain" />
+                        <SensitiveContentBoundary
+                          sensitive={draft.nsfw}
+                          label={`${draft.title || "Template"} preview`}
+                        >
+                          <img src={draft.image} alt={draft.imageAlt || "Template preview"} className="max-h-72 w-full object-contain" />
+                        </SensitiveContentBoundary>
                       ) : (
                         <div className="grid min-h-56 place-items-center px-6 text-center text-sm font-medium text-zinc-600">
                           Generated previews will appear here.

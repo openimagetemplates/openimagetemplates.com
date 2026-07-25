@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T10:24:03.000Z",
+  "generatedAt": "2026-07-25T18:00:00.000Z",
   "source": "openimagetemplates.com canonical catalogue",
   "templates": [
     {
@@ -4830,6 +4830,733 @@
         "aspect_ratio": "3:2",
         "quality": "medium"
       }
+    },
+    {
+      "id": "late-night-bed-text-selfie",
+      "title": "Late-Night Bed Text Selfie",
+      "description": "A tired, friendly front-camera check-in from an ordinary bedroom.",
+      "category": "Portrait",
+      "tags": [
+        "selfie",
+        "bedroom",
+        "night",
+        "phone photo"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/late-night-bed-text-selfie--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Adult woman taking a casual late-night selfie beside a rumpled bed",
+      "prompt": "Create a photorealistic casual front-camera phone selfie of an adult subject sitting against pillows in an ordinary bedroom late at night, wearing public-safe sleepwear such as an oversized T-shirt, with a tired friendly expression and one hand near the cheek. Use a warm bedside lamp, faint device glow, rumpled bedding, a charging cable and water glass in the background, close imperfect cropping, slight wide-angle distortion, mild low-light grain, uneven phone exposure, natural skin texture, and flyaway hairs. Make it feel like an everyday social-feed photo rather than a photoshoot. Avoid readable screens, text, logos, watermarks, nudity, lingerie, explicit posing, juvenile appearance, and beauty retouching.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "adult with dark wavy hair"
+        },
+        {
+          "name": "sleepwear",
+          "label": "Sleepwear",
+          "example": "oversized charcoal T-shirt"
+        },
+        {
+          "name": "room_light",
+          "label": "Room light",
+          "example": "warm lamp and faint laptop glow"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "A tired, friendly front-camera check-in from an ordinary bedroom.",
+      "demoPrompt": "Create a photorealistic casual front-camera phone selfie of an adult subject sitting against pillows in an ordinary bedroom late at night, wearing public-safe sleepwear such as an oversized T-shirt, with a tired friendly expression and one hand near the cheek. Use a warm bedside lamp, faint device glow, rumpled bedding, a charging cable and water glass in the background, close imperfect cropping, slight wide-angle distortion, mild low-light grain, uneven phone exposure, natural skin texture, and flyaway hairs. Make it feel like an everyday social-feed photo rather than a photoshoot. Avoid readable screens, text, logos, watermarks, nudity, lingerie, explicit posing, juvenile appearance, and beauty retouching.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "morning-window-bed-selfie",
+      "title": "Morning Window Bed Selfie",
+      "description": "An unretouched just-awake selfie in cool window light.",
+      "category": "Portrait",
+      "tags": [
+        "selfie",
+        "bedroom",
+        "morning",
+        "phone photo"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/morning-window-bed-selfie--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Adult man taking a relaxed morning selfie beside an unmade bed",
+      "prompt": "Create a photorealistic spontaneous front-camera selfie of an adult subject sitting on the edge of an unmade bed just after waking, wearing a public-safe sleep shirt with a relaxed half-smile. Use cool morning window light from one side, a plain rented bedroom, wrinkled sheets, a laundry basket and half-open curtain, chest-up framing with one shoulder slightly cut off, subtle lens smudge, normal phone sharpening, natural skin texture, and ordinary color balance. Keep it candid and personal with no editorial styling. Avoid text, logos, watermarks, nudity, sexual posing, juvenile appearance, studio light, and airbrushing.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "adult with short curly hair"
+        },
+        {
+          "name": "sleepwear",
+          "label": "Sleepwear",
+          "example": "soft gray sleep shirt"
+        },
+        {
+          "name": "room_detail",
+          "label": "Room detail",
+          "example": "unmade bed and laundry basket"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "An unretouched just-awake selfie in cool window light.",
+      "demoPrompt": "Create a photorealistic spontaneous front-camera selfie of an adult subject sitting on the edge of an unmade bed just after waking, wearing a public-safe sleep shirt with a relaxed half-smile. Use cool morning window light from one side, a plain rented bedroom, wrinkled sheets, a laundry basket and half-open curtain, chest-up framing with one shoulder slightly cut off, subtle lens smudge, normal phone sharpening, natural skin texture, and ordinary color balance. Keep it candid and personal with no editorial styling. Avoid text, logos, watermarks, nudity, sexual posing, juvenile appearance, studio light, and airbrushing.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "under-blanket-close-selfie",
+      "title": "Under-Blanket Close Selfie",
+      "description": "A cozy close-up that feels like an informal personal check-in.",
+      "category": "Portrait",
+      "tags": [
+        "selfie",
+        "bedroom",
+        "cozy",
+        "phone photo"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/under-blanket-close-selfie--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Adult woman with glasses taking a close selfie under a cream blanket",
+      "prompt": "Create a photorealistic close front-camera selfie of an adult subject tucked under a plain blanket in a dim bedroom, with only the head, shoulders, and one hand visible and a calm amused expression. Use a small warm lamp behind them, soft pillow creases, a little phone noise and motion softness, compressed perspective, slightly awkward cropping, and realistic skin and fabric detail. Make it feel like a private but public-safe everyday check-in photo, not a campaign. Avoid text, logos, watermarks, nudity, lingerie, suggestive posing, juvenile appearance, and glossy beauty retouching.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "adult with short natural hair and glasses"
+        },
+        {
+          "name": "blanket",
+          "label": "Blanket",
+          "example": "plain cream blanket"
+        },
+        {
+          "name": "expression",
+          "label": "Expression",
+          "example": "calm amused smile"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "A cozy close-up that feels like an informal personal check-in.",
+      "demoPrompt": "Create a photorealistic close front-camera selfie of an adult subject tucked under a plain blanket in a dim bedroom, with only the head, shoulders, and one hand visible and a calm amused expression. Use a small warm lamp behind them, soft pillow creases, a little phone noise and motion softness, compressed perspective, slightly awkward cropping, and realistic skin and fabric detail. Make it feel like a private but public-safe everyday check-in photo, not a campaign. Avoid text, logos, watermarks, nudity, lingerie, suggestive posing, juvenile appearance, and glossy beauty retouching.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "rainy-bedroom-mirror-selfie",
+      "title": "Rainy Bedroom Mirror Selfie",
+      "description": "A moody mirror selfie with rain, room clutter, and mixed light.",
+      "category": "Portrait",
+      "tags": [
+        "mirror selfie",
+        "bedroom",
+        "rain",
+        "phone photo"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/rainy-bedroom-mirror-selfie--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Adult person taking a rainy-evening mirror selfie in a lived-in bedroom",
+      "prompt": "Create a photorealistic bedroom mirror selfie of an adult subject standing in a lived-in room on a rainy evening, wearing public-safe relaxed everyday clothes, with the phone covering part of the face and a neutral thoughtful posture. Use a rain-streaked window, cool blue outdoor light mixed with a weak warm desk lamp, an unmade bed and jacket on a chair, mirror dust and slight glare, vertical phone framing, imperfect tilt, mild high-ISO grain, realistic proportions, and natural skin texture. Keep the result unpolished and socially authentic. Avoid readable screens, text, logos, watermarks, nudity, explicit posing, juvenile appearance, and fashion-campaign polish.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "androgynous adult with short damp hair"
+        },
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "loose knit top and dark trousers"
+        },
+        {
+          "name": "room_mood",
+          "label": "Room mood",
+          "example": "cool rain light and warm desk lamp"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "A moody mirror selfie with rain, room clutter, and mixed light.",
+      "demoPrompt": "Create a photorealistic bedroom mirror selfie of an adult subject standing in a lived-in room on a rainy evening, wearing public-safe relaxed everyday clothes, with the phone covering part of the face and a neutral thoughtful posture. Use a rain-streaked window, cool blue outdoor light mixed with a weak warm desk lamp, an unmade bed and jacket on a chair, mirror dust and slight glare, vertical phone framing, imperfect tilt, mild high-ISO grain, realistic proportions, and natural skin texture. Keep the result unpolished and socially authentic. Avoid readable screens, text, logos, watermarks, nudity, explicit posing, juvenile appearance, and fashion-campaign polish.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "vanity-getting-ready-selfie",
+      "title": "Vanity Getting-Ready Selfie",
+      "description": "An everyday mirror photo caught halfway through getting ready.",
+      "category": "Portrait",
+      "tags": [
+        "mirror selfie",
+        "bedroom",
+        "getting ready",
+        "phone photo"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/vanity-getting-ready-selfie--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Adult woman adjusting an earring in a cluttered bedroom vanity mirror",
+      "prompt": "Create a photorealistic casual vanity mirror selfie of an adult subject getting ready in a modest bedroom, wearing public-safe everyday clothes, with one hand holding an unbranded phone and the other adjusting an accessory. Include ordinary vanity clutter, a hairbrush, plain containers with no readable labels, warm bulb light mixed with weak daylight, fingerprints on the mirror, waist-up phone framing, a slight flash hotspot, realistic skin texture, and a lived-in apartment atmosphere. Keep it candid and a little messy rather than polished. Avoid text, logos, watermarks, nudity, lingerie, explicit posing, juvenile appearance, and a commercial beauty look.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "adult with curly hair pinned up"
+        },
+        {
+          "name": "wardrobe",
+          "label": "Wardrobe",
+          "example": "ribbed tank and loose cardigan"
+        },
+        {
+          "name": "getting_ready",
+          "label": "Getting ready",
+          "example": "adjusting an earring"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "An everyday mirror photo caught halfway through getting ready.",
+      "demoPrompt": "Create a photorealistic casual vanity mirror selfie of an adult subject getting ready in a modest bedroom, wearing public-safe everyday clothes, with one hand holding an unbranded phone and the other adjusting an accessory. Include ordinary vanity clutter, a hairbrush, plain containers with no readable labels, warm bulb light mixed with weak daylight, fingerprints on the mirror, waist-up phone framing, a slight flash hotspot, realistic skin texture, and a lived-in apartment atmosphere. Keep it candid and a little messy rather than polished. Avoid text, logos, watermarks, nudity, lingerie, explicit posing, juvenile appearance, and a commercial beauty look.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "casual-floor-mirror-selfie",
+      "title": "Casual Floor Mirror Selfie",
+      "description": "A relaxed full-body mirror photo taken from the bedroom floor.",
+      "category": "Portrait",
+      "tags": [
+        "mirror selfie",
+        "bedroom",
+        "casual",
+        "phone photo"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/casual-floor-mirror-selfie--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Adult man sitting cross-legged for a casual bedroom floor-mirror selfie",
+      "prompt": "Create a photorealistic low-key floor-mirror outfit selfie of an adult subject sitting cross-legged on a bedroom rug, wearing public-safe casual clothes and holding a phone at chest height with a relaxed expression. Include a leaning mirror, rumpled bed, books and headphones on the floor, soft late-afternoon window light, a slightly dusty mirror, natural fabric folds and skin texture, vertical phone framing, imperfect centering, slight barrel distortion, muted colors, and normal phone processing. Avoid readable screens, text, logos, watermarks, nudity, sexual posing, juvenile appearance, and editorial fashion polish.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Subject",
+          "example": "adult with tousled dark hair"
+        },
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "white T-shirt and plaid pajama trousers"
+        },
+        {
+          "name": "floor_details",
+          "label": "Floor details",
+          "example": "books, headphones, and a soft rug"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "A relaxed full-body mirror photo taken from the bedroom floor.",
+      "demoPrompt": "Create a photorealistic low-key floor-mirror outfit selfie of an adult subject sitting cross-legged on a bedroom rug, wearing public-safe casual clothes and holding a phone at chest height with a relaxed expression. Include a leaning mirror, rumpled bed, books and headphones on the floor, soft late-afternoon window light, a slightly dusty mirror, natural fabric folds and skin texture, vertical phone framing, imperfect centering, slight barrel distortion, muted colors, and normal phone processing. Avoid readable screens, text, logos, watermarks, nudity, sexual posing, juvenile appearance, and editorial fashion polish.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "fantasy-roleplay-character-portrait",
+      "title": "Fantasy Roleplay Character Portrait",
+      "description": "A grounded profile portrait for an original adult fantasy character.",
+      "category": "Character",
+      "tags": [
+        "roleplay",
+        "character",
+        "fantasy",
+        "portrait"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/fantasy-roleplay-character-portrait--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Original adult fantasy apothecary in a candlelit inn bedroom",
+      "prompt": "Create a photorealistic profile image for an original adult fantasy roleplay character. Show a distinctive but believable appearance, practical handmade travel clothing, one or two restrained character details, and an expressive personality-forward gaze. Frame the character chest-up inside a modest candlelit inn bedroom with a blurred travel bag and weather-dark window behind them. Use natural skin texture, slightly uneven warm light, an intimate snapshot feeling, believable materials, and restrained fantasy design rather than glossy key art. Avoid text, logos, watermarks, nudity, juvenile appearance, celebrity likeness, and copyrighted characters or franchise styling.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character",
+          "label": "Character",
+          "example": "adult wandering apothecary with cropped silver hair"
+        },
+        {
+          "name": "wardrobe",
+          "label": "Wardrobe",
+          "example": "moss-green linen layers and herb pouch"
+        },
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "candlelit inn bedroom during rain"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "A grounded profile portrait for an original adult fantasy character.",
+      "demoPrompt": "Create a photorealistic profile image for an original adult fantasy roleplay character. Show a distinctive but believable appearance, practical handmade travel clothing, one or two restrained character details, and an expressive personality-forward gaze. Frame the character chest-up inside a modest candlelit inn bedroom with a blurred travel bag and weather-dark window behind them. Use natural skin texture, slightly uneven warm light, an intimate snapshot feeling, believable materials, and restrained fantasy design rather than glossy key art. Avoid text, logos, watermarks, nudity, juvenile appearance, celebrity likeness, and copyrighted characters or franchise styling.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "cyberpunk-roleplay-bedroom-selfie",
+      "title": "Cyberpunk Roleplay Bedroom Selfie",
+      "description": "A spontaneous phone selfie from an original sci-fi character's room.",
+      "category": "Character",
+      "tags": [
+        "roleplay",
+        "character",
+        "science fiction",
+        "selfie"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/cyberpunk-roleplay-bedroom-selfie--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Original adult sci-fi mechanic taking a selfie in a cramped bedroom workshop",
+      "prompt": "Create a photorealistic phone selfie for an original adult science-fiction roleplay character in a cramped bedroom workshop. Give the character practical worn work clothes, one restrained non-branded futuristic detail, and a playful exhausted expression. Use colored equipment LEDs mixed with a cheap warm bedside lamp, tangled cables and small tools in the background, close phone framing with mild wide-angle distortion, low-light grain, imperfect focus, and realistic skin. Make it feel like the character sent a spontaneous selfie rather than promotional concept art. Avoid readable screens, text, logos, watermarks, nudity, explicit posing, juvenile appearance, celebrity likeness, and copyrighted franchise styling.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character",
+          "label": "Character",
+          "example": "adult night-shift systems mechanic"
+        },
+        {
+          "name": "future_detail",
+          "label": "Future detail",
+          "example": "subtle temple interface"
+        },
+        {
+          "name": "room_setup",
+          "label": "Room setup",
+          "example": "LED equipment, cables, and a warm lamp"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "A spontaneous phone selfie from an original sci-fi character's room.",
+      "demoPrompt": "Create a photorealistic phone selfie for an original adult science-fiction roleplay character in a cramped bedroom workshop. Give the character practical worn work clothes, one restrained non-branded futuristic detail, and a playful exhausted expression. Use colored equipment LEDs mixed with a cheap warm bedside lamp, tangled cables and small tools in the background, close phone framing with mild wide-angle distortion, low-light grain, imperfect focus, and realistic skin. Make it feel like the character sent a spontaneous selfie rather than promotional concept art. Avoid readable screens, text, logos, watermarks, nudity, explicit posing, juvenile appearance, celebrity likeness, and copyrighted franchise styling.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "low-cut-blouse-bedroom-selfie",
+      "title": "Low-Cut Blouse Bedroom Selfie",
+      "description": "A confident mirror selfie with a fitted deep-V blouse and lived-in bedroom realism.",
+      "category": "Portrait",
+      "nsfw": true,
+      "tags": [
+        "mirror selfie",
+        "bedroom",
+        "low-cut blouse",
+        "curvy"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/low-cut-blouse-bedroom-selfie--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Curvy adult woman in a burgundy deep-V blouse taking a bedroom mirror selfie",
+      "prompt": "Create a photorealistic vertical bedroom mirror selfie of an unmistakably adult woman in her early 30s with a well-shaped curvy figure, wearing a fitted burgundy deep-V blouse that shows pronounced cleavage while fully covering nipples and areola, paired with dark high-waisted jeans. Give her direct eye contact and a relaxed, confident expression. Include an unmade bed, soft lamp light, ordinary bedroom clutter, subtle mirror dust, imperfect phone framing, natural skin texture, realistic fabric tension, and mild phone-camera grain. Keep it sensual, candid, and believable rather than glossy. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Adult subject",
+          "example": "curvy brunette woman in her early 30s"
+        },
+        {
+          "name": "blouse",
+          "label": "Low-cut blouse",
+          "example": "fitted burgundy deep-V blouse"
+        },
+        {
+          "name": "bedroom",
+          "label": "Bedroom setting",
+          "example": "unmade bed with warm bedside lamp"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "A confident mirror selfie with a fitted deep-V blouse and lived-in bedroom realism.",
+      "demoPrompt": "Create a photorealistic vertical bedroom mirror selfie of an unmistakably adult woman in her early 30s with a well-shaped curvy figure, wearing a fitted burgundy deep-V blouse that shows pronounced cleavage while fully covering nipples and areola, paired with dark high-waisted jeans. Give her direct eye contact and a relaxed, confident expression. Include an unmade bed, soft lamp light, ordinary bedroom clutter, subtle mirror dust, imperfect phone framing, natural skin texture, realistic fabric tension, and mild phone-camera grain. Keep it sensual, candid, and believable rather than glossy. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, readable text, logos, or watermarks.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "curvy-girl-next-door-doorway",
+      "title": "Curvy Girl-Next-Door Doorway Portrait",
+      "description": "A warm, natural doorway portrait with a deep wrap neckline and approachable eye contact.",
+      "category": "Portrait",
+      "nsfw": true,
+      "tags": [
+        "girl next door",
+        "natural portrait",
+        "deep neckline",
+        "curvy"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/curvy-girl-next-door-doorway--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Adult brunette woman in a cream wrap top standing in a sunlit bedroom doorway",
+      "prompt": "Create a hyper-realistic vertical portrait of an unmistakably adult woman aged 35 to 45 with long brown hair, a naturally curvy figure, minimal makeup, faint freckles, and a warm flirtatious half-smile. She stands in a bedroom doorway wearing a fitted cream ribbed wrap top with a deep V neckline and visible cleavage while fully covering nipples and areola. Use late-afternoon window light, direct eye contact, slightly imperfect candid framing, natural pores and fine lines, soft background blur, and restrained film grain. The mood is approachable girl-next-door sensuality, not a polished fashion campaign. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Adult subject",
+          "example": "42-year-old brunette with freckles"
+        },
+        {
+          "name": "top",
+          "label": "Deep-neckline top",
+          "example": "cream ribbed wrap top"
+        },
+        {
+          "name": "light",
+          "label": "Home lighting",
+          "example": "warm late-afternoon window light"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "A warm, natural doorway portrait with a deep wrap neckline and approachable eye contact.",
+      "demoPrompt": "Create a hyper-realistic vertical portrait of an unmistakably adult woman aged 35 to 45 with long brown hair, a naturally curvy figure, minimal makeup, faint freckles, and a warm flirtatious half-smile. She stands in a bedroom doorway wearing a fitted cream ribbed wrap top with a deep V neckline and visible cleavage while fully covering nipples and areola. Use late-afternoon window light, direct eye contact, slightly imperfect candid framing, natural pores and fine lines, soft background blur, and restrained film grain. The mood is approachable girl-next-door sensuality, not a polished fashion campaign. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, readable text, logos, or watermarks.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "car-show-fitted-dress-portrait",
+      "title": "Car Show Fitted Dress Portrait",
+      "description": "A full-body event portrait pairing a body-skimming dress with glossy automotive bokeh.",
+      "category": "Portrait",
+      "nsfw": true,
+      "tags": [
+        "car show",
+        "full body",
+        "fitted dress",
+        "automotive"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/car-show-fitted-dress-portrait--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Adult woman in a fitted blue dress posing beside a white sports car at an auto show",
+      "prompt": "Create a hyper-realistic vertical full-body portrait at a busy indoor car show, photographed like a Canon EOS R5 with an 85mm lens. Show an unmistakably adult woman around age 30 with a shapely hourglass figure wearing a fitted cobalt-blue sleeveless dress with a low square neckline and visible cleavage while remaining fully covered. Pose her naturally beside a glossy white sports car with direct confident eye contact. Use bright exhibition lighting, dewy natural skin, crisp subject detail, realistic proportions, shallow depth of field, and soft car-show bokeh. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, branded signage, readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Adult subject",
+          "example": "confident dark-haired woman around age 30"
+        },
+        {
+          "name": "dress",
+          "label": "Fitted dress",
+          "example": "cobalt-blue square-neck dress"
+        },
+        {
+          "name": "car",
+          "label": "Display car",
+          "example": "glossy white sports coupe"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "A full-body event portrait pairing a body-skimming dress with glossy automotive bokeh.",
+      "demoPrompt": "Create a hyper-realistic vertical full-body portrait at a busy indoor car show, photographed like a Canon EOS R5 with an 85mm lens. Show an unmistakably adult woman around age 30 with a shapely hourglass figure wearing a fitted cobalt-blue sleeveless dress with a low square neckline and visible cleavage while remaining fully covered. Pose her naturally beside a glossy white sports car with direct confident eye contact. Use bright exhibition lighting, dewy natural skin, crisp subject detail, realistic proportions, shallow depth of field, and soft car-show bokeh. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, branded signage, readable text, logos, or watermarks.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "garage-low-cut-top-portrait",
+      "title": "Garage Low-Cut Top Portrait",
+      "description": "A grounded automotive portrait with a scoop-neck knit and warm workshop light.",
+      "category": "Portrait",
+      "nsfw": true,
+      "tags": [
+        "garage",
+        "automotive",
+        "low-cut top",
+        "curvy"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/garage-low-cut-top-portrait--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Adult brunette woman in a rust scoop-neck top beside a vintage green car",
+      "prompt": "Create a photorealistic vertical three-quarter portrait in a modest home garage. Show an unmistakably adult woman in her mid-30s with a well-shaped curvy figure, wavy dark hair, and a calm direct gaze, wearing a fitted rust-red scoop-neck knit top with pronounced cleavage while fully covering nipples and areola, plus high-waisted black jeans and worn boots. Place one hand casually on a weathered vintage green coupe. Use warm sunset backlight through the garage door, realistic skin texture, natural fabric folds, workshop clutter, subtle film grain, and shallow depth of field. Keep the mood sensual but grounded and everyday. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Adult subject",
+          "example": "curvy woman in her mid-30s with wavy dark hair"
+        },
+        {
+          "name": "top",
+          "label": "Low-cut top",
+          "example": "rust-red fitted scoop-neck knit"
+        },
+        {
+          "name": "vehicle",
+          "label": "Garage vehicle",
+          "example": "weathered vintage green coupe"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "A grounded automotive portrait with a scoop-neck knit and warm workshop light.",
+      "demoPrompt": "Create a photorealistic vertical three-quarter portrait in a modest home garage. Show an unmistakably adult woman in her mid-30s with a well-shaped curvy figure, wavy dark hair, and a calm direct gaze, wearing a fitted rust-red scoop-neck knit top with pronounced cleavage while fully covering nipples and areola, plus high-waisted black jeans and worn boots. Place one hand casually on a weathered vintage green coupe. Use warm sunset backlight through the garage door, realistic skin texture, natural fabric folds, workshop clutter, subtle film grain, and shallow depth of field. Keep the mood sensual but grounded and everyday. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, readable text, logos, or watermarks.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "retro-noir-diner-booth",
+      "title": "Retro-Noir Diner Booth",
+      "description": "A cinematic diner portrait with satin, rain-streaked windows, and tactile noir atmosphere.",
+      "category": "Portrait",
+      "nsfw": true,
+      "tags": [
+        "retro noir",
+        "diner",
+        "sensual",
+        "cinematic portrait"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/retro-noir-diner-booth--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Adult woman in a black satin blouse seated in a rain-lit retro diner booth",
+      "prompt": "Create a cinematic editorial portrait with retro-noir diner aesthetics, high-fashion allure, and tactile sensuality. Show an unmistakably adult woman in her mid-30s with a shapely figure and dark waved hair, seated in a red vinyl booth and holding an intense direct gaze. Dress her in a black satin blouse with a plunging neckline and visible cleavage while fully covering nipples and areola, paired with a deep-red pencil skirt. Use teal window light, warm practical lamps, rain-streaked glass, chrome reflections, subtle 35mm grain, rich fabric texture, shallow depth of field, and moody underexposure. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Adult subject",
+          "example": "dark-haired woman in her mid-30s"
+        },
+        {
+          "name": "wardrobe",
+          "label": "Noir wardrobe",
+          "example": "plunging black satin blouse and red pencil skirt"
+        },
+        {
+          "name": "diner_light",
+          "label": "Diner lighting",
+          "example": "teal rain light and amber practical lamps"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "A cinematic diner portrait with satin, rain-streaked windows, and tactile noir atmosphere.",
+      "demoPrompt": "Create a cinematic editorial portrait with retro-noir diner aesthetics, high-fashion allure, and tactile sensuality. Show an unmistakably adult woman in her mid-30s with a shapely figure and dark waved hair, seated in a red vinyl booth and holding an intense direct gaze. Dress her in a black satin blouse with a plunging neckline and visible cleavage while fully covering nipples and areola, paired with a deep-red pencil skirt. Use teal window light, warm practical lamps, rain-streaked glass, chrome reflections, subtle 35mm grain, rich fabric texture, shallow depth of field, and moody underexposure. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, readable text, logos, or watermarks.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "late-night-diner-counter-allure",
+      "title": "Late-Night Diner Counter Allure",
+      "description": "A warm late-night counter portrait with a deep wrap dress and knowing smile.",
+      "category": "Portrait",
+      "nsfw": true,
+      "tags": [
+        "diner",
+        "night",
+        "wrap dress",
+        "sensual portrait"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/late-night-diner-counter-allure--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Adult woman in an emerald wrap dress holding coffee at a late-night diner counter",
+      "prompt": "Create a hyper-realistic vertical portrait in a nearly empty late-night diner. Show an unmistakably adult woman aged 38 to 45 with a full curvy figure, shoulder-length chestnut hair, light natural makeup, and a knowing friendly smile. She stands at the chrome counter holding a plain coffee mug, wearing a fitted emerald-green wrap dress with a deep V neckline and pronounced cleavage while fully covering nipples and areola. Use amber pendant lights, red neon spill through rainy windows, soft reflections, realistic mature skin texture, gentle film grain, and a candid waist-up composition. Keep it sensual, confident, and approachable. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Adult subject",
+          "example": "42-year-old chestnut-haired woman"
+        },
+        {
+          "name": "dress",
+          "label": "Wrap dress",
+          "example": "fitted emerald deep-V wrap dress"
+        },
+        {
+          "name": "night_light",
+          "label": "Night lighting",
+          "example": "amber pendants and red neon rain light"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "A warm late-night counter portrait with a deep wrap dress and knowing smile.",
+      "demoPrompt": "Create a hyper-realistic vertical portrait in a nearly empty late-night diner. Show an unmistakably adult woman aged 38 to 45 with a full curvy figure, shoulder-length chestnut hair, light natural makeup, and a knowing friendly smile. She stands at the chrome counter holding a plain coffee mug, wearing a fitted emerald-green wrap dress with a deep V neckline and pronounced cleavage while fully covering nipples and areola. Use amber pendant lights, red neon spill through rainy windows, soft reflections, realistic mature skin texture, gentle film grain, and a candid waist-up composition. Keep it sensual, confident, and approachable. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, readable text, logos, or watermarks.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x2048",
+        "aspect_ratio": "3:4",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "playful-lingerie-bedroom-mirror-selfie",
+      "title": "Playful Lingerie Bedroom Mirror Selfie",
+      "description": "A cheeky mirror selfie leaning over a dresser in a realistically messy bedroom.",
+      "category": "Portrait",
+      "nsfw": true,
+      "tags": [
+        "mirror selfie",
+        "bedroom",
+        "lingerie",
+        "playful"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/playful-lingerie-bedroom-mirror-selfie--generated-2026-07-25--schema-v1.1.0.webp",
+      "imageAlt": "Adult blonde woman in black lace lingerie taking a playful mirror selfie in a messy bedroom",
+      "prompt": "Create an original hyper-realistic square mirror selfie with no resemblance to any specific real person. Show an unmistakably adult woman in her mid-20s with tousled shoulder-length hair in a messy, sunlit bedroom. She holds an unbranded smartphone in one hand and leans close toward a large slightly worn dresser mirror, supporting herself with her other palm on the wooden counter. Dress her in a matching floral-lace bra and thong that remain opaque where required, fully covering nipples, areola, and genitals. Give her a shapely adult figure and a playful teasing expression, smiling while sticking out her tongue toward the phone screen. Frame her from head to upper thighs in the reflection with a rumpled bed, scattered clothes, wooden furniture, small toiletries, plain walls, and soft daylight. Use realistic phone-camera quality, mirror smudges, natural skin texture, flyaway hair, mild compression, and slightly uneven exposure. Keep it spontaneous, cheeky, sensual, and lived-in rather than editorial. No nudity, exposed nipples or areola, exposed genitals, transparent lingerie, explicit sexual activity, juvenile appearance, readable text, logos, watermarks, duplicated limbs, or distorted hands.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Adult subject",
+          "example": "25-year-old blonde woman with tousled hair"
+        },
+        {
+          "name": "lingerie",
+          "label": "Lingerie",
+          "example": "opaque black floral-lace bra and thong"
+        },
+        {
+          "name": "bedroom",
+          "label": "Bedroom details",
+          "example": "rumpled bed, scattered clothes, and worn dresser mirror"
+        }
+      ],
+      "suggestedModel": "bytedance/seedream-v5.0-pro",
+      "suggestedModelLabel": "Seedream 5.0 Pro",
+      "generatedAt": "2026-07-25",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "A cheeky mirror selfie leaning over a dresser in a realistically messy bedroom.",
+      "demoPrompt": "Create an original hyper-realistic square mirror selfie with no resemblance to any specific real person. Show an unmistakably adult woman in her mid-20s with tousled shoulder-length hair in a messy, sunlit bedroom. She holds an unbranded smartphone in one hand and leans close toward a large slightly worn dresser mirror, supporting herself with her other palm on the wooden counter. Dress her in a matching floral-lace bra and thong that remain opaque where required, fully covering nipples, areola, and genitals. Give her a shapely adult figure and a playful teasing expression, smiling while sticking out her tongue toward the phone screen. Frame her from head to upper thighs in the reflection with a rumpled bed, scattered clothes, wooden furniture, small toiletries, plain walls, and soft daylight. Use realistic phone-camera quality, mirror smudges, natural skin texture, flyaway hair, mild compression, and slightly uneven exposure. Keep it spontaneous, cheeky, sensual, and lived-in rather than editorial. No nudity, exposed nipples or areola, exposed genitals, transparent lingerie, explicit sexual activity, juvenile appearance, readable text, logos, watermarks, duplicated limbs, or distorted hands.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "2048x2048",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      },
+      "exampleSchemaVersion": "1.1.0"
     }
   ]
 }

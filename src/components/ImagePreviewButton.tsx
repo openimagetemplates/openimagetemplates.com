@@ -2,6 +2,7 @@
 
 import { X } from "lucide-react";
 import { useState } from "react";
+import { SensitiveContentBoundary } from "@/components/SensitiveContentBoundary";
 import { TemplatePreviewImage } from "@/components/TemplatePreviewImage";
 
 type ImagePreviewButtonProps = {
@@ -14,6 +15,7 @@ type ImagePreviewButtonProps = {
   imageHeight?: number;
   loading?: "eager" | "lazy";
   fetchPriority?: "high" | "low" | "auto";
+  sensitive?: boolean;
 };
 
 export function ImagePreviewButton({
@@ -26,22 +28,25 @@ export function ImagePreviewButton({
   imageHeight = 1024,
   loading = "lazy",
   fetchPriority = "auto",
+  sensitive = false,
 }: ImagePreviewButtonProps) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <button type="button" onClick={() => setOpen(true)} className={`block w-full text-left ${className}`} aria-label={`Open ${label} preview`}>
-        <TemplatePreviewImage
-          src={src}
-          alt={alt}
-          className={imageClassName}
-          width={imageWidth}
-          height={imageHeight}
-          loading={loading}
-          fetchPriority={fetchPriority}
-        />
-      </button>
+      <SensitiveContentBoundary sensitive={sensitive} label={`${label} preview`}>
+        <button type="button" onClick={() => setOpen(true)} className={`block w-full text-left ${className}`} aria-label={`Open ${label} preview`}>
+          <TemplatePreviewImage
+            src={src}
+            alt={alt}
+            className={imageClassName}
+            width={imageWidth}
+            height={imageHeight}
+            loading={loading}
+            fetchPriority={fetchPriority}
+          />
+        </button>
+      </SensitiveContentBoundary>
       {open ? (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4 py-8 backdrop-blur-sm"
@@ -65,7 +70,9 @@ export function ImagePreviewButton({
                 <X size={18} aria-hidden="true" />
               </button>
             </div>
-            <TemplatePreviewImage src={src} alt={alt} className="max-h-[78vh] w-full bg-zinc-100 object-contain" fallbackClassName="min-h-[24rem]" />
+            <SensitiveContentBoundary sensitive={sensitive} label={`${label} full-size preview`}>
+              <TemplatePreviewImage src={src} alt={alt} className="max-h-[78vh] w-full bg-zinc-100 object-contain" fallbackClassName="min-h-[24rem]" />
+            </SensitiveContentBoundary>
           </div>
         </div>
       ) : null}

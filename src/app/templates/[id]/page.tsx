@@ -23,6 +23,9 @@ export async function generateMetadata({ params }: TemplatePageProps): Promise<M
   const { id } = await params;
   const template = getTemplateById(id);
   if (!template) return {};
+  const socialPreviewImage = template.nsfw
+    ? absoluteUrl("/opengraph-image.png")
+    : template.image;
 
   return {
     title: template.title,
@@ -47,8 +50,8 @@ export async function generateMetadata({ params }: TemplatePageProps): Promise<M
       type: "article",
       images: [
         {
-          url: template.image,
-          alt: template.imageAlt,
+          url: socialPreviewImage,
+          alt: template.nsfw ? "Open Image Templates" : template.imageAlt,
         },
       ],
     },
@@ -56,7 +59,7 @@ export async function generateMetadata({ params }: TemplatePageProps): Promise<M
       card: "summary_large_image",
       title: template.title,
       description: template.description,
-      images: [template.image],
+      images: [socialPreviewImage],
     },
   };
 }
@@ -104,12 +107,16 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
             name: template.title,
             description: template.description,
             url: templateUrl(template),
-            image: {
-              "@type": "ImageObject",
-              url: template.image,
-              caption: template.imageAlt,
-              representativeOfPage: true,
-            },
+            ...(template.nsfw
+              ? {}
+              : {
+                  image: {
+                    "@type": "ImageObject",
+                    url: template.image,
+                    caption: template.imageAlt,
+                    representativeOfPage: true,
+                  },
+                }),
             dateCreated: template.generatedAt,
             keywords: template.tags.join(", "),
             genre: template.category,
@@ -144,6 +151,7 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
               imageHeight={1024}
               loading="eager"
               fetchPriority="high"
+              sensitive={template.nsfw}
             />
           </div>
           <TemplateCreator baseTemplate={template} />
@@ -159,6 +167,11 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
             <span className="rounded-full border border-black/10 bg-white px-3 py-1 text-xs font-medium text-zinc-700">
               Suggested model: {template.suggestedModel}
             </span>
+            {template.nsfw ? (
+              <span className="rounded-full bg-zinc-950 px-3 py-1 text-xs font-semibold text-white">
+                18+ sensitive
+              </span>
+            ) : null}
           </div>
           <h1 className="mt-5 text-4xl font-semibold tracking-tight text-zinc-950">{template.title}</h1>
           <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-600">{template.description}</p>

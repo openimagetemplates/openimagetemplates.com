@@ -3,7 +3,7 @@ import { getTemplateBuilderControls } from "@/lib/prompt-builder";
 import { TEMPLATE_ASSET_BASE_URL, TEMPLATE_SITE_URL } from "@/lib/template-urls";
 
 export const TEMPLATE_STANDARD = "open-image-template";
-export const TEMPLATE_SCHEMA_VERSION = "1.1.0";
+export const TEMPLATE_SCHEMA_VERSION = "1.2.0";
 
 export type TemplateCategory =
   | "Portrait"
@@ -33,6 +33,7 @@ export type ImageTemplate = {
   title: string;
   description: string;
   category: TemplateCategory;
+  nsfw: boolean;
   tags: string[];
   image: string;
   imageAlt: string;
@@ -54,8 +55,9 @@ export type ImageTemplate = {
   license: string;
 };
 
-type CatalogTemplate = Omit<ImageTemplate, "category" | "schemaVersion"> & {
+type CatalogTemplate = Omit<ImageTemplate, "category" | "schemaVersion" | "nsfw"> & {
   category: string;
+  nsfw?: boolean;
 };
 
 type TemplateCatalog = {
@@ -80,6 +82,7 @@ const canonicalTemplateCatalog = templateCatalog as TemplateCatalog;
 export const templates: ImageTemplate[] = canonicalTemplateCatalog.templates.map((template) => ({
   ...template,
   category: toTemplateCategory(template.category),
+  nsfw: template.nsfw === true,
   schemaVersion: TEMPLATE_SCHEMA_VERSION,
 }));
 
@@ -90,6 +93,7 @@ export const categories: Array<"All" | TemplateCategory> = categoryOrder.filter(
 
 type TemplateSelectionOptions = {
   excludeIds?: Iterable<string>;
+  includeNsfw?: boolean;
   startCategoryIndex?: number;
   startTemplateIndex?: number;
 };
@@ -102,6 +106,9 @@ export function selectDiverseTemplates(
   options: TemplateSelectionOptions = {},
 ) {
   const excludedIds = new Set(options.excludeIds ?? []);
+  const eligibleTemplates = options.includeNsfw
+    ? sourceTemplates
+    : sourceTemplates.filter((template) => !template.nsfw);
   const selectableCategories = categoryOrder.filter((category): category is TemplateCategory => category !== "All");
   const categoryOffset = normalizeOffset(options.startCategoryIndex ?? 0, selectableCategories.length);
   const templateOffset = Math.max(0, options.startTemplateIndex ?? 0);
@@ -112,13 +119,13 @@ export function selectDiverseTemplates(
   const grouped = new Map(
     orderedCategories.map((category) => [
       category,
-      sourceTemplates.filter((template) => template.category === category && !excludedIds.has(template.id)),
+      eligibleTemplates.filter((template) => template.category === category && !excludedIds.has(template.id)),
     ]),
   );
   const selected: ImageTemplate[] = [];
   const seenIds = new Set<string>();
 
-  for (let round = 0; selected.length < limit && round < sourceTemplates.length; round += 1) {
+  for (let round = 0; selected.length < limit && round < eligibleTemplates.length; round += 1) {
     let addedThisRound = false;
 
     for (const category of orderedCategories) {
@@ -139,7 +146,7 @@ export function selectDiverseTemplates(
 
   if (selected.length >= limit) return selected;
 
-  for (const template of sourceTemplates) {
+  for (const template of eligibleTemplates) {
     if (excludedIds.has(template.id) || seenIds.has(template.id)) continue;
     selected.push(template);
     seenIds.add(template.id);
@@ -164,6 +171,7 @@ export function toPortableTemplateJson(template: ImageTemplate) {
     tags: template.tags,
     canonical_url: `${TEMPLATE_SITE_URL}/templates/${template.id}`,
     summary_prompt: template.simplePrompt,
+    nsfw: template.nsfw,
     prompt: template.prompt,
     demo_prompt: template.demoPrompt,
     negative_prompt: template.negativePrompt,

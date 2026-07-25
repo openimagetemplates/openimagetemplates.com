@@ -673,13 +673,14 @@ export function getBlogPostBody(post: BlogPost) {
 }
 
 export function getBlogPostTemplates(post: BlogPost, limit = 4): ImageTemplate[] {
+  const safeTemplates = templates.filter((template) => !template.nsfw);
   const hints = blogTemplateHints[post.slug] ?? [];
   const selected: ImageTemplate[] = [];
   const selectedIds = new Set<string>();
 
   for (const hint of hints) {
-    const direct = templates.find((template) => template.id === hint);
-    const fuzzy = direct ?? templates.find((template) => {
+    const direct = safeTemplates.find((template) => template.id === hint);
+    const fuzzy = direct ?? safeTemplates.find((template) => {
       const haystack = [template.id, template.title, template.category, template.tags.join(" ")].join(" ").toLowerCase();
       return haystack.includes(hint.toLowerCase());
     });
@@ -691,7 +692,7 @@ export function getBlogPostTemplates(post: BlogPost, limit = 4): ImageTemplate[]
   }
 
   const topic = [post.title, post.description, post.keywords.join(" ")].join(" ").toLowerCase();
-  const scored = templates
+  const scored = safeTemplates
     .map((template) => {
       const words = [template.category, ...template.tags, ...template.title.split(/\s+/)].map((word) => word.toLowerCase());
       const score = words.reduce((sum, word) => sum + (word.length > 2 && topic.includes(word) ? 1 : 0), 0);
@@ -706,7 +707,7 @@ export function getBlogPostTemplates(post: BlogPost, limit = 4): ImageTemplate[]
     if (selected.length >= limit) return selected;
   }
 
-  for (const template of templates) {
+  for (const template of safeTemplates) {
     if (selectedIds.has(template.id)) continue;
     selected.push(template);
     if (selected.length >= limit) break;
