@@ -1,7 +1,8 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import { Check, ChevronDown, Copy, ImageIcon, Loader2 } from "lucide-react";
+import { Check, ChevronDown, Copy, ImageIcon, Loader2, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import { NanoGptMark } from "@/components/NanoGptMark";
 import { TemplateLookControls } from "@/components/TemplateLookControls";
 import { templateEventProperties, trackEngagement } from "@/lib/analytics-events";
 import {
@@ -27,6 +28,20 @@ type TemplateImageGenerationResponse = {
 type TemplateImageCostEstimateResponse = {
   cost?: unknown;
 };
+
+type NanoGptAuthStatusResponse = {
+  connected?: unknown;
+};
+
+async function getNanoGptConnectionStatus() {
+  try {
+    const response = await fetch("/api/nanogpt-auth/status", { cache: "no-store" });
+    const data = (await response.json().catch(() => ({}))) as NanoGptAuthStatusResponse;
+    return response.ok && Boolean(data.connected);
+  } catch {
+    return false;
+  }
+}
 
 const nanoGptSellingPoints = [
   {
@@ -56,11 +71,42 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
   const [imageGenerationError, setImageGenerationError] = useState("");
   const [estimatedImageCost, setEstimatedImageCost] = useState<number | null>(null);
   const [costEstimateLoading, setCostEstimateLoading] = useState(false);
+  const [isNanoGptConnected, setIsNanoGptConnected] = useState<boolean | null>(null);
+  const [nanoGptSignInOpen, setNanoGptSignInOpen] = useState(false);
 
   const adjustedPrompt = useMemo(() => compileTemplatePrompt(template, state), [template, state]);
   const analyticsProperties = useMemo(() => templateEventProperties(template), [template]);
   const generatedFromCurrentPrompt = Boolean(generatedImageUrl && generatedPrompt === adjustedPrompt);
   const estimatedCostLabel = estimatedImageCost === null ? "" : `$${estimatedImageCost.toFixed(4)}`;
+
+  useEffect(() => {
+    let active = true;
+
+    getNanoGptConnectionStatus().then((connected) => {
+      if (active) setIsNanoGptConnected(connected);
+    });
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!nanoGptSignInOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") setNanoGptSignInOpen(false);
+    }
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [nanoGptSignInOpen]);
 
   useEffect(() => {
     const prompt = adjustedPrompt.trim();
@@ -194,6 +240,18 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
       return;
     }
 
+    let connected = isNanoGptConnected;
+    if (connected === null) {
+      connected = await getNanoGptConnectionStatus();
+      setIsNanoGptConnected(connected);
+    }
+    if (!connected) {
+      setImageGenerationError("");
+      setNanoGptSignInOpen(true);
+      trackEngagement("open_nanogpt_sign_in", analyticsProperties);
+      return;
+    }
+
     setImageGenerating(true);
     setImageGenerationError("");
     try {
@@ -206,6 +264,15 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
         }),
       });
       const data = (await response.json().catch(() => ({}))) as TemplateImageGenerationResponse;
+      if (response.status === 401) {
+        setIsNanoGptConnected(false);
+        setNanoGptSignInOpen(true);
+        trackEngagement("open_nanogpt_sign_in", {
+          ...analyticsProperties,
+          reason: "session_expired",
+        });
+        return;
+      }
       if (!response.ok || typeof data.imageUrl !== "string") {
         throw new Error(typeof data.message === "string" ? data.message : "Could not generate the image.");
       }
@@ -226,7 +293,14 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
     }
   }
 
+  function signInWithNanoGpt() {
+    trackEngagement("start_nanogpt_sign_in", analyticsProperties);
+    const returnTo = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+    window.location.href = `/api/nanogpt-auth/start?returnTo=${encodeURIComponent(returnTo)}`;
+  }
+
   return (
+    <>
       <section className="mt-10 rounded-[8px] border border-black/10 bg-white p-5 shadow-sm sm:p-6">
         <div>
           <div>
@@ -384,6 +458,86 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
           </div>
         </div>
       ) : null}
-    </section>
+      </section>
+
+      {nanoGptSignInOpen ? (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 py-6 backdrop-blur-sm"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="nanogpt-sign-in-title"
+          aria-describedby="nanogpt-sign-in-description"
+          onClick={() => setNanoGptSignInOpen(false)}
+        >
+          <div
+            className="w-full max-w-lg overflow-hidden rounded-[16px] bg-white shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-start justify-between gap-4 px-5 pb-3 pt-5 sm:px-6 sm:pt-6">
+              <div className="flex min-w-0 items-center gap-3">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-zinc-950">
+                  <NanoGptMark className="h-7 w-7" />
+                </span>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500">Image generation</p>
+                  <h2 id="nanogpt-sign-in-title" className="mt-1 text-xl font-semibold tracking-tight text-zinc-950">
+                    Generate with NanoGPT
+                  </h2>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setNanoGptSignInOpen(false)}
+                className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-black/10 bg-white text-zinc-700 transition hover:bg-zinc-50 hover:text-zinc-950"
+                aria-label="Close NanoGPT sign-in"
+                autoFocus
+              >
+                <X size={18} aria-hidden="true" />
+              </button>
+            </div>
+
+            <div className="px-5 pb-5 sm:px-6">
+              <p id="nanogpt-sign-in-description" className="text-sm leading-6 text-zinc-600">
+                NanoGPT connects this template to an image model. It sends the prompt you built, generates one image,
+                and brings the result back to this page.
+              </p>
+
+              <ol className="mt-5 grid gap-3">
+                {[
+                  ["1", "Sign in", "Connect your NanoGPT account securely."],
+                  ["2", "Review the cost", "See the estimated price before you generate."],
+                  ["3", "Get your image", "The finished image appears here in the template builder."],
+                ].map(([number, title, body]) => (
+                  <li key={number} className="flex gap-3 rounded-[10px] bg-zinc-50 p-3">
+                    <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-white text-xs font-bold text-zinc-950 ring-1 ring-black/10">
+                      {number}
+                    </span>
+                    <span>
+                      <span className="block text-sm font-semibold text-zinc-950">{title}</span>
+                      <span className="mt-0.5 block text-sm leading-5 text-zinc-600">{body}</span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+
+              <p className="mt-4 text-xs leading-5 text-zinc-500">
+                There is no Open Image Templates subscription. Generation charges are handled by your NanoGPT account.
+              </p>
+            </div>
+
+            <div className="border-t border-black/10 bg-zinc-50 p-4 sm:px-6">
+              <button
+                type="button"
+                onClick={signInWithNanoGpt}
+                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-zinc-800"
+              >
+                <NanoGptMark />
+                Sign in with NanoGPT
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
+    </>
   );
 }

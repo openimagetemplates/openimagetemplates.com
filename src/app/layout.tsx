@@ -4,10 +4,7 @@ import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
 import { NanoGptAuthButton } from "@/components/NanoGptAuthButton";
 import { OpenImageTemplatesLogo } from "@/components/OpenImageTemplatesLogo";
-import {
-  SensitiveContentProvider,
-  SensitiveContentToggle,
-} from "@/components/SensitiveContentProvider";
+import { SensitiveContentProvider } from "@/components/SensitiveContentProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -148,7 +145,6 @@ export default function RootLayout({
                 ))}
               </nav>
               <div className="flex items-center gap-2">
-                <SensitiveContentToggle />
                 <NanoGptAuthButton />
               </div>
             </div>

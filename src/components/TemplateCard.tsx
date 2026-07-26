@@ -1,11 +1,9 @@
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
 import { categoryPath, tagPath } from "@/lib/seo";
 import type { ImageTemplate } from "@/lib/templates";
 import { SensitiveContentBoundary } from "@/components/SensitiveContentBoundary";
 import { TemplatePreviewImage } from "@/components/TemplatePreviewImage";
-import { TrackedExternalLink } from "@/components/TrackedExternalLink";
 
 type TemplateCardProps = {
   template: ImageTemplate;
@@ -63,22 +61,14 @@ export function TemplateCard({ template, priority = false }: TemplateCardProps) 
           ))}
         </div>
         <div>
-          <TrackedExternalLink
-            href={getNanoGptGenerateUrl(template)}
-            eventName="modify_template"
-            eventProperties={{
-              template_id: template.id,
-              category: template.category,
-              suggested_model: template.suggestedModel,
-            }}
+          <Link
+            href={`/templates/${template.id}`}
             className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-3 text-sm font-medium text-white transition hover:bg-zinc-800"
-            target="_blank"
-            rel="noreferrer"
           >
             <Sparkles size={15} aria-hidden="true" />
             Modify
-            <ArrowUpRight size={14} aria-hidden="true" />
-          </TrackedExternalLink>
+            <ArrowRight size={14} aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </article>
