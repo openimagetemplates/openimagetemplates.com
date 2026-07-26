@@ -19,7 +19,7 @@ export function TemplateCard({ template, priority = false }: TemplateCardProps) 
           label={`${template.title} preview`}
         >
           <Link href={`/templates/${template.id}`} className="block">
-            <span className="block aspect-[3/1] overflow-hidden bg-zinc-100 sm:aspect-[4/3]">
+            <span className="block aspect-[4/3] overflow-hidden bg-zinc-100">
               <TemplatePreviewImage
                 src={template.image}
                 alt={template.imageAlt}
