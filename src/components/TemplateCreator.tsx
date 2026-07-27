@@ -5,6 +5,7 @@ import { ArrowUpRight, Braces, Check, ChevronDown, Clock3, Copy, ExternalLink, I
 import Link from "next/link";
 import type React from "react";
 import { useMemo, useRef, useState } from "react";
+import { GeneratedImageDownload } from "@/components/GeneratedImageDownload";
 import { SensitiveContentBoundary } from "@/components/SensitiveContentBoundary";
 import { trackEngagement } from "@/lib/analytics-events";
 import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
@@ -663,6 +664,18 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                       )}
                     </div>
                     {generatedImageMeta ? <p className="mt-3 text-xs leading-5 text-zinc-500">{generatedImageMeta}</p> : null}
+                    {generatedImageMeta && draft.image ? (
+                      <div className="mt-3 overflow-hidden rounded-[8px] border border-amber-200">
+                        <GeneratedImageDownload
+                          imageUrl={draft.image}
+                          fileName={`${previewTemplate.id}-generated`}
+                          eventName="download_generated_template_preview"
+                          eventProperties={creatorEventProperties({
+                            template_id: previewTemplate.id,
+                          })}
+                        />
+                      </div>
+                    ) : null}
                     {imageGenerationError ? (
                       <p className="mt-3 rounded-[8px] bg-red-50 p-3 text-sm leading-6 text-red-700">{imageGenerationError}</p>
                     ) : null}

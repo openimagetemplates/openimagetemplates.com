@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Check, ChevronDown, Copy, ImageIcon, Loader2, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import { GeneratedImageDownload } from "@/components/GeneratedImageDownload";
 import { NanoGptMark } from "@/components/NanoGptMark";
 import { TemplateLookControls } from "@/components/TemplateLookControls";
 import { templateEventProperties, trackEngagement } from "@/lib/analytics-events";
@@ -449,6 +450,12 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
               </p>
             </div>
           </div>
+          <GeneratedImageDownload
+            imageUrl={generatedImageUrl}
+            fileName={`${template.id}-generated`}
+            eventName="download_generated_image"
+            eventProperties={analyticsProperties}
+          />
           <div className="bg-white p-3">
             <img
               src={generatedImageUrl}
