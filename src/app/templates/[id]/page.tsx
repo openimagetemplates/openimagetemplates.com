@@ -9,7 +9,13 @@ import { TemplateCreator } from "@/components/TemplateCreator";
 import { TemplatePromptBuilder } from "@/components/TemplatePromptBuilder";
 import { TemplateCollectionGrid } from "@/components/TemplateCollectionGrid";
 import { absoluteUrl, categoryPath, getRelatedTemplates, tagPath, templateJsonUrl, templatePath, templateUrl } from "@/lib/seo";
-import { getTemplateById, templates, toPortableTemplateJson } from "@/lib/templates";
+import {
+  getTemplateAspectRatio,
+  getTemplateById,
+  TEMPLATE_LICENSE_URL,
+  templates,
+  toPortableTemplateJson,
+} from "@/lib/templates";
 
 type TemplatePageProps = {
   params: Promise<{ id: string }>;
@@ -26,10 +32,11 @@ export async function generateMetadata({ params }: TemplatePageProps): Promise<M
   const socialPreviewImage = template.nsfw
     ? absoluteUrl("/opengraph-image.png")
     : template.image;
+  const description = `${template.description} Customize the visible AI image prompt, use the suggested ${template.suggestedModelLabel ?? template.suggestedModel} model, or fetch portable JSON.`;
 
   return {
-    title: template.title,
-    description: template.description,
+    title: `${template.title} AI Image Prompt Template`,
+    description,
     keywords: [
       template.title,
       `${template.category} AI image template`,
@@ -44,8 +51,8 @@ export async function generateMetadata({ params }: TemplatePageProps): Promise<M
       },
     },
     openGraph: {
-      title: template.title,
-      description: template.description,
+      title: `${template.title} AI Image Prompt Template`,
+      description,
       url: templateUrl(template),
       type: "article",
       images: [
@@ -57,8 +64,8 @@ export async function generateMetadata({ params }: TemplatePageProps): Promise<M
     },
     twitter: {
       card: "summary_large_image",
-      title: template.title,
-      description: template.description,
+      title: `${template.title} AI Image Prompt Template`,
+      description,
       images: [socialPreviewImage],
     },
   };
@@ -72,6 +79,14 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
   const templateJson = JSON.stringify(toPortableTemplateJson(template), null, 2);
   const templateJsonPathForPage = `/templates/${template.id}.json`;
   const relatedTemplates = getRelatedTemplates(template);
+  const pageUrl = templateUrl(template);
+  const imageDimensions = parseResolution(template.suggestedSettings.resolution);
+  const aspectRatio = getTemplateAspectRatio(template);
+  const quality =
+    typeof template.suggestedSettings.quality === "string" ? template.suggestedSettings.quality : undefined;
+  const imageInput = template.inputRequirements?.image;
+  const creatorUrl = absoluteUrl("/");
+  const imageObjectId = `${pageUrl}#example-image`;
 
   return (
     <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -103,33 +118,79 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
           },
           {
             "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": pageUrl,
+            name: `${template.title} AI Image Prompt Template`,
+            description: template.description,
+            url: pageUrl,
+            mainEntity: {
+              "@id": `${pageUrl}#template`,
+            },
+            ...(template.nsfw
+              ? {}
+              : {
+                  primaryImageOfPage: {
+                    "@id": imageObjectId,
+                  },
+                }),
+            isPartOf: {
+              "@type": "WebSite",
+              name: "Open Image Templates",
+              url: absoluteUrl("/"),
+            },
+          },
+          {
+            "@context": "https://schema.org",
             "@type": "CreativeWork",
+            "@id": `${pageUrl}#template`,
             name: template.title,
             description: template.description,
-            url: templateUrl(template),
+            url: pageUrl,
+            mainEntityOfPage: {
+              "@id": pageUrl,
+            },
             ...(template.nsfw
               ? {}
               : {
                   image: {
                     "@type": "ImageObject",
+                    "@id": imageObjectId,
                     url: template.image,
+                    contentUrl: template.image,
                     caption: template.imageAlt,
+                    ...(imageDimensions ?? {}),
                     representativeOfPage: true,
+                    license: TEMPLATE_LICENSE_URL,
+                    acquireLicensePage: absoluteUrl("/license"),
+                    creditText: `${template.title} example by ${template.creator}`,
+                    creator: {
+                      "@type": "Organization",
+                      name: template.creator,
+                      url: creatorUrl,
+                    },
                   },
                 }),
             dateCreated: template.generatedAt,
+            dateModified: template.generatedAt,
             keywords: template.tags.join(", "),
             genre: template.category,
+            about: template.tags,
             creator: {
               "@type": "Organization",
               name: template.creator,
+              url: creatorUrl,
             },
-            license: template.license,
+            license: TEMPLATE_LICENSE_URL,
+            acquireLicensePage: absoluteUrl("/license"),
+            isAccessibleForFree: true,
+            usageInfo: absoluteUrl("/license"),
             encoding: {
               "@type": "DigitalDocument",
+              "@id": `${pageUrl}#json`,
               name: `${template.title} JSON`,
               encodingFormat: "application/json",
               url: templateJsonUrl(template),
+              contentUrl: templateJsonUrl(template),
             },
             text: template.prompt,
           },
@@ -214,6 +275,83 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
         </div>
       </div>
 
+      <section className="mt-14 border-t border-black/10 pt-12">
+        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-600">Template guide</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-zinc-950">
+              About this AI image prompt template
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-zinc-600">
+              Use {template.title} when you need {template.description.toLowerCase()} The template keeps its core{" "}
+              {template.category.toLowerCase()} composition stable while exposing the details that are most useful to
+              change. It is especially relevant for {formatList(template.tags.slice(0, 4))}.
+            </p>
+            {template.sourceNotes ? (
+              <p className="mt-4 max-w-3xl text-sm leading-6 text-zinc-600">
+                <span className="font-semibold text-zinc-950">Source note:</span> {template.sourceNotes}
+              </p>
+            ) : null}
+          </div>
+          <div className="rounded-[8px] border border-black/10 bg-[#f5f3ef] p-6 shadow-sm">
+            <h2 className="text-xl font-semibold tracking-tight text-zinc-950">Recommended setup</h2>
+            <dl className="mt-5 grid grid-cols-2 gap-x-5 gap-y-4 text-sm">
+              <TemplateFact label="Model" value={template.suggestedModelLabel ?? template.suggestedModel} />
+              <TemplateFact label="Aspect ratio" value={aspectRatio ?? "Model default"} />
+              <TemplateFact
+                label="Resolution"
+                value={
+                  typeof template.suggestedSettings.resolution === "string"
+                    ? template.suggestedSettings.resolution
+                    : "Model default"
+                }
+              />
+              <TemplateFact label="Quality" value={quality ?? "Model default"} />
+              <TemplateFact
+                label="Image input"
+                value={imageInput ? (imageInput.required ? "Required" : "Optional") : "Not required"}
+              />
+              <TemplateFact label="Content tier" value={template.contentTier} />
+            </dl>
+            {imageInput ? <p className="mt-5 text-sm leading-6 text-zinc-600">{imageInput.description}</p> : null}
+          </div>
+        </div>
+
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          <section className="rounded-[8px] border border-black/10 bg-white p-6 shadow-sm">
+            <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">How to customize it</h2>
+            <p className="mt-3 text-sm leading-6 text-zinc-600">
+              Start with the editable slots below, then apply optional look controls. Change one visual layer at a
+              time when you want to compare results.
+            </p>
+            <dl className="mt-5 grid gap-4">
+              {template.slots.map((slot) => (
+                <div key={slot.name}>
+                  <dt className="text-sm font-semibold text-zinc-950">{slot.label}</dt>
+                  <dd className="mt-1 text-sm leading-6 text-zinc-600">Example: {slot.example}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+          <section className="rounded-[8px] border border-black/10 bg-white p-6 shadow-sm">
+            <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">Reuse and attribution</h2>
+            <p className="mt-3 text-sm leading-6 text-zinc-600">
+              Created by {template.creator} and published as {template.license}. You can copy the prompt, adapt the
+              structured template, or import its JSON into a compatible tool. Preserve the creator, license, canonical
+              URL, and schema version when republishing template data.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-4 text-sm font-semibold">
+              <Link href="/license" className="text-zinc-950 underline">
+                License and attribution
+              </Link>
+              <a href={templateJsonPathForPage} className="text-zinc-950 underline">
+                Portable template JSON
+              </a>
+            </div>
+          </section>
+        </div>
+      </section>
+
       <section className="mt-14">
         <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">Related templates</h2>
         <p className="mt-2 text-sm leading-6 text-zinc-600">
@@ -225,4 +363,29 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
       </section>
     </main>
   );
+}
+
+function TemplateFact({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-500">{label}</dt>
+      <dd className="mt-1 font-medium text-zinc-950">{value}</dd>
+    </div>
+  );
+}
+
+function parseResolution(value: unknown) {
+  if (typeof value !== "string") return undefined;
+  const match = value.match(/^(\d+)x(\d+)$/);
+  if (!match) return undefined;
+  return {
+    width: Number(match[1]),
+    height: Number(match[2]),
+  };
+}
+
+function formatList(values: string[]) {
+  if (values.length === 0) return "reusable AI image generation";
+  if (values.length === 1) return values[0];
+  return `${values.slice(0, -1).join(", ")}, and ${values.at(-1)}`;
 }

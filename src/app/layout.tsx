@@ -39,6 +39,14 @@ export const metadata: Metadata = {
   creator: "Open Image Templates",
   publisher: "Open Image Templates",
   category: "technology",
+  verification: {
+    ...(process.env.GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+      : {}),
+    ...(process.env.BING_SITE_VERIFICATION
+      ? { other: { "msvalidate.01": process.env.BING_SITE_VERIFICATION } }
+      : {}),
+  },
   manifest: "/manifest.webmanifest",
   alternates: {
     types: {
@@ -101,6 +109,7 @@ export const viewport: Viewport = {
 
 const navItems = [
   { href: "/templates", label: "Templates" },
+  { href: "/use-cases", label: "Use cases" },
   { href: "/schema", label: "Schema" },
   { href: "/docs", label: "Docs" },
   { href: "/blog", label: "Blog" },
@@ -157,6 +166,9 @@ export default function RootLayout({
                 <p>Open Image Templates is a free prompt-template standard and gallery, sponsored by NanoGPT.</p>
               </div>
               <div className="flex gap-4">
+                <Link href="/use-cases" className="font-medium text-zinc-950 hover:underline">
+                  Use cases
+                </Link>
                 <Link href="/schema" className="font-medium text-zinc-950 hover:underline">
                   Schema
                 </Link>
@@ -165,6 +177,9 @@ export default function RootLayout({
                 </Link>
                 <Link href="/blog" className="font-medium text-zinc-950 hover:underline">
                   Blog
+                </Link>
+                <Link href="/license" className="font-medium text-zinc-950 hover:underline">
+                  License
                 </Link>
                 <a href="https://nano-gpt.com" className="font-medium text-zinc-950 hover:underline">
                   NanoGPT

@@ -11,6 +11,7 @@
     "validate:catalog": "node scripts/validate-template-catalog.mjs",
     "cloudflare:deploy": "wrangler deploy --config cloudflare/oit-api/wrangler.toml",
     "check:schema": "node scripts/check-schema-version.mjs",
+    "indexnow:submit": "node scripts/submit-indexnow.mjs",
     "lint": "npm run check:schema && eslint"
   },
   "dependencies": {

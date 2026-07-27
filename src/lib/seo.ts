@@ -4,6 +4,7 @@ import { categories, templates } from "@/lib/templates";
 export const SITE_URL = "https://www.openimagetemplates.com";
 export const SITE_NAME = "Open Image Templates";
 export const SITE_DESCRIPTION = "A free, open standard and community gallery for reusable AI image generation templates.";
+export const MIN_INDEXABLE_TAG_TEMPLATES = 4;
 
 export function absoluteUrl(path: string) {
   return new URL(path, SITE_URL).toString();

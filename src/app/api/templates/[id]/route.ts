@@ -1,4 +1,4 @@
-import { PUBLIC_TEMPLATE_API_HEADERS } from "@/lib/public-template-api";
+import { buildPublicTemplateApiHeaders, PUBLIC_TEMPLATE_API_HEADERS } from "@/lib/public-template-api";
 import { getTemplateById, templates, toPortableTemplateJson } from "@/lib/templates";
 
 type TemplateJsonRouteProps = {
@@ -29,6 +29,17 @@ export async function GET(_request: Request, { params }: TemplateJsonRouteProps)
   }
 
   return Response.json(toPortableTemplateJson(template), {
+    headers: buildPublicTemplateApiHeaders({
+      canonicalPath: `/templates/${template.id}`,
+      entityTag: `${template.id}-${template.schemaVersion}-${template.generatedAt}`,
+      lastModified: template.generatedAt,
+    }),
+  });
+}
+
+export function OPTIONS() {
+  return new Response(null, {
+    status: 204,
     headers: PUBLIC_TEMPLATE_API_HEADERS,
   });
 }

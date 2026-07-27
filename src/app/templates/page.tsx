@@ -71,10 +71,10 @@ export default function TemplatesPage() {
             </p>
           </div>
           <Link
-            href="/templates/create"
-            className="inline-flex h-12 shrink-0 items-center justify-center rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800"
+            href="/use-cases"
+            className="inline-flex h-12 shrink-0 items-center justify-center rounded-full border border-black/10 bg-white px-5 text-sm font-semibold text-zinc-950 shadow-sm transition hover:bg-zinc-50"
           >
-            Create template
+            Browse by use case
           </Link>
         </div>
       </section>

@@ -17,8 +17,13 @@ export function GET() {
     "",
     "## Core URLs",
     `- Homepage: ${absoluteUrl("/")}`,
+    `- Compact discovery index: ${absoluteUrl("/templates-index.json")}`,
+    `- Search API: ${absoluteUrl("/api/templates/search")}`,
+    `- OpenAPI document: ${absoluteUrl("/openapi.json")}`,
     `- Full template catalogue JSON: ${absoluteUrl("/templates.json")}`,
+    `- Curated use cases: ${absoluteUrl("/use-cases")}`,
     `- Schema page: ${absoluteUrl("/schema")}`,
+    `- License and attribution: ${absoluteUrl("/license")}`,
     `- Blog: ${absoluteUrl("/blog")}`,
     `- Blog RSS: ${absoluteUrl("/rss.xml")}`,
     `- Image sitemap: ${absoluteUrl("/image-sitemap.xml")}`,
@@ -32,9 +37,12 @@ export function GET() {
     "- Prompts are visible and copyable; hidden prompts are not part of the standard.",
     "",
     "## AI Retrieval Guidance",
-    "- Prefer /templates.json when you need the complete catalogue.",
+    "- Prefer /api/templates/search for ranked discovery with q, category, tag, model, aspect_ratio, content_tier, limit, and offset filters.",
+    "- Prefer /templates-index.json when you need to scan the compact catalogue without downloading full prompts.",
     "- Prefer /templates/{template_id}.json when you need one exact template.",
+    "- Use /templates.json only when you explicitly need every full template record in one response.",
     "- Prefer /schema and /open-image-template.schema.json when explaining or implementing the standard.",
+    "- Sensitive templates are excluded from search unless include_nsfw=true is explicitly requested.",
     "- Cite the human template URL for users and the JSON URL for tools.",
     "",
     "## Categories",
@@ -59,6 +67,7 @@ export function GET() {
   return new Response(body, {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
+      "X-Robots-Tag": "noindex",
     },
   });
 }

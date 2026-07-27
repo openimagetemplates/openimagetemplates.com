@@ -55,6 +55,14 @@ Consumers can fetch the full public catalogue from:
 https://www.openimagetemplates.com/templates.json
 ```
 
+Agents should prefer the compact catalog or ranked search API:
+
+```text
+https://www.openimagetemplates.com/templates-index.json
+https://www.openimagetemplates.com/api/templates/search?q=product+photo&aspect_ratio=4%3A3
+https://www.openimagetemplates.com/openapi.json
+```
+
 Individual portable templates are available at:
 
 ```text
@@ -62,6 +70,43 @@ https://www.openimagetemplates.com/templates/{id}.json
 ```
 
 Both endpoints allow cross-origin reads and publish CDN cache headers. See [the NanoGPT integration contract](docs/nanogpt-integration.md) for the consumer mapping and release order.
+
+## Search and Agent Discovery
+
+Human template pages are the canonical URLs for search results and citations. Machine-readable JSON responses include
+HTTP links to the canonical page, JSON Schema, and OpenAPI document. Sensitive templates are excluded from search API
+results unless `include_nsfw=true` is explicitly requested.
+
+For retrieval:
+
+1. Search `/api/templates/search` or scan `/templates-index.json`.
+2. Choose a compact result.
+3. Fetch its `json_url` for the complete prompt and controls.
+4. Cite its `canonical_url` when presenting it to a user.
+
+`/llms.txt` provides a concise agent index and `/llms-full.txt` provides a large prompt-oriented reference.
+
+## IndexNow
+
+Production can expose an IndexNow key at `/{INDEXNOW_KEY}.txt`. Configure `INDEXNOW_KEY` in the deployment
+environment, deploy, and submit only URLs that were created, materially changed, or deleted:
+
+```bash
+INDEXNOW_KEY=your-key npm run indexnow:submit -- \
+  /templates/example-template \
+  /use-cases/ai-portrait-prompts
+```
+
+## Search Console Verification
+
+The root metadata supports deployment-time verification tokens:
+
+```text
+GOOGLE_SITE_VERIFICATION
+BING_SITE_VERIFICATION
+```
+
+Set the values from Google Search Console and Bing Webmaster Tools in the production environment, then redeploy.
 
 ## Schema
 

@@ -69,6 +69,12 @@ export default function SchemaPage() {
         >
           View on GitHub
         </a>
+        <a
+          href="/openapi.json"
+          className="inline-flex h-12 items-center justify-center rounded-full border border-black/10 bg-white px-5 text-sm font-semibold text-zinc-950 shadow-sm transition hover:bg-zinc-50"
+        >
+          Discovery API
+        </a>
       </div>
 
       <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -103,6 +109,17 @@ export default function SchemaPage() {
           </a>
           , and every template page links to a machine-readable JSON endpoint.
         </p>
+      </section>
+
+      <section className="mt-10 rounded-[8px] border border-black/10 bg-white p-6 shadow-sm">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">License and attribution</h2>
+        <p className="mt-3 text-sm leading-6 text-zinc-600">
+          Public catalog entries identify their creator and license. Integrations should preserve the canonical
+          template URL, schema version, creator, and license when importing or republishing template data.
+        </p>
+        <a href="/license" className="mt-4 inline-flex text-sm font-semibold text-zinc-950 underline">
+          Read the license guidance
+        </a>
       </section>
 
       <section className="mt-10 rounded-[8px] border border-black/10 bg-[#f5f3ef] p-6 shadow-sm">

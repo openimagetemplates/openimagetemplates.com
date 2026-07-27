@@ -5,65 +5,52 @@ import {
   absoluteUrl,
   categoryPath,
   getTemplatesByTag,
+  MIN_INDEXABLE_TAG_TEMPLATES,
   tagPath,
   templateCategories,
-  templateJsonPath,
   templateTags,
   templatePath,
 } from "@/lib/seo";
-import { templates } from "@/lib/templates";
+import { TEMPLATE_CATALOG_GENERATED_AT, templates } from "@/lib/templates";
+import { useCases } from "@/lib/use-cases";
 
 export const revalidate = 3600;
 
-const staticPaths = ["/", "/templates", "/templates.json", "/templates/create", "/schema", "/docs", "/blog", "/rss.xml", "/image-sitemap.xml", "/llms.txt", "/llms-full.txt", "/open-image-template.schema.json"];
+const staticPaths = ["/", "/templates", "/templates/create", "/use-cases", "/schema", "/license", "/docs", "/blog"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const catalogModified = new Date(TEMPLATE_CATALOG_GENERATED_AT);
 
   return [
     ...staticPaths.map((path) => ({
       url: absoluteUrl(path),
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: path === "/" ? 1 : 0.7,
+      ...(path === "/" || path === "/templates" || path === "/use-cases"
+        ? { lastModified: catalogModified }
+        : {}),
     })),
     ...docs.map((doc) => ({
       url: absoluteUrl(`/docs/${doc.slug}`),
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
     })),
     ...getPublishedBlogPosts(now).map((post) => ({
       url: absoluteUrl(`/blog/${post.slug}`),
       lastModified: new Date(post.publishedAt),
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
     })),
     ...templateCategories.map((category) => ({
       url: absoluteUrl(categoryPath(category)),
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
+      lastModified: catalogModified,
     })),
-    ...templateTags.filter((tag) => getTemplatesByTag(tag).length >= 2).map((tag) => ({
+    ...templateTags.filter((tag) => getTemplatesByTag(tag).length >= MIN_INDEXABLE_TAG_TEMPLATES).map((tag) => ({
       url: absoluteUrl(tagPath(tag)),
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.65,
+      lastModified: catalogModified,
     })),
-    ...templates.flatMap((template) => [
-      {
-        url: absoluteUrl(templatePath(template)),
-        lastModified: new Date(template.generatedAt),
-        changeFrequency: "monthly" as const,
-        priority: 0.9,
-      },
-      {
-        url: absoluteUrl(templateJsonPath(template)),
-        lastModified: new Date(template.generatedAt),
-        changeFrequency: "monthly" as const,
-        priority: 0.6,
-      },
-    ]),
+    ...useCases.map((useCase) => ({
+      url: absoluteUrl(`/use-cases/${useCase.slug}`),
+      lastModified: catalogModified,
+    })),
+    ...templates.map((template) => ({
+      url: absoluteUrl(templatePath(template)),
+      lastModified: new Date(template.generatedAt),
+    })),
   ];
 }

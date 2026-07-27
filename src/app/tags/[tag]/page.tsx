@@ -3,7 +3,17 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { TemplateCollectionGrid } from "@/components/TemplateCollectionGrid";
-import { absoluteUrl, getTagBySlug, getTemplatesByTag, SITE_NAME, tagPath, tagSlug, templateTags, templateUrl } from "@/lib/seo";
+import {
+  absoluteUrl,
+  getTagBySlug,
+  getTemplatesByTag,
+  MIN_INDEXABLE_TAG_TEMPLATES,
+  SITE_NAME,
+  tagPath,
+  tagSlug,
+  templateTags,
+  templateUrl,
+} from "@/lib/seo";
 
 type TagPageProps = {
   params: Promise<{ tag: string }>;
@@ -19,7 +29,7 @@ export async function generateMetadata({ params }: TagPageProps): Promise<Metada
   if (!tag) return {};
 
   const taggedTemplates = getTemplatesByTag(tag);
-  const isThinTag = taggedTemplates.length < 2;
+  const isThinTag = taggedTemplates.length < MIN_INDEXABLE_TAG_TEMPLATES;
   const title = `${tag} AI Image Templates`;
   const description = `Browse ${taggedTemplates.length} open, copyable AI image templates tagged ${tag}, with visible prompts, preview images, and portable JSON schema.`;
 

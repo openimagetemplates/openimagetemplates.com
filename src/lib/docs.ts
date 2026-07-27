@@ -129,6 +129,34 @@ export const docs: DocPage[] = [
     ],
   },
   {
+    slug: "template-discovery-api-for-ai-agents",
+    title: "Template Discovery API for AI Agents",
+    description:
+      "How agents and integrations can search, retrieve, cite, and reuse Open Image Templates without downloading the full catalog.",
+    sections: [
+      {
+        heading: "Start with compact discovery",
+        body: "Use /api/templates/search for ranked retrieval or /templates-index.json for a compact catalog scan. Both return IDs, descriptions, tags, aspect ratios, model recommendations, human URLs, and JSON URLs without repeating every full prompt and control definition.",
+      },
+      {
+        heading: "Search with filters",
+        body: "The search endpoint accepts q, category, tag, model, aspect_ratio, content_tier, limit, and offset. Sensitive templates are excluded by default and are returned only when include_nsfw=true is explicitly requested.",
+      },
+      {
+        heading: "Fetch full records only when needed",
+        body: "After selecting a result, fetch its json_url to retrieve the complete prompt, editable slots, controls, negative prompt, example metadata, creator, license, and suggested settings. This two-step flow is faster and uses less context than downloading /templates.json.",
+      },
+      {
+        heading: "Use the OpenAPI document",
+        body: "The machine-readable API description is published at /openapi.json. Tools can use its operation IDs, parameters, response schemas, and link relations to integrate the read-only discovery API.",
+      },
+      {
+        heading: "Cite the canonical human page",
+        body: "Show users the canonical_url from a search result and use json_url for structured retrieval. JSON responses publish Link headers for the canonical HTML page, JSON Schema, and OpenAPI service description.",
+      },
+    ],
+  },
+  {
     slug: "open-image-template-vs-prompts",
     title: "Open Image Template vs. a Prompt",
     description: "The difference between a raw prompt and a reusable open image template.",

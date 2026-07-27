@@ -3,16 +3,16 @@ import {
   TEMPLATE_CATALOG_GENERATED_AT,
   TEMPLATE_SCHEMA_VERSION,
   templates,
-  toPortableTemplateCatalogJson,
+  toCompactTemplateCatalogJson,
 } from "@/lib/templates";
 
 export const dynamic = "force-static";
 
 export function GET() {
-  return Response.json(toPortableTemplateCatalogJson(), {
+  return Response.json(toCompactTemplateCatalogJson(), {
     headers: buildPublicTemplateApiHeaders({
       canonicalPath: "/templates",
-      entityTag: `catalog-${TEMPLATE_SCHEMA_VERSION}-${TEMPLATE_CATALOG_GENERATED_AT}`,
+      entityTag: `compact-catalog-${TEMPLATE_SCHEMA_VERSION}-${TEMPLATE_CATALOG_GENERATED_AT}`,
       lastModified: TEMPLATE_CATALOG_GENERATED_AT,
       totalCount: templates.length,
     }),
@@ -24,7 +24,7 @@ export function OPTIONS() {
     status: 204,
     headers: buildPublicTemplateApiHeaders({
       canonicalPath: "/templates",
-      entityTag: `catalog-${TEMPLATE_SCHEMA_VERSION}-${TEMPLATE_CATALOG_GENERATED_AT}`,
+      entityTag: `compact-catalog-${TEMPLATE_SCHEMA_VERSION}-${TEMPLATE_CATALOG_GENERATED_AT}`,
       lastModified: TEMPLATE_CATALOG_GENERATED_AT,
       totalCount: templates.length,
     }),
