@@ -6,6 +6,7 @@ import { GeneratedImageDownload } from "@/components/GeneratedImageDownload";
 import { NanoGptMark } from "@/components/NanoGptMark";
 import { TemplateLookControls } from "@/components/TemplateLookControls";
 import { templateEventProperties, trackEngagement } from "@/lib/analytics-events";
+import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
 import {
   compileTemplatePrompt,
   getDefaultBuilderState,
@@ -399,6 +400,16 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
           {imageGenerating ? <Loader2 size={16} className="animate-spin" aria-hidden="true" /> : <ImageIcon size={16} aria-hidden="true" />}
           {imageGenerating ? "Generating" : "Generate image"}
         </button>
+        <a
+          href={getNanoGptGenerateUrl(template, adjustedPrompt)}
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => trackEngagement("open_template_in_nanogpt", analyticsProperties)}
+          className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-5 text-sm font-semibold text-zinc-950 shadow-sm transition hover:bg-zinc-50"
+        >
+          <NanoGptMark />
+          Open in NanoGPT
+        </a>
       </div>
 
       <p className="mt-2 text-xs text-zinc-500">
