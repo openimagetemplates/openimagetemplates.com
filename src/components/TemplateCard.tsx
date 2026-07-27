@@ -11,6 +11,8 @@ type TemplateCardProps = {
 };
 
 export function TemplateCard({ template, priority = false }: TemplateCardProps) {
+  const previewDimensions = getPreviewDimensions(template);
+
   return (
     <article className="group mb-5 break-inside-avoid overflow-hidden rounded-[8px] border border-black/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-xl">
       <div className="relative bg-zinc-100">
@@ -19,13 +21,16 @@ export function TemplateCard({ template, priority = false }: TemplateCardProps) 
           label={`${template.title} preview`}
         >
           <Link href={`/templates/${template.id}`} className="block">
-            <span className="block aspect-[4/3] overflow-hidden bg-zinc-100">
+            <span
+              className="block overflow-hidden bg-zinc-100"
+              style={{ aspectRatio: `${previewDimensions.width} / ${previewDimensions.height}` }}
+            >
               <TemplatePreviewImage
                 src={template.image}
                 alt={template.imageAlt}
                 className="h-full w-full object-cover"
-                width={1024}
-                height={768}
+                width={previewDimensions.width}
+                height={previewDimensions.height}
                 loading={priority ? "eager" : "lazy"}
                 fetchPriority={priority ? "high" : "auto"}
               />
@@ -73,4 +78,21 @@ export function TemplateCard({ template, priority = false }: TemplateCardProps) 
       </div>
     </article>
   );
+}
+
+function getPreviewDimensions(template: ImageTemplate) {
+  const resolution = template.suggestedSettings.resolution;
+  if (typeof resolution !== "string") return { width: 1024, height: 768 };
+
+  const match = resolution.match(/^(\d+)x(\d+)$/);
+  if (!match) return { width: 1024, height: 768 };
+
+  const width = Number(match[1]);
+  const height = Number(match[2]);
+
+  if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+    return { width: 1024, height: 768 };
+  }
+
+  return { width, height };
 }
