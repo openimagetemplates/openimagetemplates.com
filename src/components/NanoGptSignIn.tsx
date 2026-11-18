@@ -20,10 +20,9 @@ export async function getNanoGptConnectionStatus() {
 
 /**
  * Connection state for the visitor's NanoGPT session: `null` while the status
- * request is in flight, then `true` or `false`. `onResolved` runs once with the
- * first answer, which lets callers restore state after a sign-in round trip.
+ * request is in flight, then `true` or `false`.
  */
-export function useNanoGptConnection(onResolved?: (connected: boolean) => void) {
+export function useNanoGptConnection() {
   const [connected, setConnected] = useState<boolean | null>(null);
 
   useEffect(() => {
@@ -31,13 +30,10 @@ export function useNanoGptConnection(onResolved?: (connected: boolean) => void) 
     getNanoGptConnectionStatus().then((value) => {
       if (!active) return;
       setConnected(value);
-      onResolved?.(value);
     });
     return () => {
       active = false;
     };
-    // onResolved is intentionally read once, on mount.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return [connected, setConnected] as const;

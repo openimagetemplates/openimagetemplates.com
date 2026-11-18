@@ -5,6 +5,7 @@ import {
   getNanoGptBaseUrl,
   NANO_GPT_ACCESS_TOKEN_COOKIE,
   NANO_GPT_AUTH_STATE_COOKIE,
+  normalizeReturnTo,
 } from "@/lib/nanogpt-auth";
 
 export const runtime = "nodejs";
@@ -64,7 +65,9 @@ export async function GET(request: Request) {
     return redirectWithAuthError(requestUrl, "NanoGPT token exchange failed. Please try again.");
   }
 
-  const destination = new URL(oauthState.returnTo || "/", requestUrl.origin);
+  // The state cookie may predate the stricter check in the start route.
+  let destination = new URL(normalizeReturnTo(oauthState.returnTo), requestUrl.origin);
+  if (destination.origin !== requestUrl.origin) destination = new URL("/", requestUrl.origin);
   destination.searchParams.set("nanogptAuth", "connected");
 
   const response = NextResponse.redirect(destination, 303);

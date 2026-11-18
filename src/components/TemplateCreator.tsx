@@ -4,7 +4,7 @@
 import { ArrowUpRight, Braces, Check, ChevronDown, Clock3, Copy, ExternalLink, ImageIcon, Loader2, Plus, Send, Sparkles, Trash2, Upload, X } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { GeneratedImageDownload } from "@/components/GeneratedImageDownload";
 import { getNanoGptConnectionStatus, NanoGptSignInButton, useNanoGptConnection } from "@/components/NanoGptSignIn";
 import { SensitiveContentBoundary } from "@/components/SensitiveContentBoundary";
@@ -47,7 +47,9 @@ type TemplateImageGenerationResponse = {
   message?: unknown;
 };
 
-const maxImageBytes = 4 * 1024 * 1024;
+// A data URL is a third larger than the file, and the AI draft and submission
+// requests carry it in a JSON body that the host caps at 4.5 MB.
+const maxImageBytes = 3 * 1024 * 1024;
 
 // Keeps the unsaved creator state across the NanoGPT sign-in redirect.
 const PENDING_DRAFT_STORAGE_KEY = "open-image-templates.creator-pending-draft";
@@ -61,6 +63,10 @@ type PendingCreatorState = {
   referenceImage: string;
   referenceFileName: string;
   aiDraftOpen: boolean;
+  /** The upload is also the draft's preview image; it is stored once. */
+  referenceIsDraftImage: boolean;
+  /** An uploaded image did not fit in storage and was left out. */
+  imageDropped: boolean;
 };
 
 const signInLineClass = "text-sm leading-6 text-zinc-600";
@@ -87,7 +93,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
   const [imageGenerationError, setImageGenerationError] = useState("");
   const [error, setError] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const [nanoGptConnected, setNanoGptConnected] = useNanoGptConnection(restorePendingCreatorState);
+  const [nanoGptConnected, setNanoGptConnected] = useNanoGptConnection();
   const signedOut = nanoGptConnected === false;
 
   const signature = useMemo(() => JSON.stringify(draft), [draft]);
@@ -117,25 +123,42 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
     setAiDraftOpen(nextOpen);
   }
 
-  function restorePendingCreatorState() {
-    const pending = takePendingCreatorState();
-    if (!pending) return;
-    setDraft(pending.draft);
-    setIdea(pending.idea);
-    setReferenceImage(pending.referenceImage);
-    setReferenceFileName(pending.referenceImage ? pending.referenceFileName : "");
-    setAiDraftOpen(pending.aiDraftOpen);
-  }
+  // Restores what the visitor had before the sign-in redirect. Runs one
+  // microtask after mount, before they can type, so it never replaces newer
+  // edits. Reading storage only while `active` keeps a discarded effect run
+  // (React strict mode) from consuming the stored draft.
+  useEffect(() => {
+    let active = true;
+    queueMicrotask(() => {
+      if (!active) return;
+      const pending = takePendingCreatorState();
+      if (!pending) return;
+      setDraft(pending.draft);
+      setIdea(pending.idea);
+      setReferenceImage(pending.referenceImage);
+      setReferenceFileName(pending.referenceImage ? pending.referenceFileName : "");
+      setAiDraftOpen(pending.aiDraftOpen || pending.imageDropped);
+      if (pending.imageDropped) {
+        setError("Your fields are back. The image was too large to keep during sign-in, so upload it again.");
+      }
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   function keepDraftForSignIn() {
+    const referenceIsDraftImage = Boolean(referenceImage) && referenceImage === draft.image;
     savePendingCreatorState({
       path: currentCreatorPath(),
       savedAt: Date.now(),
       draft,
       idea,
-      referenceImage,
+      referenceImage: referenceIsDraftImage ? "" : referenceImage,
       referenceFileName,
       aiDraftOpen,
+      referenceIsDraftImage,
+      imageDropped: false,
     });
   }
 
@@ -157,7 +180,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
     if (!file) return;
     setError("");
     if (file.size > maxImageBytes) {
-      setError("Choose an image smaller than 4 MB.");
+      setError("Choose an image smaller than 3 MB.");
       return;
     }
 
@@ -572,7 +595,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                               <>
                                 <Upload size={28} aria-hidden="true" />
                                 <span className="mt-3 text-sm font-semibold">Upload reference image</span>
-                                <span className="mt-1 text-xs text-zinc-500">PNG, JPEG, or WebP up to 4 MB</span>
+                                <span className="mt-1 text-xs text-zinc-500">PNG, JPEG, or WebP up to 3 MB</span>
                               </>
                             )}
                           </button>
@@ -984,10 +1007,13 @@ function currentCreatorPath() {
 function savePendingCreatorState(state: PendingCreatorState) {
   const attempts: PendingCreatorState[] = [
     state,
-    // An uploaded image can exceed the storage quota; keep the text without it.
+    // An uploaded image can exceed the storage quota; keep the text without
+    // it and say so after the return.
     {
       ...state,
       referenceImage: "",
+      referenceIsDraftImage: false,
+      imageDropped: Boolean(state.referenceImage) || state.draft.image.startsWith("data:"),
       draft: { ...state.draft, image: state.draft.image.startsWith("data:") ? "" : state.draft.image },
     },
   ];
@@ -1022,9 +1048,13 @@ function takePendingCreatorState(): PendingCreatorState | null {
       savedAt: parsed.savedAt,
       draft: parsed.draft,
       idea: typeof parsed.idea === "string" ? parsed.idea : "",
-      referenceImage: typeof parsed.referenceImage === "string" ? parsed.referenceImage : "",
+      referenceImage: parsed.referenceIsDraftImage === true && typeof parsed.draft.image === "string"
+        ? parsed.draft.image
+        : typeof parsed.referenceImage === "string" ? parsed.referenceImage : "",
       referenceFileName: typeof parsed.referenceFileName === "string" ? parsed.referenceFileName : "",
       aiDraftOpen: Boolean(parsed.aiDraftOpen),
+      referenceIsDraftImage: parsed.referenceIsDraftImage === true,
+      imageDropped: parsed.imageDropped === true,
     };
   } catch {
     return null;

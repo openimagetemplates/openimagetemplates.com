@@ -88,8 +88,14 @@ export function decodeOAuthStateCookie(value: string | undefined): NanoGptOAuthS
 export function normalizeReturnTo(value: string | null | undefined) {
   if (!value) return "/";
   try {
-    const url = new URL(value, "https://openimagetemplates.com");
-    return `${url.pathname}${url.search}`;
+    const base = "https://openimagetemplates.com";
+    const url = new URL(value, base);
+    if (url.origin !== base) return "/";
+    const path = `${url.pathname}${url.search}`;
+    // "/.//host/path" normalizes to "//host/path", which a later URL resolve
+    // would read as another site. Only a single leading slash is a local path.
+    if (!path.startsWith("/") || path.startsWith("//") || path.includes("\\")) return "/";
+    return path;
   } catch {
     return "/";
   }
