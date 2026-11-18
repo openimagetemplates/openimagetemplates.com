@@ -1,6 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { NextResponse } from "next/server";
 import { normalizeOitApiUrl } from "@/lib/oit-api-url";
+import { TEMPLATE_SUBMISSION_LIMITS as limits } from "@/lib/template-creator";
 import { TEMPLATE_SCHEMA_VERSION, TEMPLATE_STANDARD } from "@/lib/templates";
 
 export const runtime = "nodejs";
@@ -38,12 +39,12 @@ function validateTemplate(template: SubmissionTemplate | null) {
   if (!template || typeof template !== "object") return "Missing template.";
   if (template.standard !== TEMPLATE_STANDARD) return "Template standard is invalid.";
   if (template.schema_version !== TEMPLATE_SCHEMA_VERSION) return "Template schema version is invalid.";
-  if (!isString(template.id) || template.id.length > 120) return "Template id is invalid.";
-  if (!isString(template.title) || template.title.length > 120) return "Template title is invalid.";
-  if (!isString(template.description) || template.description.length > 280) return "Template description is invalid.";
-  if (!isString(template.prompt) || template.prompt.length > 4000) return "Template prompt is invalid.";
+  if (!isString(template.id) || template.id.length > limits.idMaxLength) return "Template id is invalid.";
+  if (!isString(template.title) || template.title.length > limits.titleMaxLength) return "Template title is invalid.";
+  if (!isString(template.description) || template.description.length > limits.descriptionMaxLength) return "Template description is invalid.";
+  if (!isString(template.prompt) || template.prompt.length > limits.promptMaxLength) return "Template prompt is invalid.";
   if (template.nsfw !== undefined && typeof template.nsfw !== "boolean") return "Template NSFW flag is invalid.";
-  if (!Array.isArray(template.slots) || template.slots.length < 1 || template.slots.length > 12) return "Template slots are invalid.";
+  if (!Array.isArray(template.slots) || template.slots.length < limits.minSlots || template.slots.length > limits.maxSlots) return "Template slots are invalid.";
   return null;
 }
 

@@ -6,6 +6,7 @@ import Link from "next/link";
 import type React from "react";
 import { useMemo, useRef, useState } from "react";
 import { GeneratedImageDownload } from "@/components/GeneratedImageDownload";
+import { getNanoGptConnectionStatus, NanoGptSignInButton, useNanoGptConnection } from "@/components/NanoGptSignIn";
 import { SensitiveContentBoundary } from "@/components/SensitiveContentBoundary";
 import { trackEngagement } from "@/lib/analytics-events";
 import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
@@ -14,8 +15,10 @@ import {
   COMMUNITY_SUBMISSION_STORAGE_KEY,
   draftFromTemplate,
   fileToDataUrl,
+  MAX_CREATOR_SLOTS,
   PERSONAL_TEMPLATE_STORAGE_KEY,
   TEMPLATE_CREATOR_CATEGORIES,
+  TEMPLATE_SUBMISSION_LIMITS,
   templateFromCreatorDraft,
   toCreatorJson,
   type CommunitySubmissionRecord,
@@ -46,6 +49,22 @@ type TemplateImageGenerationResponse = {
 
 const maxImageBytes = 4 * 1024 * 1024;
 
+// Keeps the unsaved creator state across the NanoGPT sign-in redirect.
+const PENDING_DRAFT_STORAGE_KEY = "open-image-templates.creator-pending-draft";
+const PENDING_DRAFT_MAX_AGE_MS = 60 * 60 * 1000;
+
+type PendingCreatorState = {
+  path: string;
+  savedAt: number;
+  draft: TemplateCreatorDraft;
+  idea: string;
+  referenceImage: string;
+  referenceFileName: string;
+  aiDraftOpen: boolean;
+};
+
+const signInLineClass = "text-sm leading-6 text-zinc-600";
+
 export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "modal" }: TemplateCreatorProps) {
   const isInline = mode === "inline";
   const [open, setOpen] = useState(initiallyOpen || isInline);
@@ -68,6 +87,8 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
   const [imageGenerationError, setImageGenerationError] = useState("");
   const [error, setError] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [nanoGptConnected, setNanoGptConnected] = useNanoGptConnection(restorePendingCreatorState);
+  const signedOut = nanoGptConnected === false;
 
   const signature = useMemo(() => JSON.stringify(draft), [draft]);
   const isSaved = Boolean(savedTemplate && savedSignature === signature);
@@ -89,8 +110,47 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
     const nextOpen = !aiDraftOpen;
     if (nextOpen) {
       trackEngagement("open_ai_template_draft", creatorEventProperties());
+      if (signedOut) {
+        trackEngagement("open_nanogpt_sign_in", creatorEventProperties({ placement: "template_creator_ai_draft" }));
+      }
     }
     setAiDraftOpen(nextOpen);
+  }
+
+  function restorePendingCreatorState() {
+    const pending = takePendingCreatorState();
+    if (!pending) return;
+    setDraft(pending.draft);
+    setIdea(pending.idea);
+    setReferenceImage(pending.referenceImage);
+    setReferenceFileName(pending.referenceImage ? pending.referenceFileName : "");
+    setAiDraftOpen(pending.aiDraftOpen);
+  }
+
+  function keepDraftForSignIn() {
+    savePendingCreatorState({
+      path: currentCreatorPath(),
+      savedAt: Date.now(),
+      draft,
+      idea,
+      referenceImage,
+      referenceFileName,
+      aiDraftOpen,
+    });
+  }
+
+  // Resolves whether the visitor is signed in before an AI request. Returns
+  // false (and switches to the sign-in presentation) when they are not.
+  async function ensureNanoGptConnected() {
+    if (nanoGptConnected) return true;
+    const connected = nanoGptConnected === null ? await getNanoGptConnectionStatus() : false;
+    setNanoGptConnected(connected);
+    return connected;
+  }
+
+  function handleSessionExpired(placement: string) {
+    setNanoGptConnected(false);
+    trackEngagement("open_nanogpt_sign_in", creatorEventProperties({ placement, reason: "session_expired" }));
   }
 
   async function handleFile(file: File | null) {
@@ -131,6 +191,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
     setAnalyzing(true);
     setError("");
     try {
+      if (!(await ensureNanoGptConnected())) return;
       const response = await fetch("/api/template-drafts", {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -142,6 +203,10 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
         }),
       });
       const data = (await response.json().catch(() => ({}))) as TemplateAnalysisResponse;
+      if (response.status === 401) {
+        handleSessionExpired("template_creator_ai_draft");
+        return;
+      }
       if (!response.ok || !data.draft) {
         throw new Error(data.message || "Template AI request failed.");
       }
@@ -202,6 +267,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
     setImageGenerationError("");
     setError("");
     try {
+      if (!(await ensureNanoGptConnected())) return;
       const response = await fetch("/api/template-image-generations", {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -211,6 +277,10 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
         }),
       });
       const data = (await response.json().catch(() => ({}))) as TemplateImageGenerationResponse;
+      if (response.status === 401) {
+        handleSessionExpired("template_creator_preview_image");
+        return;
+      }
       if (!response.ok || typeof data.imageUrl !== "string") {
         throw new Error(typeof data.message === "string" ? data.message : "Could not generate the image.");
       }
@@ -252,7 +322,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
           label: "Detail",
           example: "custom detail",
         },
-      ].slice(0, 8),
+      ].slice(0, MAX_CREATOR_SLOTS),
     });
   }
 
@@ -416,12 +486,14 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                     <span className="min-w-0">
                       <span className="block text-base font-semibold text-zinc-950">Start from an image or idea</span>
                       <span className="mt-1 block text-sm leading-5 text-zinc-600">
-                        Upload a reference or describe the template. AI fills the fields below for review.
+                        {signedOut
+                          ? "AI fills the fields below for review. Needs a NanoGPT sign-in."
+                          : "Upload a reference or describe the template. AI fills the fields below for review."}
                       </span>
                     </span>
                   </span>
                   <span className="inline-flex shrink-0 items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-2 text-sm font-semibold text-zinc-950">
-                    Generate with AI
+                    <span className="hidden sm:inline">Generate with AI</span>
                     <ChevronDown
                       className={`transition-transform duration-300 ${aiDraftOpen ? "rotate-180" : ""}`}
                       size={16}
@@ -454,15 +526,31 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                             The draft updates the title, category, prompt, tags, and editable slots. You can change everything before saving.
                           </p>
                           {error ? <p className="mt-4 rounded-[8px] bg-red-50 p-3 text-sm leading-6 text-red-700">{error}</p> : null}
-                          <button
-                            type="button"
-                            onClick={() => void generateWithAi()}
-                            disabled={analyzing}
-                            className="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800 disabled:cursor-wait disabled:opacity-70 sm:w-auto"
-                          >
-                            {analyzing ? <Loader2 className="animate-spin" size={17} aria-hidden="true" /> : <ImageIcon size={17} aria-hidden="true" />}
-                            Generate template with AI
-                          </button>
+                          {signedOut ? (
+                            <div className="mt-4 rounded-[8px] border border-black/10 bg-white p-4">
+                              <p className={signInLineClass}>
+                                AI drafting and image generation run on your NanoGPT account. Pay per image, no subscription.
+                              </p>
+                              <NanoGptSignInButton
+                                beforeRedirect={keepDraftForSignIn}
+                                eventProperties={creatorEventProperties({ placement: "template_creator_ai_draft" })}
+                                className="mt-3 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800 sm:w-auto"
+                              />
+                              <p className="mt-3 text-xs leading-5 text-zinc-500">
+                                Your idea and fields are kept while you sign in. Filling the fields by hand, saving, copying JSON and opening in NanoGPT work without an account.
+                              </p>
+                            </div>
+                          ) : (
+                            <button
+                              type="button"
+                              onClick={() => void generateWithAi()}
+                              disabled={analyzing}
+                              className="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800 disabled:cursor-wait disabled:opacity-70 sm:w-auto"
+                            >
+                              {analyzing ? <Loader2 className="animate-spin" size={17} aria-hidden="true" /> : <ImageIcon size={17} aria-hidden="true" />}
+                              Generate template with AI
+                            </button>
+                          )}
                         </div>
 
                         <div>
@@ -504,6 +592,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                         value={draft.title}
                         onChange={(event) => updateDraft({ title: event.target.value })}
                         placeholder="Bold magazine close-up"
+                        maxLength={TEMPLATE_SUBMISSION_LIMITS.titleMaxLength}
                         className="creator-input"
                       />
                     </Field>
@@ -527,6 +616,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                       value={draft.description}
                       onChange={(event) => updateDraft({ description: event.target.value })}
                       placeholder="A reusable portrait template with polished editorial framing."
+                      maxLength={TEMPLATE_SUBMISSION_LIMITS.descriptionMaxLength}
                       className="creator-input"
                     />
                   </Field>
@@ -571,6 +661,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                       value={draft.prompt}
                       onChange={(event) => updateDraft({ prompt: event.target.value })}
                       placeholder="Write the full visible prompt. Use variables like {Subject}, then add matching editable slots below."
+                      maxLength={TEMPLATE_SUBMISSION_LIMITS.promptMaxLength}
                       rows={7}
                       className="creator-input min-h-40 resize-y py-3 leading-6"
                     />
@@ -599,7 +690,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                       <button
                         type="button"
                         onClick={addSlot}
-                        disabled={draft.slots.length >= 8}
+                        disabled={draft.slots.length >= MAX_CREATOR_SLOTS}
                         className="inline-flex h-9 items-center justify-center gap-2 rounded-full border border-black/10 px-3 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-50 disabled:cursor-not-allowed disabled:opacity-45"
                       >
                         <Plus size={15} aria-hidden="true" />
@@ -679,16 +770,29 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
                     {imageGenerationError ? (
                       <p className="mt-3 rounded-[8px] bg-red-50 p-3 text-sm leading-6 text-red-700">{imageGenerationError}</p>
                     ) : null}
+                    {signedOut ? (
+                      <p className={`mt-4 ${signInLineClass}`}>
+                        Image generation runs on your NanoGPT account. Pay per image, no subscription.
+                      </p>
+                    ) : null}
                     <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-                      <button
-                        type="button"
-                        onClick={() => void generatePreviewImage()}
-                        disabled={imageGenerating || draft.prompt.trim().length < 3}
-                        className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-full bg-zinc-950 px-4 text-sm font-semibold text-white transition hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-45"
-                      >
-                        {imageGenerating ? <Loader2 className="animate-spin" size={16} aria-hidden="true" /> : <ImageIcon size={16} aria-hidden="true" />}
-                        Generate image
-                      </button>
+                      {signedOut ? (
+                        <NanoGptSignInButton
+                          beforeRedirect={keepDraftForSignIn}
+                          eventProperties={creatorEventProperties({ placement: "template_creator_preview_image" })}
+                          className="inline-flex h-11 items-center sm:flex-1 justify-center gap-2 rounded-full bg-zinc-950 px-4 text-sm font-semibold text-white transition hover:bg-zinc-800"
+                        />
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => void generatePreviewImage()}
+                          disabled={imageGenerating || draft.prompt.trim().length < 3}
+                          className="inline-flex h-11 items-center sm:flex-1 justify-center gap-2 rounded-full bg-zinc-950 px-4 text-sm font-semibold text-white transition hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-45"
+                        >
+                          {imageGenerating ? <Loader2 className="animate-spin" size={16} aria-hidden="true" /> : <ImageIcon size={16} aria-hidden="true" />}
+                          Generate image
+                        </button>
+                      )}
                       <a
                         href={getNanoGptGenerateUrl(previewTemplate)}
                         target="_blank"
@@ -867,4 +971,62 @@ function writeCommunitySubmission(record: CommunitySubmissionRecord) {
   const existing = readCommunitySubmissions();
   const next = [record, ...existing.filter((submission) => submission.submissionId !== record.submissionId && submission.templateId !== record.templateId)].slice(0, 100);
   window.localStorage.setItem(COMMUNITY_SUBMISSION_STORAGE_KEY, JSON.stringify(next));
+}
+
+function currentCreatorPath() {
+  const params = new URLSearchParams(window.location.search);
+  params.delete("nanogptAuth");
+  params.delete("message");
+  const query = params.toString();
+  return `${window.location.pathname}${query ? `?${query}` : ""}`;
+}
+
+function savePendingCreatorState(state: PendingCreatorState) {
+  const attempts: PendingCreatorState[] = [
+    state,
+    // An uploaded image can exceed the storage quota; keep the text without it.
+    {
+      ...state,
+      referenceImage: "",
+      draft: { ...state.draft, image: state.draft.image.startsWith("data:") ? "" : state.draft.image },
+    },
+  ];
+  for (const attempt of attempts) {
+    try {
+      window.sessionStorage.setItem(PENDING_DRAFT_STORAGE_KEY, JSON.stringify(attempt));
+      return;
+    } catch {
+      // Try the smaller copy, or give up quietly: sign-in still works.
+    }
+  }
+}
+
+function takePendingCreatorState(): PendingCreatorState | null {
+  try {
+    const raw = window.sessionStorage.getItem(PENDING_DRAFT_STORAGE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as Partial<PendingCreatorState>;
+    if (parsed.path !== currentCreatorPath()) return null;
+    window.sessionStorage.removeItem(PENDING_DRAFT_STORAGE_KEY);
+    if (
+      typeof parsed.savedAt !== "number"
+      || Date.now() - parsed.savedAt > PENDING_DRAFT_MAX_AGE_MS
+      || !parsed.draft
+      || typeof parsed.draft.prompt !== "string"
+      || !Array.isArray(parsed.draft.slots)
+    ) {
+      return null;
+    }
+    return {
+      path: parsed.path,
+      savedAt: parsed.savedAt,
+      draft: parsed.draft,
+      idea: typeof parsed.idea === "string" ? parsed.idea : "",
+      referenceImage: typeof parsed.referenceImage === "string" ? parsed.referenceImage : "",
+      referenceFileName: typeof parsed.referenceFileName === "string" ? parsed.referenceFileName : "",
+      aiDraftOpen: Boolean(parsed.aiDraftOpen),
+    };
+  } catch {
+    return null;
+  }
 }

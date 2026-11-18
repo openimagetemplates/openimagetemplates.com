@@ -16,7 +16,11 @@ const allowedOrigins = new Set([
 ]);
 
 const templateStandard = "open-image-template";
-const templateSchemaVersion = "1.1.0";
+// Schema versions accepted from the site's creator. Keep the site's current
+// TEMPLATE_SCHEMA_VERSION (src/lib/templates.ts) in this list; `npm run
+// check:schema` fails when it is missing. Older versions stay accepted for
+// clients that loaded the site before a schema bump.
+const acceptedTemplateSchemaVersions = new Set(["1.1.0", "1.2.0"]);
 
 const worker = {
   async fetch(request: Request, env: Env): Promise<Response> {
@@ -112,7 +116,7 @@ async function readJson(request: Request): Promise<JsonRecord | null> {
 function validateTemplate(template: JsonRecord | null) {
   if (!template) return "Missing template.";
   if (template.standard !== templateStandard) return "Template standard is invalid.";
-  if (template.schema_version !== templateSchemaVersion) return "Template schema version is invalid.";
+  if (typeof template.schema_version !== "string" || !acceptedTemplateSchemaVersions.has(template.schema_version)) return "Template schema version is invalid.";
   if (!isString(template.id) || template.id.length > 120) return "Template id is invalid.";
   if (!isString(template.title) || template.title.length > 120) return "Template title is invalid.";
   if (!isString(template.description) || template.description.length > 280) return "Template description is invalid.";

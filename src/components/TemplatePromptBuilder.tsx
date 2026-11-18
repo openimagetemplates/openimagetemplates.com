@@ -4,6 +4,7 @@ import { Check, ChevronDown, Copy, ImageIcon, Loader2, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { GeneratedImageDownload } from "@/components/GeneratedImageDownload";
 import { NanoGptMark } from "@/components/NanoGptMark";
+import { getNanoGptConnectionStatus, NanoGptSignInButton, useNanoGptConnection } from "@/components/NanoGptSignIn";
 import { TemplateLookControls } from "@/components/TemplateLookControls";
 import { templateEventProperties, trackEngagement } from "@/lib/analytics-events";
 import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
@@ -30,20 +31,6 @@ type TemplateImageGenerationResponse = {
 type TemplateImageCostEstimateResponse = {
   cost?: unknown;
 };
-
-type NanoGptAuthStatusResponse = {
-  connected?: unknown;
-};
-
-async function getNanoGptConnectionStatus() {
-  try {
-    const response = await fetch("/api/nanogpt-auth/status", { cache: "no-store" });
-    const data = (await response.json().catch(() => ({}))) as NanoGptAuthStatusResponse;
-    return response.ok && Boolean(data.connected);
-  } catch {
-    return false;
-  }
-}
 
 const nanoGptSellingPoints = [
   {
@@ -73,25 +60,13 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
   const [imageGenerationError, setImageGenerationError] = useState("");
   const [estimatedImageCost, setEstimatedImageCost] = useState<number | null>(null);
   const [costEstimateLoading, setCostEstimateLoading] = useState(false);
-  const [isNanoGptConnected, setIsNanoGptConnected] = useState<boolean | null>(null);
+  const [isNanoGptConnected, setIsNanoGptConnected] = useNanoGptConnection();
   const [nanoGptSignInOpen, setNanoGptSignInOpen] = useState(false);
 
   const adjustedPrompt = useMemo(() => compileTemplatePrompt(template, state), [template, state]);
   const analyticsProperties = useMemo(() => templateEventProperties(template), [template]);
   const generatedFromCurrentPrompt = Boolean(generatedImageUrl && generatedPrompt === adjustedPrompt);
   const estimatedCostLabel = estimatedImageCost === null ? "" : `$${estimatedImageCost.toFixed(4)}`;
-
-  useEffect(() => {
-    let active = true;
-
-    getNanoGptConnectionStatus().then((connected) => {
-      if (active) setIsNanoGptConnected(connected);
-    });
-
-    return () => {
-      active = false;
-    };
-  }, []);
 
   useEffect(() => {
     if (!nanoGptSignInOpen) return;
@@ -293,12 +268,6 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
     } finally {
       setImageGenerating(false);
     }
-  }
-
-  function signInWithNanoGpt() {
-    trackEngagement("start_nanogpt_sign_in", analyticsProperties);
-    const returnTo = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-    window.location.href = `/api/nanogpt-auth/start?returnTo=${encodeURIComponent(returnTo)}`;
   }
 
   return (
@@ -544,14 +513,7 @@ export function TemplatePromptBuilder({ template }: TemplatePromptBuilderProps) 
             </div>
 
             <div className="border-t border-black/10 bg-zinc-50 p-4 sm:px-6">
-              <button
-                type="button"
-                onClick={signInWithNanoGpt}
-                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-zinc-800"
-              >
-                <NanoGptMark />
-                Sign in with NanoGPT
-              </button>
+              <NanoGptSignInButton eventProperties={analyticsProperties} />
             </div>
           </div>
         </div>

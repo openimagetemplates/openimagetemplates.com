@@ -1,32 +1,10 @@
 "use client";
 
 import { Check, LogOut } from "lucide-react";
-import { useEffect, useState } from "react";
-
-type AuthStatusResponse = {
-  connected?: unknown;
-};
+import { useNanoGptConnection } from "@/components/NanoGptSignIn";
 
 export function NanoGptAuthButton() {
-  const [isConnected, setIsConnected] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    let active = true;
-
-    fetch("/api/nanogpt-auth/status", { cache: "no-store" })
-      .then((response) => response.json())
-      .then((data) => {
-        const status = data as AuthStatusResponse;
-        if (active) setIsConnected(Boolean(status?.connected));
-      })
-      .catch(() => {
-        if (active) setIsConnected(false);
-      });
-
-    return () => {
-      active = false;
-    };
-  }, []);
+  const [isConnected] = useNanoGptConnection();
 
   if (!isConnected) return null;
 

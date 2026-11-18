@@ -9,6 +9,20 @@ import {
 export const PERSONAL_TEMPLATE_STORAGE_KEY = "open-image-templates.personal";
 export const COMMUNITY_SUBMISSION_STORAGE_KEY = "open-image-templates.community-submissions";
 
+// Limits enforced by /api/template-submissions and the oit-api worker
+// (cloudflare/oit-api/src/index.ts). scripts/check-schema-version.mjs checks
+// that both validators keep using these numbers.
+export const TEMPLATE_SUBMISSION_LIMITS = {
+  idMaxLength: 120,
+  titleMaxLength: 120,
+  descriptionMaxLength: 280,
+  promptMaxLength: 4000,
+  minSlots: 1,
+  maxSlots: 12,
+} as const;
+
+export const MAX_CREATOR_SLOTS = 8;
+
 export const TEMPLATE_CREATOR_CATEGORIES: TemplateCategory[] = [
   "Portrait",
   "Lifestyle",
@@ -113,9 +127,9 @@ export function draftFromTemplate(template: ImageTemplate): TemplateCreatorDraft
 }
 
 export function templateFromCreatorDraft(draft: TemplateCreatorDraft, existingId?: string): ImageTemplate {
-  const title = draft.title.trim() || "Untitled image template";
-  const description = draft.description.trim() || "A reusable image template.";
-  const prompt = draft.prompt.trim() || `Create ${title.toLowerCase()}.`;
+  const title = truncate(draft.title, TEMPLATE_SUBMISSION_LIMITS.titleMaxLength) || "Untitled image template";
+  const description = truncate(draft.description, TEMPLATE_SUBMISSION_LIMITS.descriptionMaxLength) || "A reusable image template.";
+  const prompt = draft.prompt.trim().slice(0, TEMPLATE_SUBMISSION_LIMITS.promptMaxLength).trim() || `Create ${title.toLowerCase()}.`;
   const slots = normalizeCreatorSlots(draft.slots);
   const generatedAt = new Date().toISOString().slice(0, 10);
 
@@ -203,7 +217,7 @@ export function normalizeCreatorSlots(rows: TemplateCreatorSlot[]): TemplateSlot
       return { name, label, example };
     })
     .filter((slot) => slot.label && slot.example)
-    .slice(0, 8);
+    .slice(0, MAX_CREATOR_SLOTS);
 
   return slots.length > 0 ? slots : [{ name: "subject", label: "Subject", example: "main subject" }];
 }

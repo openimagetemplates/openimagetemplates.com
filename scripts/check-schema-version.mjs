@@ -9,6 +9,8 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "
 const schemaPath = "public/open-image-template.schema.json";
 const versionSourcePath = "src/lib/templates.ts";
 const changelogPath = "docs/schema-changelog.md";
+const workerPath = "cloudflare/oit-api/src/index.ts";
+const submissionLimitsPath = "src/lib/template-creator.ts";
 
 function readProjectFile(filePath) {
   return readFileSync(path.join(projectRoot, filePath), "utf8");
@@ -20,6 +22,53 @@ function versionFromSource(source, label) {
     throw new Error(`Could not find TEMPLATE_SCHEMA_VERSION in ${label}.`);
   }
   return match[1];
+}
+
+// The oit-api worker validates community submissions on its own, so it must
+// accept the site's current schema version and use the same field limits as
+// the site's submission route.
+function checkWorkerSubmissionRules(currentVersion) {
+  const workerSource = readProjectFile(workerPath);
+  const versionsMatch = workerSource.match(/acceptedTemplateSchemaVersions\s*=\s*new Set\(\[([^\]]*)\]\)/);
+  if (!versionsMatch) {
+    throw new Error(`Could not find acceptedTemplateSchemaVersions in ${workerPath}.`);
+  }
+  const acceptedVersions = [...versionsMatch[1].matchAll(/"([^"]+)"/g)].map((match) => match[1]);
+  if (!acceptedVersions.includes(currentVersion)) {
+    throw new Error(
+      `${workerPath} accepts schema versions [${acceptedVersions.join(", ")}], but the site submits "${currentVersion}". Add it to acceptedTemplateSchemaVersions.`,
+    );
+  }
+
+  const limitsSource = readProjectFile(submissionLimitsPath);
+  const limitsBlock = limitsSource.match(/TEMPLATE_SUBMISSION_LIMITS\s*=\s*\{([^}]*)\}/);
+  if (!limitsBlock) {
+    throw new Error(`Could not find TEMPLATE_SUBMISSION_LIMITS in ${submissionLimitsPath}.`);
+  }
+  const siteLimit = (name) => {
+    const match = limitsBlock[1].match(new RegExp(`${name}:\\s*(\\d+)`));
+    if (!match) throw new Error(`TEMPLATE_SUBMISSION_LIMITS.${name} is missing in ${submissionLimitsPath}.`);
+    return Number(match[1]);
+  };
+  const workerLimit = (pattern, label) => {
+    const match = workerSource.match(pattern);
+    if (!match) throw new Error(`Could not find the ${label} rule in ${workerPath}.`);
+    return Number(match[1]);
+  };
+
+  const pairs = [
+    ["id length", siteLimit("idMaxLength"), workerLimit(/template\.id\.length\s*>\s*(\d+)/, "id length")],
+    ["title length", siteLimit("titleMaxLength"), workerLimit(/template\.title\.length\s*>\s*(\d+)/, "title length")],
+    ["description length", siteLimit("descriptionMaxLength"), workerLimit(/template\.description\.length\s*>\s*(\d+)/, "description length")],
+    ["prompt length", siteLimit("promptMaxLength"), workerLimit(/template\.prompt\.length\s*>\s*(\d+)/, "prompt length")],
+    ["minimum slots", siteLimit("minSlots"), workerLimit(/template\.slots\.length\s*<\s*(\d+)/, "minimum slots")],
+    ["maximum slots", siteLimit("maxSlots"), workerLimit(/template\.slots\.length\s*>\s*(\d+)/, "maximum slots")],
+  ];
+  for (const [label, site, worker] of pairs) {
+    if (site !== worker) {
+      throw new Error(`Submission ${label} differs: site ${submissionLimitsPath} uses ${site}, worker ${workerPath} uses ${worker}.`);
+    }
+  }
 }
 
 function parseVersion(version, label) {
@@ -82,6 +131,8 @@ try {
   if (!changelogHeading.test(changelog)) {
     throw new Error(`${changelogPath} needs a dated "## [${currentVersion}] - YYYY-MM-DD" entry.`);
   }
+
+  checkWorkerSubmissionRules(currentVersion);
 
   const baseRef = requestedBaseRef();
   let baseSchemaSource;
