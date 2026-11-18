@@ -126,10 +126,38 @@ export function draftFromTemplate(template: ImageTemplate): TemplateCreatorDraft
   };
 }
 
+// Shortens a prompt to the submission limit without cutting a {placeholder}
+// in half.
+export function clampTemplatePrompt(value: string): string {
+  const limit = TEMPLATE_SUBMISSION_LIMITS.promptMaxLength;
+  if (value.length <= limit) return value;
+  let cut = value.slice(0, limit);
+  const lastOpen = cut.lastIndexOf("{");
+  if (lastOpen > cut.lastIndexOf("}")) cut = cut.slice(0, lastOpen);
+  return cut.trimEnd();
+}
+
+// Brings a draft that did not come through the form fields (an AI draft, a
+// restored draft) inside the submission limits, so the fields show exactly
+// what is generated, saved and exported.
+export function clampCreatorDraft(draft: TemplateCreatorDraft): { draft: TemplateCreatorDraft; promptShortened: boolean } {
+  const { titleMaxLength, descriptionMaxLength } = TEMPLATE_SUBMISSION_LIMITS;
+  const prompt = clampTemplatePrompt(draft.prompt);
+  return {
+    draft: {
+      ...draft,
+      title: draft.title.length > titleMaxLength ? truncate(draft.title, titleMaxLength) : draft.title,
+      description: draft.description.length > descriptionMaxLength ? truncate(draft.description, descriptionMaxLength) : draft.description,
+      prompt,
+    },
+    promptShortened: prompt.length < draft.prompt.length,
+  };
+}
+
 export function templateFromCreatorDraft(draft: TemplateCreatorDraft, existingId?: string): ImageTemplate {
   const title = truncate(draft.title, TEMPLATE_SUBMISSION_LIMITS.titleMaxLength) || "Untitled image template";
   const description = truncate(draft.description, TEMPLATE_SUBMISSION_LIMITS.descriptionMaxLength) || "A reusable image template.";
-  const prompt = draft.prompt.trim().slice(0, TEMPLATE_SUBMISSION_LIMITS.promptMaxLength).trim() || `Create ${title.toLowerCase()}.`;
+  const prompt = clampTemplatePrompt(draft.prompt.trim()) || `Create ${title.toLowerCase()}.`;
   const slots = normalizeCreatorSlots(draft.slots);
   const generatedAt = new Date().toISOString().slice(0, 10);
 

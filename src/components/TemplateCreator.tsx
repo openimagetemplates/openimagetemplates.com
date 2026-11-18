@@ -13,6 +13,7 @@ import { getNanoGptGenerateUrl } from "@/lib/nanogpt-url";
 import {
   createEmptyTemplateDraft,
   COMMUNITY_SUBMISSION_STORAGE_KEY,
+  clampCreatorDraft,
   draftFromTemplate,
   fileToDataUrl,
   MAX_CREATOR_SLOTS,
@@ -133,7 +134,7 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
       if (!active) return;
       const pending = takePendingCreatorState();
       if (!pending) return;
-      setDraft(pending.draft);
+      setDraft(clampCreatorDraft(pending.draft).draft);
       setIdea(pending.idea);
       setReferenceImage(pending.referenceImage);
       setReferenceFileName(pending.referenceImage ? pending.referenceFileName : "");
@@ -233,7 +234,11 @@ export function TemplateCreator({ baseTemplate, initiallyOpen = false, mode = "m
       if (!response.ok || !data.draft) {
         throw new Error(data.message || "Template AI request failed.");
       }
-      setDraft(data.draft);
+      const aiDraft = clampCreatorDraft(data.draft);
+      setDraft(aiDraft.draft);
+      if (aiDraft.promptShortened) {
+        setError(`The AI prompt was longer than ${TEMPLATE_SUBMISSION_LIMITS.promptMaxLength.toLocaleString("en-US")} characters, so it was shortened. Check how it ends.`);
+      }
       setSavedTemplate(null);
       setSavedSignature("");
       setCommunitySubmission(null);
@@ -1039,6 +1044,8 @@ function takePendingCreatorState(): PendingCreatorState | null {
       || Date.now() - parsed.savedAt > PENDING_DRAFT_MAX_AGE_MS
       || !parsed.draft
       || typeof parsed.draft.prompt !== "string"
+      || typeof parsed.draft.title !== "string"
+      || typeof parsed.draft.description !== "string"
       || !Array.isArray(parsed.draft.slots)
     ) {
       return null;
