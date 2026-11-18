@@ -5684,13 +5684,13 @@
       ],
       "image": "https://assets.openimagetemplates.com/prompt-templates/beach-towel-vacation-selfie--generated-2026-11-18--v2--schema-v1.2.0.webp",
       "imageAlt": "Adult woman in a one-piece swimsuit lying on a striped towel taking an overhead selfie with sand and waves around her",
-      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic overhead phone selfie of an unmistakably adult woman around age 30 lying on her back on a beach towel, arm stretched up holding the phone. She wears a sporty opaque coral one-piece swimsuit with a high scoop neckline and sunglasses pushed into her hair. The towel has wide blue and white stripes, and warm pale sand fills much of the frame, with the white edge of breaking surf in one corner. Bright midday sun, windblown hair across the towel, sunscreen shine on the shoulders, a paperback and a straw hat beside her. Natural skin texture, easy laughing expression with her face as the focus of the frame, casual tilted vacation framing with slight wide-angle distortion. No resemblance to any specific real person other than an uploaded reference. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic overhead phone selfie of an unmistakably adult woman around age 30 lying on her back on a beach towel, arm stretched up holding the phone. She wears a sporty opaque coral one-piece swimsuit with a scoop neckline and sunglasses pushed into her hair. The towel has wide blue and white stripes, and warm pale sand fills much of the frame, with the white edge of breaking surf in one corner. Bright midday sun, windblown hair across the towel, sunscreen shine on the shoulders, a paperback and a straw hat beside her. Natural skin texture, easy laughing expression with her face as the focus of the frame, casual tilted vacation framing with slight wide-angle distortion. No resemblance to any specific real person other than an uploaded reference. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
       "negativePrompt": [],
       "slots": [
         {
           "name": "swimwear",
           "label": "Swimwear",
-          "example": "sporty opaque coral one-piece swimsuit with a high scoop neckline"
+          "example": "sporty opaque coral one-piece swimsuit with a scoop neckline"
         },
         {
           "name": "towel_pattern",
@@ -5710,7 +5710,7 @@
       "creator": "Open Image Templates",
       "license": "CC BY 4.0",
       "simplePrompt": "Create an overhead vacation selfie on a striped beach towel.",
-      "demoPrompt": "A realistic overhead phone selfie of an unmistakably adult woman around age 30 with freckles and sun-lightened auburn hair, lying on her back on a beach towel, arm stretched up holding the phone. She wears a sporty opaque coral one-piece swimsuit with a high scoop neckline and sunglasses pushed into her hair. The towel has wide blue and white stripes; warm pale sand fills much of the frame with the white edge of breaking surf in one corner. Bright midday sun, windblown hair, sunscreen shine on her shoulders, a paperback and a straw hat beside her. Natural skin texture, easy laughing expression with her face as the focus of the frame, casual tilted framing with slight wide-angle distortion. No resemblance to any specific real person. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "demoPrompt": "A realistic overhead phone selfie of an unmistakably adult woman around age 30 with freckles and sun-lightened auburn hair, lying on her back on a beach towel, arm stretched up holding the phone. She wears a sporty opaque coral one-piece swimsuit with a scoop neckline and sunglasses pushed into her hair. The towel has wide blue and white stripes; warm pale sand fills much of the frame with the white edge of breaking surf in one corner. Bright midday sun, windblown hair, sunscreen shine on her shoulders, a paperback and a straw hat beside her. Natural skin texture, easy laughing expression with her face as the focus of the frame, casual tilted framing with slight wide-angle distortion. No resemblance to any specific real person. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
       "contentTier": "suggestive-capable",
       "suggestedSettings": {
         "nImages": 1,
@@ -5964,13 +5964,13 @@
       ],
       "image": "https://assets.openimagetemplates.com/prompt-templates/pet-and-owner-park-selfie--generated-2026-11-18--schema-v1.2.0.webp",
       "imageAlt": "Adult woman crouching in a park taking a close selfie with a golden retriever pushing its nose toward the camera",
-      "prompt": "If an image is uploaded, use it as the optional reference pet and keep that animal's species, coat and markings. Create a realistic close phone selfie of an unmistakably adult person around age 30 crouching on a park path beside their pet, by default a fluffy golden retriever. The pet pushes its wet nose toward the lens so it looks big and slightly distorted, while the owner laughs and squeezes into the other half of the frame. Wearing a navy rain jacket, cheek pressed near the pet's ear. Behind them, a leafy park with a gravel path, a bench and soft autumn light. Shared awkward crop, natural fur and skin detail, a little motion blur from the pet's movement, ordinary smartphone sharpness. No resemblance to any specific real person. No logos, readable text, or watermarks.",
+      "prompt": "If an image is uploaded, use it as the optional reference pet and keep that animal's species, coat and markings. Create a realistic close phone selfie of an unmistakably adult person around age 30 crouching on a park path beside their pet, by default a fluffy golden retriever. The pet pushes its nose toward the lens so it looks big and slightly distorted, while the owner laughs and squeezes into the other half of the frame. Wearing a navy rain jacket, cheek pressed near the pet's ear. Behind them, a leafy park with a gravel path, a bench and soft autumn light. Shared awkward crop, natural fur and skin detail, a little motion blur from the pet's movement, ordinary smartphone sharpness. No resemblance to any specific real person. No logos, readable text, or watermarks.",
       "negativePrompt": [],
       "slots": [
         {
           "name": "pet",
           "label": "Pet",
-          "example": "fluffy golden retriever"
+          "example": "the uploaded pet; a fluffy golden retriever if no photo"
         },
         {
           "name": "park_setting",
@@ -5980,7 +5980,7 @@
         {
           "name": "interaction",
           "label": "Interaction",
-          "example": "dog pushing its wet nose toward the lens"
+          "example": "pet pushing its nose toward the lens"
         }
       ],
       "suggestedModel": "gpt-image-2",
@@ -6466,20 +6466,20 @@
         "film",
         "fun"
       ],
-      "image": "https://assets.openimagetemplates.com/prompt-templates/four-frame-photo-booth-strip--generated-2026-11-18--schema-v1.2.0.webp",
+      "image": "https://assets.openimagetemplates.com/prompt-templates/four-frame-photo-booth-strip--generated-2026-11-18--v2--schema-v1.2.0.webp",
       "imageAlt": "Vertical photo-booth strip of four black-and-white frames showing two adult friends making different faces",
-      "prompt": "If an image is uploaded, use it as the optional reference for the person or people in the strip. Create a realistic vertical photo-booth strip of four stacked frames showing two unmistakably adult best friends in their late twenties squeezed onto a booth bench; if the reference shows one person, show that person alone in every frame. Frame one: big smiles. Frame two: silly crossed eyes and tongues out. Frame three: one kissing the other's cheek while they laugh, or a chin-on-hand pose if alone. Frame four: laughing hard, mid-motion. Same tight framing in every frame, with a plain red curtain behind them. Classic black-and-white film print with rich contrast, soft grain, slight flash falloff and thin white print borders. Show the paper strip lying on a dark wooden table so its edges are visible. No resemblance to any specific real person other than an uploaded reference. No logos, readable text, or watermarks.",
+      "prompt": "If an image is uploaded, use it as the optional reference for the person or people in the strip. Create a realistic vertical photo-booth strip of four stacked frames showing two unmistakably adult best friends in their late twenties squeezed onto a booth bench; if the reference shows one person, show that person alone in every frame. Frame one: big smiles. Frame two: silly crossed eyes and tongues out. Frame three: blowing a kiss toward the camera. Frame four: laughing hard, mid-motion. Same tight framing in every frame, with a plain red curtain behind them. Classic black-and-white film print with rich contrast, soft grain, slight flash falloff and thin white print borders. Show the paper strip lying on a dark wooden table so its edges are visible. No resemblance to any specific real person other than an uploaded reference. No logos, readable text, or watermarks.",
       "negativePrompt": [],
       "slots": [
         {
           "name": "people",
           "label": "People",
-          "example": "two adult best friends in their late twenties"
+          "example": "the person or people in the uploaded photo; two adult best friends if no photo"
         },
         {
           "name": "expressions",
           "label": "Expressions",
-          "example": "big smiles, silly faces, cheek kiss, laughing hard"
+          "example": "big smiles, silly faces, blowing a kiss, laughing hard"
         },
         {
           "name": "film_look",
@@ -6494,7 +6494,7 @@
       "creator": "Open Image Templates",
       "license": "CC BY 4.0",
       "simplePrompt": "Create a four-frame photo-booth strip of me or me and a friend.",
-      "demoPrompt": "A realistic vertical photo-booth strip of four stacked frames showing two unmistakably adult best friends in their late twenties, a woman with a curly afro and a woman with a straight black bob, squeezed onto a booth bench. Frame one: big smiles. Frame two: silly crossed eyes and tongues out. Frame three: one kissing the other's cheek while they laugh. Frame four: laughing hard, mid-motion. Same tight framing in every frame, a plain red curtain behind. Classic black-and-white film print with rich contrast, soft grain, slight flash falloff, thin white print borders. The paper strip lies on a dark wooden table. No resemblance to any specific real person, no logos, readable text, or watermarks.",
+      "demoPrompt": "A realistic vertical photo-booth strip of four stacked frames showing two unmistakably adult best friends in their late twenties, a woman with a curly afro and a woman with a straight black bob, squeezed onto a booth bench. Frame one: big smiles. Frame two: silly crossed eyes and tongues out. Frame three: both blowing a kiss toward the camera. Frame four: laughing hard, mid-motion. Same tight framing in every frame, a plain red curtain behind. Classic black-and-white film print with rich contrast, soft grain, slight flash falloff, thin white print borders. The paper strip lies on a dark wooden table. No resemblance to any specific real person, no logos, readable text, or watermarks.",
       "contentTier": "sfw",
       "suggestedSettings": {
         "nImages": 1,
