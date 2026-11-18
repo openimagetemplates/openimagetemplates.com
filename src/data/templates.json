@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T18:00:00.000Z",
+  "generatedAt": "2026-11-18T22:00:00.000Z",
   "source": "openimagetemplates.com canonical catalogue",
   "templates": [
     {
@@ -5557,6 +5557,1399 @@
         "quality": "medium"
       },
       "exampleSchemaVersion": "1.1.0"
+    },
+    {
+      "id": "golden-hour-car-selfie",
+      "title": "Golden Hour Car Selfie",
+      "description": "A relaxed phone selfie from the driver's seat with warm late-day sun through the car windows.",
+      "category": "Portrait",
+      "tags": [
+        "car selfie",
+        "golden hour",
+        "phone photo",
+        "candid",
+        "driver seat"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/golden-hour-car-selfie--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Adult man smiling in the driver's seat of a parked car with warm sunlight across his face and the steering wheel in frame",
+      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic phone selfie of an unmistakably adult person in their late twenties sitting in the driver's seat of a parked car, wearing a soft grey hoodie over a white t-shirt. Hold the camera at arm's length from slightly above so the steering wheel, the seatbelt across the chest and the side window are clearly in frame. Low golden-hour sun pours through the window, leaving warm clipped patches on the cheek and dashboard. Beige fabric seats and a tidy interior, with a quiet suburban street and trees outside. Natural skin texture, relaxed half smile, slightly tilted imperfect crop, ordinary smartphone sharpness and mild lens flare. No resemblance to any specific real person, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "outfit",
+          "label": "Casual outfit",
+          "example": "soft grey hoodie over a white t-shirt"
+        },
+        {
+          "name": "car_interior",
+          "label": "Car interior",
+          "example": "beige fabric seats and a tidy interior"
+        },
+        {
+          "name": "window_view",
+          "label": "Window view",
+          "example": "a quiet suburban street and trees"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a warm golden-hour selfie taken in the driver's seat of a parked car.",
+      "demoPrompt": "A realistic phone selfie of an unmistakably adult man around 28 with short curly dark hair and light stubble, sitting in the driver's seat of a parked car, wearing a soft grey hoodie over a white t-shirt. Camera held at arm's length from slightly above, with the steering wheel, the seatbelt across his chest and the side window clearly in frame. Low golden-hour sun through the window leaves warm clipped patches on his cheek and the dashboard. Beige fabric seats, a quiet suburban street and trees outside. Natural skin texture, relaxed half smile, slightly tilted imperfect crop, ordinary smartphone sharpness, mild lens flare. No resemblance to any specific real person, no logos, readable text, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional selfie reference",
+          "description": "Upload a clear face photo if you want the selfie to keep a specific person's look."
+        }
+      }
+    },
+    {
+      "id": "post-workout-gym-mirror",
+      "title": "Post Workout Gym Mirror",
+      "description": "A sweaty after-set mirror selfie in a weight room with racks, rubber floor and overhead glare.",
+      "category": "Portrait",
+      "tags": [
+        "gym selfie",
+        "mirror selfie",
+        "activewear",
+        "fitness",
+        "workout"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/post-workout-gym-mirror--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Adult woman in a sage sports top and black leggings taking a mirror selfie in a weight room with dumbbell racks behind her",
+      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic post-workout mirror selfie of an unmistakably adult woman around age 27 with a fit, athletic build, standing in a weight room right after a set. She wears a fitted sage-green sports top and high-waisted black leggings, holding her phone at chest height with one hand on her hip. Frame from knees up so the wall mirror shows rows of dumbbell racks, a bench and black rubber flooring behind her. Harsh overhead lights cause glare spots on the mirror, a light sheen of sweat on her skin, a loose ponytail with flyaway hair and a water bottle at her feet. Natural skin texture, confident tired smile, ordinary phone-camera detail. No resemblance to any specific real person. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "subject",
+          "label": "Adult subject",
+          "example": "adult woman around age 27 with a fit, athletic build"
+        },
+        {
+          "name": "activewear",
+          "label": "Activewear set",
+          "example": "fitted sage-green sports top and high-waisted black leggings"
+        },
+        {
+          "name": "pose",
+          "label": "Pose",
+          "example": "phone at chest height with one hand on her hip"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a realistic gym mirror selfie right after a workout.",
+      "demoPrompt": "A realistic post-workout mirror selfie of an unmistakably adult woman around age 27 with an athletic build, warm brown skin and a loose dark ponytail, standing in a weight room right after a set. She wears a fitted sage-green sports top and high-waisted black leggings, phone at chest height, one hand on her hip. Framed from the knees up; the wall mirror shows rows of dumbbell racks, a bench and black rubber flooring. Harsh overhead lights cause glare spots on the mirror, light sheen of sweat, flyaway hair, a water bottle at her feet. Natural skin texture, confident tired smile, ordinary phone-camera detail. No resemblance to any specific real person. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional selfie reference",
+          "description": "Upload a clear photo if you want the gym selfie to keep a specific adult's look."
+        }
+      }
+    },
+    {
+      "id": "beach-towel-vacation-selfie",
+      "title": "Beach Towel Vacation Selfie",
+      "description": "An overhead vacation selfie lying on a striped beach towel with sand and surf around.",
+      "category": "Portrait",
+      "tags": [
+        "beach selfie",
+        "vacation",
+        "swimwear",
+        "summer",
+        "overhead"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/beach-towel-vacation-selfie--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Adult woman in a one-piece swimsuit lying on a striped towel taking an overhead selfie with sand and waves around her",
+      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic overhead phone selfie of an unmistakably adult woman around age 30 lying on her back on a beach towel, arm stretched up holding the phone. She wears an opaque coral one-piece swimsuit and sunglasses pushed into her hair. The towel has wide blue and white stripes, and warm pale sand fills much of the frame, with the white edge of breaking surf in one corner. Bright midday sun, windblown hair across the towel, sunscreen shine on the shoulders, a paperback and a straw hat beside her. Natural skin texture, easy laughing expression, casual tilted vacation framing with slight wide-angle distortion. No resemblance to any specific real person. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "swimwear",
+          "label": "Swimwear",
+          "example": "opaque coral one-piece swimsuit"
+        },
+        {
+          "name": "towel_pattern",
+          "label": "Towel pattern",
+          "example": "wide blue and white stripes"
+        },
+        {
+          "name": "beach_setting",
+          "label": "Beach setting",
+          "example": "warm pale sand with breaking surf in one corner"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an overhead vacation selfie on a striped beach towel.",
+      "demoPrompt": "A realistic overhead phone selfie of an unmistakably adult woman around age 30 with freckles and sun-lightened auburn hair, lying on her back on a beach towel, arm stretched up holding the phone. She wears an opaque coral one-piece swimsuit and sunglasses pushed into her hair. The towel has wide blue and white stripes; warm pale sand fills much of the frame with the white edge of breaking surf in one corner. Bright midday sun, windblown hair, sunscreen shine on her shoulders, a paperback and a straw hat beside her. Natural skin texture, laughing expression, casual tilted framing with slight wide-angle distortion. No resemblance to any specific real person. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional selfie reference",
+          "description": "Upload a clear photo if you want the beach selfie to keep a specific adult's look."
+        }
+      }
+    },
+    {
+      "id": "elevator-going-out-mirror",
+      "title": "Elevator Going Out Mirror",
+      "description": "A full-length evening outfit check in a brushed-metal elevator mirror on the way out.",
+      "category": "Portrait",
+      "tags": [
+        "elevator selfie",
+        "mirror selfie",
+        "night out",
+        "evening outfit",
+        "full body"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/elevator-going-out-mirror--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Adult woman in a black fitted dress taking a full-length selfie in a brushed steel elevator with lit floor buttons",
+      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic full-length mirror selfie of an unmistakably adult woman around age 29 inside a compact elevator, heading out for the evening. She wears a fitted black midi dress with thin straps, strappy heels and a small gold chain shoulder bag, holding her phone in front of her chest. Show brushed-steel wall panels with visible seams, a round handrail at hip height and a column of softly lit floor buttons beside the door. Slightly greenish ceiling light from above, faint smudges on the mirror, natural skin texture, glossy hair and a confident sideways glance. Ordinary phone-camera realism with a small tilt. No resemblance to any specific real person. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "evening_outfit",
+          "label": "Evening outfit",
+          "example": "fitted black midi dress with thin straps and strappy heels"
+        },
+        {
+          "name": "elevator_finish",
+          "label": "Elevator finish",
+          "example": "brushed-steel wall panels with visible seams"
+        },
+        {
+          "name": "bag_style",
+          "label": "Bag",
+          "example": "small gold chain shoulder bag"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a full-length outfit selfie in an elevator mirror before a night out.",
+      "demoPrompt": "A realistic full-length mirror selfie of an unmistakably adult woman around age 29 with a sleek black bob, inside a compact elevator, heading out for the evening. She wears a fitted black midi dress with thin straps, strappy heels and a small gold chain shoulder bag, phone held in front of her chest. Brushed-steel wall panels with visible seams, a round handrail at hip height, a column of softly lit floor buttons beside the door. Slightly greenish ceiling light, faint smudges on the mirror, natural skin texture, confident sideways glance, ordinary phone-camera realism with a small tilt. No resemblance to any specific real person. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional selfie reference",
+          "description": "Upload a clear photo if you want the elevator selfie to keep a specific adult's look."
+        }
+      }
+    },
+    {
+      "id": "boutique-fitting-room-check",
+      "title": "Boutique Fitting Room Check",
+      "description": "A try-on mirror photo in a boutique fitting room with curtain, spare outfits and shopping bags.",
+      "category": "Portrait",
+      "tags": [
+        "fitting room",
+        "try on",
+        "mirror selfie",
+        "fitted dress",
+        "shopping"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/boutique-fitting-room-check--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Adult woman trying on an emerald fitted dress in a boutique fitting room with a velvet curtain and shopping bags",
+      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic fitting-room mirror selfie of an unmistakably adult woman around age 32 trying on a fitted emerald knit dress that falls below the knee, fully clothed and checking the fit over her shoulder. A heavy mustard velvet curtain is half drawn behind her, two spare outfits with paper price tags hang on a wall hook, and paper shopping bags and her sneakers sit on the floor. Small boutique cubicle with a pale wood bench, warm downlight from above and ordinary retail brightness. Natural skin texture, a pleased, slightly unsure expression, phone partly covering her chin, slightly crooked phone crop. No resemblance to any specific real person. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "fitted_outfit",
+          "label": "Fitted outfit",
+          "example": "fitted emerald knit dress that falls below the knee"
+        },
+        {
+          "name": "curtain_color",
+          "label": "Curtain",
+          "example": "heavy mustard velvet curtain"
+        },
+        {
+          "name": "shopping_props",
+          "label": "Shopping props",
+          "example": "paper shopping bags and tagged spare outfits"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a fitting-room mirror selfie trying on a new dress.",
+      "demoPrompt": "A realistic fitting-room mirror selfie of an unmistakably adult woman around age 32 with shoulder-length wavy chestnut hair, trying on a fitted emerald knit dress that falls below the knee, fully clothed and checking the fit over her shoulder. A heavy mustard velvet curtain half drawn behind her, two spare outfits with paper price tags on a wall hook, paper shopping bags and her sneakers on the floor. Small boutique cubicle with a pale wood bench, warm downlight, ordinary retail brightness. Natural skin texture, pleased, slightly unsure expression, phone partly covering her chin, slightly crooked crop. No resemblance to any specific real person. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional selfie reference",
+          "description": "Upload a clear photo if you want the try-on selfie to keep a specific adult's look."
+        }
+      }
+    },
+    {
+      "id": "blue-hour-rooftop-outfit",
+      "title": "Blue Hour Rooftop Outfit",
+      "description": "A flash-lit full-body outfit photo on a rooftop terrace against a lavender twilight skyline.",
+      "category": "Portrait",
+      "tags": [
+        "rooftop",
+        "blue hour",
+        "flash photo",
+        "evening outfit",
+        "skyline"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/blue-hour-rooftop-outfit--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Adult woman in a satin slip-style evening dress lit by camera flash on a rooftop with a lavender city skyline behind her",
+      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic flash-lit full-body photo of an unmistakably adult woman around age 28 standing casually on a wide rooftop terrace at blue hour, one hand resting on the concrete parapet. She wears a fitted deep-red satin midi dress with a lined, opaque skirt, a cropped leather jacket and block heels. Behind her, a broad city skyline with scattered lit windows sits under a soft lavender sky fading to blue. Direct on-camera flash makes her bright against the dimmer background, with wind lifting her hair and the hem of the dress. Natural skin texture, relaxed smile, slightly off-center snapshot framing. No resemblance to any specific real person. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "evening_outfit",
+          "label": "Evening outfit",
+          "example": "fitted deep-red satin midi dress with a cropped leather jacket"
+        },
+        {
+          "name": "city_skyline",
+          "label": "City skyline",
+          "example": "broad city skyline with scattered lit windows"
+        },
+        {
+          "name": "sky_color",
+          "label": "Sky color",
+          "example": "soft lavender fading to blue"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a flash photo of an evening outfit on a rooftop at blue hour.",
+      "demoPrompt": "A realistic flash-lit full-body photo of an unmistakably adult woman around age 28 with long box braids, standing casually on a wide rooftop terrace at blue hour, one hand on the concrete parapet. She wears a fitted deep-red satin midi dress with a lined, opaque skirt, a cropped leather jacket and block heels. Behind her a broad city skyline with scattered lit windows under a soft lavender sky fading to blue. Direct on-camera flash makes her bright against the dimmer background; wind lifts her braids and the hem of the dress. Natural skin texture, relaxed smile, slightly off-center snapshot framing. No resemblance to any specific real person. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "contentTier": "suggestive-capable",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional outfit reference",
+          "description": "Upload a clear photo if you want the rooftop photo to keep a specific adult's look."
+        }
+      }
+    },
+    {
+      "id": "ultra-wide-friends-huddle",
+      "title": "Ultra Wide Friends Huddle",
+      "description": "A playful 0.5x ultra-wide group selfie of friends leaning in from above in a sunny park.",
+      "category": "Lifestyle",
+      "tags": [
+        "group selfie",
+        "ultra wide",
+        "friends",
+        "park",
+        "0.5x"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/ultra-wide-friends-huddle--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Four adult friends leaning into an overhead ultra-wide selfie on park grass with distorted faces at the edges",
+      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic ultra-wide 0.5x group selfie of four unmistakably adult friends in their mid-twenties, shot from a high arm angle as they lean in around the camera. Everyone wears relaxed summer clothes in cream, olive and faded denim. Below them is bright green park grass with a picnic blanket, a few scattered snacks and leafy trees at the curved edges of the frame. The closest faces at the edges stretch and bulge with fisheye distortion while the circle of friends stays visible. Sunny afternoon light, laughing and pulling silly faces, one person half cut off, natural skin texture and ordinary phone sharpness. No resemblance to any specific real person, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "friend_group",
+          "label": "Adult friend group",
+          "example": "four adult friends in their mid-twenties"
+        },
+        {
+          "name": "outfit_palette",
+          "label": "Outfit palette",
+          "example": "relaxed summer clothes in cream, olive and faded denim"
+        },
+        {
+          "name": "group_expression",
+          "label": "Group expression",
+          "example": "laughing and pulling silly faces"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a fun ultra-wide group selfie of friends in a park.",
+      "demoPrompt": "A realistic ultra-wide 0.5x group selfie of four unmistakably adult friends in their mid-twenties, two women and two men of different backgrounds, shot from a high arm angle as they lean in around the camera. Relaxed summer clothes in cream, olive and faded denim. Below them bright green park grass, a picnic blanket, scattered snacks and leafy trees at the curved edges of the frame. Faces at the edges stretch and bulge with fisheye distortion while the circle of friends stays visible. Sunny afternoon light, laughing and pulling silly faces, one person half cut off, natural skin texture, ordinary phone sharpness. No resemblance to any specific real person, no logos, readable text, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional group reference",
+          "description": "Upload a photo if you want one of the friends to keep a specific person's look."
+        }
+      }
+    },
+    {
+      "id": "pet-and-owner-park-selfie",
+      "title": "Pet And Owner Park Selfie",
+      "description": "A close, awkward outdoor selfie of an owner and their pet nosing into the lens.",
+      "category": "Lifestyle",
+      "tags": [
+        "pet selfie",
+        "dog",
+        "owner",
+        "park",
+        "candid"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/pet-and-owner-park-selfie--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Adult woman crouching in a park taking a close selfie with a golden retriever pushing its nose toward the camera",
+      "prompt": "If an image is uploaded, use it as the optional reference pet. Create a realistic close phone selfie of an unmistakably adult person around age 30 crouching on a park path beside their dog, a fluffy golden retriever. The dog pushes its wet nose toward the lens so it looks big and slightly distorted, while the owner laughs and squeezes into the other half of the frame. Wearing a navy rain jacket, cheek pressed near the dog's ear. Behind them, a leafy park with a gravel path, a bench and soft autumn light. Shared awkward crop, natural fur and skin detail, a little motion blur on the wagging tail, ordinary smartphone sharpness. No resemblance to any specific real person, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "pet",
+          "label": "Pet",
+          "example": "fluffy golden retriever"
+        },
+        {
+          "name": "park_setting",
+          "label": "Park setting",
+          "example": "leafy park with a gravel path and a bench in autumn light"
+        },
+        {
+          "name": "interaction",
+          "label": "Interaction",
+          "example": "dog pushing its wet nose toward the lens"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a close selfie of an owner and their pet in a park.",
+      "demoPrompt": "A realistic close phone selfie of an unmistakably adult woman around age 30 with a messy blonde bun, crouching on a park path beside her fluffy golden retriever. The dog pushes its wet nose toward the lens so it looks big and slightly distorted, while she laughs and squeezes into the other half of the frame, wearing a navy rain jacket, cheek pressed near the dog's ear. Behind them a leafy park with a gravel path, a bench and soft autumn light. Shared awkward crop, natural fur and skin detail, slight motion blur on the wagging tail, ordinary smartphone sharpness. No resemblance to any specific real person, no logos, readable text, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional pet photo",
+          "description": "Upload a clear photo of your dog or cat if you want the selfie to show that pet."
+        }
+      }
+    },
+    {
+      "id": "airport-gate-waiting-selfie",
+      "title": "Airport Gate Waiting Selfie",
+      "description": "A tired but cheerful selfie at a boarding gate with luggage and a plane in the window.",
+      "category": "Portrait",
+      "tags": [
+        "airport",
+        "travel selfie",
+        "boarding gate",
+        "vacation",
+        "phone photo"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/airport-gate-waiting-selfie--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Adult man in a travel hoodie taking a selfie at an airport gate with a carry-on and an airplane visible through the window",
+      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic phone selfie of an unmistakably adult traveler around age 34 sitting in a row of connected terminal seats at a boarding gate. Wearing a comfortable navy zip hoodie, neck pillow around the shoulders and over-ear headphones resting on the collar. A mustard-yellow hard-shell carry-on stands beside the seat. Through the tall terminal windows behind, a parked airliner and a jet bridge sit on a grey tarmac under an overcast sky. Mixed light: cool daylight from the windows and warm ceiling spots. Slightly tired eyes with a cheerful grin, natural skin texture, coffee cup in hand, ordinary phone sharpness and a casual crooked crop. No resemblance to any specific real person, airline branding, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "travel_outfit",
+          "label": "Travel outfit",
+          "example": "comfortable navy zip hoodie with a neck pillow"
+        },
+        {
+          "name": "luggage",
+          "label": "Luggage",
+          "example": "mustard-yellow hard-shell carry-on"
+        },
+        {
+          "name": "airport_view",
+          "label": "Airport view",
+          "example": "parked airliner and jet bridge under an overcast sky"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a cheerful selfie waiting at an airport boarding gate.",
+      "demoPrompt": "A realistic phone selfie of an unmistakably adult man around age 34 with a trimmed beard and glasses, sitting in a row of connected terminal seats at a boarding gate. He wears a comfortable navy zip hoodie, a neck pillow around his shoulders and over-ear headphones resting on his collar. A mustard-yellow hard-shell carry-on stands beside him. Through tall terminal windows behind, a parked airliner and a jet bridge on grey tarmac under an overcast sky. Cool window daylight mixed with warm ceiling spots. Slightly tired eyes, cheerful grin, natural skin texture, coffee cup in hand, casual crooked crop. No resemblance to any specific real person, no airline branding, logos, readable text, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional selfie reference",
+          "description": "Upload a clear face photo if you want the travel selfie to keep a specific person's look."
+        }
+      }
+    },
+    {
+      "id": "festival-crowd-wristband-selfie",
+      "title": "Festival Crowd Wristband Selfie",
+      "description": "Two friends grinning in a sunny festival crowd selfie with wristbands and a distant stage.",
+      "category": "Lifestyle",
+      "tags": [
+        "festival",
+        "crowd selfie",
+        "friends",
+        "concert",
+        "summer"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/festival-crowd-wristband-selfie--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Two adult friends with fabric wristbands taking a selfie in a sunny outdoor festival crowd with a stage far behind",
+      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic phone selfie of two unmistakably adult friends in their mid-twenties squeezed together inside an outdoor music festival crowd. Both wear casual festival clothes: a tie-dye tank top, a denim shirt, bucket hat and sunglasses on the head. Raise the hands near the lens to show colorful woven fabric wristbands. Behind them, a sea of shoulders and raised arms leads to a distant stage with a large lighting rig. Late-afternoon sun creates haze and lens flare, with slightly blown highlights, dust in the air, glitter on the cheeks and big open-mouth smiles. Ordinary phone exposure, imperfect tilt. No resemblance to any specific real person, performer likenesses, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "festival_outfits",
+          "label": "Festival outfits",
+          "example": "tie-dye tank top, denim shirt and bucket hat"
+        },
+        {
+          "name": "stage_backdrop",
+          "label": "Stage backdrop",
+          "example": "distant stage with a large lighting rig"
+        },
+        {
+          "name": "time_of_day",
+          "label": "Time of day",
+          "example": "late-afternoon sun with haze"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a sunny festival crowd selfie of two friends showing their wristbands.",
+      "demoPrompt": "A realistic phone selfie of two unmistakably adult friends in their mid-twenties, a tall man with a shaved head and a woman with curly red hair, squeezed together inside an outdoor music festival crowd. Casual festival clothes: a tie-dye tank top, a denim shirt, a bucket hat and sunglasses on the head. Hands raised near the lens show colorful woven fabric wristbands. Behind them a sea of shoulders and raised arms leads to a distant stage with a large lighting rig. Late-afternoon sun creates haze and lens flare, slightly blown highlights, dust in the air, glitter on cheeks, big open-mouth smiles, imperfect tilt. No resemblance to any specific real person, no logos, readable text, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional selfie reference",
+          "description": "Upload a photo if you want one of the two friends to keep a specific person's look."
+        }
+      }
+    },
+    {
+      "id": "hug-your-younger-self",
+      "title": "Hug Your Younger Self",
+      "description": "A warm instant-photo style hug between you today and you as a child.",
+      "category": "Portrait",
+      "tags": [
+        "younger self",
+        "instant photo",
+        "family photo",
+        "nostalgic",
+        "hug"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/hug-your-younger-self--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Instant photo of an adult kneeling to hug a smiling child version of themselves in a sunny backyard",
+      "prompt": "Use the uploaded image as the reference for the adult's face; if a childhood photo is also uploaded, use it for the child. Create a warm instant-camera photo of an unmistakably adult person kneeling on the grass to hug a smiling six-year-old version of themselves, clearly the same person at two ages with matching eyes, smile and hair color. Both wear everyday clothes in soft yellow and blue: the adult in a sweater and jeans, the child in a t-shirt and shorts. Set in a sunny suburban backyard with a wooden fence and a garden swing. Soft afternoon light, slightly faded colors, light film grain and a white instant-print border. A gentle, happy family-snapshot feel. No resemblance to any specific real person beyond the uploaded reference, readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "setting",
+          "label": "Setting",
+          "example": "sunny suburban backyard with a wooden fence and a garden swing"
+        },
+        {
+          "name": "clothing_colors",
+          "label": "Clothing colors",
+          "example": "everyday clothes in soft yellow and blue"
+        },
+        {
+          "name": "film_look",
+          "label": "Film look",
+          "example": "slightly faded colors with a white instant-print border"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an instant photo of me hugging my younger self.",
+      "demoPrompt": "A warm instant-camera photo of an unmistakably adult man around age 35 with wavy brown hair and warm brown eyes, kneeling on the grass to hug a smiling six-year-old boy who is clearly him as a child, with matching eyes, smile and hair. Both wear everyday clothes in soft yellow and blue: the man in a sweater and jeans, the boy in a t-shirt and shorts. A sunny suburban backyard with a wooden fence and a garden swing. Soft afternoon light, slightly faded colors, light film grain and a white instant-print border. A gentle, happy family-snapshot feel. No resemblance to any specific real person, no readable text, logos, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": true,
+          "label": "Upload your photo",
+          "description": "Upload a clear photo of yourself today; you may add a childhood photo as a second reference."
+        }
+      }
+    },
+    {
+      "id": "my-pet-as-a-human",
+      "title": "My Pet As A Human",
+      "description": "Your pet reimagined as a human portrait that keeps its coloring, eyes and personality.",
+      "category": "Portrait",
+      "tags": [
+        "pet as human",
+        "pet portrait",
+        "transformation",
+        "funny",
+        "portrait"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/my-pet-as-a-human--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Studio-style portrait of an adult man whose ginger hair, green eyes and striped sweater echo an orange tabby cat",
+      "prompt": "Use the uploaded image as the reference pet. Create a realistic portrait of an unmistakably adult person who is that pet reimagined as a human, keeping its fur colors as hair color, its eye color and its personality in the expression. Show them from the chest up in a cozy knit sweater whose pattern echoes the pet's markings, with a small nod to the animal such as a collar-style necklace. Set against a warm living room with a soft armchair blurred behind. Soft window light, natural skin texture, crisp eyes, and a smug, curious look that matches the pet's character. Keep the person fully human, with no animal ears, fur, snout or whiskers. No resemblance to any specific real person, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "cozy knit sweater that echoes the pet's markings"
+        },
+        {
+          "name": "background",
+          "label": "Background",
+          "example": "warm living room with a soft armchair"
+        },
+        {
+          "name": "mood",
+          "label": "Mood",
+          "example": "smug, curious look"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Turn my pet into a human portrait that still feels like them.",
+      "demoPrompt": "A realistic portrait of an unmistakably adult man around age 30 who is an orange tabby cat reimagined as a human: tousled ginger hair with lighter streaks, bright green eyes and a faint mischievous smile. Chest up, in a cozy rust and cream striped knit sweater that echoes tabby markings, with a thin leather collar-style necklace. A warm living room with a soft armchair blurred behind. Soft window light, natural skin texture, crisp eyes, a smug, curious look. Fully human, no animal ears, fur, snout or whiskers. No resemblance to any specific real person, no logos, readable text, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": true,
+          "label": "Upload pet photo",
+          "description": "Upload a clear photo of your pet showing its face, coloring and eyes."
+        }
+      }
+    },
+    {
+      "id": "royal-court-pet-portrait",
+      "title": "Royal Court Pet Portrait",
+      "description": "Your pet painted as a Renaissance noble in ornate costume inside a gilded frame.",
+      "category": "Portrait",
+      "tags": [
+        "pet portrait",
+        "renaissance",
+        "oil painting",
+        "royal",
+        "funny"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/royal-court-pet-portrait--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Oil painting of a pug dressed as a noble in a red velvet cape and lace collar inside an ornate gold frame",
+      "prompt": "Use the uploaded image as the reference pet. Create a classical oil painting of that pet posed as a Renaissance noble, seated upright on a carved chair and keeping its real face, markings and expression. Dress it in a deep crimson velvet cape with ermine trim, a stiff white lace ruff collar and a jeweled gold chain. Behind, a dim palace chamber with heavy green drapery and a marble column. Warm directional light from the left, rich glazed colors, visible brushwork and fine craquelure across the paint. Present the canvas in an ornate carved gilded frame against a dark wall. A dignified, slightly absurd mood. No human body, readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "costume",
+          "label": "Costume",
+          "example": "deep crimson velvet cape with ermine trim and a lace ruff"
+        },
+        {
+          "name": "frame_style",
+          "label": "Frame",
+          "example": "ornate carved gilded frame"
+        },
+        {
+          "name": "background_room",
+          "label": "Background room",
+          "example": "dim palace chamber with green drapery and a marble column"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Paint my pet as a Renaissance noble in a gold frame.",
+      "demoPrompt": "A classical oil painting of a fawn pug with a black face posed as a Renaissance noble, seated upright on a carved chair with a serious, dignified expression. It wears a deep crimson velvet cape with ermine trim, a stiff white lace ruff collar and a jeweled gold chain. Behind, a dim palace chamber with heavy green drapery and a marble column. Warm directional light from the left, rich glazed colors, visible brushwork and fine craquelure. The canvas sits in an ornate carved gilded frame against a dark wall. A dignified, slightly absurd mood. No human body, readable text, logos, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": true,
+          "label": "Upload pet photo",
+          "description": "Upload a clear photo of your pet showing its face and markings."
+        }
+      }
+    },
+    {
+      "id": "job-caricature-portrait",
+      "title": "Job Caricature Portrait",
+      "description": "A playful big-head cartoon caricature of you at work, surrounded by job props.",
+      "category": "Character",
+      "tags": [
+        "caricature",
+        "cartoon",
+        "job",
+        "funny portrait",
+        "gift"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/job-caricature-portrait--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Big-head cartoon caricature of a barista grinning behind a coffee counter with oversized cups and a steaming machine",
+      "prompt": "Use the uploaded image as the reference person. Create a colorful cartoon caricature of that unmistakably adult person at work as a barista, with an oversized head on a small body and a recognizable likeness. Exaggerate one trait in a friendly way: a huge beaming grin. Place them behind a coffee counter, pouring latte art with a giant steaming espresso machine, stacks of oversized cups and a jar of beans tumbling over. Bold clean ink outlines, smooth digital painting, soft shadows and bright cheerful colors on a simple cream background with a loose splash of color. Funny and flattering, never mean. No resemblance to any specific real person beyond the uploaded reference, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "job",
+          "label": "Job",
+          "example": "barista"
+        },
+        {
+          "name": "props",
+          "label": "Props",
+          "example": "giant steaming espresso machine and oversized cups"
+        },
+        {
+          "name": "exaggerated_trait",
+          "label": "Exaggerated trait",
+          "example": "huge beaming grin"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Turn my photo into a funny caricature of me at my job.",
+      "demoPrompt": "A colorful cartoon caricature of an unmistakably adult woman around age 30 with a high curly ponytail and round glasses, at work as a barista, with an oversized head on a small body. One trait exaggerated in a friendly way: a huge beaming grin. She stands behind a coffee counter pouring latte art, with a giant steaming espresso machine, stacks of oversized cups and a jar of beans tumbling over. Bold clean ink outlines, smooth digital painting, soft shadows, bright cheerful colors on a simple cream background with a loose splash of color. Funny and flattering, never mean. No resemblance to any specific real person, no logos, readable text, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": true,
+          "label": "Upload your photo",
+          "description": "Upload a clear front-facing photo so the caricature keeps your likeness."
+        }
+      }
+    },
+    {
+      "id": "hairstyle-try-on-grid",
+      "title": "Hairstyle Try-On Grid",
+      "description": "One face shown with six different haircuts and colors in a tidy comparison grid.",
+      "category": "Portrait",
+      "tags": [
+        "hairstyle",
+        "haircut ideas",
+        "hair color",
+        "try on",
+        "grid"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/hairstyle-try-on-grid--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Grid of six head-and-shoulders photos of the same adult woman with different haircuts and hair colors",
+      "prompt": "Use the uploaded image as the reference person. Create a clean 3 by 2 grid of six realistic head-and-shoulders photos of that same unmistakably adult person, identical face, skin tone and expression in every tile, each with a different hairstyle: a sleek chin-length bob, long soft waves, a short pixie cut, curtain bangs with layers, a high ponytail and a shaggy shoulder-length cut. Vary the colors across the tiles: natural brunette, honey blonde, copper red, platinum, jet black and soft caramel. Same plain light grey studio background, same even soft front light and same framing in every tile, separated by thin white gutters. Natural hair texture and realistic hairlines. No resemblance to any specific real person beyond the uploaded reference, labels, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "cuts",
+          "label": "Cuts",
+          "example": "bob, long waves, pixie, curtain bangs, high ponytail, shag"
+        },
+        {
+          "name": "hair_colors",
+          "label": "Hair colors",
+          "example": "brunette, honey blonde, copper red, platinum, jet black, caramel"
+        },
+        {
+          "name": "background",
+          "label": "Background",
+          "example": "plain light grey studio"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Show my face with six different hairstyles in a grid.",
+      "demoPrompt": "A clean 3 by 2 grid of six realistic head-and-shoulders photos of the same unmistakably adult woman around age 30 with an oval face, light olive skin and hazel eyes, identical face and gentle smile in every tile, each with a different hairstyle: a sleek chin-length bob, long soft waves, a short pixie cut, curtain bangs with layers, a high ponytail and a shaggy shoulder-length cut. Colors across the tiles: natural brunette, honey blonde, copper red, platinum, jet black and soft caramel. Same plain light grey studio background, even soft front light and framing in every tile, thin white gutters. Natural hair texture, realistic hairlines. No resemblance to any specific real person, no labels, readable text, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": true,
+          "label": "Upload your photo",
+          "description": "Upload a clear, front-facing photo with your face and hairline visible."
+        }
+      }
+    },
+    {
+      "id": "decade-mall-studio-portrait",
+      "title": "Decade Mall Studio Portrait",
+      "description": "A retro mall-studio portrait with big hair, a laser backdrop and soft film grain.",
+      "category": "Portrait",
+      "tags": [
+        "retro portrait",
+        "80s",
+        "90s",
+        "mall studio",
+        "laser background"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/decade-mall-studio-portrait--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Retro 1980s studio portrait of an adult woman with big permed hair and a denim jacket against a blue laser backdrop",
+      "prompt": "Use the uploaded image as the reference person. Create a retro 1980s mall photo-studio portrait of that unmistakably adult person, head and shoulders, turned slightly with the chin resting on one hand. Give them big voluminous permed hair and a bright acid-wash denim jacket with rolled sleeves over a neon pink top. Behind them, a classic studio backdrop of glowing blue and purple laser beams fanning out over a dark starfield. Soft diffused glamour lighting with a bright hair light, slight soft-focus glow, saturated colors, warm skin and gentle film grain, like a print from a decades-old portrait package. Cheesy, sincere smile. No resemblance to any specific real person beyond the uploaded reference, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "decade",
+          "label": "Decade",
+          "example": "1980s"
+        },
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "acid-wash denim jacket over a neon pink top"
+        },
+        {
+          "name": "backdrop",
+          "label": "Backdrop",
+          "example": "glowing blue and purple laser beams over a starfield"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Turn my photo into a retro mall-studio portrait with a laser backdrop.",
+      "demoPrompt": "A retro 1980s mall photo-studio portrait of an unmistakably adult woman around age 30 with warm brown skin and bright dark eyes, head and shoulders, turned slightly with her chin resting on one hand. Big voluminous permed hair, a bright acid-wash denim jacket with rolled sleeves over a neon pink top. Behind her a classic studio backdrop of glowing blue and purple laser beams fanning over a dark starfield. Soft diffused glamour lighting with a bright hair light, slight soft-focus glow, saturated colors, gentle film grain, like a print from a decades-old portrait package. Cheesy, sincere smile. No resemblance to any specific real person, no logos, readable text, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": true,
+          "label": "Upload your photo",
+          "description": "Upload a clear face photo to star in the retro studio portrait."
+        }
+      }
+    },
+    {
+      "id": "four-frame-photo-booth-strip",
+      "title": "Four-Frame Photo Booth Strip",
+      "description": "A classic vertical photo-booth strip with four poses of you or you and a friend.",
+      "category": "Portrait",
+      "tags": [
+        "photo booth",
+        "photo strip",
+        "friends",
+        "film",
+        "fun"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/four-frame-photo-booth-strip--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Vertical photo-booth strip of four black-and-white frames showing two adult friends making different faces",
+      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic vertical photo-booth strip of four stacked frames showing two unmistakably adult best friends in their late twenties squeezed onto a booth bench. Frame one: big smiles. Frame two: silly crossed eyes and tongues out. Frame three: one kissing the other's cheek while they laugh. Frame four: laughing hard, mid-motion. Same tight framing in every frame, with a plain red curtain behind them. Classic black-and-white film print with rich contrast, soft grain, slight flash falloff and thin white print borders. Show the paper strip lying on a dark wooden table so its edges are visible. No resemblance to any specific real person, logos, readable text, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "people",
+          "label": "People",
+          "example": "two adult best friends in their late twenties"
+        },
+        {
+          "name": "expressions",
+          "label": "Expressions",
+          "example": "big smiles, silly faces, cheek kiss, laughing hard"
+        },
+        {
+          "name": "film_look",
+          "label": "Film look",
+          "example": "classic black-and-white film print"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a four-frame photo-booth strip of me or me and a friend.",
+      "demoPrompt": "A realistic vertical photo-booth strip of four stacked frames showing two unmistakably adult best friends in their late twenties, a woman with a curly afro and a woman with a straight black bob, squeezed onto a booth bench. Frame one: big smiles. Frame two: silly crossed eyes and tongues out. Frame three: one kissing the other's cheek while they laugh. Frame four: laughing hard, mid-motion. Same tight framing in every frame, a plain red curtain behind. Classic black-and-white film print with rich contrast, soft grain, slight flash falloff, thin white print borders. The paper strip lies on a dark wooden table. No resemblance to any specific real person, no logos, readable text, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1536",
+        "aspect_ratio": "2:3",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional photo of you or you and a friend",
+          "description": "Upload a photo of one person or two friends to appear in the booth strip."
+        }
+      }
+    },
+    {
+      "id": "hand-painted-pastoral-anime-portrait",
+      "title": "Hand-Painted Pastoral Anime Portrait",
+      "description": "Your photo repainted as a gentle hand-painted anime film still under a soft watercolor sky.",
+      "category": "Character",
+      "tags": [
+        "anime",
+        "hand painted",
+        "pastoral",
+        "film still",
+        "portrait"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/hand-painted-pastoral-anime-portrait--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Hand-painted anime-style still of a young adult standing in a windy green meadow under huge soft summer clouds",
+      "prompt": "Use the uploaded image as the reference person. Create a hand-painted anime film still of that unmistakably adult person standing in a windswept hillside meadow, keeping their face shape, hairstyle and clothing colors. Wearing a light linen shirt and a straw sun hat held against the breeze. The background is lush and detailed: tall green grass, wildflowers, a winding dirt path, a small red-roofed farmhouse and towering soft cumulus clouds in a watercolor blue summer sky. Clean, simple character linework with flat soft shading set against richly painted scenery, warm late-morning light and grass bending in the wind. A calm, nostalgic film-still feel. No readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "scene",
+          "label": "Scene",
+          "example": "windswept hillside meadow with a red-roofed farmhouse"
+        },
+        {
+          "name": "season_sky",
+          "label": "Season and sky",
+          "example": "summer, towering cumulus clouds in a watercolor blue sky"
+        },
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "light linen shirt and a straw sun hat"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Repaint my photo as a soft hand-painted anime film still.",
+      "demoPrompt": "A hand-painted anime film still of an unmistakably adult young woman with a short black bob and freckles, standing in a windswept hillside meadow, wearing a light linen shirt and holding a straw sun hat against the breeze. Lush, detailed background: tall green grass, wildflowers, a winding dirt path, a small red-roofed farmhouse and towering soft cumulus clouds in a watercolor blue summer sky. Clean, simple character linework with flat soft shading against richly painted scenery, warm late-morning light, grass bending in the wind. A calm, nostalgic film-still feel. No readable text, logos, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": true,
+          "label": "Upload your photo",
+          "description": "Upload a clear photo of the person to repaint in the anime style."
+        }
+      }
+    },
+    {
+      "id": "character-turnaround-reference-sheet",
+      "title": "Character Turnaround Reference Sheet",
+      "description": "A clean model sheet with front, side and back views plus detail close-ups and color swatches.",
+      "category": "Character",
+      "tags": [
+        "character sheet",
+        "turnaround",
+        "concept art",
+        "reference",
+        "original character"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/character-turnaround-reference-sheet--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Character model sheet showing an adventurer in front, side and back views with close-up details and color swatches",
+      "prompt": "If an image is uploaded, use it as the optional reference character. Create a clean character turnaround reference sheet of an original adult adventurer: a wandering cartographer with a long teal coat, a leather satchel full of rolled maps, fingerless gloves and sturdy boots. Show the same character at full height in front, side and back views standing in a neutral pose on one baseline, evenly spaced. To the right, a small detail panel with close-ups of the satchel buckle, the coat clasp and the face, plus a row of five flat color swatches. Plain off-white background with faint guide lines, crisp clean linework, flat cel colors and consistent proportions across every view. No readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character_concept",
+          "label": "Character concept",
+          "example": "wandering cartographer adventurer"
+        },
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "long teal coat, leather map satchel, fingerless gloves and boots"
+        },
+        {
+          "name": "color_palette",
+          "label": "Color palette",
+          "example": "teal, tan leather, cream, rust and charcoal"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a front, side and back reference sheet for my character.",
+      "demoPrompt": "A clean character turnaround reference sheet of an original adult adventurer: a wandering cartographer with tied-back silver hair, a long teal coat, a leather satchel full of rolled maps, fingerless gloves and sturdy boots. The same character at full height in front, side and back views, neutral pose on one baseline, evenly spaced. To the right, a small detail panel with close-ups of the satchel buckle, the coat clasp and the face, plus a row of five flat color swatches in teal, tan leather, cream, rust and charcoal. Plain off-white background with faint guide lines, crisp clean linework, flat cel colors, consistent proportions across every view. No readable text, logos, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional character reference",
+          "description": "Upload a sketch or image if you want the sheet to follow an existing character design."
+        }
+      }
+    },
+    {
+      "id": "chibi-sticker-pack",
+      "title": "Chibi Sticker Pack",
+      "description": "A sheet of nine cute die-cut chibi stickers of one character in different poses.",
+      "category": "Character",
+      "tags": [
+        "chibi",
+        "stickers",
+        "sticker sheet",
+        "cute",
+        "original character"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/chibi-sticker-pack--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Sticker sheet of nine cute chibi stickers of a fox-eared character in a hoodie with white die-cut borders",
+      "prompt": "If an image is uploaded, use it as the optional reference character. Create a sheet of nine flat die-cut chibi stickers arranged in a 3 by 3 grid, all showing the same original character: a cheerful adventurer with fox ears, a fluffy tail and an oversized mint hoodie. Each sticker shows a different pose: waving, sleeping, eating a dumpling, crying comically, giving a thumbs up, hugging a pillow, cheering, sipping tea and peeking from behind a wall. Big heads, tiny bodies, simple round eyes, bold clean outlines and soft flat colors with a little shading. Every sticker has a thick white border and a faint drop shadow on a pale lavender backing sheet. No readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character",
+          "label": "Character",
+          "example": "cheerful adventurer with fox ears and an oversized mint hoodie"
+        },
+        {
+          "name": "poses",
+          "label": "Poses",
+          "example": "waving, sleeping, eating, crying, thumbs up, hugging, cheering, tea, peeking"
+        },
+        {
+          "name": "backing_color",
+          "label": "Backing sheet",
+          "example": "pale lavender"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a sheet of nine cute chibi stickers of my character.",
+      "demoPrompt": "A sheet of nine flat die-cut chibi stickers in a 3 by 3 grid, all showing the same original character: a cheerful adventurer with fox ears, orange hair, a fluffy tail and an oversized mint hoodie. Poses: waving, sleeping, eating a dumpling, crying comically, giving a thumbs up, hugging a pillow, cheering, sipping tea and peeking from behind a wall. Big heads, tiny bodies, simple round eyes, bold clean outlines, soft flat colors with a little shading. Each sticker has a thick white border and a faint drop shadow on a pale lavender backing sheet. No readable text, logos, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional character reference",
+          "description": "Upload an image if you want the stickers to follow an existing character or person."
+        }
+      }
+    },
+    {
+      "id": "90s-cel-anime-screencap",
+      "title": "90s Cel Anime Screencap",
+      "description": "A grainy retro TV-anime frame of an original character with flat cel shading.",
+      "category": "Character",
+      "tags": [
+        "90s anime",
+        "retro",
+        "cel shading",
+        "screencap",
+        "lofi"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/90s-cel-anime-screencap--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Grainy retro anime frame of a young adult woman on a train platform at dusk with flat cel shading and soft color bleed",
+      "prompt": "Create a retro 1990s TV anime frame of an original adult character: a young woman with a long brown ponytail, a loose cream sweater and a messenger bag, waiting on an empty suburban train platform at dusk and glancing sideways. Hand-painted cel look with flat two-tone shading, slightly thick uneven outlines and simple painted backgrounds of overhead wires, a vending machine glow and a pink and orange sky. Faded warm color grade, visible film grain, soft color bleed, a slight blur at the edges and the gentle softness of an old broadcast frame. Present it as a 4:3 picture with black bars on either side. No subtitles, readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character",
+          "label": "Character",
+          "example": "young woman with a long brown ponytail and a loose cream sweater"
+        },
+        {
+          "name": "scene",
+          "label": "Scene",
+          "example": "empty suburban train platform at dusk"
+        },
+        {
+          "name": "color_grade",
+          "label": "Color grade",
+          "example": "faded warm tones with a pink and orange sky"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a grainy 90s anime screencap of an original character.",
+      "demoPrompt": "A retro 1990s TV anime frame of an original adult character: a young woman with a long brown ponytail, a loose cream sweater and a messenger bag, waiting on an empty suburban train platform at dusk and glancing sideways. Hand-painted cel look with flat two-tone shading, slightly thick uneven outlines and simple painted backgrounds of overhead wires, a vending machine glow and a pink and orange sky. Faded warm color grade, visible film grain, soft color bleed, slight edge blur, the softness of an old broadcast frame. Shown as a 4:3 picture with black bars on either side. No subtitles, readable text, logos, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      }
+    },
+    {
+      "id": "expression-sheet-emotion-grid",
+      "title": "Expression Sheet Emotion Grid",
+      "description": "One original character shown with eight distinct emotions in a clean bust-shot grid.",
+      "category": "Character",
+      "tags": [
+        "expression sheet",
+        "emotions",
+        "character design",
+        "reference",
+        "grid"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/expression-sheet-emotion-grid--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Grid of eight bust portraits of the same illustrated adult character showing happy, sad, angry and other expressions",
+      "prompt": "If an image is uploaded, use it as the optional reference character. Create a character expression sheet of one original adult character, a sharp-eyed sky pirate navigator with a short silver undercut, a scar across one eyebrow and a high-collared burgundy coat. Arrange eight bust-sized portraits in a 4 by 2 grid, identical design, angle and lighting in each: joyful laugh, quiet smile, anger, sadness with tears, surprise, smug confidence, embarrassment with blushing and exhausted. Clean semi-realistic anime illustration with crisp linework and soft cel shading. Each portrait sits on a pale blue-grey tile with even white gutters. No readable text, labels, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character_concept",
+          "label": "Character concept",
+          "example": "sky pirate navigator with a silver undercut and a burgundy coat"
+        },
+        {
+          "name": "emotions",
+          "label": "Emotions",
+          "example": "joy, smile, anger, sadness, surprise, smug, embarrassed, exhausted"
+        },
+        {
+          "name": "background_tint",
+          "label": "Background tint",
+          "example": "pale blue-grey"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an eight-emotion expression sheet for my character.",
+      "demoPrompt": "A character expression sheet of one original adult character, a sharp-eyed sky pirate navigator with a short silver undercut, a scar across one eyebrow and a high-collared burgundy coat. Eight bust-sized portraits in a 4 by 2 grid, identical design, angle and lighting in each: joyful laugh, quiet smile, anger, sadness with tears, surprise, smug confidence, embarrassment with blushing and exhausted. Clean semi-realistic anime illustration, crisp linework, soft cel shading. Each portrait on a pale blue-grey tile with even white gutters. No readable text, labels, logos, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional character reference",
+          "description": "Upload an image if you want the sheet to follow an existing character or person."
+        }
+      }
+    },
+    {
+      "id": "pixel-rpg-character-sprite-sheet",
+      "title": "Pixel RPG Character Sprite Sheet",
+      "description": "A pixel-art walk-cycle sprite sheet in four directions with a small portrait icon.",
+      "category": "Character",
+      "tags": [
+        "pixel art",
+        "sprite sheet",
+        "rpg",
+        "game asset",
+        "walk cycle"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/pixel-rpg-character-sprite-sheet--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Pixel-art sprite sheet of a knight walking in four directions in rows with a larger pixel portrait in the corner",
+      "prompt": "If an image is uploaded, use it as the optional reference character. Create a pixel-art sprite sheet for an original fantasy hero, a young adult knight with a blue tabard, a round shield and a short red cape. Show a walk cycle in four rows, one per direction: facing down, left, right and up, with four evenly spaced frames per row showing clear leg and cape motion. Each sprite is small and chunky with a crisp one-pixel dark outline and a limited palette of about twelve colors. In the top-right corner, add a larger pixel portrait icon of the hero's face in a simple frame. Plain flat light-grey background with a faint grid, no anti-aliasing and no blur. No readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character_class",
+          "label": "Character class",
+          "example": "young adult knight with a blue tabard, round shield and red cape"
+        },
+        {
+          "name": "palette",
+          "label": "Palette",
+          "example": "limited palette of about twelve colors"
+        },
+        {
+          "name": "directions",
+          "label": "Directions",
+          "example": "four rows facing down, left, right and up"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create a pixel-art walking sprite sheet for my game hero.",
+      "demoPrompt": "A pixel-art sprite sheet for an original fantasy hero, a young adult knight with short black hair, a blue tabard, a round shield and a short red cape. A walk cycle in four rows, one per direction: facing down, left, right and up, four evenly spaced frames per row with clear leg and cape motion. Small chunky sprites with a crisp one-pixel dark outline and a limited palette of about twelve colors. In the top-right corner a larger pixel portrait icon of the hero's face in a simple frame. Plain flat light-grey background with a faint grid, no anti-aliasing, no blur. No readable text, logos, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1024x1024",
+        "aspect_ratio": "1:1",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional character reference",
+          "description": "Upload an image if you want the sprite to follow an existing character or person."
+        }
+      }
+    },
+    {
+      "id": "creature-companion-duo",
+      "title": "Creature Companion Duo",
+      "description": "An illustrated adventure scene of a character and their creature or robot friend.",
+      "category": "Character",
+      "tags": [
+        "companion",
+        "illustration",
+        "adventure",
+        "fantasy",
+        "duo"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/creature-companion-duo--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Illustration of a young adult traveler and a small round moss-covered robot sitting together on a cliff above a valley at sunset",
+      "prompt": "If an image is uploaded, use it as the optional reference character. Create a warm painterly illustration of an original young adult traveler sitting on a grassy cliff edge beside their companion, a small round robot covered in moss with one glowing amber eye. The traveler shares a piece of bread while the robot leans in curiously, both seen from slightly behind and to the side. Below them stretches a wide valley with a winding river, scattered forests and distant blue mountains. Golden sunset light, long soft shadows, floating seed puffs in the air and a gentle sense of friendship. Rich brush textures, soft edges and clear silhouettes. No readable text, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "character",
+          "label": "Character",
+          "example": "young adult traveler"
+        },
+        {
+          "name": "companion",
+          "label": "Companion",
+          "example": "small round moss-covered robot with one glowing amber eye"
+        },
+        {
+          "name": "landscape",
+          "label": "Landscape",
+          "example": "wide valley with a winding river and distant blue mountains"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Create an illustration of a character and their creature companion.",
+      "demoPrompt": "A warm painterly illustration of an original young adult traveler with a long green scarf and a patched backpack, sitting on a grassy cliff edge beside a small round robot covered in moss with one glowing amber eye. The traveler shares a piece of bread while the robot leans in curiously, both seen from slightly behind and to the side. Below, a wide valley with a winding river, scattered forests and distant blue mountains. Golden sunset light, long soft shadows, floating seed puffs, a gentle sense of friendship. Rich brush textures, soft edges, clear silhouettes. No readable text, logos, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": false,
+          "label": "Optional character reference",
+          "description": "Upload an image if you want the traveler to follow an existing character or person."
+        }
+      }
+    },
+    {
+      "id": "game-character-select-screen",
+      "title": "Game Character Select Screen",
+      "description": "You as the highlighted hero on an original video-game character-select screen.",
+      "category": "Character",
+      "tags": [
+        "video game",
+        "character select",
+        "game ui",
+        "hero",
+        "fighter"
+      ],
+      "image": "https://assets.openimagetemplates.com/prompt-templates/game-character-select-screen--generated-2026-11-18--schema-v1.2.0.webp",
+      "imageAlt": "Video-game character select screen with a stylized adult hero highlighted in the center, stat bars and a row of portrait tiles",
+      "prompt": "Use the uploaded image as the reference person. Create an original video-game character-select screen with that unmistakably adult person as the highlighted playable hero, rendered as a stylized 3D game character with a recognizable likeness. They stand large in the center in a confident ready stance, dressed as a sci-fi brawler in a scuffed armored jacket with glowing cyan seams. To the left, three short horizontal stat bars; along the bottom, a row of six small portrait tiles of other invented characters, the hero's tile glowing. Behind, a dark arena backdrop with sweeping light beams. Invented UI in neon cyan and magenta, with one short fictional name plate as the only text. No real game, brand, logos, or watermarks.",
+      "negativePrompt": [],
+      "slots": [
+        {
+          "name": "game_genre",
+          "label": "Game genre",
+          "example": "sci-fi arena fighting game"
+        },
+        {
+          "name": "outfit",
+          "label": "Outfit",
+          "example": "scuffed armored jacket with glowing cyan seams"
+        },
+        {
+          "name": "color_scheme",
+          "label": "Color scheme",
+          "example": "neon cyan and magenta"
+        }
+      ],
+      "suggestedModel": "gpt-image-2",
+      "suggestedModelLabel": "GPT Image 2",
+      "exampleSchemaVersion": "1.2.0",
+      "generatedAt": "2026-11-18",
+      "creator": "Open Image Templates",
+      "license": "CC BY 4.0",
+      "simplePrompt": "Put me on a video-game character-select screen as the chosen hero.",
+      "demoPrompt": "An original video-game character-select screen with an unmistakably adult man around 30 with a dark undercut and a short beard as the highlighted playable hero, rendered as a stylized 3D game character. He stands large in the center in a confident ready stance, dressed as a sci-fi brawler in a scuffed armored jacket with glowing cyan seams. To the left, three short horizontal stat bars; along the bottom, a row of six small portrait tiles of other invented characters, his tile glowing. Behind, a dark arena backdrop with sweeping light beams. Invented UI in neon cyan and magenta, with one short fictional name plate reading NOVA as the only text. No real game, brand, logos, or watermarks.",
+      "contentTier": "sfw",
+      "suggestedSettings": {
+        "nImages": 1,
+        "resolution": "1536x1024",
+        "aspect_ratio": "3:2",
+        "quality": "medium"
+      },
+      "inputRequirements": {
+        "image": {
+          "required": true,
+          "label": "Upload your photo",
+          "description": "Upload a clear photo of the person to turn into the playable hero."
+        }
+      }
     }
   ]
 }
