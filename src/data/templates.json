@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T22:00:00.000Z",
+  "generatedAt": "2026-11-19T13:00:00.000Z",
   "source": "openimagetemplates.com canonical catalogue",
   "templates": [
     {
@@ -5628,7 +5628,7 @@
       ],
       "image": "https://assets.openimagetemplates.com/prompt-templates/post-workout-gym-mirror--generated-2026-11-18--schema-v1.2.0.webp",
       "imageAlt": "Adult woman in a sage sports top and black leggings taking a mirror selfie in a weight room with dumbbell racks behind her",
-      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic post-workout mirror selfie of an unmistakably adult woman around age 27 with a fit, athletic build, standing in a weight room right after a set. She wears a fitted sage-green sports top and high-waisted black leggings, holding her phone at chest height with one hand on her hip. Frame from knees up so the wall mirror shows rows of dumbbell racks, a bench and black rubber flooring behind her. Harsh overhead lights cause glare spots on the mirror, a light sheen of sweat on her skin, a loose ponytail with flyaway hair and a water bottle at her feet. Natural skin texture, confident tired smile, ordinary phone-camera detail. No resemblance to any specific real person other than an uploaded reference. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "prompt": "If an image is uploaded, it is the user's own photo: use it as the optional reference person. Create a realistic post-workout mirror selfie of an unmistakably adult woman around age 27 with a fit, athletic build, standing in a weight room right after a set. She wears a fitted sage-green sports top and high-waisted black leggings, holding her phone at chest height with one hand on her hip. Frame from knees up so the wall mirror shows rows of dumbbell racks, a bench and black rubber flooring behind her. Harsh overhead lights cause glare spots on the mirror, a light sheen of sweat on her skin, a loose ponytail with flyaway hair and a water bottle at her feet. Natural skin texture, confident tired smile, ordinary phone-camera detail. No resemblance to any specific real person other than an uploaded reference. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
       "negativePrompt": [],
       "slots": [
         {
@@ -5665,8 +5665,8 @@
       "inputRequirements": {
         "image": {
           "required": false,
-          "label": "Optional selfie reference",
-          "description": "Upload a clear photo if you want the gym selfie to keep a specific adult's look."
+          "label": "Optional photo of yourself",
+          "description": "Upload a clear photo of yourself (adults only) if you want the gym selfie to look like you."
         }
       }
     },
@@ -5684,7 +5684,7 @@
       ],
       "image": "https://assets.openimagetemplates.com/prompt-templates/beach-towel-vacation-selfie--generated-2026-11-18--v2--schema-v1.2.0.webp",
       "imageAlt": "Adult woman in a one-piece swimsuit lying on a striped towel taking an overhead selfie with sand and waves around her",
-      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic overhead phone selfie of an unmistakably adult woman around age 30 lying on her back on a beach towel, arm stretched up holding the phone. She wears a sporty opaque coral one-piece swimsuit with a scoop neckline and sunglasses pushed into her hair. The towel has wide blue and white stripes, and warm pale sand fills much of the frame, with the white edge of breaking surf in one corner. Bright midday sun, windblown hair across the towel, sunscreen shine on the shoulders, a paperback and a straw hat beside her. Natural skin texture, easy laughing expression with her face as the focus of the frame, casual tilted vacation framing with slight wide-angle distortion. No resemblance to any specific real person other than an uploaded reference. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "prompt": "If an image is uploaded, it is the user's own photo: use it as the optional reference person. Create a realistic overhead phone selfie of an unmistakably adult woman around age 30 lying on her back on a beach towel, arm stretched up holding the phone. She wears a sporty opaque coral one-piece swimsuit with a scoop neckline and sunglasses pushed into her hair. The towel has wide blue and white stripes, and warm pale sand fills much of the frame, with the white edge of breaking surf in one corner. Bright midday sun, windblown hair across the towel, sunscreen shine on the shoulders, a paperback and a straw hat beside her. Natural skin texture, easy laughing expression with her face as the focus of the frame, casual tilted vacation framing with slight wide-angle distortion. No resemblance to any specific real person other than an uploaded reference. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
       "negativePrompt": [],
       "slots": [
         {
@@ -5721,8 +5721,8 @@
       "inputRequirements": {
         "image": {
           "required": false,
-          "label": "Optional selfie reference",
-          "description": "Upload a clear photo if you want the beach selfie to keep a specific adult's look."
+          "label": "Optional photo of yourself",
+          "description": "Upload a clear photo of yourself (adults only) if you want the beach selfie to look like you."
         }
       }
     },
@@ -5740,7 +5740,7 @@
       ],
       "image": "https://assets.openimagetemplates.com/prompt-templates/elevator-going-out-mirror--generated-2026-11-18--schema-v1.2.0.webp",
       "imageAlt": "Adult woman in a black fitted dress taking a full-length selfie in a brushed steel elevator with lit floor buttons",
-      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic full-length mirror selfie of an unmistakably adult woman around age 29 inside a compact elevator, heading out for the evening. She wears a fitted black midi dress with thin straps, strappy heels and a small gold chain shoulder bag, holding her phone in front of her chest. Show brushed-steel wall panels with visible seams, a round handrail at hip height and a column of softly lit floor buttons beside the door. Slightly greenish ceiling light from above, faint smudges on the mirror, natural skin texture, glossy hair and a confident sideways glance. Ordinary phone-camera realism with a small tilt. No resemblance to any specific real person other than an uploaded reference. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "prompt": "If an image is uploaded, it is the user's own photo: use it as the optional reference person. Create a realistic full-length mirror selfie of an unmistakably adult woman around age 29 inside a compact elevator, heading out for the evening. She wears a fitted black midi dress with thin straps, strappy heels and a small gold chain shoulder bag, holding her phone in front of her chest. Show brushed-steel wall panels with visible seams, a round handrail at hip height and a column of softly lit floor buttons beside the door. Slightly greenish ceiling light from above, faint smudges on the mirror, natural skin texture, glossy hair and a confident sideways glance. Ordinary phone-camera realism with a small tilt. No resemblance to any specific real person other than an uploaded reference. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
       "negativePrompt": [],
       "slots": [
         {
@@ -5777,8 +5777,8 @@
       "inputRequirements": {
         "image": {
           "required": false,
-          "label": "Optional selfie reference",
-          "description": "Upload a clear photo if you want the elevator selfie to keep a specific adult's look."
+          "label": "Optional photo of yourself",
+          "description": "Upload a clear photo of yourself (adults only) if you want the elevator selfie to look like you."
         }
       }
     },
@@ -5796,7 +5796,7 @@
       ],
       "image": "https://assets.openimagetemplates.com/prompt-templates/boutique-fitting-room-check--generated-2026-11-18--schema-v1.2.0.webp",
       "imageAlt": "Adult woman trying on an emerald fitted dress in a boutique fitting room with a velvet curtain and shopping bags",
-      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic fitting-room mirror selfie of an unmistakably adult woman around age 32 trying on a fitted emerald knit dress that falls below the knee, fully clothed and checking the fit over her shoulder. A heavy mustard velvet curtain is half drawn behind her, two spare outfits with paper price tags hang on a wall hook, and paper shopping bags and her sneakers sit on the floor. Small boutique cubicle with a pale wood bench, warm downlight from above and ordinary retail brightness. Natural skin texture, a pleased, slightly unsure expression, phone partly covering her chin, slightly crooked phone crop. No resemblance to any specific real person other than an uploaded reference. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "prompt": "If an image is uploaded, it is the user's own photo: use it as the optional reference person. Create a realistic fitting-room mirror selfie of an unmistakably adult woman around age 32 trying on a fitted emerald knit dress that falls below the knee, fully clothed and checking the fit over her shoulder. A heavy mustard velvet curtain is half drawn behind her, two spare outfits with paper price tags hang on a wall hook, and paper shopping bags and her sneakers sit on the floor. Small boutique cubicle with a pale wood bench, warm downlight from above and ordinary retail brightness. Natural skin texture, a pleased, slightly unsure expression, phone partly covering her chin, slightly crooked phone crop. No resemblance to any specific real person other than an uploaded reference. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
       "negativePrompt": [],
       "slots": [
         {
@@ -5833,8 +5833,8 @@
       "inputRequirements": {
         "image": {
           "required": false,
-          "label": "Optional selfie reference",
-          "description": "Upload a clear photo if you want the try-on selfie to keep a specific adult's look."
+          "label": "Optional photo of yourself",
+          "description": "Upload a clear photo of yourself (adults only) if you want the try-on selfie to look like you."
         }
       }
     },
@@ -5851,8 +5851,8 @@
         "skyline"
       ],
       "image": "https://assets.openimagetemplates.com/prompt-templates/blue-hour-rooftop-outfit--generated-2026-11-18--schema-v1.2.0.webp",
-      "imageAlt": "Adult woman in a satin slip-style evening dress lit by camera flash on a rooftop with a lavender city skyline behind her",
-      "prompt": "If an image is uploaded, use it as the optional reference person. Create a realistic flash-lit full-body photo of an unmistakably adult woman around age 28 standing casually on a wide rooftop terrace at blue hour, one hand resting on the concrete parapet. She wears a fitted deep-red satin midi dress with a lined, opaque skirt, a cropped leather jacket and block heels. Behind her, a broad city skyline with scattered lit windows sits under a soft lavender sky fading to blue. Direct on-camera flash makes her bright against the dimmer background, with wind lifting her hair and the hem of the dress. Natural skin texture, relaxed smile, slightly off-center snapshot framing. No resemblance to any specific real person other than an uploaded reference. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
+      "imageAlt": "Adult woman in a deep-red satin midi dress and a cropped leather jacket lit by camera flash on a rooftop with a lavender city skyline behind her",
+      "prompt": "If an image is uploaded, it is the user's own photo: use it as the optional reference person. Create a realistic flash-lit full-body photo of an unmistakably adult woman around age 28 standing casually on a wide rooftop terrace at blue hour, one hand resting on the concrete parapet. She wears a fitted deep-red satin midi dress with a lined, opaque skirt, a cropped leather jacket and block heels. Behind her, a broad city skyline with scattered lit windows sits under a soft lavender sky fading to blue. Direct on-camera flash makes her bright against the dimmer background, with wind lifting her hair and the hem of the dress. Natural skin texture, relaxed smile, slightly off-center snapshot framing. No resemblance to any specific real person other than an uploaded reference. No nudity, lingerie, transparent fabric, explicit posing, juvenile appearance, logos, readable text, or watermarks.",
       "negativePrompt": [],
       "slots": [
         {
@@ -5889,8 +5889,8 @@
       "inputRequirements": {
         "image": {
           "required": false,
-          "label": "Optional outfit reference",
-          "description": "Upload a clear photo if you want the rooftop photo to keep a specific adult's look."
+          "label": "Optional photo of yourself",
+          "description": "Upload a clear photo of yourself (adults only) if you want the rooftop photo to look like you."
         }
       }
     },
@@ -5964,7 +5964,7 @@
       ],
       "image": "https://assets.openimagetemplates.com/prompt-templates/pet-and-owner-park-selfie--generated-2026-11-18--schema-v1.2.0.webp",
       "imageAlt": "Adult woman crouching in a park taking a close selfie with a golden retriever pushing its nose toward the camera",
-      "prompt": "If an image is uploaded, use it as the optional reference pet and keep that animal's species, coat and markings. Create a realistic close phone selfie of an unmistakably adult person around age 30 crouching on a park path beside their pet, by default a fluffy golden retriever. The pet pushes its nose toward the lens so it looks big and slightly distorted, while the owner laughs and squeezes into the other half of the frame. The owner wears a navy rain jacket and leans in close beside the pet. Behind them, a leafy park with a gravel path, a bench and soft autumn light. Shared awkward crop, natural fur and skin detail, a little motion blur from the pet's movement, ordinary smartphone sharpness. No resemblance to any specific real person. No logos, readable text, or watermarks.",
+      "prompt": "If an image is uploaded, use it as the optional reference: keep the pet's species, coat and markings, and if an adult is also in the photo, keep that person's look as the owner. Create a realistic close phone selfie of the owner, an unmistakably adult person, by default around age 30, crouching on a park path beside their pet, by default a fluffy golden retriever. The pet pushes its nose toward the lens so it looks big and slightly distorted, while the owner laughs and squeezes into the other half of the frame. The owner wears a navy rain jacket and leans in close beside the pet. Behind them, a leafy park with a gravel path, a bench and soft autumn light. Shared awkward crop, natural fur and skin detail, a little motion blur from the pet's movement, ordinary smartphone sharpness. No resemblance to any specific real person other than a person in the uploaded photo. No logos, readable text, or watermarks.",
       "negativePrompt": [],
       "slots": [
         {
@@ -6001,8 +6001,8 @@
       "inputRequirements": {
         "image": {
           "required": false,
-          "label": "Optional pet photo",
-          "description": "Upload a clear photo of your dog or cat if you want the selfie to show that pet."
+          "label": "Optional pet photo, with or without you",
+          "description": "Upload a clear photo of your dog or cat to show that pet. If you are in the photo too, the selfie keeps your look as the owner."
         }
       }
     },
@@ -6401,7 +6401,7 @@
     {
       "id": "decade-mall-studio-portrait",
       "title": "Decade Mall Studio Portrait",
-      "description": "A retro mall-studio portrait with big hair, a laser backdrop and soft film grain.",
+      "description": "A retro mall-studio portrait in the style of a chosen decade, by default the 1980s with big hair, a laser backdrop and soft film grain.",
       "category": "Portrait",
       "tags": [
         "retro portrait",
@@ -6412,7 +6412,7 @@
       ],
       "image": "https://assets.openimagetemplates.com/prompt-templates/decade-mall-studio-portrait--generated-2026-11-18--schema-v1.2.0.webp",
       "imageAlt": "Retro 1980s studio portrait of an adult woman with big permed hair and a denim jacket against a blue laser backdrop",
-      "prompt": "Use the uploaded image as the reference person. Create a retro 1980s mall photo-studio portrait of that unmistakably adult person, head and shoulders, turned slightly with the chin resting on one hand. Give them big voluminous permed hair and a bright acid-wash denim jacket with rolled sleeves over a neon pink top. Behind them, a classic studio backdrop of glowing blue and purple laser beams fanning out over a dark starfield. Soft diffused glamour lighting with a bright hair light, slight soft-focus glow, saturated colors, warm skin and gentle film grain, like a print from a decades-old portrait package. Cheesy, sincere smile. No resemblance to any specific real person beyond the uploaded reference. No logos, readable text, or watermarks.",
+      "prompt": "Use the uploaded image as the reference person. Create a retro 1980s mall photo-studio portrait of that unmistakably adult person, head and shoulders, turned slightly with the chin resting on one hand. Style the hair, makeup, outfit and backdrop the way a mall portrait studio of the chosen decade would. For the 1980s that means big voluminous permed hair, a bright acid-wash denim jacket with rolled sleeves over a neon pink top, and a classic studio backdrop of glowing blue and purple laser beams fanning out over a dark starfield. Soft diffused glamour lighting with a bright hair light, slight soft-focus glow, saturated colors, warm skin and gentle film grain, like a print from a portrait package of that decade. Cheesy, sincere smile. No resemblance to any specific real person beyond the uploaded reference. No logos, readable text, or watermarks.",
       "negativePrompt": [],
       "slots": [
         {
